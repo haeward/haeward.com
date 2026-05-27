@@ -21,8 +21,8 @@ const {
 const HeadingTag = headingLevel;
 const headingClass =
     headingLevel === "h1"
-        ? "serif-reading-title text-3xl font-bold tracking-[0.01em] text-[var(--site-color-text-primary)] sm:text-4xl"
-        : "serif-reading-title text-2xl font-bold text-[var(--site-color-text-primary)]";
+        ? "serif-reading-title text-3xl font-bold tracking-[0.01em] text-(--site-color-text-primary) sm:text-4xl"
+        : "serif-reading-title text-2xl font-bold text-(--site-color-text-primary)";
 ---
 
 <section
@@ -50,7 +50,7 @@ const headingClass =
         hidden
     ></ul>
 
-    <div class="flex justify-end">
+    <div class="flex justify-end" data-moments-more="true" hidden>
         <a
             href={profileUrl}
             target="_blank"

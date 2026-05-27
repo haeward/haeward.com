@@ -33,7 +33,11 @@ const MOCK_MASTODON_ACCOUNT = {
     username: "haeward",
 };
 
-const MOCK_MASTODON_VISIBLE_STATUSES = Array.from({ length: 10 }, (_, index) => ({
+function renderMockMastodonCreatedAt(index) {
+    return new Date(Date.UTC(2026, 3, 21 + index, 16, 57)).toISOString();
+}
+
+const MOCK_MASTODON_VISIBLE_STATUSES = Array.from({ length: 40 }, (_, index) => ({
     id: `moment-${index + 1}`,
     account: MOCK_MASTODON_ACCOUNT,
     card:
@@ -47,7 +51,7 @@ const MOCK_MASTODON_VISIBLE_STATUSES = Array.from({ length: 10 }, (_, index) => 
               }
             : null,
     content: renderMockMastodonContent(index),
-    created_at: `2026-04-2${index + 1}T16:57:00.000Z`,
+    created_at: renderMockMastodonCreatedAt(index),
     emojis:
         index === 4
             ? [
@@ -107,6 +111,29 @@ const MOCK_MASTODON_VISIBLE_STATUSES = Array.from({ length: 10 }, (_, index) => 
     url: `https://mas.to/@haeward/${index + 1}`,
 }));
 
+const MOCK_MASTODON_BOOSTED_STATUS = {
+    id: "boosted-moment",
+    account: MOCK_MASTODON_ACCOUNT,
+    content: "<p>Boost wrapper should stay hidden.</p>",
+    created_at: "2026-04-30T16:57:00.000Z",
+    media_attachments: [],
+    reblog: {
+        id: "boosted-original",
+        account: {
+            acct: "boosted",
+            avatar: "/assets/images/site/favicon.png",
+            display_name: "Boosted User",
+            url: "https://mas.to/@boosted",
+            username: "boosted",
+        },
+        content: "<p>Boosted toot should render.</p>",
+        created_at: "2026-04-30T15:57:00.000Z",
+        media_attachments: [],
+        url: "https://mas.to/@boosted/1",
+    },
+    url: "https://mas.to/@haeward/boosted",
+};
+
 const MOCK_MASTODON_STATUSES = [
     {
         id: "reply-moment",
@@ -118,6 +145,7 @@ const MOCK_MASTODON_STATUSES = [
         media_attachments: [],
         url: "https://mas.to/@haeward/reply",
     },
+    MOCK_MASTODON_BOOSTED_STATUS,
     ...MOCK_MASTODON_VISIBLE_STATUSES,
 ];
 
@@ -371,6 +399,13 @@ async function run() {
         await assertStatus(baseUrl, "/sitemap-index.xml", 200);
         await assertStatus(baseUrl, "/does-not-exist/", 404);
 
+        const momentsHtml = await fetch(new URL("/moments/", baseUrl)).then((response) =>
+            response.text(),
+        );
+        if (!momentsHtml.includes('data-moments-more="true" hidden')) {
+            fail("Expected /moments to hide the Mastodon more link before moments load.");
+        }
+
         const page = await browser.newPage({ viewport: { width: 1440, height: 960 } });
         await page.addInitScript(
             ({ accountId, statuses }) => {
@@ -438,14 +473,22 @@ async function run() {
         await assertOk(page, `${baseUrl}/moments/`, "Moments");
         await page.waitForSelector("[data-moments-item='true']");
         const momentsCount = await page.locator("[data-moments-item='true']").count();
-        if (momentsCount !== 10) {
-            fail(`Expected /moments to render 10 moments, received ${momentsCount}.`);
+        if (momentsCount !== 40) {
+            fail(`Expected /moments to render 40 moments, received ${momentsCount}.`);
         }
         if ((await page.locator("text=Reply should render").count()) !== 1) {
             fail("Expected /moments to render reply statuses.");
         }
+        if ((await page.locator("text=Boost wrapper should stay hidden").count()) !== 0) {
+            fail("Expected /moments to hide boosted status wrappers.");
+        }
+        if ((await page.locator("text=Boosted toot should render").count()) !== 1) {
+            fail("Expected /moments to render boosted toot content.");
+        }
+        await page.waitForSelector('[data-moments-boost="true"]:has-text("Haeward boosted")');
+        await page.waitForSelector('[data-moments-boost-avatar="true"]');
         await page.waitForSelector(
-            '[data-moments-reply="true"] a[href="https://mas.to/web/statuses/114251868212289000"]:has-text("toot")',
+            '[data-moments-reply="true"]:has-text("Haeward replied to") a[href="https://mas.to/web/statuses/114251868212289000"]:has-text("toot")',
         );
         await page.waitForSelector('a[href="https://mas.to/@haeward/reply"]:has-text("View Toot")');
         if ((await page.locator("text=Quote inline source").count()) !== 0) {
