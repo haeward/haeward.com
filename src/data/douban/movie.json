@@ -2,6 +2,254 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-05-27 14:00:19",
+		"id": 4852255535,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/35689244 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35689244/interest/4852255535",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "布拉德·皮特"
+				},
+				{
+					"name": "戴姆森·伊德瑞斯"
+				},
+				{
+					"name": "哈维尔·巴登"
+				},
+				{
+					"name": "凯瑞·康顿"
+				},
+				{
+					"name": "托比亚斯·门基斯"
+				},
+				{
+					"name": "金·波德尼亚"
+				},
+				{
+					"name": "萨拉·奈尔斯"
+				},
+				{
+					"name": "威尔·梅瑞克"
+				},
+				{
+					"name": "约瑟夫·巴德拉玛"
+				},
+				{
+					"name": "萨姆森·卡约"
+				},
+				{
+					"name": "谢伊·惠格姆"
+				},
+				{
+					"name": "卡莉·库克"
+				},
+				{
+					"name": "阿卜杜勒·萨利斯"
+				},
+				{
+					"name": "利兹·金斯曼"
+				},
+				{
+					"name": "西蒙·坤茨"
+				},
+				{
+					"name": "刘易斯·汉密尔顿"
+				},
+				{
+					"name": "马克斯·维斯塔潘"
+				},
+				{
+					"name": "塞尔吉奥·佩雷兹"
+				},
+				{
+					"name": "夏尔·勒克莱尔"
+				},
+				{
+					"name": "小卡洛斯·赛恩斯"
+				},
+				{
+					"name": "奥利弗·贝尔曼"
+				},
+				{
+					"name": "乔治·拉塞尔"
+				},
+				{
+					"name": "埃斯塔班·奥康"
+				},
+				{
+					"name": "皮埃尔·加斯利"
+				},
+				{
+					"name": "杰克·杜汉"
+				},
+				{
+					"name": "兰多·诺里斯"
+				},
+				{
+					"name": "奥斯卡·皮亚斯特里"
+				},
+				{
+					"name": "托托·沃尔夫"
+				},
+				{
+					"name": "瓦尔泰里·博塔斯"
+				},
+				{
+					"name": "周冠宇"
+				},
+				{
+					"name": "费尔南多·阿隆索"
+				},
+				{
+					"name": "兰斯·斯特罗尔"
+				},
+				{
+					"name": "凯文·马格努森"
+				},
+				{
+					"name": "尼科·霍肯伯格"
+				},
+				{
+					"name": "尼克·德弗里斯"
+				},
+				{
+					"name": "丹尼尔·里卡多"
+				},
+				{
+					"name": "角田裕毅"
+				},
+				{
+					"name": "利亚姆·劳森"
+				},
+				{
+					"name": "亚历山大·阿尔本"
+				},
+				{
+					"name": "洛根·萨金特"
+				},
+				{
+					"name": "弗朗哥·科拉平托"
+				},
+				{
+					"name": "卢西亚诺·巴切塔"
+				},
+				{
+					"name": "伯努瓦·特雷卢耶"
+				},
+				{
+					"name": "马丁·布伦德尔"
+				},
+				{
+					"name": "大卫·迈克尔·克罗夫特"
+				},
+				{
+					"name": "安迪·M·米利根"
+				},
+				{
+					"name": "阿维斯·玛丽·巴尼斯"
+				},
+				{
+					"name": "拉莫娜·冯·普什"
+				},
+				{
+					"name": "巴尼·史密斯"
+				},
+				{
+					"name": "波比·史密斯"
+				},
+				{
+					"name": "罗茜·德怀尔"
+				},
+				{
+					"name": "莱恩·哈珀"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 美国 / 剧情 动作 运动 / 约瑟夫·科辛斯基 / 布拉德·皮特 戴姆森·伊德瑞斯",
+			"color_scheme": {
+				"_base_color": [
+					0.029411764705882342,
+					0.48571428571428577,
+					0.13725490196078433
+				],
+				"_avg_color": [
+					0.06451612903225806,
+					0.29807692307692313,
+					0.40784313725490196
+				],
+				"primary_color_light": "72443b",
+				"primary_color_dark": "4c2d27",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35689244.jpg",
+			"directors": [
+				{
+					"name": "约瑟夫·科辛斯基"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"运动"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 5,
+					"title": "美国动作片榜",
+					"uri": "douban://douban.com/subject_collection/ECPMPC7JA?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "35689244",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2922238175.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2922238175.jpg"
+			},
+			"pubdate": [
+				"2025-06-27(美国/中国大陆)"
+			],
+			"rating": {
+				"count": 524961,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.7
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35689244",
+			"subtype": "movie",
+			"title": "F1：狂飙飞车",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35689244",
+			"url": "https://movie.douban.com/subject/35689244/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-05-27 14:00:19"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-05-18 22:55:59",
 		"id": 4845640080,
 		"is_editable": false,
