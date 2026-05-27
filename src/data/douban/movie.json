@@ -1,6 +1,158 @@
 [
 	{
 		"charts": [],
+		"comment": "浪费时间，有一个演技在线的吗？剧情更像是玩似的",
+		"create_time": "2026-05-27 23:35:21",
+		"id": 4852642331,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 1,
+			"value": 1
+		},
+		"sharing_text": "我的评分：★ 浪费时间，有一个演技在线的吗？剧情更像是玩似的 https://www.douban.com/doubanapp/dispatch/movie/37242440 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37242440/interest/4852642331",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "易烊千玺"
+				},
+				{
+					"name": "朱一龙"
+				},
+				{
+					"name": "宋佳"
+				},
+				{
+					"name": "雷佳音"
+				},
+				{
+					"name": "杨幂"
+				},
+				{
+					"name": "张译"
+				},
+				{
+					"name": "刘诗诗"
+				},
+				{
+					"name": "刘耀文"
+				},
+				{
+					"name": "林博洋"
+				},
+				{
+					"name": "潘斌龙"
+				},
+				{
+					"name": "姚安娜"
+				},
+				{
+					"name": "段奕宏"
+				},
+				{
+					"name": "陈明昊"
+				},
+				{
+					"name": "江奇霖"
+				},
+				{
+					"name": "王圣迪"
+				},
+				{
+					"name": "黄炎"
+				},
+				{
+					"name": "飞凡"
+				},
+				{
+					"name": "蒋鹏宇"
+				},
+				{
+					"name": "孟丹青"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 剧情 犯罪 / 张艺谋 / 易烊千玺 朱一龙",
+			"color_scheme": {
+				"_base_color": [
+					0.564516129032258,
+					0.4920634920634921,
+					0.24705882352941178
+				],
+				"_avg_color": [
+					0.537878787878788,
+					0.3893805309734513,
+					0.44313725490196076
+				],
+				"primary_color_light": "3a5c72",
+				"primary_color_dark": "263d4c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37242440.jpg",
+			"directors": [
+				{
+					"name": "张艺谋"
+				}
+			],
+			"genres": [
+				"剧情",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 4,
+					"title": "豆瓣2026最值得期待华语电影",
+					"uri": "douban://douban.com/subject_collection/ECQZAGSTQ?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "37242440",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2929759786.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2929759786.jpg"
+			},
+			"pubdate": [
+				"2026-02-17(中国大陆)"
+			],
+			"rating": {
+				"count": 258450,
+				"max": 10,
+				"star_count": 3,
+				"value": 5.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37242440",
+			"subtype": "movie",
+			"title": "惊蛰无声",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/37242440",
+			"url": "https://movie.douban.com/subject/37242440/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 1,
+		"star_time": "2026-05-27 23:35:21"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-05-27 14:00:19",
 		"id": 4852255535,
