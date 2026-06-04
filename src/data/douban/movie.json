@@ -2,6 +2,231 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-04 19:45:05",
+		"id": 4858202480,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/35159709 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35159709/interest/4858202480",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "彭昱畅"
+				},
+				{
+					"name": "丁禹兮"
+				},
+				{
+					"name": "李蔓瑄"
+				},
+				{
+					"name": "邓恩熙"
+				},
+				{
+					"name": "侯雯元"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 悬疑 犯罪 / 程亮 / 彭昱畅 丁禹兮",
+			"color_scheme": {
+				"_base_color": [
+					0.7142857142857143,
+					0.5833333333333334,
+					0.18823529411764706
+				],
+				"_avg_color": [
+					0.7304964539007092,
+					0.5802469135802469,
+					0.3176470588235294
+				],
+				"primary_color_light": "422f72",
+				"primary_color_dark": "2c1f4c",
+				"secondary_color": "f6f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35159709.jpg",
+			"directors": [
+				{
+					"name": "程亮"
+				}
+			],
+			"genres": [
+				"悬疑",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "35159709",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2931149949.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2931149949.jpg"
+			},
+			"pubdate": [
+				"2026-04-04(中国大陆)"
+			],
+			"rating": {
+				"count": 44984,
+				"max": 10,
+				"star_count": 3,
+				"value": 5.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35159709",
+			"subtype": "movie",
+			"title": "天才游戏",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35159709",
+			"url": "https://movie.douban.com/subject/35159709/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-04 19:45:05"
+	},
+	{
+		"charts": [],
+		"comment": "逻辑不通，祭祖那段的动作戏还可以",
+		"create_time": "2026-06-04 17:56:58",
+		"id": 4858146632,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 逻辑不通，祭祖那段的动作戏还可以 https://www.douban.com/doubanapp/dispatch/movie/38433149 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/38433149/interest/4858146632",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "吴樾"
+				},
+				{
+					"name": "谭凯"
+				},
+				{
+					"name": "包贝尔"
+				},
+				{
+					"name": "修睿"
+				},
+				{
+					"name": "王李丹鈮"
+				},
+				{
+					"name": "梁颂晴"
+				},
+				{
+					"name": "雷牧"
+				},
+				{
+					"name": "好奇"
+				},
+				{
+					"name": "沐岚"
+				},
+				{
+					"name": "王蕴凡"
+				},
+				{
+					"name": "郭桐溪"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 剧情 动作 犯罪 / 霍穗强 / 吴樾 谭凯",
+			"color_scheme": {
+				"_base_color": [
+					0.5740740740740741,
+					0.3673469387755102,
+					0.19215686274509805
+				],
+				"_avg_color": [
+					0.5701754385964911,
+					0.2183908045977012,
+					0.3411764705882353
+				],
+				"primary_color_light": "486072",
+				"primary_color_dark": "30404c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/38433149.jpg",
+			"directors": [
+				{
+					"name": "霍穗强"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "38433149",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2932232320.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2932232320.jpg"
+			},
+			"pubdate": [
+				"2026-05-08(中国大陆网络)"
+			],
+			"rating": {
+				"count": 4316,
+				"max": 10,
+				"star_count": 2.5,
+				"value": 4.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/38433149",
+			"subtype": "movie",
+			"title": "伪钞重案",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/38433149",
+			"url": "https://movie.douban.com/subject/38433149/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-04 17:56:58"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-04 16:07:06",
 		"id": 4858087087,
 		"is_editable": false,
