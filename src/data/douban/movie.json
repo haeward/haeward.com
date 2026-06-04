@@ -2,6 +2,143 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-04 16:07:06",
+		"id": 4858087087,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/37427493 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37427493/interest/4858087087",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张伟"
+				},
+				{
+					"name": "张秉君"
+				},
+				{
+					"name": "谭笑"
+				},
+				{
+					"name": "王兵兵"
+				},
+				{
+					"name": "聂吉轩"
+				},
+				{
+					"name": "周子瑜"
+				},
+				{
+					"name": "潘耀东"
+				},
+				{
+					"name": "贺敬仁"
+				},
+				{
+					"name": "贾晨露"
+				},
+				{
+					"name": "张茗"
+				},
+				{
+					"name": "王思雨"
+				},
+				{
+					"name": "崔恩梓"
+				},
+				{
+					"name": "李婉瑶"
+				},
+				{
+					"name": "刘思奇"
+				},
+				{
+					"name": "李芝恩"
+				},
+				{
+					"name": "梁晨"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 喜剧 动画 奇幻 / 林汇达 / 张伟 张秉君",
+			"color_scheme": {
+				"_base_color": [
+					0.6666666666666666,
+					0.016042780748663044,
+					0.7333333333333333
+				],
+				"_avg_color": [
+					0.11666666666666664,
+					0.1515151515151516,
+					0.5176470588235295
+				],
+				"primary_color_light": "a3a3a5",
+				"primary_color_dark": "7d7d7f",
+				"secondary_color": "f4f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37427493.jpg",
+			"directors": [
+				{
+					"name": "林汇达"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动画",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "37427493",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2930029531.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2930029531.jpg"
+			},
+			"pubdate": [
+				"2026-02-17(中国大陆)"
+			],
+			"rating": {
+				"count": 30753,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 6.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37427493",
+			"subtype": "movie",
+			"title": "熊出没·年年有熊",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/37427493",
+			"url": "https://movie.douban.com/subject/37427493/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-04 16:07:06"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-05-29 00:44:34",
 		"id": 4852817686,
 		"is_editable": false,
