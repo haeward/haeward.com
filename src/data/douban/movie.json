@@ -2,6 +2,218 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-06 00:16:58",
+		"id": 4859093140,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/35364691 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35364691/interest/4859093140",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "陈柏霖"
+				},
+				{
+					"name": "张榕容"
+				},
+				{
+					"name": "王净"
+				},
+				{
+					"name": "姚以缇"
+				},
+				{
+					"name": "百白"
+				},
+				{
+					"name": "瘦瘦"
+				},
+				{
+					"name": "罗芽里"
+				},
+				{
+					"name": "葛凡"
+				},
+				{
+					"name": "那维勋"
+				},
+				{
+					"name": "叶静涵"
+				},
+				{
+					"name": "赖雨霏"
+				},
+				{
+					"name": "黄迪扬"
+				},
+				{
+					"name": "林鹤轩"
+				},
+				{
+					"name": "龙龙"
+				},
+				{
+					"name": "昶玮"
+				},
+				{
+					"name": "尹宣方"
+				},
+				{
+					"name": "张承贤"
+				},
+				{
+					"name": "赖玟君"
+				},
+				{
+					"name": "黄豪平"
+				},
+				{
+					"name": "吴志庆"
+				},
+				{
+					"name": "杨达敬"
+				},
+				{
+					"name": "洪藜恩"
+				},
+				{
+					"name": "罗香菱"
+				},
+				{
+					"name": "曹瑜"
+				},
+				{
+					"name": "李进中"
+				},
+				{
+					"name": "陈葳"
+				},
+				{
+					"name": "蔡邵桓"
+				},
+				{
+					"name": "苏耀庭"
+				},
+				{
+					"name": "舒伟杰"
+				},
+				{
+					"name": "贺珑"
+				},
+				{
+					"name": "董芷涵"
+				},
+				{
+					"name": "云靖云"
+				},
+				{
+					"name": "刘冠宏"
+				},
+				{
+					"name": "陈怡桦"
+				},
+				{
+					"name": "阳靓"
+				},
+				{
+					"name": "竺定谊"
+				},
+				{
+					"name": "林宴慈"
+				},
+				{
+					"name": "谢章颖"
+				},
+				{
+					"name": "张雅玲"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2024 / 中国台湾 / 喜剧 恐怖 / 徐汉强 / 陈柏霖 张榕容",
+			"color_scheme": {
+				"_base_color": [
+					0.0056689342403628,
+					0.6901408450704225,
+					0.8352941176470589
+				],
+				"_avg_color": [
+					0.9912280701754386,
+					0.6627906976744187,
+					0.33725490196078434
+				],
+				"primary_color_light": "722623",
+				"primary_color_dark": "4c1917",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35364691.jpg",
+			"directors": [
+				{
+					"name": "徐汉强"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"恐怖"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 4,
+					"title": "华语恐怖片榜",
+					"uri": "douban://douban.com/subject_collection/EC54OE5HA?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "35364691",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2917676972.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2917676972.jpg"
+			},
+			"pubdate": [
+				"2025-02-22(中国大陆)"
+			],
+			"rating": {
+				"count": 176284,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35364691",
+			"subtype": "movie",
+			"title": "诡才之道",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35364691",
+			"url": "https://movie.douban.com/subject/35364691/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2024"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-06 00:16:58"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-04 19:45:05",
 		"id": 4858202480,
 		"is_editable": false,
