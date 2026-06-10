@@ -2,6 +2,133 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-10 21:32:21",
+		"id": 4860999842,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/25899362 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/25899362/interest/4860999842",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "邓超"
+				},
+				{
+					"name": "王祖蓝"
+				},
+				{
+					"name": "王宝强"
+				},
+				{
+					"name": "陈赫"
+				},
+				{
+					"name": "郑恺"
+				},
+				{
+					"name": "杨颖"
+				},
+				{
+					"name": "李晨"
+				},
+				{
+					"name": "马苏"
+				},
+				{
+					"name": "窦骁"
+				},
+				{
+					"name": "金钟国"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2014 / 中国大陆 / 真人秀 / 陆皓 岑俊义 / 邓超 王祖蓝",
+			"color_scheme": {
+				"_base_color": [
+					0.08847736625514406,
+					0.3681818181818183,
+					0.8627450980392157
+				],
+				"_avg_color": [
+					0.05392156862745099,
+					0.37569060773480667,
+					0.7098039215686275
+				],
+				"primary_color_light": "a58968",
+				"primary_color_dark": "7f6950",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/25899362.jpg",
+			"directors": [
+				{
+					"name": "陆皓"
+				},
+				{
+					"name": "岑俊义"
+				}
+			],
+			"genres": [
+				"真人秀"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "show",
+					"rank": 4,
+					"title": "2014热门大陆综艺",
+					"uri": "douban://douban.com/subject_collection/2014_show_17?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "25899362",
+			"is_released": true,
+			"is_show": true,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2216355516.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2216355516.jpg"
+			},
+			"pubdate": [
+				"2014-10-10(中国大陆)"
+			],
+			"rating": {
+				"count": 73956,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/25899362",
+			"subtype": "tv",
+			"title": "奔跑吧兄弟 第一季",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/25899362",
+			"url": "https://movie.douban.com/subject/25899362/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2014"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-10 21:32:21"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-06 00:16:58",
 		"id": 4859093140,
 		"is_editable": false,
