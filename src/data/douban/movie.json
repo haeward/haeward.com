@@ -2,6 +2,112 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-18 04:21:40",
+		"id": 4867173966,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/37071123 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37071123/interest/4867173966",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "金武烈"
+				},
+				{
+					"name": "李星民"
+				},
+				{
+					"name": "秦基周"
+				},
+				{
+					"name": "表志勋"
+				},
+				{
+					"name": "贺营"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 韩国 / 剧情 动作 / 洪忠灿 / 金武烈 李星民",
+			"color_scheme": {
+				"_base_color": [
+					0.16666666666666666,
+					0.029268292682926862,
+					0.803921568627451
+				],
+				"_avg_color": [
+					0.6296296296296298,
+					0.0978260869565217,
+					0.3607843137254902
+				],
+				"primary_color_light": "72726f",
+				"primary_color_dark": "4c4c4a",
+				"secondary_color": "f9f9f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37071123.jpg",
+			"directors": [
+				{
+					"name": "洪忠灿"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 1,
+					"title": "一周全球口碑剧集榜",
+					"uri": "douban://douban.com/subject_collection/tv_global_best_weekly?type=rank&category=movie&rank_type=weekly"
+				}
+			],
+			"id": "37071123",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2933103931.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2933103931.jpg"
+			},
+			"pubdate": [
+				"2026-06-05(韩国)"
+			],
+			"rating": {
+				"count": 77724,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37071123",
+			"subtype": "tv",
+			"title": "铁拳教育",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37071123",
+			"url": "https://movie.douban.com/subject/37071123/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-18 04:21:40"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-12 00:08:17",
 		"id": 4863854625,
 		"is_editable": false,
