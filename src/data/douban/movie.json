@@ -2,6 +2,136 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-19 17:07:12",
+		"id": 4860998380,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/26387728 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26387728/interest/4860998380",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "黄渤"
+				},
+				{
+					"name": "孙红雷"
+				},
+				{
+					"name": "黄磊"
+				},
+				{
+					"name": "罗志祥"
+				},
+				{
+					"name": "张艺兴"
+				},
+				{
+					"name": "王迅"
+				},
+				{
+					"name": "陈乔恩"
+				},
+				{
+					"name": "郭涛"
+				},
+				{
+					"name": "周冬雨"
+				},
+				{
+					"name": "陈柏霖"
+				},
+				{
+					"name": "徐峥"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2015 / 中国大陆 / 真人秀 / 任静 严敏 / 黄渤 孙红雷",
+			"color_scheme": {
+				"_base_color": [
+					0.04761904761904765,
+					0.09767441860465122,
+					0.8431372549019608
+				],
+				"_avg_color": [
+					0.9374999999999999,
+					0.0808080808080808,
+					0.38823529411764707
+				],
+				"primary_color_light": "726a67",
+				"primary_color_dark": "4c4745",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26387728.jpg",
+			"directors": [
+				{
+					"name": "任静"
+				},
+				{
+					"name": "严敏"
+				}
+			],
+			"genres": [
+				"真人秀"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "show",
+					"rank": 1,
+					"title": "2015热门大陆综艺",
+					"uri": "douban://douban.com/subject_collection/2015_show_18?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "26387728",
+			"is_released": true,
+			"is_show": true,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2603241359.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2603241359.jpg"
+			},
+			"pubdate": [
+				"2015-06-14(中国大陆)"
+			],
+			"rating": {
+				"count": 132928,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 9.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26387728",
+			"subtype": "tv",
+			"title": "极限挑战 第一季",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/26387728",
+			"url": "https://movie.douban.com/subject/26387728/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2015"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-19 17:07:12"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-18 04:21:40",
 		"id": 4867173966,
 		"is_editable": false,
