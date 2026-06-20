@@ -1,6 +1,201 @@
 [
 	{
 		"charts": [],
+		"comment": "剧情稀碎，演技和台词一言难尽。。看过原著，很难代入其中。镖人应该是武侠片，而不是纯粹的武打动作，况且，就算是动作片，也要讲究一定的剧情逻辑。",
+		"create_time": "2026-06-20 10:45:20",
+		"id": 4869993713,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ 剧情稀碎，演技和台词一言难尽。。看过原著，很难代入其中。镖人应该是武侠片，而不是纯粹的武打动作，况且，就算是动作片，也要讲究一定的剧情逻辑。 https://www.douban.com/doubanapp/dispatch/movie/36474027 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36474027/interest/4869993713",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "吴京"
+				},
+				{
+					"name": "谢霆锋"
+				},
+				{
+					"name": "于适"
+				},
+				{
+					"name": "陈丽君"
+				},
+				{
+					"name": "孙艺洲"
+				},
+				{
+					"name": "此沙"
+				},
+				{
+					"name": "李云霄"
+				},
+				{
+					"name": "梁家辉"
+				},
+				{
+					"name": "张晋"
+				},
+				{
+					"name": "惠英红"
+				},
+				{
+					"name": "张译"
+				},
+				{
+					"name": "李连杰"
+				},
+				{
+					"name": "刘耀文"
+				},
+				{
+					"name": "熊瑾怡"
+				},
+				{
+					"name": "莒谦朗"
+				},
+				{
+					"name": "白那日苏"
+				},
+				{
+					"name": "梁壁荧"
+				},
+				{
+					"name": "文俊辉"
+				},
+				{
+					"name": "董思成"
+				},
+				{
+					"name": "林秋楠"
+				},
+				{
+					"name": "景瓷"
+				},
+				{
+					"name": "张艺泷"
+				},
+				{
+					"name": "李嘉辉"
+				},
+				{
+					"name": "寇占文"
+				},
+				{
+					"name": "代乐乐"
+				},
+				{
+					"name": "释彦能"
+				},
+				{
+					"name": "徐向东"
+				},
+				{
+					"name": "淳于珊珊"
+				},
+				{
+					"name": "孟鹤堂"
+				},
+				{
+					"name": "于荣光"
+				},
+				{
+					"name": "陈少熙"
+				},
+				{
+					"name": "赵箭"
+				},
+				{
+					"name": "袁和平"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 动作 武侠 古装 / 袁和平 / 吴京 谢霆锋",
+			"color_scheme": {
+				"_base_color": [
+					0.06349206349206349,
+					0.6774193548387096,
+					0.48627450980392156
+				],
+				"_avg_color": [
+					0.07317073170731707,
+					0.5503355704697986,
+					0.5843137254901961
+				],
+				"primary_color_light": "a56035",
+				"primary_color_dark": "7f4a29",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36474027.jpg",
+			"directors": [
+				{
+					"name": "袁和平"
+				}
+			],
+			"genres": [
+				"动作",
+				"武侠",
+				"古装"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "中国大陆武侠片榜",
+					"uri": "douban://douban.com/subject_collection/EC6YOLGQQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "36474027",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2929760596.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2929760596.jpg"
+			},
+			"pubdate": [
+				"2026-02-17(中国大陆)"
+			],
+			"rating": {
+				"count": 396255,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36474027",
+			"subtype": "movie",
+			"title": "镖人：风起大漠",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36474027",
+			"url": "https://movie.douban.com/subject/36474027/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-20 10:45:20"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-06-19 17:07:12",
 		"id": 4860998380,
