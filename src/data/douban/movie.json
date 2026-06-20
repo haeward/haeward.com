@@ -1,6 +1,143 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-06-21 00:29:18",
+		"id": 4870679744,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/35074609 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35074609/interest/4870679744",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "梁朝伟"
+				},
+				{
+					"name": "刘德华"
+				},
+				{
+					"name": "蔡卓妍"
+				},
+				{
+					"name": "任达华"
+				},
+				{
+					"name": "方中信"
+				},
+				{
+					"name": "陈家乐"
+				},
+				{
+					"name": "白只"
+				},
+				{
+					"name": "姜皓文"
+				},
+				{
+					"name": "太保"
+				},
+				{
+					"name": "钱嘉乐"
+				},
+				{
+					"name": "袁咏仪"
+				},
+				{
+					"name": "周家怡"
+				},
+				{
+					"name": "岑珈其"
+				},
+				{
+					"name": "李靖筠"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2023 / 中国香港 中国大陆 / 剧情 犯罪 / 庄文强 / 梁朝伟 刘德华",
+			"color_scheme": {
+				"_base_color": [
+					0.0856164383561644,
+					0.6431718061674009,
+					0.8901960784313725
+				],
+				"_avg_color": [
+					0.06928838951310862,
+					0.7007874015748031,
+					0.4980392156862745
+				],
+				"primary_color_light": "724e28",
+				"primary_color_dark": "4c341b",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35074609.jpg",
+			"directors": [
+				{
+					"name": "庄文强"
+				}
+			],
+			"genres": [
+				"剧情",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 11,
+					"title": "近期热门犯罪片榜",
+					"uri": "douban://douban.com/subject_collection/ECLAN6LHQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "35074609",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2901830629.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2901830629.jpg"
+			},
+			"pubdate": [
+				"2023-12-30(中国大陆)"
+			],
+			"rating": {
+				"count": 173900,
+				"max": 10,
+				"star_count": 3,
+				"value": 6.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35074609",
+			"subtype": "movie",
+			"title": "金手指",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35074609",
+			"url": "https://movie.douban.com/subject/35074609/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2023"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-21 00:29:18"
+	},
+	{
+		"charts": [],
 		"comment": "剧情稀碎，演技和台词一言难尽。。看过原著，很难代入其中。镖人应该是武侠片，而不是纯粹的武打动作，况且，就算是动作片，也要讲究一定的剧情逻辑。",
 		"create_time": "2026-06-20 10:45:20",
 		"id": 4869993713,
