@@ -2,6 +2,415 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-21 14:34:32",
+		"id": 4871039905,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/1329562 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1329562/interest/4871039905",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "周杰伦"
+				},
+				{
+					"name": "陈冠希"
+				},
+				{
+					"name": "黄秋生"
+				},
+				{
+					"name": "铃木杏"
+				},
+				{
+					"name": "余文乐"
+				},
+				{
+					"name": "钟镇涛"
+				},
+				{
+					"name": "陈小春"
+				},
+				{
+					"name": "津村和幸"
+				},
+				{
+					"name": "阿部力"
+				},
+				{
+					"name": "田中千绘"
+				},
+				{
+					"name": "刘畊宏"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2005 / 中国香港 日本 / 剧情 动作 / 刘伟强 麦兆辉 / 周杰伦 陈冠希",
+			"color_scheme": {
+				"_base_color": [
+					0.11458333333333333,
+					0.507936507936508,
+					0.7411764705882353
+				],
+				"_avg_color": [
+					0.12222222222222225,
+					0.4347826086956521,
+					0.5411764705882353
+				],
+				"primary_color_light": "a58b51",
+				"primary_color_dark": "7f6b3e",
+				"secondary_color": "f9f8f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1329562.jpg",
+			"directors": [
+				{
+					"name": "刘伟强"
+				},
+				{
+					"name": "麦兆辉"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 10,
+					"title": "华语动作片榜",
+					"uri": "douban://douban.com/subject_collection/EC2YO2M2A?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1329562",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2171302998.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171302998.jpg"
+			},
+			"pubdate": [
+				"2005-06-23(中国大陆)"
+			],
+			"rating": {
+				"count": 448118,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1329562",
+			"subtype": "movie",
+			"title": "头文字D",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1329562",
+			"url": "https://movie.douban.com/subject/1329562/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2005"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-21 14:34:32"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-06-21 14:33:53",
+		"id": 4871039376,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/1306664 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1306664/interest/4871039376",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "李英爱"
+				},
+				{
+					"name": "李炳宪"
+				},
+				{
+					"name": "宋康昊"
+				},
+				{
+					"name": "申河均"
+				},
+				{
+					"name": "金太祐"
+				},
+				{
+					"name": "赫伯特·乌利齐"
+				},
+				{
+					"name": "克里斯托夫·霍夫里希特"
+				},
+				{
+					"name": "李汉伟"
+				},
+				{
+					"name": "奇周峯"
+				},
+				{
+					"name": "陈泰贤"
+				},
+				{
+					"name": "李代延"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2000 / 韩国 / 剧情 / 朴赞郁 / 李英爱 李炳宪",
+			"color_scheme": {
+				"_base_color": [
+					0.0625,
+					0.8,
+					0.19607843137254902
+				],
+				"_avg_color": [
+					0.06790123456790122,
+					0.6,
+					0.35294117647058826
+				],
+				"primary_color_light": "723916",
+				"primary_color_dark": "4c260f",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1306664.jpg",
+			"directors": [
+				{
+					"name": "朴赞郁"
+				}
+			],
+			"genres": [
+				"剧情"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "1306664",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p1603485241.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1603485241.jpg"
+			},
+			"pubdate": [
+				"2000-09-09(韩国)"
+			],
+			"rating": {
+				"count": 179205,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1306664",
+			"subtype": "movie",
+			"title": "共同警备区",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1306664",
+			"url": "https://movie.douban.com/subject/1306664/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2000"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-21 14:33:53"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-06-21 14:05:10",
+		"id": 4871017184,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/36176155 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36176155/interest/4871017184",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "莱昂纳多·迪卡普里奥"
+				},
+				{
+					"name": "西恩·潘"
+				},
+				{
+					"name": "本尼西奥·德尔·托罗"
+				},
+				{
+					"name": "蔡斯·英菲尼迪"
+				},
+				{
+					"name": "缇雅娜·泰勒"
+				},
+				{
+					"name": "雷吉娜·赫尔"
+				},
+				{
+					"name": "伍德·哈里斯"
+				},
+				{
+					"name": "阿拉娜·哈伊姆"
+				},
+				{
+					"name": " 保罗·格里姆斯塔德"
+				},
+				{
+					"name": "莎娜·麦克黑尔"
+				},
+				{
+					"name": "斯塔尔勒塔·杜波利斯"
+				},
+				{
+					"name": "埃里克·施维克"
+				},
+				{
+					"name": "托尼·戈德温"
+				},
+				{
+					"name": "詹姆斯·唐尼"
+				},
+				{
+					"name": "约翰·胡热那克"
+				},
+				{
+					"name": "凯文·泰德"
+				},
+				{
+					"name": "D·W·莫菲特"
+				},
+				{
+					"name": "丹·查里顿"
+				},
+				{
+					"name": "艾普尔·格雷斯"
+				},
+				{
+					"name": "珀尔·米妮·安德森"
+				},
+				{
+					"name": "吉娜·马隆"
+				},
+				{
+					"name": "乔恩·比弗斯"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 美国 / 剧情 动作 惊悚 犯罪 / 保罗·托马斯·安德森 / 莱昂纳多·迪卡普里奥 西恩·潘",
+			"color_scheme": {
+				"_base_color": [
+					0.07051282051282047,
+					0.11206896551724135,
+					0.9098039215686274
+				],
+				"_avg_color": [
+					0.05434782608695652,
+					0.2486486486486487,
+					0.7254901960784313
+				],
+				"primary_color_light": "a59b93",
+				"primary_color_dark": "7f7771",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36176155.jpg",
+			"directors": [
+				{
+					"name": "保罗·托马斯·安德森"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"惊悚"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 5,
+					"title": "豆瓣2025评分最高外语电影",
+					"uri": "douban://douban.com/subject_collection/ECB5AE5EQ?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "36176155",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2925146362.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2925146362.jpg"
+			},
+			"pubdate": [
+				"2025-10-17(中国大陆)"
+			],
+			"rating": {
+				"count": 255041,
+				"max": 10,
+				"star_count": 4,
+				"value": 8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36176155",
+			"subtype": "movie",
+			"title": "一战再战",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36176155",
+			"url": "https://movie.douban.com/subject/36176155/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-21 14:05:10"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-21 10:33:27",
 		"id": 4870874911,
 		"is_editable": false,
