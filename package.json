@@ -56,7 +56,7 @@
     },
     "pnpm": {
         "overrides": {
-            "fast-xml-parser": "5.8.0",
+            "fast-xml-parser": "5.9.3",
             "lodash": "4.18.1"
         },
         "onlyBuiltDependencies": [
