@@ -2,6 +2,161 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-06-24 23:09:38",
+		"id": 4860998654,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/26615572 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26615572/interest/4860998654",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "黄渤"
+				},
+				{
+					"name": "孙红雷"
+				},
+				{
+					"name": "黄磊"
+				},
+				{
+					"name": "罗志祥"
+				},
+				{
+					"name": "张艺兴"
+				},
+				{
+					"name": "王迅"
+				},
+				{
+					"name": "薛之谦"
+				},
+				{
+					"name": "岳云鹏"
+				},
+				{
+					"name": "宋小宝"
+				},
+				{
+					"name": "林志玲"
+				},
+				{
+					"name": "王自健"
+				},
+				{
+					"name": "谢娜"
+				},
+				{
+					"name": "蒋劲夫"
+				},
+				{
+					"name": "王大陆"
+				},
+				{
+					"name": "庾澄庆"
+				},
+				{
+					"name": "林俊杰"
+				},
+				{
+					"name": "蔡依林"
+				},
+				{
+					"name": "杨魏玲花"
+				},
+				{
+					"name": "曾毅"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2016 / 中国大陆 / 冒险 真人秀 / 任静 严敏 / 黄渤 孙红雷",
+			"color_scheme": {
+				"_base_color": [
+					0.5166666666666667,
+					0.3030303030303031,
+					0.12941176470588237
+				],
+				"_avg_color": [
+					0.5,
+					0.0508474576271187,
+					0.23137254901960785
+				],
+				"primary_color_light": "4f6f72",
+				"primary_color_dark": "354a4c",
+				"secondary_color": "f4f9f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26615572.jpg",
+			"directors": [
+				{
+					"name": "任静"
+				},
+				{
+					"name": "严敏"
+				}
+			],
+			"genres": [
+				"冒险",
+				"真人秀"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "show",
+					"rank": 1,
+					"title": "2016最受关注大陆电视综艺",
+					"uri": "douban://douban.com/subject_collection/2016_show_485?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "26615572",
+			"is_released": true,
+			"is_show": true,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2329745796.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2329745796.jpg"
+			},
+			"pubdate": [
+				"2016-04-17(中国大陆)"
+			],
+			"rating": {
+				"count": 119287,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 9.4
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26615572",
+			"subtype": "tv",
+			"title": "极限挑战 第二季",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/26615572",
+			"url": "https://movie.douban.com/subject/26615572/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2016"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-24 23:09:38"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-23 09:46:30",
 		"id": 4872493719,
 		"is_editable": false,
