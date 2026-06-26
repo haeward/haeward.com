@@ -1,6 +1,118 @@
 [
 	{
 		"charts": [],
+		"comment": "剧本更明显了，游戏环节一般。喜欢黄渤和王珞丹",
+		"create_time": "2026-06-27 00:07:19",
+		"id": 4860999053,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ 剧本更明显了，游戏环节一般。喜欢黄渤和王珞丹 https://www.douban.com/doubanapp/dispatch/movie/26830087 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26830087/interest/4860999053",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "黄渤"
+				},
+				{
+					"name": "孙红雷"
+				},
+				{
+					"name": "黄磊"
+				},
+				{
+					"name": "罗志祥"
+				},
+				{
+					"name": "王迅"
+				},
+				{
+					"name": "张艺兴"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2017 / 中国大陆 / 真人秀 / 严敏 / 黄渤 孙红雷",
+			"color_scheme": {
+				"_base_color": [
+					0.6944444444444443,
+					0.11764705882352941,
+					0.2
+				],
+				"_avg_color": [
+					0.9892086330935252,
+					0.8081395348837209,
+					0.6745098039215687
+				],
+				"primary_color_light": "9592a5",
+				"primary_color_dark": "72707f",
+				"secondary_color": "f5f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26830087.jpg",
+			"directors": [
+				{
+					"name": "严敏"
+				}
+			],
+			"genres": [
+				"真人秀"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "show",
+					"rank": 2,
+					"title": "2017最受关注大陆电视综艺",
+					"uri": "douban://douban.com/subject_collection/2017_show_domestic_tv?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "26830087",
+			"is_released": true,
+			"is_show": true,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2481248710.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2481248710.jpg"
+			},
+			"pubdate": [
+				"2017-07-09(中国大陆)"
+			],
+			"rating": {
+				"count": 95416,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26830087",
+			"subtype": "tv",
+			"title": "极限挑战 第三季",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/26830087",
+			"url": "https://movie.douban.com/subject/26830087/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2017"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-27 00:07:19"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-06-24 23:09:38",
 		"id": 4860998654,
