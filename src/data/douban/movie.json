@@ -1,6 +1,131 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-06-30 23:34:17",
+		"id": 4878124774,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/37067150 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37067150/interest/4878124774",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "爱德华多·莱奥"
+				},
+				{
+					"name": "皮拉尔·福格莉亚蒂"
+				},
+				{
+					"name": "埃马努艾拉·法内利"
+				},
+				{
+					"name": "玛丽亚·基娅拉·詹内塔"
+				},
+				{
+					"name": "克劳迪亚·潘多尔菲"
+				},
+				{
+					"name": "维多利亚·普契尼"
+				},
+				{
+					"name": "马可·贾利尼"
+				},
+				{
+					"name": "毛里齐奥·拉斯特里科"
+				},
+				{
+					"name": "罗科·帕帕莱奥"
+				},
+				{
+					"name": "克劳迪奥·桑塔玛利亚"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 意大利 / 喜剧 爱情 / 保罗·杰诺维塞 / 爱德华多·莱奥 皮拉尔·福格莉亚蒂",
+			"color_scheme": {
+				"_base_color": [
+					0.07471264367816093,
+					0.58,
+					0.19607843137254902
+				],
+				"_avg_color": [
+					0.07801418439716312,
+					0.573170731707317,
+					0.3215686274509804
+				],
+				"primary_color_light": "724e30",
+				"primary_color_dark": "4c3420",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37067150.jpg",
+			"directors": [
+				{
+					"name": "保罗·杰诺维塞"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"爱情"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "意大利爱情片榜",
+					"uri": "douban://douban.com/subject_collection/EC3UOSWUY?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "37067150",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2924636647.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2924636647.jpg"
+			},
+			"pubdate": [
+				"2025-09-05(中国大陆)"
+			],
+			"rating": {
+				"count": 75640,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37067150",
+			"subtype": "movie",
+			"title": "关于约会的一切",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/37067150",
+			"url": "https://movie.douban.com/subject/37067150/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-06-30 23:34:17"
+	},
+	{
+		"charts": [],
 		"comment": "影片立意是好的，但故事逻辑稀碎，主角光环太严重。另外，赵丽颖的表演也比较木，前期根本看不出是找孩子的",
 		"create_time": "2026-06-30 16:42:02",
 		"id": 4877820056,
