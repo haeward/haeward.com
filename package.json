@@ -41,7 +41,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.6",
-        "@biomejs/biome": "2.4.16",
+        "@biomejs/biome": "2.5.2",
         "@secretlint/secretlint-rule-preset-recommend": "^13.0.0",
         "@types/mdast": "^4.0.4",
         "@types/unist": "^3.0.3",
