@@ -2,6 +2,111 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-01 22:35:49",
+		"id": 4878168456,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ https://www.douban.com/doubanapp/dispatch/movie/36691850 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36691850/interest/4878168456",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "朱智勋"
+				},
+				{
+					"name": "河智苑"
+				},
+				{
+					"name": "林珍娜"
+				},
+				{
+					"name": "吴正世"
+				},
+				{
+					"name": "车珠英"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 韩国 / 剧情 / 李知原 / 朱智勋 河智苑",
+			"color_scheme": {
+				"_base_color": [
+					0.9583333333333334,
+					0.21052631578947367,
+					0.07450980392156863
+				],
+				"_avg_color": [
+					0.025641025641025644,
+					0.24074074074074067,
+					0.21176470588235294
+				],
+				"primary_color_light": "725a60",
+				"primary_color_dark": "4c3c40",
+				"secondary_color": "f9f4f6",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36691850.jpg",
+			"directors": [
+				{
+					"name": "李知原"
+				}
+			],
+			"genres": [
+				"剧情"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 6,
+					"title": "近期热门韩剧榜",
+					"uri": "douban://douban.com/subject_collection/ECBE5CBEI?type=rank&category=movie&rank_type=tv_genre"
+				}
+			],
+			"id": "36691850",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2930426640.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2930426640.jpg"
+			},
+			"pubdate": [
+				"2026-03-16(韩国)"
+			],
+			"rating": {
+				"count": 14283,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36691850",
+			"subtype": "tv",
+			"title": "权欲之巅",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/36691850",
+			"url": "https://movie.douban.com/subject/36691850/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-01 22:35:49"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-06-30 23:34:17",
 		"id": 4878124774,
 		"is_editable": false,
