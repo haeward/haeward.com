@@ -2,6 +2,156 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-02 09:17:41",
+		"id": 4879035970,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/34960078 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/34960078/interest/4879035970",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "克里斯·海姆斯沃斯"
+				},
+				{
+					"name": "布莱恩·泰里·亨利"
+				},
+				{
+					"name": "斯嘉丽·约翰逊"
+				},
+				{
+					"name": "科甘-迈克尔·凯"
+				},
+				{
+					"name": "乔恩·哈姆"
+				},
+				{
+					"name": "史蒂夫·布西密"
+				},
+				{
+					"name": "劳伦斯·菲什伯恩"
+				},
+				{
+					"name": "凡妮莎·利古力"
+				},
+				{
+					"name": "乔恩·贝利"
+				},
+				{
+					"name": "杰森·科诺皮索斯"
+				},
+				{
+					"name": "埃文·迈克尔·李"
+				},
+				{
+					"name": "詹姆斯·瑞马尔"
+				},
+				{
+					"name": "小伊萨克·C.辛格尔顿"
+				},
+				{
+					"name": "史蒂夫·布卢姆"
+				},
+				{
+					"name": "钟金妮"
+				},
+				{
+					"name": "乔什·库雷"
+				},
+				{
+					"name": "Dillon Bryan"
+				},
+				{
+					"name": "Misty Lee"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2024 / 美国 / 动作 科幻 动画 冒险 / 乔什·库雷 / 克里斯·海姆斯沃斯 布莱恩·泰里·亨利",
+			"color_scheme": {
+				"_base_color": [
+					0.7555555555555555,
+					0.4545454545454546,
+					0.25882352941176473
+				],
+				"_avg_color": [
+					0.8245614035087719,
+					0.16964285714285718,
+					0.4392156862745098
+				],
+				"primary_color_light": "5a3e72",
+				"primary_color_dark": "3c294c",
+				"secondary_color": "f7f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/34960078.jpg",
+			"directors": [
+				{
+					"name": "乔什·库雷"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 4,
+					"title": "近期热门动画片榜",
+					"uri": "douban://douban.com/subject_collection/EC3UOBDQY?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "34960078",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2912407834.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2912407834.jpg"
+			},
+			"pubdate": [
+				"2024-09-27(中国大陆)"
+			],
+			"rating": {
+				"count": 94584,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/34960078",
+			"subtype": "movie",
+			"title": "变形金刚：起源",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/34960078",
+			"url": "https://movie.douban.com/subject/34960078/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2024"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-02 09:17:41"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-01 22:35:49",
 		"id": 4878168456,
 		"is_editable": false,
