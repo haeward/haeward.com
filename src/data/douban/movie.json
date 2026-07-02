@@ -2,6 +2,150 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-02 13:47:27",
+		"id": 4879168186,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/5045678 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/5045678/interest/4879168186",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "季冠霖"
+				},
+				{
+					"name": "苏尚卿"
+				},
+				{
+					"name": "许魏洲"
+				},
+				{
+					"name": "金士杰"
+				},
+				{
+					"name": "杨婷"
+				},
+				{
+					"name": "潘淑兰"
+				},
+				{
+					"name": "九儿"
+				},
+				{
+					"name": "王德顺"
+				},
+				{
+					"name": "张媛媛"
+				},
+				{
+					"name": "薛立方"
+				},
+				{
+					"name": "姜广涛"
+				},
+				{
+					"name": "张杰"
+				},
+				{
+					"name": "马正阳"
+				},
+				{
+					"name": "宝木中阳"
+				},
+				{
+					"name": "刘校妤"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2016 / 中国大陆 / 剧情 动画 奇幻 / 梁旋 张春 / 季冠霖 苏尚卿",
+			"color_scheme": {
+				"_base_color": [
+					0.031558185404339245,
+					0.8125,
+					0.8156862745098039
+				],
+				"_avg_color": [
+					0.034444444444444444,
+					0.7692307692307692,
+					0.7647058823529411
+				],
+				"primary_color_light": "a5381f",
+				"primary_color_dark": "7f2b17",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/5045678.jpg",
+			"directors": [
+				{
+					"name": "梁旋"
+				},
+				{
+					"name": "张春"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动画",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "2016热门院线电影",
+					"uri": "douban://douban.com/subject_collection/2016_movie_452?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "5045678",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2932950007.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2932950007.jpg"
+			},
+			"pubdate": [
+				"2016-07-08(中国大陆)"
+			],
+			"rating": {
+				"count": 632233,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/5045678",
+			"subtype": "movie",
+			"title": "大鱼海棠",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/5045678",
+			"url": "https://movie.douban.com/subject/5045678/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2016"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-02 13:47:27"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-02 09:17:41",
 		"id": 4879035970,
 		"is_editable": false,
