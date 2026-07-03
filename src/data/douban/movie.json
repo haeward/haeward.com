@@ -1,6 +1,112 @@
 [
 	{
 		"charts": [],
+		"comment": "无脑堆特效。战力体系崩盘，前面神尊威压都可以压制这些试炼的天才，boss 战时已经可以和箫瑾瑜都打不过的魔尊战斗了，而主角修炼更是依靠情绪爆发和开挂，没有修行、参悟、磨练，重要节点爆发即可战力飙升。改编的剧情一味强调内斗，妖星临近，试炼却损失了大量天才和重要战力的神尊，丝毫体现不出人族危机的紧迫感。",
+		"create_time": "2026-07-03 19:35:30",
+		"id": 4879584762,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ 无脑堆特效。战力体系崩盘，前面神尊威压都可以压制这些试炼的天才，boss 战时已经可以和箫瑾瑜都打不过的魔尊战斗了，而主角修炼更是依靠情绪爆发和开挂，没有修行、参悟、磨练，重要节点爆发即可战力飙升。改编的剧情一… https://www.douban.com/doubanapp/dispatch/movie/36597131 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36597131/interest/4879584762",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张磊"
+				},
+				{
+					"name": "段艺璇"
+				},
+				{
+					"name": "马斑马 Banma Ma"
+				},
+				{
+					"name": "姜广涛"
+				},
+				{
+					"name": "孙睿扬"
+				},
+				{
+					"name": "王小月"
+				},
+				{
+					"name": "胡良伟"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2024 / 中国大陆 / 动作 动画 奇幻 / 张毅立 / 张磊 段艺璇",
+			"color_scheme": {
+				"_base_color": [
+					0.8589743589743589,
+					0.1805555555555555,
+					0.2823529411764706
+				],
+				"_avg_color": [
+					0.9600000000000001,
+					0.20833333333333331,
+					0.47058823529411764
+				],
+				"primary_color_light": "725e6f",
+				"primary_color_dark": "4c3e4a",
+				"secondary_color": "f9f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36597131.jpg",
+			"directors": [
+				{
+					"name": "张毅立"
+				}
+			],
+			"genres": [
+				"动作",
+				"动画",
+				"奇幻"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "36597131",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2922552553.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2922552553.jpg"
+			},
+			"pubdate": [
+				"2024-12-06(中国大陆)"
+			],
+			"rating": {
+				"count": 10542,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36597131",
+			"subtype": "tv",
+			"title": "沧元图2",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/36597131",
+			"url": "https://movie.douban.com/subject/36597131/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2024"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-03 19:35:30"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-07-02 23:56:53",
 		"id": 4879582459,
