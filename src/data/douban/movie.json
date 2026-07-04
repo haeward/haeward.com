@@ -1,6 +1,122 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-07-04 13:09:21",
+		"id": 4869998078,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/37441858 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37441858/interest/4869998078",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "佐藤拓也"
+				},
+				{
+					"name": "星希成奏"
+				},
+				{
+					"name": "行成桃姬"
+				},
+				{
+					"name": "丰口惠美"
+				},
+				{
+					"name": "安田陆矢"
+				},
+				{
+					"name": "日笠阳子"
+				},
+				{
+					"name": "高桥伸也"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 日本 / 剧情 爱情 动画 / 铃木理人 森葵 / 佐藤拓也 星希成奏",
+			"color_scheme": {
+				"_base_color": [
+					0.6666666666666666,
+					0.017857142857142794,
+					0.2196078431372549
+				],
+				"_avg_color": [
+					0.07142857142857147,
+					0.09333333333333338,
+					0.29411764705882354
+				],
+				"primary_color_light": "707072",
+				"primary_color_dark": "4b4b4c",
+				"secondary_color": "f4f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37441858.jpg",
+			"directors": [
+				{
+					"name": "铃木理人"
+				},
+				{
+					"name": "森葵"
+				}
+			],
+			"genres": [
+				"剧情",
+				"爱情",
+				"动画"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 7,
+					"title": "一周全球口碑剧集榜",
+					"uri": "douban://douban.com/subject_collection/tv_global_best_weekly?type=rank&category=movie&rank_type=weekly"
+				}
+			],
+			"id": "37441858",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2929038414.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2929038414.jpg"
+			},
+			"pubdate": [
+				"2026-06-03(日本网络)"
+			],
+			"rating": {
+				"count": 13847,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37441858",
+			"subtype": "tv",
+			"title": "躲在超市后门抽烟的两人",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37441858",
+			"url": "https://movie.douban.com/subject/37441858/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-04 13:09:21"
+	},
+	{
+		"charts": [],
 		"comment": "无脑堆特效。战力体系崩盘，前面神尊威压都可以压制这些试炼的天才，boss 战时已经可以和箫瑾瑜都打不过的魔尊战斗了，而主角修炼更是依靠情绪爆发和开挂，没有修行、参悟、磨练，重要节点爆发即可战力飙升。改编的剧情一味强调内斗，妖星临近，试炼却损失了大量天才和重要战力的神尊，丝毫体现不出人族危机的紧迫感。",
 		"create_time": "2026-07-03 19:35:30",
 		"id": 4879584762,
