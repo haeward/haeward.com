@@ -2,6 +2,140 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-08 00:37:11",
+		"id": 4883480424,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/30165311 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/30165311/interest/4883480424",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "山姆·洛克威尔"
+				},
+				{
+					"name": "马克·马龙"
+				},
+				{
+					"name": "奥卡菲娜"
+				},
+				{
+					"name": "克雷格·罗宾森"
+				},
+				{
+					"name": "安东尼·拉莫斯"
+				},
+				{
+					"name": "理查德·艾欧阿德"
+				},
+				{
+					"name": "莎姬·贝兹"
+				},
+				{
+					"name": "艾利克斯·布斯汀"
+				},
+				{
+					"name": "莉莉·辛格"
+				},
+				{
+					"name": "芭芭拉·古德森"
+				},
+				{
+					"name": "迪娜·莫罗"
+				},
+				{
+					"name": "迈克尔·高德尔"
+				},
+				{
+					"name": "凯莉·库尼"
+				},
+				{
+					"name": "沃尔特·道恩"
+				},
+				{
+					"name": "戴维·P·史密斯"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2022 / 美国 / 喜剧 动画 冒险 / 皮埃尔·佩里费尔 / 山姆·洛克威尔 马克·马龙",
+			"color_scheme": {
+				"_base_color": [
+					0.12765957446808515,
+					0.20346320346320348,
+					0.9058823529411765
+				],
+				"_avg_color": [
+					0.09999999999999994,
+					0.27322404371584696,
+					0.7176470588235294
+				],
+				"primary_color_light": "a59d84",
+				"primary_color_dark": "7f7965",
+				"secondary_color": "f9f8f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/30165311.jpg",
+			"directors": [
+				{
+					"name": "皮埃尔·佩里费尔"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动画",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "30165311",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2870318303.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2870318303.jpg"
+			},
+			"pubdate": [
+				"2022-04-29(中国大陆)"
+			],
+			"rating": {
+				"count": 251863,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.4
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/30165311",
+			"subtype": "movie",
+			"title": "坏蛋联盟",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/30165311",
+			"url": "https://movie.douban.com/subject/30165311/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2022"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-08 00:37:11"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-04 13:09:21",
 		"id": 4869998078,
 		"is_editable": false,
