@@ -1,6 +1,165 @@
 [
 	{
 		"charts": [],
+		"comment": "有趣",
+		"create_time": "2026-07-09 20:38:29",
+		"id": 4884604031,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ 有趣 https://www.douban.com/doubanapp/dispatch/movie/36829507 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36829507/interest/4884604031",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "山姆·洛克威尔"
+				},
+				{
+					"name": "马克·马龙"
+				},
+				{
+					"name": "奥卡菲娜"
+				},
+				{
+					"name": "克雷格·罗宾森"
+				},
+				{
+					"name": "安东尼·拉莫斯"
+				},
+				{
+					"name": "莎姬·贝兹"
+				},
+				{
+					"name": "丹妮尔·布鲁克斯"
+				},
+				{
+					"name": "娜塔莎·雷昂"
+				},
+				{
+					"name": "玛丽亚·巴卡洛娃"
+				},
+				{
+					"name": "艾利克斯·布斯汀"
+				},
+				{
+					"name": "理查德·艾欧阿德"
+				},
+				{
+					"name": "莉莉·辛格"
+				},
+				{
+					"name": "欧米德·吉亚李利"
+				},
+				{
+					"name": "科林·乔斯特"
+				},
+				{
+					"name": "杰米·卡米尔"
+				},
+				{
+					"name": "雨果·萨维诺维奇"
+				},
+				{
+					"name": "迈克尔·高德尔"
+				},
+				{
+					"name": "乔伊·纳波尔"
+				},
+				{
+					"name": "莫尼娅·阿亚齐"
+				},
+				{
+					"name": "杰伦·摩尔"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 美国 / 喜剧 动作 动画 悬疑 犯罪 冒险 / 皮埃尔·佩里费尔  J·P·桑斯 / 山姆·洛克威尔 马克·马龙",
+			"color_scheme": {
+				"_base_color": [
+					0.5579710144927535,
+					0.2254901960784314,
+					0.4
+				],
+				"_avg_color": [
+					0.10632183908045982,
+					0.29743589743589743,
+					0.7647058823529411
+				],
+				"primary_color_light": "8098a5",
+				"primary_color_dark": "62757f",
+				"secondary_color": "f4f8f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36829507.jpg",
+			"directors": [
+				{
+					"name": "皮埃尔·佩里费尔"
+				},
+				{
+					"name": " J·P·桑斯"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 9,
+					"title": "豆瓣2025评分最高外语电影",
+					"uri": "douban://douban.com/subject_collection/ECB5AE5EQ?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "36829507",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2923073504.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2923073504.jpg"
+			},
+			"pubdate": [
+				"2025-08-16(中国大陆)"
+			],
+			"rating": {
+				"count": 83707,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36829507",
+			"subtype": "movie",
+			"title": "坏蛋联盟2",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36829507",
+			"url": "https://movie.douban.com/subject/36829507/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-09 20:38:29"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-07-08 00:37:11",
 		"id": 4883480424,
