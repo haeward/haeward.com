@@ -1,6 +1,149 @@
 [
 	{
 		"charts": [],
+		"comment": "光污染，再加上这种剧情逻辑。。。",
+		"create_time": "2026-07-11 15:01:49",
+		"id": 4885857517,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ 光污染，再加上这种剧情逻辑。。。 https://www.douban.com/doubanapp/dispatch/movie/33447633 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/33447633/interest/4885857517",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "雷佳音"
+				},
+				{
+					"name": "张国立"
+				},
+				{
+					"name": "于和伟"
+				},
+				{
+					"name": "周冬雨"
+				},
+				{
+					"name": "孙艺洲"
+				},
+				{
+					"name": "李乃文"
+				},
+				{
+					"name": "许亚军"
+				},
+				{
+					"name": "田雨"
+				},
+				{
+					"name": "何政军"
+				},
+				{
+					"name": "徐子力"
+				},
+				{
+					"name": "林博洋"
+				},
+				{
+					"name": "陈童"
+				},
+				{
+					"name": "陈道明"
+				},
+				{
+					"name": "陈冲"
+				},
+				{
+					"name": "王迅"
+				},
+				{
+					"name": "赵亮"
+				},
+				{
+					"name": "焦刚"
+				},
+				{
+					"name": "楚布花羯"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2023 / 中国大陆 / 剧情 动作 犯罪 / 张艺谋 / 雷佳音 张国立",
+			"color_scheme": {
+				"_base_color": [
+					0.6041666666666666,
+					0.5,
+					0.06274509803921569
+				],
+				"_avg_color": [
+					0.5714285714285715,
+					0.4117647058823529,
+					0.13333333333333333
+				],
+				"primary_color_light": "394e72",
+				"primary_color_dark": "26344c",
+				"secondary_color": "f4f6f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/33447633.jpg",
+			"directors": [
+				{
+					"name": "张艺谋"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "33447633",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2896319483.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2896319483.jpg"
+			},
+			"pubdate": [
+				"2023-09-28(中国大陆)"
+			],
+			"rating": {
+				"count": 393094,
+				"max": 10,
+				"star_count": 3,
+				"value": 6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/33447633",
+			"subtype": "movie",
+			"title": "坚如磐石",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/33447633",
+			"url": "https://movie.douban.com/subject/33447633/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2023"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-11 15:01:49"
+	},
+	{
+		"charts": [],
 		"comment": "有趣",
 		"create_time": "2026-07-09 20:38:29",
 		"id": 4884604031,
