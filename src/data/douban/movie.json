@@ -2,6 +2,130 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-14 20:52:43",
+		"id": 4889279139,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/36894170 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36894170/interest/4889279139",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "松隆子"
+				},
+				{
+					"name": "松村北斗"
+				},
+				{
+					"name": "吉冈里帆"
+				},
+				{
+					"name": "森七菜"
+				},
+				{
+					"name": "江原由希子"
+				},
+				{
+					"name": "竹原和生"
+				},
+				{
+					"name": "松田大辅"
+				},
+				{
+					"name": "和田雅成"
+				},
+				{
+					"name": "铃木庆一"
+				},
+				{
+					"name": "神野三铃"
+				},
+				{
+					"name": "中川雅也"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 日本 / 爱情 奇幻 / 冢原亚由子 / 松隆子 松村北斗",
+			"color_scheme": {
+				"_base_color": [
+					0.4393939393939394,
+					0.17187499999999994,
+					0.25098039215686274
+				],
+				"_avg_color": [
+					0.16666666666666666,
+					0.05487804878048795,
+					0.6431372549019608
+				],
+				"primary_color_light": "89a59b",
+				"primary_color_dark": "697f77",
+				"secondary_color": "f4f9f8",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36894170.jpg",
+			"directors": [
+				{
+					"name": "冢原亚由子"
+				}
+			],
+			"genres": [
+				"爱情",
+				"奇幻"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 8,
+					"title": "日本奇幻片榜",
+					"uri": "douban://douban.com/subject_collection/ECEIOJZTQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "36894170",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2927586493.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2927586493.jpg"
+			},
+			"pubdate": [
+				"2025-02-07(日本)"
+			],
+			"rating": {
+				"count": 55309,
+				"max": 10,
+				"star_count": 4,
+				"value": 8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36894170",
+			"subtype": "movie",
+			"title": "初吻",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36894170",
+			"url": "https://movie.douban.com/subject/36894170/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-14 20:52:43"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-13 13:51:10",
 		"id": 4888160287,
 		"is_editable": false,
