@@ -2,6 +2,308 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-20 15:00:56",
+		"id": 4894069516,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/37021110 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37021110/interest/4894069516",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "克里斯蒂安·普利西奇"
+				},
+				{
+					"name": "阿方索·戴维斯"
+				},
+				{
+					"name": "埃德松·阿尔瓦雷斯"
+				},
+				{
+					"name": "唐纳德·特朗普"
+				},
+				{
+					"name": "贾斯汀·特鲁多"
+				},
+				{
+					"name": "利昂内尔·梅西"
+				},
+				{
+					"name": "路易斯·德拉富恩特"
+				},
+				{
+					"name": "戴维·拉亚"
+				},
+				{
+					"name": "马克·普维尔"
+				},
+				{
+					"name": "亚历杭德罗·格里马尔多"
+				},
+				{
+					"name": "埃里克·加西亚"
+				},
+				{
+					"name": "马科斯·略伦特"
+				},
+				{
+					"name": "米克尔·梅里诺"
+				},
+				{
+					"name": "费兰·托雷斯"
+				},
+				{
+					"name": "法比安·鲁伊斯"
+				},
+				{
+					"name": "加维"
+				},
+				{
+					"name": "达尼·奥尔莫"
+				},
+				{
+					"name": "耶雷米·皮诺"
+				},
+				{
+					"name": "佩德罗·波罗"
+				},
+				{
+					"name": "霍安·加西亚"
+				},
+				{
+					"name": "艾默里克·拉波特"
+				},
+				{
+					"name": "阿莱克斯·巴埃纳"
+				},
+				{
+					"name": "罗德里"
+				},
+				{
+					"name": "尼科·威廉斯"
+				},
+				{
+					"name": "马丁·苏维门迪"
+				},
+				{
+					"name": "拉明·亚马尔"
+				},
+				{
+					"name": "佩德里"
+				},
+				{
+					"name": "米克尔·奥亚萨瓦尔"
+				},
+				{
+					"name": "保·库巴西"
+				},
+				{
+					"name": "乌奈·西蒙"
+				},
+				{
+					"name": "马克·库库雷利亚"
+				},
+				{
+					"name": "维克托·穆尼奥斯"
+				},
+				{
+					"name": "斯托皮拉"
+				},
+				{
+					"name": "罗伯托·洛佩斯"
+				},
+				{
+					"name": "西德尼·洛佩斯·卡布拉尔"
+				},
+				{
+					"name": "里安·门德斯"
+				},
+				{
+					"name": "CJ·多斯桑托斯"
+				},
+				{
+					"name": "鲁迪·加西亚"
+				},
+				{
+					"name": "蒂博·库尔图瓦"
+				},
+				{
+					"name": "泽诺·德巴斯特"
+				},
+				{
+					"name": "阿蒂尔·蒂特"
+				},
+				{
+					"name": "布兰东·梅赫莱"
+				},
+				{
+					"name": "马克西姆·德屈佩"
+				},
+				{
+					"name": "埃克塞尔·维特塞尔"
+				},
+				{
+					"name": "凯文·德布劳内"
+				},
+				{
+					"name": "尤里·蒂勒曼斯"
+				},
+				{
+					"name": "罗梅卢·卢卡库"
+				},
+				{
+					"name": "莱安德罗·特罗萨德"
+				},
+				{
+					"name": "杰里米·多库"
+				},
+				{
+					"name": "森内·拉门斯"
+				},
+				{
+					"name": "迈克·彭德斯"
+				},
+				{
+					"name": "多迪·卢克巴吉奥"
+				},
+				{
+					"name": "托马斯·默尼耶"
+				},
+				{
+					"name": "科尼·德·温特"
+				},
+				{
+					"name": "夏尔·德凯特拉雷"
+				},
+				{
+					"name": "华金·塞斯"
+				},
+				{
+					"name": "汉斯·法纳肯"
+				},
+				{
+					"name": "蒂莫西·卡斯塔涅"
+				},
+				{
+					"name": "亚历克西斯·萨勒马克尔斯"
+				},
+				{
+					"name": "阿马杜·奥纳纳"
+				},
+				{
+					"name": "马蒂亚斯·费尔南德斯-帕尔多"
+				},
+				{
+					"name": "霍桑·哈桑"
+				},
+				{
+					"name": "穆罕默德·埃尔·希纳维"
+				},
+				{
+					"name": "亚西尔·易卜拉欣"
+				},
+				{
+					"name": "穆罕默德·哈尼"
+				},
+				{
+					"name": "拉米·拉比亚"
+				},
+				{
+					"name": "特雷泽盖"
+				},
+				{
+					"name": "伊马姆·阿舒尔"
+				},
+				{
+					"name": "穆罕默德·萨拉赫"
+				},
+				{
+					"name": "哈姆迪·法特希"
+				},
+				{
+					"name": "马尔万·阿提亚"
+				},
+				{
+					"name": "奥马尔·马尔穆什"
+				},
+				{
+					"name": "穆斯塔法·肖贝尔"
+				},
+				{
+					"name": "齐佐"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 美国 加拿大 墨西哥 / 运动 真人秀 / 克里斯蒂安·普利西奇 阿方索·戴维斯",
+			"color_scheme": {
+				"_base_color": [
+					0.6666666666666666,
+					0.11666666666666661,
+					0.23529411764705882
+				],
+				"_avg_color": [
+					0.9833333333333333,
+					0.25641025641025633,
+					0.4588235294117647
+				],
+				"primary_color_light": "656572",
+				"primary_color_dark": "43434c",
+				"secondary_color": "f4f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37021110.jpg",
+			"directors": [],
+			"genres": [
+				"运动",
+				"真人秀"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "37021110",
+			"is_released": true,
+			"is_show": true,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2933183805.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2933183805.jpg"
+			},
+			"pubdate": [
+				"2026-06-11(美国)"
+			],
+			"rating": {
+				"count": 1387,
+				"max": 10,
+				"star_count": 4,
+				"value": 8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37021110",
+			"subtype": "tv",
+			"title": "2026年国际足联美国加拿大墨西哥世界杯",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37021110",
+			"url": "https://movie.douban.com/subject/37021110/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-20 15:00:56"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-17 18:53:28",
 		"id": 4891405483,
 		"is_editable": false,
