@@ -2,6 +2,149 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-28 00:38:40",
+		"id": 4880377617,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/35206436 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35206436/interest/4880377617",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "柳承龙"
+				},
+				{
+					"name": "韩孝周"
+				},
+				{
+					"name": "赵寅成"
+				},
+				{
+					"name": "车太贤"
+				},
+				{
+					"name": "柳承范"
+				},
+				{
+					"name": "金成畇"
+				},
+				{
+					"name": "金熙元"
+				},
+				{
+					"name": "文成根"
+				},
+				{
+					"name": "李正河"
+				},
+				{
+					"name": "高允贞"
+				},
+				{
+					"name": "金道勋"
+				},
+				{
+					"name": "朴熙顺 "
+				},
+				{
+					"name": "杨东根"
+				},
+				{
+					"name": "朴炳垠"
+				},
+				{
+					"name": "郭善英"
+				},
+				{
+					"name": "金新绿"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2023 / 韩国 / 动作 爱情 悬疑 奇幻 / 朴仁载 朴允书 / 柳承龙 韩孝周",
+			"color_scheme": {
+				"_base_color": [
+					0.10984848484848482,
+					0.38596491228070173,
+					0.8941176470588236
+				],
+				"_avg_color": [
+					0.08695652173913049,
+					0.17829457364341078,
+					0.5058823529411764
+				],
+				"primary_color_light": "a58f65",
+				"primary_color_dark": "7f6e4e",
+				"secondary_color": "f9f8f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35206436.jpg",
+			"directors": [
+				{
+					"name": "朴仁载"
+				},
+				{
+					"name": "朴允书"
+				}
+			],
+			"genres": [
+				"动作",
+				"爱情",
+				"悬疑"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 19,
+					"title": "高分经典韩剧榜",
+					"uri": "douban://douban.com/subject_collection/EC6EC5GBQ?type=rank&category=movie&rank_type=tv_genre"
+				}
+			],
+			"id": "35206436",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2895751873.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2895751873.jpg"
+			},
+			"pubdate": [
+				"2023-08-09(韩国)"
+			],
+			"rating": {
+				"count": 266935,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35206436",
+			"subtype": "tv",
+			"title": "超异能族",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/35206436",
+			"url": "https://movie.douban.com/subject/35206436/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2023"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-28 00:38:40"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-20 16:44:32",
 		"id": 4894158628,
 		"is_editable": false,
