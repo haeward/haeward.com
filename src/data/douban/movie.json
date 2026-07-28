@@ -2,6 +2,355 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-28 15:58:45",
+		"id": 4901677710,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/36857924 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36857924/interest/4901677710",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "吴彦祖"
+				},
+				{
+					"name": "刘俊谦"
+				},
+				{
+					"name": "吴慷仁"
+				},
+				{
+					"name": "谢君豪"
+				},
+				{
+					"name": "王丹妮"
+				},
+				{
+					"name": "廖子妤"
+				},
+				{
+					"name": "艾丹·吉伦"
+				},
+				{
+					"name": "休·博纳维尔"
+				},
+				{
+					"name": "周润发"
+				},
+				{
+					"name": "郭富城"
+				},
+				{
+					"name": "梁家辉"
+				},
+				{
+					"name": "古天乐"
+				},
+				{
+					"name": "元彪"
+				},
+				{
+					"name": "叶童"
+				},
+				{
+					"name": "陈以文"
+				},
+				{
+					"name": "莫文蔚"
+				},
+				{
+					"name": "周文健"
+				},
+				{
+					"name": "陈家乐"
+				},
+				{
+					"name": "白只"
+				},
+				{
+					"name": "彭敬慈"
+				},
+				{
+					"name": "朱鉴然"
+				},
+				{
+					"name": "谭旻萱"
+				},
+				{
+					"name": "何启华"
+				},
+				{
+					"name": "杨乐文"
+				},
+				{
+					"name": "邱士缙"
+				},
+				{
+					"name": "魏浚笙"
+				},
+				{
+					"name": "林嘉华"
+				},
+				{
+					"name": "太保"
+				},
+				{
+					"name": "杨天宇"
+				},
+				{
+					"name": "高海宁"
+				},
+				{
+					"name": "郑则仕"
+				},
+				{
+					"name": "张可坚"
+				},
+				{
+					"name": "麦沛东"
+				},
+				{
+					"name": "陈湛文"
+				},
+				{
+					"name": "陈伟雄"
+				},
+				{
+					"name": "张达伦"
+				},
+				{
+					"name": "栢天男"
+				},
+				{
+					"name": "林家熙"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国香港 中国大陆 / 剧情 动作 犯罪 / 梁乐民 / 吴彦祖 刘俊谦",
+			"color_scheme": {
+				"_base_color": [
+					0.5947712418300654,
+					0.4811320754716981,
+					0.41568627450980394
+				],
+				"_avg_color": [
+					0.59,
+					0.39999999999999997,
+					0.49019607843137253
+				],
+				"primary_color_light": "3b5372",
+				"primary_color_dark": "27374c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36857924.jpg",
+			"directors": [
+				{
+					"name": "梁乐民"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "36857924",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2931924492.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2931924492.jpg"
+			},
+			"pubdate": [
+				"2026-05-01(中国大陆)"
+			],
+			"rating": {
+				"count": 117101,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36857924",
+			"subtype": "movie",
+			"title": "寒战1994",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36857924",
+			"url": "https://movie.douban.com/subject/36857924/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-28 15:58:45"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-07-28 14:04:40",
+		"id": 4886183393,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/37523009 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37523009/interest/4886183393",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "苏志燮"
+				},
+				{
+					"name": "崔大勋"
+				},
+				{
+					"name": "尹敬浩"
+				},
+				{
+					"name": "朱相昱"
+				},
+				{
+					"name": "孙娜恩"
+				},
+				{
+					"name": "金成圭"
+				},
+				{
+					"name": "李在勇"
+				},
+				{
+					"name": "元贤俊"
+				},
+				{
+					"name": "朴真宇"
+				},
+				{
+					"name": "赵福来"
+				},
+				{
+					"name": "李东河"
+				},
+				{
+					"name": "徐貹旼"
+				},
+				{
+					"name": "刘知安"
+				},
+				{
+					"name": "金景龙"
+				},
+				{
+					"name": "金大涵"
+				},
+				{
+					"name": "金允裴"
+				},
+				{
+					"name": "崔范浩"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 韩国 / 动作 惊悚 犯罪 / 李胜英 李昭垠 / 苏志燮 崔大勋",
+			"color_scheme": {
+				"_base_color": [
+					0.06962025316455694,
+					0.3969849246231156,
+					0.7803921568627451
+				],
+				"_avg_color": [
+					0.1388888888888889,
+					0.26666666666666666,
+					0.17647058823529413
+				],
+				"primary_color_light": "725845",
+				"primary_color_dark": "4c3a2e",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37523009.jpg",
+			"directors": [
+				{
+					"name": "李胜英"
+				},
+				{
+					"name": "李昭垠"
+				}
+			],
+			"genres": [
+				"动作",
+				"惊悚",
+				"犯罪"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 6,
+					"title": "一周全球口碑剧集榜",
+					"uri": "douban://douban.com/subject_collection/tv_global_best_weekly?type=rank&category=movie&rank_type=weekly"
+				}
+			],
+			"id": "37523009",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2933197483.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2933197483.jpg"
+			},
+			"pubdate": [
+				"2026-06-26(韩国)"
+			],
+			"rating": {
+				"count": 21932,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37523009",
+			"subtype": "tv",
+			"title": "金特务：本色回归",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37523009",
+			"url": "https://movie.douban.com/subject/37523009/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-28 14:04:40"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-28 00:38:40",
 		"id": 4880377617,
 		"is_editable": false,
