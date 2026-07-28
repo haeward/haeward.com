@@ -2,6 +2,241 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-28 16:40:30",
+		"id": 4901708740,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1302434 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1302434/interest/4901708740",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "任达华"
+				},
+				{
+					"name": "邵美琪"
+				},
+				{
+					"name": "林雪"
+				},
+				{
+					"name": "黄卓玲"
+				},
+				{
+					"name": "黄浩然"
+				},
+				{
+					"name": "高雄"
+				},
+				{
+					"name": "卢海鹏"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2003 / 中国香港 / 剧情 犯罪 / 杜琪峰 / 任达华 邵美琪",
+			"color_scheme": {
+				"_base_color": [
+					0.6904761904761904,
+					0.031250000000000014,
+					0.8784313725490196
+				],
+				"_avg_color": [
+					0.633333333333333,
+					0.05102040816326541,
+					0.3843137254901961
+				],
+				"primary_color_light": "6f6f72",
+				"primary_color_dark": "4a4a4c",
+				"secondary_color": "f5f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1302434.jpg",
+			"directors": [
+				{
+					"name": "杜琪峰"
+				}
+			],
+			"genres": [
+				"剧情",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 15,
+					"title": "中国香港犯罪片榜",
+					"uri": "douban://douban.com/subject_collection/EC3AOZZUY?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1302434",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2913800774.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2913800774.jpg"
+			},
+			"pubdate": [
+				"2003-04-17(中国香港)"
+			],
+			"rating": {
+				"count": 140744,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1302434",
+			"subtype": "movie",
+			"title": "机动部队",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1302434",
+			"url": "https://movie.douban.com/subject/1302434/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2003"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-28 16:40:30"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-07-28 16:37:12",
+		"id": 4901706127,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/1300741 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1300741/interest/4901706127",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "吴镇宇"
+				},
+				{
+					"name": "任达华"
+				},
+				{
+					"name": "黄秋生"
+				},
+				{
+					"name": "吕颂贤"
+				},
+				{
+					"name": "张耀扬"
+				},
+				{
+					"name": "林雪"
+				},
+				{
+					"name": "王天林"
+				},
+				{
+					"name": "施绮莲"
+				},
+				{
+					"name": "高雄"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1999 / 中国香港 / 剧情 动作 犯罪 / 杜琪峰 / 吴镇宇 任达华",
+			"color_scheme": {
+				"_base_color": [
+					0,
+					0.024896265560166005,
+					0.9450980392156862
+				],
+				"_avg_color": [
+					0.9666666666666668,
+					0.10695187165775394,
+					0.7333333333333333
+				],
+				"primary_color_light": "a5a1a1",
+				"primary_color_dark": "7f7c7c",
+				"secondary_color": "f9f4f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1300741.jpg",
+			"directors": [
+				{
+					"name": "杜琪峰"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 5,
+					"title": "中国香港犯罪片榜",
+					"uri": "douban://douban.com/subject_collection/EC3AOZZUY?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1300741",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p1538646661.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1538646661.jpg"
+			},
+			"pubdate": [
+				"1999-11-19(中国香港)"
+			],
+			"rating": {
+				"count": 268684,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1300741",
+			"subtype": "movie",
+			"title": "枪火",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1300741",
+			"url": "https://movie.douban.com/subject/1300741/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "1999"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-28 16:37:12"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-28 15:58:45",
 		"id": 4901677710,
 		"is_editable": false,
