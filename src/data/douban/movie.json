@@ -2,6 +2,129 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-07-29 06:57:50",
+		"id": 4902342615,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/23775560 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/23775560/interest/4902342615",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "李敏镐"
+				},
+				{
+					"name": "朴信惠"
+				},
+				{
+					"name": "金宇彬"
+				},
+				{
+					"name": "崔振赫"
+				},
+				{
+					"name": "郑秀晶"
+				},
+				{
+					"name": "朴炯植"
+				},
+				{
+					"name": "姜河那"
+				},
+				{
+					"name": "姜敏赫"
+				},
+				{
+					"name": "金智媛"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2013 / 韩国 / 剧情 爱情 / 姜信孝 富圣哲 / 李敏镐 朴信惠",
+			"color_scheme": {
+				"_base_color": [
+					0.09999999999999998,
+					0.2678571428571428,
+					0.2196078431372549
+				],
+				"_avg_color": [
+					0.09803921568627445,
+					0.10493827160493825,
+					0.6352941176470588
+				],
+				"primary_color_light": "a59379",
+				"primary_color_dark": "7f715d",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/23775560.jpg",
+			"directors": [
+				{
+					"name": "姜信孝"
+				},
+				{
+					"name": "富圣哲"
+				}
+			],
+			"genres": [
+				"剧情",
+				"爱情"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 17,
+					"title": "第50届百想艺术大赏获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECEUJHDKQ?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "23775560",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2153020708.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2153020708.jpg"
+			},
+			"pubdate": [
+				"2013-10-09(韩国)"
+			],
+			"rating": {
+				"count": 228446,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/23775560",
+			"subtype": "tv",
+			"title": "继承者们",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/23775560",
+			"url": "https://movie.douban.com/subject/23775560/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2013"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-29 06:57:50"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-07-28 16:40:30",
 		"id": 4901708740,
 		"is_editable": false,
