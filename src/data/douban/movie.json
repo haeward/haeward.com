@@ -1,6 +1,167 @@
 [
 	{
 		"charts": [],
+		"comment": "剧情节奏太慢，罪犯的角色刻画和演技要好很多。\n第一个案子岳云鹏饰演的记者除了体现出警媒合作，并没有重要作用，更不论其尴尬且出戏的演技；第二个案子，警方探查的很多线索（比如鞋子、凶器）不了了之，我还以为会在审讯和审判阶段会总结呢，最想吐槽的一点是，上门的警察是如何一眼看出刘永坤的指纹的，不理解...",
+		"create_time": "2026-07-31 13:32:17",
+		"id": 4880997605,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 剧情节奏太慢，罪犯的角色刻画和演技要好很多。\n第一个案子岳云鹏饰演的记者除了体现出警媒合作，并没有重要作用，更不论其尴尬且出戏的演技；第二个案子，警方探查的很多线索（比如鞋子、凶器）不了了之，我还以为会在… https://www.douban.com/doubanapp/dispatch/movie/36624136 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36624136/interest/4880997605",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "王传君"
+				},
+				{
+					"name": "江奇霖"
+				},
+				{
+					"name": "杨烁"
+				},
+				{
+					"name": "郎月婷"
+				},
+				{
+					"name": "岳云鹏"
+				},
+				{
+					"name": "姜冠南"
+				},
+				{
+					"name": "黄觉"
+				},
+				{
+					"name": "曾美慧孜"
+				},
+				{
+					"name": "公磊"
+				},
+				{
+					"name": "王砚辉"
+				},
+				{
+					"name": "艾丽娅"
+				},
+				{
+					"name": "甘昀宸"
+				},
+				{
+					"name": "刘丹"
+				},
+				{
+					"name": "刘畅"
+				},
+				{
+					"name": "刘洋"
+				},
+				{
+					"name": "金泽灏"
+				},
+				{
+					"name": "周野芒"
+				},
+				{
+					"name": "董牧沙"
+				},
+				{
+					"name": "葛四"
+				},
+				{
+					"name": "翟小兴"
+				},
+				{
+					"name": "尚铁龙"
+				},
+				{
+					"name": "黄璐"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 剧情 悬疑 犯罪 / 算 / 王传君 江奇霖",
+			"color_scheme": {
+				"_base_color": [
+					0.11333333333333336,
+					0.3846153846153846,
+					0.2549019607843137
+				],
+				"_avg_color": [
+					0.11274509803921569,
+					0.30630630630630634,
+					0.43529411764705883
+				],
+				"primary_color_light": "726446",
+				"primary_color_dark": "4c432f",
+				"secondary_color": "f9f8f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36624136.jpg",
+			"directors": [
+				{
+					"name": "算"
+				}
+			],
+			"genres": [
+				"剧情",
+				"悬疑",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 2,
+					"title": "一周华语口碑剧集榜",
+					"uri": "douban://douban.com/subject_collection/tv_chinese_best_weekly?type=rank&category=movie&rank_type=weekly"
+				}
+			],
+			"id": "36624136",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2933759962.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2933759962.jpg"
+			},
+			"pubdate": [
+				"2026-07-03(中国大陆)"
+			],
+			"rating": {
+				"count": 28287,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36624136",
+			"subtype": "tv",
+			"title": "悬案",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/36624136",
+			"url": "https://movie.douban.com/subject/36624136/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-07-31 13:32:17"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-07-29 06:57:50",
 		"id": 4902342615,
