@@ -1,6 +1,141 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-08-01 13:23:08",
+		"id": 4905605543,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/36965301 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36965301/interest/4905605543",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "郑恺"
+				},
+				{
+					"name": "刘浩存"
+				},
+				{
+					"name": "邱泽"
+				},
+				{
+					"name": "李晨"
+				},
+				{
+					"name": "姜妍"
+				},
+				{
+					"name": "黄小蕾"
+				},
+				{
+					"name": "李梦"
+				},
+				{
+					"name": "张琪"
+				},
+				{
+					"name": "毕雯珺"
+				},
+				{
+					"name": "冯兵"
+				},
+				{
+					"name": "滕哲"
+				},
+				{
+					"name": "冯雪雅"
+				},
+				{
+					"name": "汤心一"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 悬疑 惊悚 犯罪 / 程伟豪 / 郑恺 刘浩存",
+			"color_scheme": {
+				"_base_color": [
+					0.04166666666666682,
+					0.09523809523809523,
+					0.16470588235294117
+				],
+				"_avg_color": [
+					0.06666666666666671,
+					0.09259259259259253,
+					0.21176470588235294
+				],
+				"primary_color_light": "726a67",
+				"primary_color_dark": "4c4745",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36965301.jpg",
+			"directors": [
+				{
+					"name": "程伟豪"
+				}
+			],
+			"genres": [
+				"悬疑",
+				"惊悚",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 13,
+					"title": "华语惊悚片榜",
+					"uri": "douban://douban.com/subject_collection/EC5MPCA7Y?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "36965301",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2931601069.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2931601069.jpg"
+			},
+			"pubdate": [
+				"2026-05-01(中国大陆)"
+			],
+			"rating": {
+				"count": 107694,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36965301",
+			"subtype": "movie",
+			"title": "消失的人",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36965301",
+			"url": "https://movie.douban.com/subject/36965301/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-01 13:23:08"
+	},
+	{
+		"charts": [],
 		"comment": "剧情节奏太慢，罪犯的角色刻画和演技要好很多。\n第一个案子岳云鹏饰演的记者除了体现出警媒合作，并没有重要作用，更不论其尴尬且出戏的演技；第二个案子，警方探查的很多线索（比如鞋子、凶器）不了了之，我还以为会在审讯和审判阶段会总结呢，最想吐槽的一点是，上门的警察是如何一眼看出刘永坤的指纹的，不理解...",
 		"create_time": "2026-07-31 13:32:17",
 		"id": 4880997605,
