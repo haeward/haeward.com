@@ -2,6 +2,207 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-02 01:59:49",
+		"id": 4906620823,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/25890081 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/25890081/interest/4906620823",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "朴勇宇"
+				},
+				{
+					"name": "金瑞亨"
+				},
+				{
+					"name": "李裕英"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2014 / 韩国 / 剧情 / 曹近铉 / 朴勇宇 金瑞亨",
+			"color_scheme": {
+				"_base_color": [
+					0.09999999999999999,
+					0.4838709677419355,
+					0.24313725490196078
+				],
+				"_avg_color": [
+					0.09047619047619049,
+					0.3181818181818182,
+					0.43137254901960786
+				],
+				"primary_color_light": "725c3b",
+				"primary_color_dark": "4c3d27",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/25890081.jpg",
+			"directors": [
+				{
+					"name": "曹近铉"
+				}
+			],
+			"genres": [
+				"剧情"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "第52届韩国电影大钟奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECIQJWCII?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "25890081",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2206674898.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2206674898.jpg"
+			},
+			"pubdate": [
+				"2014-11-20(韩国)"
+			],
+			"rating": {
+				"count": 3399,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 6.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/25890081",
+			"subtype": "movie",
+			"title": "春天",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/25890081",
+			"url": "https://movie.douban.com/subject/25890081/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2014"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-02 01:59:49"
+	},
+	{
+		"charts": [],
+		"comment": "高开低走，案件审理和法庭对峙的逻辑不严谨，走的喜剧和温情的路子",
+		"create_time": "2026-08-02 00:43:53",
+		"id": 4878167469,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ 高开低走，案件审理和法庭对峙的逻辑不严谨，走的喜剧和温情的路子 https://www.douban.com/doubanapp/dispatch/movie/37172430 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37172430/interest/4878167469",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "郑敬淏"
+				},
+				{
+					"name": "苏珠妍"
+				},
+				{
+					"name": "李裕英"
+				},
+				{
+					"name": "尹那武"
+				},
+				{
+					"name": "徐惠媛"
+				},
+				{
+					"name": "姜亨硕"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 韩国 / 剧情 喜剧 / 金善允 / 郑敬淏 苏珠妍",
+			"color_scheme": {
+				"_base_color": [
+					0.15625000000000003,
+					0.08648648648648649,
+					0.7254901960784313
+				],
+				"_avg_color": [
+					0.5208333333333334,
+					0.10666666666666666,
+					0.29411764705882354
+				],
+				"primary_color_light": "727268",
+				"primary_color_dark": "4c4c45",
+				"secondary_color": "f9f9f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37172430.jpg",
+			"directors": [
+				{
+					"name": "金善允"
+				}
+			],
+			"genres": [
+				"剧情",
+				"喜剧"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "37172430",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2927066922.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2927066922.jpg"
+			},
+			"pubdate": [
+				"2025-12-06(韩国)"
+			],
+			"rating": {
+				"count": 13588,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37172430",
+			"subtype": "tv",
+			"title": "公益律师",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37172430",
+			"url": "https://movie.douban.com/subject/37172430/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-02 00:43:53"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-01 13:23:08",
 		"id": 4905605543,
 		"is_editable": false,
