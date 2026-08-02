@@ -1,6 +1,158 @@
 [
 	{
 		"charts": [],
+		"comment": "有隐喻，但确实有些看不懂。最喜欢首尾两个故事—《如何成为三条龙》和《大贵人》",
+		"create_time": "2026-08-02 12:59:09",
+		"id": 4906635548,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 有隐喻，但确实有些看不懂。最喜欢首尾两个故事—《如何成为三条龙》和《大贵人》 https://www.douban.com/doubanapp/dispatch/movie/36299879 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36299879/interest/4906635548",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "路扬"
+				},
+				{
+					"name": "董汶亮"
+				},
+				{
+					"name": "蔡壮壮"
+				},
+				{
+					"name": "徐铭皓"
+				},
+				{
+					"name": "刘芊含"
+				},
+				{
+					"name": "言浩"
+				},
+				{
+					"name": "陆慧桥"
+				},
+				{
+					"name": "赵铭洲"
+				},
+				{
+					"name": "徐赫"
+				},
+				{
+					"name": "田二喜"
+				},
+				{
+					"name": "张赫"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 动画 奇幻 / 陈廖宇 张俊杰 周旭 顾杨 刘旷 杜鹏鹏 胡睿 杨雅词 杨木 欧阳仲泓 张扬 陈莲华 / 路扬 董汶亮",
+			"color_scheme": {
+				"_base_color": [
+					0.09523809523809529,
+					0.12499999999999993,
+					0.8784313725490196
+				],
+				"_avg_color": [
+					0.10810810810810818,
+					0.22981366459627328,
+					0.6313725490196078
+				],
+				"primary_color_light": "a59c91",
+				"primary_color_dark": "7f786f",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36299879.jpg",
+			"directors": [
+				{
+					"name": "陈廖宇"
+				},
+				{
+					"name": "张俊杰"
+				},
+				{
+					"name": "周旭"
+				},
+				{
+					"name": "顾杨"
+				},
+				{
+					"name": "刘旷"
+				},
+				{
+					"name": "杜鹏鹏"
+				},
+				{
+					"name": "胡睿"
+				},
+				{
+					"name": "杨雅词"
+				},
+				{
+					"name": "杨木"
+				},
+				{
+					"name": "欧阳仲泓"
+				},
+				{
+					"name": "张扬"
+				},
+				{
+					"name": "陈莲华"
+				}
+			],
+			"genres": [
+				"动画",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "36299879",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2927155061.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2927155061.jpg"
+			},
+			"pubdate": [
+				"2026-01-01(中国大陆)"
+			],
+			"rating": {
+				"count": 24847,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.4
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36299879",
+			"subtype": "tv",
+			"title": "中国奇谭2",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/36299879",
+			"url": "https://movie.douban.com/subject/36299879/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 1,
+		"star_time": "2026-08-02 12:59:09"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-08-02 01:59:49",
 		"id": 4906620823,
