@@ -2,6 +2,128 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-04 23:00:45",
+		"id": 4909355041,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1296629 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1296629/interest/4909355041",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张国荣"
+				},
+				{
+					"name": "王祖贤"
+				},
+				{
+					"name": "张学友"
+				},
+				{
+					"name": "午马"
+				},
+				{
+					"name": "李子雄"
+				},
+				{
+					"name": "李嘉欣"
+				},
+				{
+					"name": "刘洵"
+				},
+				{
+					"name": "刘兆铭"
+				},
+				{
+					"name": "谷峰"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1990 / 中国香港 / 爱情 奇幻 武侠 古装 / 程小东 / 张国荣 王祖贤",
+			"color_scheme": {
+				"_base_color": [
+					0.6227106227106227,
+					0.7165354330708662,
+					0.4980392156862745
+				],
+				"_avg_color": [
+					0.6720430107526881,
+					0.2627118644067797,
+					0.4627450980392157
+				],
+				"primary_color_light": "203672",
+				"primary_color_dark": "15244c",
+				"secondary_color": "f4f6f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1296629.jpg",
+			"directors": [
+				{
+					"name": "程小东"
+				}
+			],
+			"genres": [
+				"爱情",
+				"奇幻",
+				"武侠"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 14,
+					"title": "评分最高武侠片",
+					"uri": "douban://douban.com/subject_collection/film_genre_50?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1296629",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2518212196.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2518212196.jpg"
+			},
+			"pubdate": [
+				"1990-07-13(中国香港)"
+			],
+			"rating": {
+				"count": 217558,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1296629",
+			"subtype": "movie",
+			"title": "倩女幽魂2：人间道",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1296629",
+			"url": "https://movie.douban.com/subject/1296629/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "1990"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-04 23:00:45"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-04 20:06:27",
 		"id": 4819348801,
 		"is_editable": false,
