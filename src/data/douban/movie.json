@@ -2,6 +2,140 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-05 14:05:23",
+		"id": 2547490083,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/34888476 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/34888476/interest/2547490083",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "小连杀"
+				},
+				{
+					"name": "王潇倩"
+				},
+				{
+					"name": "林强"
+				},
+				{
+					"name": "马正阳"
+				},
+				{
+					"name": "宝木中阳"
+				},
+				{
+					"name": "张振"
+				},
+				{
+					"name": "林柏青"
+				},
+				{
+					"name": "朱蓉蓉"
+				},
+				{
+					"name": "袁铭喆"
+				},
+				{
+					"name": "高枫"
+				},
+				{
+					"name": "刘芊含"
+				},
+				{
+					"name": "姜广涛"
+				},
+				{
+					"name": "蔡杰"
+				},
+				{
+					"name": "周侗"
+				},
+				{
+					"name": "高一雪"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2020 / 中国大陆 / 动画 奇幻 冒险 / 李凌霄 / 小连杀 王潇倩",
+			"color_scheme": {
+				"_base_color": [
+					0.22154471544715446,
+					0.4120603015075377,
+					0.7803921568627451
+				],
+				"_avg_color": [
+					0.23737373737373732,
+					0.358695652173913,
+					0.7215686274509804
+				],
+				"primary_color_light": "8fa561",
+				"primary_color_dark": "6e7f4a",
+				"secondary_color": "f8f9f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/34888476.jpg",
+			"directors": [
+				{
+					"name": "李凌霄"
+				}
+			],
+			"genres": [
+				"动画",
+				"奇幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "34888476",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2614234255.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2614234255.jpg"
+			},
+			"pubdate": [
+				"2020-07-31(中国大陆)"
+			],
+			"rating": {
+				"count": 80246,
+				"max": 10,
+				"star_count": 3,
+				"value": 6.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/34888476",
+			"subtype": "movie",
+			"title": "妙先生",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/34888476",
+			"url": "https://movie.douban.com/subject/34888476/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2020"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-05 14:05:23"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-04 23:00:45",
 		"id": 4909355041,
 		"is_editable": false,
