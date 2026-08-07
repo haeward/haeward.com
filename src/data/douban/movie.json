@@ -2,6 +2,146 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-07 21:43:36",
+		"id": 4855719563,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/36246195 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36246195/interest/4855719563",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "汤姆·霍兰德"
+				},
+				{
+					"name": "赞达亚"
+				},
+				{
+					"name": "萨迪·辛克"
+				},
+				{
+					"name": "雅各布·贝塔隆"
+				},
+				{
+					"name": "马克·鲁法洛"
+				},
+				{
+					"name": "乔·博恩瑟"
+				},
+				{
+					"name": "弗洛伦丝·皮尤"
+				},
+				{
+					"name": "莉莎·科伦-扎亚斯"
+				},
+				{
+					"name": "特拉梅尔·提尔曼"
+				},
+				{
+					"name": "玛丽莎·托梅"
+				},
+				{
+					"name": "迈克尔·曼多"
+				},
+				{
+					"name": "娜奥米·沃茨"
+				},
+				{
+					"name": "凯斯·大卫"
+				},
+				{
+					"name": "马文·琼斯三世"
+				},
+				{
+					"name": "奥利维亚·布斯-福特"
+				},
+				{
+					"name": "艾曼·埃斯凡迪"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 美国 加拿大 英国 德国 / 动作 科幻 冒险 / 德斯汀·丹尼尔·克雷顿 / 汤姆·霍兰德 赞达亚",
+			"color_scheme": {
+				"_base_color": [
+					0.9444444444444444,
+					0.16666666666666666,
+					0.1411764705882353
+				],
+				"_avg_color": [
+					0.01851851851851845,
+					0.1578947368421052,
+					0.6705882352941176
+				],
+				"primary_color_light": "a58a93",
+				"primary_color_dark": "7f6a71",
+				"secondary_color": "f9f4f6",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36246195.jpg",
+			"directors": [
+				{
+					"name": "德斯汀·丹尼尔·克雷顿"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"冒险"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "豆瓣2026最值得期待外语电影",
+					"uri": "douban://douban.com/subject_collection/ECGRADN5Q?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "36246195",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2934276912.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2934276912.jpg"
+			},
+			"pubdate": [
+				"2026-07-29(中国大陆)"
+			],
+			"rating": {
+				"count": 269624,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36246195",
+			"subtype": "movie",
+			"title": "蜘蛛侠：崭新之日",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36246195",
+			"url": "https://movie.douban.com/subject/36246195/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-07 21:43:36"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-07 06:19:00",
 		"id": 3628983793,
 		"is_editable": false,
