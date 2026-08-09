@@ -2,6 +2,170 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-09 22:18:03",
+		"id": 4913682529,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1292286 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1292286/interest/4913682529",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "车太贤"
+				},
+				{
+					"name": "全智贤"
+				},
+				{
+					"name": "金仁文"
+				},
+				{
+					"name": "宋钰宿"
+				},
+				{
+					"name": "韩振熙"
+				},
+				{
+					"name": "玄淑熙"
+				},
+				{
+					"name": "金一宇"
+				},
+				{
+					"name": "Soon-cheol Yoo"
+				},
+				{
+					"name": "徐东元"
+				},
+				{
+					"name": "金敏载"
+				},
+				{
+					"name": "Nam-hwi Heo"
+				},
+				{
+					"name": "李在浩"
+				},
+				{
+					"name": "朴俊英"
+				},
+				{
+					"name": "玄哲浩"
+				},
+				{
+					"name": "Jong-hun Hyeon"
+				},
+				{
+					"name": "赵庆勋"
+				},
+				{
+					"name": "孙光业"
+				},
+				{
+					"name": "李正学"
+				},
+				{
+					"name": "陈泰贤"
+				},
+				{
+					"name": "金哲秀"
+				},
+				{
+					"name": "李无影"
+				},
+				{
+					"name": "林湖"
+				},
+				{
+					"name": "郭在容"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2001 / 韩国 / 剧情 喜剧 爱情 / 郭在容 / 车太贤 全智贤",
+			"color_scheme": {
+				"_base_color": [
+					0.09999999999999994,
+					0.13636363636363638,
+					0.8627450980392157
+				],
+				"_avg_color": [
+					0.016025641025641007,
+					0.3132530120481928,
+					0.6509803921568628
+				],
+				"primary_color_light": "a59c8f",
+				"primary_color_dark": "7f786e",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1292286.jpg",
+			"directors": [
+				{
+					"name": "郭在容"
+				}
+			],
+			"genres": [
+				"剧情",
+				"喜剧",
+				"爱情"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 3,
+					"title": "韩国爱情片榜",
+					"uri": "douban://douban.com/subject_collection/ECHIOXXIQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1292286",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p489336497.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p489336497.jpg"
+			},
+			"pubdate": [
+				"2001-07-27(韩国)"
+			],
+			"rating": {
+				"count": 483952,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1292286",
+			"subtype": "movie",
+			"title": "我的野蛮女友",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1292286",
+			"url": "https://movie.douban.com/subject/1292286/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2001"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-09 22:18:03"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-07 21:43:36",
 		"id": 4855719563,
 		"is_editable": false,
