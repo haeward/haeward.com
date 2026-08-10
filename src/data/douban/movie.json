@@ -2,6 +2,141 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-10 20:33:18",
+		"id": 4914498874,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/32493124 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/32493124/interest/4914498874",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张译"
+				},
+				{
+					"name": "于和伟"
+				},
+				{
+					"name": "秦海璐"
+				},
+				{
+					"name": "朱亚文"
+				},
+				{
+					"name": "刘浩存"
+				},
+				{
+					"name": "倪大红"
+				},
+				{
+					"name": "李乃文"
+				},
+				{
+					"name": "余皑磊"
+				},
+				{
+					"name": "飞凡"
+				},
+				{
+					"name": "雷佳音"
+				},
+				{
+					"name": "沙溢"
+				},
+				{
+					"name": "韩昊霖"
+				},
+				{
+					"name": "赵毅"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2021 / 中国大陆 中国香港 / 剧情 动作 悬疑 / 张艺谋 / 张译 于和伟",
+			"color_scheme": {
+				"_base_color": [
+					0.5833333333333334,
+					0.15319148936170207,
+					0.9215686274509803
+				],
+				"_avg_color": [
+					0.5925925925925926,
+					0.17821782178217815,
+					0.396078431372549
+				],
+				"primary_color_light": "616972",
+				"primary_color_dark": "40464c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/32493124.jpg",
+			"directors": [
+				{
+					"name": "张艺谋"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动作",
+				"悬疑"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 11,
+					"title": "华语悬疑片榜",
+					"uri": "douban://douban.com/subject_collection/ECRMOX2JI?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "32493124",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2638045698.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2638045698.jpg"
+			},
+			"pubdate": [
+				"2021-04-30(中国大陆)"
+			],
+			"rating": {
+				"count": 828483,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/32493124",
+			"subtype": "movie",
+			"title": "悬崖之上",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/32493124",
+			"url": "https://movie.douban.com/subject/32493124/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2021"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-10 20:33:18"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-09 22:18:03",
 		"id": 4913682529,
 		"is_editable": false,
