@@ -2,6 +2,150 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-12 23:55:13",
+		"id": 4916727302,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1308570 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1308570/interest/4916727302",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "托比·马奎尔"
+				},
+				{
+					"name": "克尔斯滕·邓斯特"
+				},
+				{
+					"name": "詹姆斯·弗兰科"
+				},
+				{
+					"name": "阿尔弗雷德·莫里纳"
+				},
+				{
+					"name": "罗斯玛丽·哈里斯"
+				},
+				{
+					"name": "J·K·西蒙斯"
+				},
+				{
+					"name": "唐娜·墨菲"
+				},
+				{
+					"name": "丹尼尔·吉里斯"
+				},
+				{
+					"name": "迪伦·贝克"
+				},
+				{
+					"name": "比尔·努恩"
+				},
+				{
+					"name": "范妮莎·费丽托"
+				},
+				{
+					"name": "阿西夫·曼德维"
+				},
+				{
+					"name": "威廉·达福"
+				},
+				{
+					"name": "克里夫·罗伯逊"
+				},
+				{
+					"name": "泰德·雷米"
+				},
+				{
+					"name": "布鲁斯·坎贝尔"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2004 / 美国 / 动作 科幻 冒险 / 山姆·雷米 / 托比·马奎尔 克尔斯滕·邓斯特",
+			"color_scheme": {
+				"_base_color": [
+					0.012121212121212125,
+					0.8333333333333333,
+					0.5176470588235295
+				],
+				"_avg_color": [
+					0.022653721682847888,
+					0.7862595419847328,
+					0.5137254901960784
+				],
+				"primary_color_light": "a5251b",
+				"primary_color_dark": "7f1c15",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1308570.jpg",
+			"directors": [
+				{
+					"name": "山姆·雷米"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 9,
+					"title": "第77届奥斯卡金像奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECF4IAOBA?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "1308570",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p1617867110.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1617867110.jpg"
+			},
+			"pubdate": [
+				"2004-08-05(中国大陆)"
+			],
+			"rating": {
+				"count": 322369,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1308570",
+			"subtype": "movie",
+			"title": "蜘蛛侠2",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1308570",
+			"url": "https://movie.douban.com/subject/1308570/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2004"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-12 23:55:13"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-11 01:34:57",
 		"id": 4914809875,
 		"is_editable": false,
