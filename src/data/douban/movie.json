@@ -2,6 +2,140 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-14 11:01:17",
+		"id": 4917919881,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1418189 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1418189/interest/4917919881",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "托比·马奎尔"
+				},
+				{
+					"name": "克尔斯滕·邓斯特"
+				},
+				{
+					"name": "詹姆斯·弗兰科"
+				},
+				{
+					"name": "托马斯·哈登·丘奇"
+				},
+				{
+					"name": "托弗·格雷斯"
+				},
+				{
+					"name": "布莱丝·达拉斯·霍华德"
+				},
+				{
+					"name": "罗斯玛丽·哈里斯"
+				},
+				{
+					"name": "J·K·西蒙斯"
+				},
+				{
+					"name": "詹姆斯·克伦威尔"
+				},
+				{
+					"name": "泰莉莎·拉塞尔"
+				},
+				{
+					"name": "迪伦·贝克"
+				},
+				{
+					"name": "比尔·努恩"
+				},
+				{
+					"name": "布鲁斯·坎贝尔"
+				},
+				{
+					"name": "伊丽莎白·班克斯"
+				},
+				{
+					"name": "泰德·雷米"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2007 / 美国 / 动作 科幻 冒险 / 山姆·雷米 / 托比·马奎尔 克尔斯滕·邓斯特",
+			"color_scheme": {
+				"_base_color": [
+					0.042666666666666665,
+					0.5841121495327103,
+					0.8392156862745098
+				],
+				"_avg_color": [
+					0.9482758620689655,
+					0.42647058823529405,
+					0.26666666666666666
+				],
+				"primary_color_light": "72402f",
+				"primary_color_dark": "4c2b1f",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1418189.jpg",
+			"directors": [
+				{
+					"name": "山姆·雷米"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "1418189",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p1841701456.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1841701456.jpg"
+			},
+			"pubdate": [
+				"2007-05-01(中国大陆)"
+			],
+			"rating": {
+				"count": 293214,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.7
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1418189",
+			"subtype": "movie",
+			"title": "蜘蛛侠3",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1418189",
+			"url": "https://movie.douban.com/subject/1418189/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2007"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-14 11:01:17"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-12 23:55:13",
 		"id": 4916727302,
 		"is_editable": false,
