@@ -2,6 +2,155 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-15 00:12:59",
+		"id": 4918847365,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/2129132 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/2129132/interest/4918847365",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "安德鲁·加菲尔德"
+				},
+				{
+					"name": "艾玛·斯通"
+				},
+				{
+					"name": "瑞斯·伊凡斯"
+				},
+				{
+					"name": "丹尼斯·利瑞"
+				},
+				{
+					"name": "马丁·辛"
+				},
+				{
+					"name": "莎莉·菲尔德"
+				},
+				{
+					"name": "伊尔凡·可汗"
+				},
+				{
+					"name": "坎贝尔·斯科特"
+				},
+				{
+					"name": "艾伯丝·戴维兹"
+				},
+				{
+					"name": "克里斯·泽尔卡"
+				},
+				{
+					"name": "麦克斯·查尔斯"
+				},
+				{
+					"name": "C·托马斯·豪威尔"
+				},
+				{
+					"name": "杰克·凯弗"
+				},
+				{
+					"name": "卡丽·科尔曼"
+				},
+				{
+					"name": "迈克尔·巴拉"
+				},
+				{
+					"name": "雷弗·甘特沃特"
+				},
+				{
+					"name": "安迪·佩索亚"
+				},
+				{
+					"name": "汉娜·马克斯"
+				},
+				{
+					"name": "凯尔西·阿斯比尔"
+				},
+				{
+					"name": "凯文·麦克克科尔"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2012 / 美国 / 动作 科幻 奇幻 冒险 / 马克·韦布 / 安德鲁·加菲尔德 艾玛·斯通",
+			"color_scheme": {
+				"_base_color": [
+					0.6052631578947368,
+					0.38,
+					0.19607843137254902
+				],
+				"_avg_color": [
+					0.625,
+					0.19277108433734938,
+					0.3254901960784314
+				],
+				"primary_color_light": "475772",
+				"primary_color_dark": "2f3a4c",
+				"secondary_color": "f4f6f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/2129132.jpg",
+			"directors": [
+				{
+					"name": "马克·韦布"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "2129132",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p1619928534.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1619928534.jpg"
+			},
+			"pubdate": [
+				"2012-08-27(中国大陆)"
+			],
+			"rating": {
+				"count": 379354,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/2129132",
+			"subtype": "movie",
+			"title": "超凡蜘蛛侠",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/2129132",
+			"url": "https://movie.douban.com/subject/2129132/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2012"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-15 00:12:59"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-14 11:01:17",
 		"id": 4917919881,
 		"is_editable": false,
