@@ -2,6 +2,147 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-17 12:21:04",
+		"id": 4921435971,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/6082518 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/6082518/interest/4921435971",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "安德鲁·加菲尔德"
+				},
+				{
+					"name": "艾玛·斯通"
+				},
+				{
+					"name": "杰米·福克斯"
+				},
+				{
+					"name": "戴恩·德哈恩"
+				},
+				{
+					"name": "科鲁姆·费奥瑞"
+				},
+				{
+					"name": "菲丽希缇·琼斯"
+				},
+				{
+					"name": "保罗·吉亚玛提"
+				},
+				{
+					"name": "莎莉·菲尔德"
+				},
+				{
+					"name": "艾伯丝·戴维兹"
+				},
+				{
+					"name": "坎贝尔·斯科特"
+				},
+				{
+					"name": "马尔顿·索克斯"
+				},
+				{
+					"name": "路易斯·坎瑟米"
+				},
+				{
+					"name": "麦克斯·查尔斯"
+				},
+				{
+					"name": "B·J·诺瓦克"
+				},
+				{
+					"name": "莎拉·加顿"
+				},
+				{
+					"name": "迈克尔·麦斯"
+				},
+				{
+					"name": "乔治·维加"
+				},
+				{
+					"name": "比尔·赫克"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2014 / 美国 / 动作 科幻 奇幻 冒险 / 马克·韦布 / 安德鲁·加菲尔德 艾玛·斯通",
+			"color_scheme": {
+				"_base_color": [
+					0.5897435897435898,
+					0.3999999999999999,
+					0.2549019607843137
+				],
+				"_avg_color": [
+					0.6851851851851851,
+					0.08653846153846151,
+					0.40784313725490196
+				],
+				"primary_color_light": "445a72",
+				"primary_color_dark": "2d3c4c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/6082518.jpg",
+			"directors": [
+				{
+					"name": "马克·韦布"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "6082518",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2179858051.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2179858051.jpg"
+			},
+			"pubdate": [
+				"2014-05-04(中国大陆)"
+			],
+			"rating": {
+				"count": 329988,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/6082518",
+			"subtype": "movie",
+			"title": "超凡蜘蛛侠2",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/6082518",
+			"url": "https://movie.douban.com/subject/6082518/",
+			"vendor_desc": "独播",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png"
+			],
+			"year": "2014"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-17 12:21:04"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-15 00:12:59",
 		"id": 4918847365,
 		"is_editable": false,
