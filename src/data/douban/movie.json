@@ -2,6 +2,165 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-17 19:29:16",
+		"id": 4921766445,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/24753477 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/24753477/interest/4921766445",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "汤姆·霍兰德"
+				},
+				{
+					"name": "小罗伯特·唐尼"
+				},
+				{
+					"name": "玛丽莎·托梅"
+				},
+				{
+					"name": "迈克尔·基顿"
+				},
+				{
+					"name": "雅各布·贝塔隆"
+				},
+				{
+					"name": "托尼·雷沃罗利"
+				},
+				{
+					"name": "赞达亚"
+				},
+				{
+					"name": "乔恩·费儒"
+				},
+				{
+					"name": "亚伯拉罕·阿塔哈"
+				},
+				{
+					"name": "劳拉·哈里尔"
+				},
+				{
+					"name": "迈克尔·巴尔别里"
+				},
+				{
+					"name": "罗根·马歇尔-格林"
+				},
+				{
+					"name": "马丁·斯塔尔"
+				},
+				{
+					"name": "唐纳德·格洛弗"
+				},
+				{
+					"name": "汉尼拔·布勒斯"
+				},
+				{
+					"name": "迈克尔·曼多"
+				},
+				{
+					"name": "博基姆·伍德拜因"
+				},
+				{
+					"name": "肯尼斯·崔"
+				},
+				{
+					"name": "詹妮弗·康纳利"
+				},
+				{
+					"name": "格温妮斯·帕特洛"
+				},
+				{
+					"name": "克里斯·埃文斯"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2017 / 美国 / 动作 科幻 冒险 / 乔恩·沃茨 / 汤姆·霍兰德 小罗伯特·唐尼",
+			"color_scheme": {
+				"_base_color": [
+					0.04761904761904743,
+					0.03535353535353537,
+					0.7764705882352941
+				],
+				"_avg_color": [
+					0.05555555555555556,
+					0.11464968152866255,
+					0.615686274509804
+				],
+				"primary_color_light": "a5a19f",
+				"primary_color_dark": "7f7c7a",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/24753477.jpg",
+			"directors": [
+				{
+					"name": "乔恩·沃茨"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "2017高分科幻/动作片",
+					"uri": "douban://douban.com/subject_collection/2017_movie_701?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "24753477",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2497756471.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2497756471.jpg"
+			},
+			"pubdate": [
+				"2017-09-08(中国大陆)"
+			],
+			"rating": {
+				"count": 474769,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/24753477",
+			"subtype": "movie",
+			"title": "蜘蛛侠：英雄归来",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/24753477",
+			"url": "https://movie.douban.com/subject/24753477/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2017"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-17 19:29:16"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-17 12:21:04",
 		"id": 4921435971,
 		"is_editable": false,
