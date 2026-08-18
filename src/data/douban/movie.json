@@ -2,6 +2,225 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-18 19:27:17",
+		"id": 3817400574,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/26374197 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26374197/interest/3817400574",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "沙梅克·摩尔"
+				},
+				{
+					"name": "杰克·约翰逊"
+				},
+				{
+					"name": "海莉·斯坦菲尔德"
+				},
+				{
+					"name": "马赫沙拉·阿里"
+				},
+				{
+					"name": "布莱恩·泰里·亨利"
+				},
+				{
+					"name": "莉莉·汤姆林"
+				},
+				{
+					"name": "劳伦·维勒斯"
+				},
+				{
+					"name": "佐伊·克罗维兹"
+				},
+				{
+					"name": "约翰·木兰尼"
+				},
+				{
+					"name": "贵美子·格伦"
+				},
+				{
+					"name": "尼古拉斯·凯奇"
+				},
+				{
+					"name": "凯瑟琳·哈恩"
+				},
+				{
+					"name": "列维·施瑞博尔"
+				},
+				{
+					"name": "马文·琼斯三世"
+				},
+				{
+					"name": "克里斯·派恩"
+				},
+				{
+					"name": "娜塔丽·莫瑞丝"
+				},
+				{
+					"name": "奥斯卡·伊萨克"
+				},
+				{
+					"name": "格蕾塔·李"
+				},
+				{
+					"name": "斯坦·李"
+				},
+				{
+					"name": "乔玛·塔科内"
+				},
+				{
+					"name": "华金·科西奥"
+				},
+				{
+					"name": "蕾克·贝尔"
+				},
+				{
+					"name": "梅勒妮·海恩斯"
+				},
+				{
+					"name": "尼克·杰恩"
+				},
+				{
+					"name": "穆尼卜·拉赫曼"
+				},
+				{
+					"name": "卡洛斯·萨拉戈萨"
+				},
+				{
+					"name": "黛西·罗斯·布莱内斯"
+				},
+				{
+					"name": "里夫·霍顿"
+				},
+				{
+					"name": "哈里森·奈特"
+				},
+				{
+					"name": "莱克斯·朗"
+				},
+				{
+					"name": "凯特琳·麦肯纳-威尔金森"
+				},
+				{
+					"name": "斯科特·门维尔"
+				},
+				{
+					"name": "克里斯托弗·米勒"
+				},
+				{
+					"name": "德维卡·帕利赫"
+				},
+				{
+					"name": "柯特妮·佩尔顿"
+				},
+				{
+					"name": "克里斯蒂·法瑞斯"
+				},
+				{
+					"name": "杰奎琳·皮诺尔"
+				},
+				{
+					"name": "贾斯汀·沉卡罗"
+				},
+				{
+					"name": "梅利莎·斯特姆"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2018 / 美国 / 动作 科幻 动画 冒险 / 鲍勃·佩尔西凯蒂 彼得·拉姆齐 罗德尼·罗斯曼 / 沙梅克·摩尔 杰克·约翰逊",
+			"color_scheme": {
+				"_base_color": [
+					0.12021857923497263,
+					0.2772727272727273,
+					0.8627450980392157
+				],
+				"_avg_color": [
+					0.07971014492753625,
+					0.3216783216783217,
+					0.5607843137254902
+				],
+				"primary_color_light": "a59877",
+				"primary_color_dark": "7f755c",
+				"secondary_color": "f9f8f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26374197.jpg",
+			"directors": [
+				{
+					"name": "鲍勃·佩尔西凯蒂"
+				},
+				{
+					"name": "彼得·拉姆齐"
+				},
+				{
+					"name": "罗德尼·罗斯曼"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 239,
+					"title": "豆瓣电影Top250",
+					"uri": "douban://douban.com/subject_collection/movie_top250"
+				}
+			],
+			"id": "26374197",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2535851348.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2535851348.jpg"
+			},
+			"pubdate": [
+				"2018-12-21(中国大陆)"
+			],
+			"rating": {
+				"count": 771001,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26374197",
+			"subtype": "movie",
+			"title": "蜘蛛侠：平行宇宙",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/26374197",
+			"url": "https://movie.douban.com/subject/26374197/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2018"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-18 19:27:17"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-18 09:19:06",
 		"id": 4922271052,
 		"is_editable": false,
