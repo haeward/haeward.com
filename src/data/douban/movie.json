@@ -2,6 +2,529 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-19 05:36:49",
+		"id": 4923210326,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1302090 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1302090/interest/4923210326",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "周星驰"
+				},
+				{
+					"name": "张敏"
+				},
+				{
+					"name": "吴孟达"
+				},
+				{
+					"name": "张耀扬"
+				},
+				{
+					"name": "黄一山"
+				},
+				{
+					"name": "秦沛"
+				},
+				{
+					"name": "苑琼丹"
+				},
+				{
+					"name": "陈国新"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1991 / 中国香港 / 喜剧 动作 爱情 / 陈嘉上 / 周星驰 张敏",
+			"color_scheme": {
+				"_base_color": [
+					0.05141843971631205,
+					0.4497607655502392,
+					0.8196078431372549
+				],
+				"_avg_color": [
+					0.07142857142857145,
+					0.31111111111111117,
+					0.35294117647058826
+				],
+				"primary_color_light": "724f3f",
+				"primary_color_dark": "4c342a",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1302090.jpg",
+			"directors": [
+				{
+					"name": "陈嘉上"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"爱情"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 15,
+					"title": "中国香港喜剧片榜",
+					"uri": "douban://douban.com/subject_collection/ECOYO2QPA?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1302090",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2002724530.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2002724530.jpg"
+			},
+			"pubdate": [
+				"1991-07-18(中国香港)"
+			],
+			"rating": {
+				"count": 392245,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1302090",
+			"subtype": "movie",
+			"title": "逃学威龙",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1302090",
+			"url": "https://movie.douban.com/subject/1302090/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "1991"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-19 05:36:49"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-08-19 05:34:10",
+		"id": 4923209955,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ https://www.douban.com/doubanapp/dispatch/movie/6982558 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/6982558/interest/4923209955",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "马特·达蒙"
+				},
+				{
+					"name": "景甜"
+				},
+				{
+					"name": "佩德罗·帕斯卡"
+				},
+				{
+					"name": "刘德华"
+				},
+				{
+					"name": "威廉·达福"
+				},
+				{
+					"name": "张涵予"
+				},
+				{
+					"name": "鹿晗"
+				},
+				{
+					"name": "彭于晏"
+				},
+				{
+					"name": "林更新"
+				},
+				{
+					"name": "郑恺"
+				},
+				{
+					"name": "黄轩"
+				},
+				{
+					"name": "陈学冬"
+				},
+				{
+					"name": "王俊凯"
+				},
+				{
+					"name": "余心恬"
+				},
+				{
+					"name": "刘恩佳"
+				},
+				{
+					"name": "李亨"
+				},
+				{
+					"name": "李京沐"
+				},
+				{
+					"name": "纽曼·阿卡"
+				},
+				{
+					"name": "约翰尼·希科"
+				},
+				{
+					"name": "皮鲁·埃斯贝克"
+				},
+				{
+					"name": "李彦"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2016 / 中国大陆 美国 / 动作 奇幻 冒险 / 张艺谋 / 马特·达蒙 景甜",
+			"color_scheme": {
+				"_base_color": [
+					0.8333333333333334,
+					0.018867924528301952,
+					0.20784313725490197
+				],
+				"_avg_color": [
+					0.04545454545454549,
+					0.1195652173913044,
+					0.3607843137254902
+				],
+				"primary_color_light": "727072",
+				"primary_color_dark": "4c4b4c",
+				"secondary_color": "f9f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/6982558.jpg",
+			"directors": [
+				{
+					"name": "张艺谋"
+				}
+			],
+			"genres": [
+				"动作",
+				"奇幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 12,
+					"title": "第8届金扫帚奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECIUKEUPA?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "6982558",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2400082527.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2400082527.jpg"
+			},
+			"pubdate": [
+				"2016-12-16(中国大陆)"
+			],
+			"rating": {
+				"count": 429782,
+				"max": 10,
+				"star_count": 2.5,
+				"value": 4.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/6982558",
+			"subtype": "movie",
+			"title": "长城",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/6982558",
+			"url": "https://movie.douban.com/subject/6982558/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2016"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-19 05:34:10"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-08-19 05:31:39",
+		"id": 4923209632,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/24284175 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/24284175/interest/4923209632",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "古天乐"
+				},
+				{
+					"name": "洪金宝"
+				},
+				{
+					"name": "任贤齐"
+				},
+				{
+					"name": "林峯"
+				},
+				{
+					"name": "刘俊谦"
+				},
+				{
+					"name": "黄德斌"
+				},
+				{
+					"name": "伍允龙"
+				},
+				{
+					"name": "胡子彤"
+				},
+				{
+					"name": "张文杰"
+				},
+				{
+					"name": "廖子妤"
+				},
+				{
+					"name": "郭富城"
+				},
+				{
+					"name": "蔡思韵"
+				},
+				{
+					"name": "黄梓乐"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2024 / 中国香港 中国大陆 / 动作 犯罪 / 郑保瑞 / 古天乐 洪金宝",
+			"color_scheme": {
+				"_base_color": [
+					0.006410256410256406,
+					0.7222222222222222,
+					0.1411764705882353
+				],
+				"_avg_color": [
+					0.0032679738562091387,
+					0.7183098591549296,
+					0.2784313725490196
+				],
+				"primary_color_light": "72231f",
+				"primary_color_dark": "4c1715",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/24284175.jpg",
+			"directors": [
+				{
+					"name": "郑保瑞"
+				}
+			],
+			"genres": [
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 8,
+					"title": "近期热门犯罪片榜",
+					"uri": "douban://douban.com/subject_collection/ECLAN6LHQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "24284175",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2920653336.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2920653336.jpg"
+			},
+			"pubdate": [
+				"2024-05-01(中国大陆/中国香港)"
+			],
+			"rating": {
+				"count": 348495,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/24284175",
+			"subtype": "movie",
+			"title": "九龙城寨之围城",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/24284175",
+			"url": "https://movie.douban.com/subject/24284175/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2024"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-19 05:31:39"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-08-19 04:14:44",
+		"id": 4923196195,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1428577 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1428577/interest/4923196195",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "丁建华"
+				},
+				{
+					"name": "杨成纯"
+				},
+				{
+					"name": "程晓桦"
+				},
+				{
+					"name": "于鼎"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1981 / 中国大陆 / 剧情 动画 短片 奇幻 / 钱家骏 戴铁郎 / 丁建华 杨成纯",
+			"color_scheme": {
+				"_base_color": [
+					0.02688172043010752,
+					0.7989690721649484,
+					0.7607843137254902
+				],
+				"_avg_color": [
+					0.03395061728395062,
+					0.5373134328358209,
+					0.788235294117647
+				],
+				"primary_color_light": "a53621",
+				"primary_color_dark": "7f2a19",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1428577.jpg",
+			"directors": [
+				{
+					"name": "钱家骏"
+				},
+				{
+					"name": "戴铁郎"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动画",
+				"短片"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 14,
+					"title": "评分最高短片",
+					"uri": "douban://douban.com/subject_collection/film_genre_36?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1428577",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2331868079.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2331868079.jpg"
+			},
+			"pubdate": [
+				"1981"
+			],
+			"rating": {
+				"count": 105053,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1428577",
+			"subtype": "movie",
+			"title": "九色鹿",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1428577",
+			"url": "https://movie.douban.com/subject/1428577/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "1981"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-19 04:14:44"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-18 19:27:17",
 		"id": 3817400574,
 		"is_editable": false,
