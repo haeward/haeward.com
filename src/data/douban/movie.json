@@ -2,6 +2,121 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-19 12:37:43",
+		"id": 3670717895,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/36123159 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36123159/interest/3670717895",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张秉君"
+				},
+				{
+					"name": "谭笑"
+				},
+				{
+					"name": "张伟"
+				},
+				{
+					"name": "缪莹莹"
+				},
+				{
+					"name": "贾晨露"
+				},
+				{
+					"name": "聂吉轩"
+				},
+				{
+					"name": "王天昊"
+				},
+				{
+					"name": "张茗"
+				},
+				{
+					"name": "王思雨"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2023 / 中国大陆 / 喜剧 科幻 动画 / 林永长 邵和麒 / 张秉君 谭笑",
+			"color_scheme": {
+				"_base_color": [
+					0.050925925925925986,
+					0.16822429906542063,
+					0.8392156862745098
+				],
+				"_avg_color": [
+					0.9933333333333334,
+					0.1623376623376623,
+					0.6039215686274509
+				],
+				"primary_color_light": "a59289",
+				"primary_color_dark": "7f706a",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36123159.jpg",
+			"directors": [
+				{
+					"name": "林永长"
+				},
+				{
+					"name": "邵和麒"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"科幻",
+				"动画"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "36123159",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2886535219.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2886535219.jpg"
+			},
+			"pubdate": [
+				"2023-01-22(中国大陆)"
+			],
+			"rating": {
+				"count": 73472,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36123159",
+			"subtype": "movie",
+			"title": "熊出没·伴我“熊芯”",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36123159",
+			"url": "https://movie.douban.com/subject/36123159/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2023"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-19 12:37:43"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-19 05:36:49",
 		"id": 4923210326,
 		"is_editable": false,
