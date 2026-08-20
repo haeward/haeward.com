@@ -2,6 +2,153 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-20 22:11:04",
+		"id": 4924835823,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/1578714 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1578714/interest/4924835823",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "盖尔·加朵"
+				},
+				{
+					"name": "克里斯·派恩"
+				},
+				{
+					"name": "康妮·尼尔森"
+				},
+				{
+					"name": "罗宾·怀特"
+				},
+				{
+					"name": "大卫·休里斯"
+				},
+				{
+					"name": "丹尼·赫斯顿"
+				},
+				{
+					"name": "埃伦娜·安纳亚"
+				},
+				{
+					"name": "露茜·戴维斯"
+				},
+				{
+					"name": "萨伊德·塔格马奥"
+				},
+				{
+					"name": "艾文·布莱纳"
+				},
+				{
+					"name": "尤金·布雷弗·洛克"
+				},
+				{
+					"name": "莉莉·阿斯佩尔"
+				},
+				{
+					"name": "艾米丽·凯里"
+				},
+				{
+					"name": "丽莎·洛文·孔斯利"
+				},
+				{
+					"name": "安·奥戈博莫"
+				},
+				{
+					"name": "弗洛伦丝·卡松巴"
+				},
+				{
+					"name": "杜晨·科洛斯"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2017 / 美国 中国大陆 中国香港 / 动作 奇幻 冒险 / 派蒂·杰金斯 / 盖尔·加朵 克里斯·派恩",
+			"color_scheme": {
+				"_base_color": [
+					0.045662100456621,
+					0.7487179487179487,
+					0.7647058823529411
+				],
+				"_avg_color": [
+					0.05180180180180177,
+					0.5,
+					0.5803921568627451
+				],
+				"primary_color_light": "a54b29",
+				"primary_color_dark": "7f3a20",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1578714.jpg",
+			"directors": [
+				{
+					"name": "派蒂·杰金斯"
+				}
+			],
+			"genres": [
+				"动作",
+				"奇幻",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 9,
+					"title": "2017高分科幻/动作片",
+					"uri": "douban://douban.com/subject_collection/2017_movie_701?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "1578714",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2460006593.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2460006593.jpg"
+			},
+			"pubdate": [
+				"2017-06-02(中国大陆)"
+			],
+			"rating": {
+				"count": 488430,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1578714",
+			"subtype": "movie",
+			"title": "神奇女侠",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1578714",
+			"url": "https://movie.douban.com/subject/1578714/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2017"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-20 22:11:04"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-20 01:27:08",
 		"id": 4871039095,
 		"is_editable": false,
