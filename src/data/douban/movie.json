@@ -2,6 +2,114 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-23 04:29:52",
+		"id": 4926937017,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/27121260 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/27121260/interest/4926937017",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "李元韬"
+				},
+				{
+					"name": "陶典"
+				},
+				{
+					"name": "黄莺"
+				},
+				{
+					"name": "梁达伟"
+				},
+				{
+					"name": "张欣"
+				},
+				{
+					"name": "夏一可"
+				},
+				{
+					"name": "唐雅菁"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2019 / 中国大陆 / 动作 科幻 动画 冒险 / 董相博 / 李元韬 陶典",
+			"color_scheme": {
+				"_base_color": [
+					0.5666666666666668,
+					0.22727272727272727,
+					0.17254901960784313
+				],
+				"_avg_color": [
+					0.5666666666666668,
+					0.1515151515151516,
+					0.25882352941176473
+				],
+				"primary_color_light": "586872",
+				"primary_color_dark": "3b454c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/27121260.jpg",
+			"directors": [
+				{
+					"name": "董相博"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "27121260",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2650641487.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2650641487.jpg"
+			},
+			"pubdate": [
+				"2019-07-13(中国大陆)"
+			],
+			"rating": {
+				"count": 120937,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/27121260",
+			"subtype": "tv",
+			"title": "灵笼 第一季",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/27121260",
+			"url": "https://movie.douban.com/subject/27121260/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2019"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-23 04:29:52"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-23 00:14:34",
 		"id": 4839412273,
 		"is_editable": false,
