@@ -2,6 +2,172 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-25 04:55:05",
+		"id": 4928856052,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1439579 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1439579/interest/4928856052",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "高山南"
+				},
+				{
+					"name": "山口胜平"
+				},
+				{
+					"name": "山崎和佳奈"
+				},
+				{
+					"name": "神谷明"
+				},
+				{
+					"name": "盐泽兼人"
+				},
+				{
+					"name": "绪方贤一"
+				},
+				{
+					"name": "茶风林"
+				},
+				{
+					"name": "岩居由希子"
+				},
+				{
+					"name": "高木涉"
+				},
+				{
+					"name": "大谷育江"
+				},
+				{
+					"name": "藤本让"
+				},
+				{
+					"name": "藤城裕士"
+				},
+				{
+					"name": "宫寺智子"
+				},
+				{
+					"name": "藤井佳代子"
+				},
+				{
+					"name": "山路和弘"
+				},
+				{
+					"name": "平尾仁"
+				},
+				{
+					"name": "谷川俊"
+				},
+				{
+					"name": "山崎巧"
+				},
+				{
+					"name": "千叶一伸"
+				},
+				{
+					"name": "真山亚子"
+				},
+				{
+					"name": "一条和矢"
+				},
+				{
+					"name": "百百麻子"
+				},
+				{
+					"name": "川谷修士"
+				},
+				{
+					"name": "小堀裕之"
+				},
+				{
+					"name": "野村明大"
+				},
+				{
+					"name": "石田太郎"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1997 / 日本 / 动画 悬疑 / 儿玉兼嗣 / 高山南 山口胜平",
+			"color_scheme": {
+				"_base_color": [
+					0.04477611940298506,
+					0.30044843049327347,
+					0.8745098039215686
+				],
+				"_avg_color": [
+					0.9666666666666665,
+					0.0892857142857143,
+					0.6588235294117647
+				],
+				"primary_color_light": "a58173",
+				"primary_color_dark": "7f6359",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1439579.jpg",
+			"directors": [
+				{
+					"name": "儿玉兼嗣"
+				}
+			],
+			"genres": [
+				"动画",
+				"悬疑"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "1439579",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2926763729.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2926763729.jpg"
+			},
+			"pubdate": [
+				"2026(中国大陆)"
+			],
+			"rating": {
+				"count": 162364,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1439579",
+			"subtype": "movie",
+			"title": "名侦探柯南：计时引爆摩天楼",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1439579",
+			"url": "https://movie.douban.com/subject/1439579/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "1997"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-25 04:55:05"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-23 04:29:52",
 		"id": 4926937017,
 		"is_editable": false,
