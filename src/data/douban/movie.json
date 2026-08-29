@@ -2,6 +2,156 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-29 17:55:16",
+		"id": 4932548569,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/35259439 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35259439/interest/4932548569",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张东"
+				},
+				{
+					"name": "陈张太康"
+				},
+				{
+					"name": "李诗萌"
+				},
+				{
+					"name": "季冠霖"
+				},
+				{
+					"name": "张喆"
+				},
+				{
+					"name": "梁晓强"
+				},
+				{
+					"name": "宣晓鸣"
+				},
+				{
+					"name": "商虹"
+				},
+				{
+					"name": "张艺"
+				},
+				{
+					"name": "钱文青"
+				},
+				{
+					"name": "周莹"
+				},
+				{
+					"name": "曾梦玉"
+				},
+				{
+					"name": "羊仔"
+				},
+				{
+					"name": "景向谁依"
+				},
+				{
+					"name": "郭政建"
+				},
+				{
+					"name": "严燕生"
+				},
+				{
+					"name": "林强"
+				},
+				{
+					"name": "王秋皓"
+				},
+				{
+					"name": "杨洁"
+				},
+				{
+					"name": "木易"
+				},
+				{
+					"name": "柒夜"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2022 / 中国大陆 / 科幻 动画 悬疑 / 徐一超 / 张东 陈张太康",
+			"color_scheme": {
+				"_base_color": [
+					0.05121042830540037,
+					0.8287037037037036,
+					0.8470588235294118
+				],
+				"_avg_color": [
+					0.025316455696202556,
+					0.7053571428571429,
+					0.4392156862745098
+				],
+				"primary_color_light": "723013",
+				"primary_color_dark": "4c200d",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35259439.jpg",
+			"directors": [
+				{
+					"name": "徐一超"
+				}
+			],
+			"genres": [
+				"科幻",
+				"动画",
+				"悬疑"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "35259439",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2876361744.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2876361744.jpg"
+			},
+			"pubdate": [
+				"2022-07-29(中国大陆)"
+			],
+			"rating": {
+				"count": 9079,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35259439",
+			"subtype": "tv",
+			"title": "黑门",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/35259439",
+			"url": "https://movie.douban.com/subject/35259439/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2022"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-29 17:55:16"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-26 19:33:29",
 		"id": 4930172966,
 		"is_editable": false,
