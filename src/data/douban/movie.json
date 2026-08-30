@@ -2,6 +2,203 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-30 23:25:00",
+		"id": 4933781309,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/2286642 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/2286642/interest/4933781309",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "高山南"
+				},
+				{
+					"name": "山崎和佳奈"
+				},
+				{
+					"name": "神谷明"
+				},
+				{
+					"name": "山口胜平"
+				},
+				{
+					"name": "林原惠美"
+				},
+				{
+					"name": "岩居由希子"
+				},
+				{
+					"name": "高木涉"
+				},
+				{
+					"name": "大谷育江"
+				},
+				{
+					"name": "绪方惠美"
+				},
+				{
+					"name": "高乃丽"
+				},
+				{
+					"name": "爱河里花子"
+				},
+				{
+					"name": "斋贺光希"
+				},
+				{
+					"name": "田中秀幸"
+				},
+				{
+					"name": "岛本须美"
+				},
+				{
+					"name": "绪方贤一"
+				},
+				{
+					"name": "茶风林"
+				},
+				{
+					"name": "井上和彦"
+				},
+				{
+					"name": "松井菜樱子"
+				},
+				{
+					"name": "平田广明"
+				},
+				{
+					"name": "藤本让"
+				},
+				{
+					"name": "依田英助"
+				},
+				{
+					"name": "堀部隆一"
+				},
+				{
+					"name": "千叶一伸"
+				},
+				{
+					"name": "小林清志"
+				},
+				{
+					"name": "速水奖"
+				},
+				{
+					"name": "速水圭"
+				},
+				{
+					"name": "宝龟克寿"
+				},
+				{
+					"name": "中岛聪彦"
+				},
+				{
+					"name": "长嶝高士"
+				},
+				{
+					"name": "细井治"
+				},
+				{
+					"name": "增谷康纪"
+				},
+				{
+					"name": "百百麻子"
+				},
+				{
+					"name": "村井每早"
+				},
+				{
+					"name": "莲池龙三"
+				},
+				{
+					"name": "津嘉山正种"
+				},
+				{
+					"name": "折笠爱"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2002 / 日本 / 动画 悬疑 冒险 / 儿玉兼嗣 / 高山南 山崎和佳奈",
+			"color_scheme": {
+				"_base_color": [
+					0.03968253968253969,
+					0.6631578947368422,
+					0.7450980392156863
+				],
+				"_avg_color": [
+					0.04460093896713616,
+					0.4965034965034965,
+					0.5607843137254902
+				],
+				"primary_color_light": "a55237",
+				"primary_color_dark": "7f3f2a",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/2286642.jpg",
+			"directors": [
+				{
+					"name": "儿玉兼嗣"
+				}
+			],
+			"genres": [
+				"动画",
+				"悬疑",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "2286642",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2890515833.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2890515833.jpg"
+			},
+			"pubdate": [
+				"2023-04-04(中国大陆)"
+			],
+			"rating": {
+				"count": 305700,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/2286642",
+			"subtype": "movie",
+			"title": "名侦探柯南：贝克街的亡灵",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/2286642",
+			"url": "https://movie.douban.com/subject/2286642/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2002"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-30 23:25:00"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-30 08:46:44",
 		"id": 4933090833,
 		"is_editable": false,
