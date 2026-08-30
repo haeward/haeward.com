@@ -2,6 +2,151 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-30 08:46:44",
+		"id": 4933090833,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/37096700 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37096700/interest/4933090833",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "全智贤"
+				},
+				{
+					"name": "具教焕"
+				},
+				{
+					"name": "池昌旭"
+				},
+				{
+					"name": "申铉彬"
+				},
+				{
+					"name": "金新绿"
+				},
+				{
+					"name": "高洙"
+				},
+				{
+					"name": "李仲玉"
+				},
+				{
+					"name": "李玄均"
+				},
+				{
+					"name": "金炯默"
+				},
+				{
+					"name": "黄在烈"
+				},
+				{
+					"name": "金在禄"
+				},
+				{
+					"name": "蔡徐恩"
+				},
+				{
+					"name": "李淡熙"
+				},
+				{
+					"name": "申成日"
+				},
+				{
+					"name": "吴庆华"
+				},
+				{
+					"name": "崔熙道"
+				},
+				{
+					"name": "崔广日"
+				},
+				{
+					"name": "金钟泰"
+				},
+				{
+					"name": "李康旭"
+				},
+				{
+					"name": "金演佼"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 韩国 / 动作 科幻 悬疑 惊悚 / 延尚昊 / 全智贤 具教焕",
+			"color_scheme": {
+				"_base_color": [
+					0.4791666666666667,
+					0.34782608695652173,
+					0.09019607843137255
+				],
+				"_avg_color": [
+					0.4479166666666667,
+					0.2962962962962963,
+					0.21176470588235294
+				],
+				"primary_color_light": "4a726d",
+				"primary_color_dark": "314c49",
+				"secondary_color": "f4f9f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37096700.jpg",
+			"directors": [
+				{
+					"name": "延尚昊"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"悬疑"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "37096700",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2932381127.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2932381127.jpg"
+			},
+			"pubdate": [
+				"2026-05-15(戛纳电影节)"
+			],
+			"rating": {
+				"count": 35176,
+				"max": 10,
+				"star_count": 3,
+				"value": 6.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37096700",
+			"subtype": "movie",
+			"title": "群体",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/37096700",
+			"url": "https://movie.douban.com/subject/37096700/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-30 08:46:44"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-29 17:55:16",
 		"id": 4932548569,
 		"is_editable": false,
