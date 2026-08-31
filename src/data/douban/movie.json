@@ -2,6 +2,143 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-08-31 15:40:04",
+		"id": 4934211116,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/26425068 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26425068/interest/4934211116",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "甄子丹"
+				},
+				{
+					"name": "刘德华"
+				},
+				{
+					"name": "姜皓文"
+				},
+				{
+					"name": "郑则仕"
+				},
+				{
+					"name": "刘浩龙"
+				},
+				{
+					"name": "汤镇业"
+				},
+				{
+					"name": "喻亢"
+				},
+				{
+					"name": "胡然"
+				},
+				{
+					"name": "徐冬冬"
+				},
+				{
+					"name": "黄日华"
+				},
+				{
+					"name": "陈惠敏"
+				},
+				{
+					"name": "周励淇"
+				},
+				{
+					"name": "吴毅将"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2017 / 中国香港 中国大陆 / 动作 犯罪 / 王晶 关智耀 / 甄子丹 刘德华",
+			"color_scheme": {
+				"_base_color": [
+					0,
+					0.034482758620689655,
+					0.11372549019607843
+				],
+				"_avg_color": [
+					0.11904761904761914,
+					0.08641975308641962,
+					0.3176470588235294
+				],
+				"primary_color_light": "726e6e",
+				"primary_color_dark": "4c4949",
+				"secondary_color": "f9f4f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26425068.jpg",
+			"directors": [
+				{
+					"name": "王晶"
+				},
+				{
+					"name": "关智耀"
+				}
+			],
+			"genres": [
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 20,
+					"title": "中国香港犯罪片榜",
+					"uri": "douban://douban.com/subject_collection/EC3AOZZUY?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "26425068",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2499052494.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2499052494.jpg"
+			},
+			"pubdate": [
+				"2017-09-30(中国大陆)"
+			],
+			"rating": {
+				"count": 378379,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 7.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26425068",
+			"subtype": "movie",
+			"title": "追龙",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/26425068",
+			"url": "https://movie.douban.com/subject/26425068/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2017"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-08-31 15:40:04"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-30 23:25:00",
 		"id": 4933781309,
 		"is_editable": false,
