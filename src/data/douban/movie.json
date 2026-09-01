@@ -2,6 +2,161 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-01 23:38:20",
+		"id": 4935330614,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/36247731 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36247731/interest/4935330614",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "梅森·泰晤士"
+				},
+				{
+					"name": "妮可·帕克"
+				},
+				{
+					"name": "杰拉德·巴特勒"
+				},
+				{
+					"name": "尼克·弗罗斯特"
+				},
+				{
+					"name": "加布里埃尔·豪尔"
+				},
+				{
+					"name": "朱利安·丹尼森"
+				},
+				{
+					"name": "布朗温·詹姆斯"
+				},
+				{
+					"name": "哈里·特雷瓦尔德温"
+				},
+				{
+					"name": "默里·麦克阿瑟"
+				},
+				{
+					"name": "彼得·塞拉菲诺威茨"
+				},
+				{
+					"name": "纳奥米·维尔特纳"
+				},
+				{
+					"name": "露丝·科德"
+				},
+				{
+					"name": "安德烈埃·瓦雷"
+				},
+				{
+					"name": "安娜·里昂·布洛菲"
+				},
+				{
+					"name": "马库斯·奥尼卢德"
+				},
+				{
+					"name": "皮特·塞尔伍德"
+				},
+				{
+					"name": "丹尼尔-约翰·威廉斯"
+				},
+				{
+					"name": "凯特·肯尼迪"
+				},
+				{
+					"name": "赛琳娜·琼斯"
+				},
+				{
+					"name": "尼克·康沃尔"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 美国 / 剧情 喜剧 动作 奇幻 冒险 / 迪恩·戴布洛伊 / 梅森·泰晤士 妮可·帕克",
+			"color_scheme": {
+				"_base_color": [
+					0.09090909090909088,
+					0.25581395348837216,
+					0.16862745098039217
+				],
+				"_avg_color": [
+					0.09313725490196083,
+					0.29059829059829057,
+					0.4588235294117647
+				],
+				"primary_color_light": "726555",
+				"primary_color_dark": "4c4338",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36247731.jpg",
+			"directors": [
+				{
+					"name": "迪恩·戴布洛伊"
+				}
+			],
+			"genres": [
+				"剧情",
+				"喜剧",
+				"动作"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 19,
+					"title": "美国冒险片榜",
+					"uri": "douban://douban.com/subject_collection/ECOMON43Q?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "36247731",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2922512455.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2922512455.jpg"
+			},
+			"pubdate": [
+				"2025-06-13(美国/中国大陆)"
+			],
+			"rating": {
+				"count": 184404,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36247731",
+			"subtype": "movie",
+			"title": "新·驯龙高手",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36247731",
+			"url": "https://movie.douban.com/subject/36247731/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-01 23:38:20"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-01 11:38:47",
 		"id": 4934805352,
 		"is_editable": false,
