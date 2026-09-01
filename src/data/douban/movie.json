@@ -2,6 +2,190 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-01 11:38:47",
+		"id": 4934805352,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/2357707 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/2357707/interest/4934805352",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "高山南"
+				},
+				{
+					"name": "堀川亮"
+				},
+				{
+					"name": "山口胜平"
+				},
+				{
+					"name": "山崎和佳奈"
+				},
+				{
+					"name": "宫村优子"
+				},
+				{
+					"name": "神谷明"
+				},
+				{
+					"name": "绪方贤一"
+				},
+				{
+					"name": "林原惠美"
+				},
+				{
+					"name": "岩居由希子"
+				},
+				{
+					"name": "高木涉"
+				},
+				{
+					"name": "大谷育江"
+				},
+				{
+					"name": "松井菜樱子"
+				},
+				{
+					"name": "置鲇龙太郎"
+				},
+				{
+					"name": "若本规夫"
+				},
+				{
+					"name": "茶风林"
+				},
+				{
+					"name": "井上和彦"
+				},
+				{
+					"name": "汤屋敦子"
+				},
+				{
+					"name": "井原启介"
+				},
+				{
+					"name": "中村大树"
+				},
+				{
+					"name": "龟井三郎"
+				},
+				{
+					"name": "游佐浩二"
+				},
+				{
+					"name": "水内清光"
+				},
+				{
+					"name": "三户耕三"
+				},
+				{
+					"name": "里内信夫"
+				},
+				{
+					"name": "安达麻里"
+				},
+				{
+					"name": "铃木弘子"
+				},
+				{
+					"name": "佐久间玲"
+				},
+				{
+					"name": "一龙斋贞友"
+				},
+				{
+					"name": "松本幸"
+				},
+				{
+					"name": "千叶一伸"
+				},
+				{
+					"name": "菅原淳一"
+				},
+				{
+					"name": "铃置洋孝"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2003 / 日本 / 动画 悬疑 冒险 / 儿玉兼嗣 / 高山南 堀川亮",
+			"color_scheme": {
+				"_base_color": [
+					0.8666666666666666,
+					0.07812499999999994,
+					0.25098039215686274
+				],
+				"_avg_color": [
+					0.029166666666666674,
+					0.31007751937984496,
+					0.5058823529411764
+				],
+				"primary_color_light": "a598a3",
+				"primary_color_dark": "7f757d",
+				"secondary_color": "f9f4f8",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/2357707.jpg",
+			"directors": [
+				{
+					"name": "儿玉兼嗣"
+				}
+			],
+			"genres": [
+				"动画",
+				"悬疑",
+				"冒险"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "2357707",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2916591242.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2916591242.jpg"
+			},
+			"pubdate": [
+				"2024-12-27(中国大陆)"
+			],
+			"rating": {
+				"count": 172606,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/2357707",
+			"subtype": "movie",
+			"title": "名侦探柯南：迷宫的十字路口",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/2357707",
+			"url": "https://movie.douban.com/subject/2357707/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2003"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-01 11:38:47"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-08-31 15:40:04",
 		"id": 4934211116,
 		"is_editable": false,
