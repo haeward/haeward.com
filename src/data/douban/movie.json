@@ -2,6 +2,130 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-03 23:18:07",
+		"id": 4513640324,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/36889934 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36889934/interest/4513640324",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "高山南"
+				},
+				{
+					"name": "石见舞菜香"
+				},
+				{
+					"name": "细谷佳正"
+				},
+				{
+					"name": "诹访部顺一"
+				},
+				{
+					"name": "井上刚"
+				},
+				{
+					"name": "市之濑加那"
+				},
+				{
+					"name": "东地宏树"
+				},
+				{
+					"name": "千本木彩花"
+				},
+				{
+					"name": "高桥英则"
+				},
+				{
+					"name": "千叶一伸"
+				},
+				{
+					"name": "越后屋浩介"
+				},
+				{
+					"name": "阪口周平"
+				},
+				{
+					"name": "小清水亚美"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 日本 / 动画 / 莲井隆弘 / 高山南 石见舞菜香",
+			"color_scheme": {
+				"_base_color": [
+					0.5416666666666666,
+					0.13333333333333333,
+					0.11764705882352941
+				],
+				"_avg_color": [
+					0.041666666666666664,
+					0.15267175572519073,
+					0.5137254901960784
+				],
+				"primary_color_light": "8fa0a5",
+				"primary_color_dark": "6e7b7f",
+				"secondary_color": "f4f8f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36889934.jpg",
+			"directors": [
+				{
+					"name": "莲井隆弘"
+				}
+			],
+			"genres": [
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "36889934",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2918954003.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2918954003.jpg"
+			},
+			"pubdate": [
+				"2025-06-14(中国大陆)"
+			],
+			"rating": {
+				"count": 933,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36889934",
+			"subtype": "tv",
+			"title": "真·武士传",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/36889934",
+			"url": "https://movie.douban.com/subject/36889934/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-03 23:18:07"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-03 02:40:50",
 		"id": 4936131464,
 		"is_editable": false,
