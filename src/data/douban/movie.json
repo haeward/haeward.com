@@ -2,6 +2,497 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-04 13:58:35",
+		"id": 4937020433,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/26727273 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26727273/interest/4937020433",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "陆毅"
+				},
+				{
+					"name": "柯蓝"
+				},
+				{
+					"name": "张丰毅"
+				},
+				{
+					"name": "吴刚"
+				},
+				{
+					"name": "许亚军"
+				},
+				{
+					"name": "张志坚"
+				},
+				{
+					"name": "胡静"
+				},
+				{
+					"name": "张凯丽"
+				},
+				{
+					"name": "高亚麟"
+				},
+				{
+					"name": "白志迪"
+				},
+				{
+					"name": "李建义"
+				},
+				{
+					"name": "冯雷"
+				},
+				{
+					"name": "李光复"
+				},
+				{
+					"name": "赵子琪"
+				},
+				{
+					"name": "丁海峰"
+				},
+				{
+					"name": "张晞临"
+				},
+				{
+					"name": "岳秀清"
+				},
+				{
+					"name": "翟万臣"
+				},
+				{
+					"name": "许文广"
+				},
+				{
+					"name": "侯勇"
+				},
+				{
+					"name": "黄品沅"
+				},
+				{
+					"name": "王丽云"
+				},
+				{
+					"name": "陶慧敏"
+				},
+				{
+					"name": "徐光宇"
+				},
+				{
+					"name": "黄俊鹏"
+				},
+				{
+					"name": "李威"
+				},
+				{
+					"name": "阚犇犇"
+				},
+				{
+					"name": "唐菀"
+				},
+				{
+					"name": "纪帅"
+				},
+				{
+					"name": "李昕岳"
+				},
+				{
+					"name": "黄薇"
+				},
+				{
+					"name": "高英"
+				},
+				{
+					"name": "赵龙豪"
+				},
+				{
+					"name": "施大生"
+				},
+				{
+					"name": "卞涛"
+				},
+				{
+					"name": "何达"
+				},
+				{
+					"name": "侯天来"
+				},
+				{
+					"name": "沈晓海"
+				},
+				{
+					"name": "郝光"
+				},
+				{
+					"name": "孙宁"
+				},
+				{
+					"name": "李学政"
+				},
+				{
+					"name": "徐小恪"
+				},
+				{
+					"name": "王海平"
+				},
+				{
+					"name": "滕爱弦"
+				},
+				{
+					"name": "方晓莉"
+				},
+				{
+					"name": "李飞"
+				},
+				{
+					"name": "于诚群"
+				},
+				{
+					"name": "石强"
+				},
+				{
+					"name": "王晞"
+				},
+				{
+					"name": "何昕霖"
+				},
+				{
+					"name": "欧阳培龙"
+				},
+				{
+					"name": "刘若谷"
+				},
+				{
+					"name": "杨嘉华"
+				},
+				{
+					"name": "曹杨"
+				},
+				{
+					"name": "张艺丹"
+				},
+				{
+					"name": "李路"
+				},
+				{
+					"name": "宗晶"
+				},
+				{
+					"name": "赵雄"
+				},
+				{
+					"name": "史政涵"
+				},
+				{
+					"name": "王建兵"
+				},
+				{
+					"name": "亚飞"
+				},
+				{
+					"name": "贾米娜"
+				},
+				{
+					"name": "张世民"
+				},
+				{
+					"name": "潘兴源"
+				},
+				{
+					"name": "赵文春"
+				},
+				{
+					"name": "包云飞"
+				},
+				{
+					"name": "陈果"
+				},
+				{
+					"name": "马丹旎"
+				},
+				{
+					"name": "张萍"
+				},
+				{
+					"name": "胡世群"
+				},
+				{
+					"name": "安龙"
+				},
+				{
+					"name": "戴金正"
+				},
+				{
+					"name": "刘伟"
+				},
+				{
+					"name": "彭蓝"
+				},
+				{
+					"name": "魏兵"
+				},
+				{
+					"name": "杨军"
+				},
+				{
+					"name": "夏天"
+				},
+				{
+					"name": "崔健"
+				},
+				{
+					"name": "张佳佳"
+				},
+				{
+					"name": "王彬"
+				},
+				{
+					"name": "危颖"
+				},
+				{
+					"name": "腾宝才"
+				},
+				{
+					"name": "潘小千"
+				},
+				{
+					"name": "赵晓飞"
+				},
+				{
+					"name": "薛晓帆"
+				},
+				{
+					"name": "巩金国"
+				},
+				{
+					"name": "张倩"
+				},
+				{
+					"name": "陈旭鹏"
+				},
+				{
+					"name": "邱梓童"
+				},
+				{
+					"name": "盛凡"
+				},
+				{
+					"name": "丁俊龙"
+				},
+				{
+					"name": "赵敏"
+				},
+				{
+					"name": "霍娟"
+				},
+				{
+					"name": "蔡永健"
+				},
+				{
+					"name": "袁军"
+				},
+				{
+					"name": "朱国瑜"
+				},
+				{
+					"name": "朱维民"
+				},
+				{
+					"name": "曹洪"
+				},
+				{
+					"name": "马国华"
+				},
+				{
+					"name": "任重"
+				},
+				{
+					"name": "盖琛雨"
+				},
+				{
+					"name": "李义"
+				},
+				{
+					"name": "胡林"
+				},
+				{
+					"name": "徐宁"
+				},
+				{
+					"name": "金春"
+				},
+				{
+					"name": "乔治"
+				},
+				{
+					"name": "陈光辉"
+				},
+				{
+					"name": "李书豪"
+				},
+				{
+					"name": "刘晓莉"
+				},
+				{
+					"name": "张思远"
+				},
+				{
+					"name": "李文强"
+				},
+				{
+					"name": "丛魏"
+				},
+				{
+					"name": "刘同"
+				},
+				{
+					"name": "史建明"
+				},
+				{
+					"name": "霍兴宝"
+				},
+				{
+					"name": "叶华"
+				},
+				{
+					"name": "李阳"
+				},
+				{
+					"name": "陈句"
+				},
+				{
+					"name": "陈刚"
+				},
+				{
+					"name": "仲奕卉"
+				},
+				{
+					"name": "仲奕如"
+				},
+				{
+					"name": "毛凡"
+				},
+				{
+					"name": "张德超"
+				},
+				{
+					"name": "王国华"
+				},
+				{
+					"name": "韩志华"
+				},
+				{
+					"name": "刘佳星"
+				},
+				{
+					"name": "赵辉"
+				},
+				{
+					"name": "孟宪国"
+				},
+				{
+					"name": "刘建国"
+				},
+				{
+					"name": "刘高丽"
+				},
+				{
+					"name": "于军峰"
+				},
+				{
+					"name": "周凯"
+				},
+				{
+					"name": "周竹梅"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2017 / 中国大陆 / 剧情 悬疑 犯罪 / 李路 / 陆毅 柯蓝",
+			"color_scheme": {
+				"_base_color": [
+					0.033333333333333326,
+					0.2,
+					0.09803921568627451
+				],
+				"_avg_color": [
+					0.04166666666666661,
+					0.22641509433962262,
+					0.20784313725490197
+				],
+				"primary_color_light": "72605b",
+				"primary_color_dark": "4c403d",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26727273.jpg",
+			"directors": [
+				{
+					"name": "李路"
+				}
+			],
+			"genres": [
+				"剧情",
+				"悬疑",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 8,
+					"title": "悬疑类大陆剧榜",
+					"uri": "douban://douban.com/subject_collection/ECIU5AZDA?type=rank&category=movie&rank_type=tv_genre"
+				}
+			],
+			"id": "26727273",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2452241358.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2452241358.jpg"
+			},
+			"pubdate": [
+				"2017-03-28(中国大陆)"
+			],
+			"rating": {
+				"count": 517902,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26727273",
+			"subtype": "tv",
+			"title": "人民的名义",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/26727273",
+			"url": "https://movie.douban.com/subject/26727273/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2017"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-04 13:58:35"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-03 23:18:07",
 		"id": 4513640324,
 		"is_editable": false,
