@@ -288,6 +288,7 @@ async function getMediaTabCounts(page, tabName) {
 
         return {
             initialCount: Math.min(pageSize, totalCount),
+            pageSize,
             totalCount,
         };
     }, tabName);
@@ -324,12 +325,12 @@ async function assertMediaTabInitialLoad(page, tabName, label) {
     );
 }
 
-async function assertMediaTabAutoLoadMore(page, tabName, label) {
+async function assertMediaTabAutoLoadMore(page, tabName, label, requestLog) {
     const panelSelector = `[data-tab-panel="${tabName}"]:not([hidden])`;
     const gridItemSelector = `${panelSelector} [data-media-grid] > li`;
     const sentinelSelector = `${panelSelector} [data-media-sentinel]`;
 
-    const { initialCount, totalCount } = await getMediaTabCounts(page, tabName);
+    const { initialCount, pageSize, totalCount } = await getMediaTabCounts(page, tabName);
     await assertMediaTabInitialLoad(page, tabName, label);
     const initialVisibleCount = await page.locator(gridItemSelector).count();
     if (initialVisibleCount !== initialCount) {
@@ -347,7 +348,22 @@ async function assertMediaTabAutoLoadMore(page, tabName, label) {
         fail(`${label} expected auto loading without a visible load-more button.`);
     }
 
-    await page.locator(sentinelSelector).scrollIntoViewIfNeeded();
+    // Each appended page moves the sentinel down; scroll again to trigger the next page.
+    const pageCount = Math.ceil(totalCount / pageSize);
+    for (let pageNumber = 2; pageNumber <= pageCount; pageNumber += 1) {
+        const expectedCount = Math.min(pageNumber * pageSize, totalCount);
+        if ((await page.locator(gridItemSelector).count()) < expectedCount) {
+            await page.locator(sentinelSelector).scrollIntoViewIfNeeded();
+        }
+        await page
+            .waitForFunction(
+                ({ gridItemSelector, expectedCount }) =>
+                    document.querySelectorAll(gridItemSelector).length >= expectedCount,
+                { gridItemSelector, expectedCount },
+            )
+            .catch(() => fail(`${label} timed out loading ${tabName} page ${pageNumber}.`));
+    }
+
     await page.waitForFunction(
         ({ panelSelector, expectedCount }) => {
             const panel = document.querySelector(panelSelector);
@@ -364,6 +380,14 @@ async function assertMediaTabAutoLoadMore(page, tabName, label) {
             expectedCount: totalCount,
         },
     );
+
+    for (let pageNumber = 2; pageNumber <= pageCount; pageNumber += 1) {
+        const pathname = `/media/data/${tabName}/${pageNumber}.json`;
+        const requestCount = countMediaRequests(requestLog, pathname);
+        if (requestCount !== 1) {
+            fail(`${label} expected ${pathname} to be requested once, received ${requestCount}.`);
+        }
+    }
 }
 
 function countMediaRequests(requestLog, pathname) {
@@ -578,10 +602,7 @@ async function run() {
 
         await page.click('[data-tab="movies"]');
         await waitForActiveMediaTab(page, "movies");
-        await assertMediaTabAutoLoadMore(page, "movies", "Desktop media tab");
-        if (countMediaRequests(desktopMediaRequests, "/media/data/movies/2.json") !== 1) {
-            fail(`Expected /media/data/movies/2.json to be requested once for desktop load more.`);
-        }
+        await assertMediaTabAutoLoadMore(page, "movies", "Desktop media tab", desktopMediaRequests);
 
         await page.goto(`${baseUrl}${ARTICLE_SLUG}`, { waitUntil: "networkidle" });
         const articleImageStyles = await page
@@ -635,10 +656,12 @@ async function run() {
         await mobilePage.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         await mobilePage.locator('[data-tab="movies"]').click();
         await mobilePage.waitForFunction(() => window.location.hash === "#movies");
-        await assertMediaTabAutoLoadMore(mobilePage, "movies", "Mobile media tab");
-        if (countMediaRequests(mobileMediaRequests, "/media/data/movies/2.json") !== 1) {
-            fail(`Expected /media/data/movies/2.json to be requested once for mobile load more.`);
-        }
+        await assertMediaTabAutoLoadMore(
+            mobilePage,
+            "movies",
+            "Mobile media tab",
+            mobileMediaRequests,
+        );
 
         assertNoErrors();
         assertNoMobileErrors();
