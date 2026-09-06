@@ -9,7 +9,7 @@ interface Props {
 const { tabs, defaultTab } = Astro.props;
 ---
 
-<nav
+<div
     id="media-tabs"
     class="flex flex-wrap gap-5 text-sm justify-start"
     role="tablist"
@@ -29,4 +29,4 @@ const { tabs, defaultTab } = Astro.props;
             {tab.label} <span class="text-[var(--site-color-text-muted)]">({tab.count})</span>
         </button>
     ))}
-</nav>
+</div>
