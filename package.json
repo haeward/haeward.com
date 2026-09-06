@@ -37,7 +37,7 @@
         "clsx": "^2.1.0",
         "tailwind-merge": "^3.0.0",
         "tailwindcss": "^4.0.0",
-        "typescript": "6.0.3",
+        "typescript": "7.0.2",
         "unist-util-visit": "^5.0.0"
     },
     "devDependencies": {
