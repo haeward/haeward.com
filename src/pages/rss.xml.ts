@@ -1,6 +1,6 @@
 import { loadRenderers } from "astro:container";
 import { render } from "astro:content";
-import { getContainerRenderer as getMDXRenderer } from "@astrojs/mdx";
+import { getContainerRenderer as getMDXRenderer } from "@astrojs/mdx/container-renderer";
 import rss from "@astrojs/rss";
 import { SITE } from "@consts";
 import { getPublishedPosts } from "@lib/posts";
