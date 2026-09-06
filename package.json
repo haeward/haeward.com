@@ -54,15 +54,5 @@
         "secretlint": "^13.0.0",
         "sharp": "^0.35.4",
         "vite": "8.2.2"
-    },
-    "pnpm": {
-        "overrides": {
-            "fast-xml-parser": "5.11.1",
-            "lodash": "4.18.1"
-        },
-        "onlyBuiltDependencies": [
-            "esbuild",
-            "sharp"
-        ]
     }
 }
