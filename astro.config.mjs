@@ -1,3 +1,4 @@
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -10,6 +11,7 @@ const viteCacheDir = `node_modules/.vite/${astroCommand}`;
 
 export default defineConfig({
     site: "https://haeward.com",
+    compressHTML: true,
 
     integrations: [sitemap(), mdx()],
 
@@ -28,7 +30,9 @@ export default defineConfig({
             defaultColor: false,
             wrap: true,
         },
-        remarkPlugins: [remarkSpotifyEmbed, remarkImageCaption],
+        processor: unified({
+            remarkPlugins: [remarkSpotifyEmbed, remarkImageCaption],
+        }),
     },
 
     output: "static",
