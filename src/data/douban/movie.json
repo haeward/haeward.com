@@ -2,6 +2,158 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-07 21:53:38",
+		"id": 4939662162,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/35419153 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35419153/interest/4939662162",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "丹尼尔·克雷格"
+				},
+				{
+					"name": "乔什·奥康纳"
+				},
+				{
+					"name": "格伦·克洛斯"
+				},
+				{
+					"name": "乔什·布洛林"
+				},
+				{
+					"name": "米拉·库尼斯"
+				},
+				{
+					"name": "杰瑞米·雷纳"
+				},
+				{
+					"name": "凯丽·华盛顿"
+				},
+				{
+					"name": "安德鲁·斯科特"
+				},
+				{
+					"name": "卡莉·史派妮"
+				},
+				{
+					"name": "达利尔·麦克科马克"
+				},
+				{
+					"name": "托马斯·哈登·丘奇"
+				},
+				{
+					"name": "杰弗里·怀特"
+				},
+				{
+					"name": "安妮·汉密尔顿"
+				},
+				{
+					"name": "詹姆斯·福克纳"
+				},
+				{
+					"name": "布里奇特·埃弗里特"
+				},
+				{
+					"name": "诺阿·西甘"
+				},
+				{
+					"name": "杰米·卡里提兹"
+				},
+				{
+					"name": "基特·伯登"
+				},
+				{
+					"name": "加文·斯波克斯"
+				},
+				{
+					"name": "保罗·希尔顿"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2025 / 美国 / 剧情 喜剧 悬疑 惊悚 犯罪 / 莱恩·约翰逊 / 丹尼尔·克雷格 乔什·奥康纳",
+			"color_scheme": {
+				"_base_color": [
+					0.22916666666666705,
+					0.04060913705583756,
+					0.7725490196078432
+				],
+				"_avg_color": [
+					0.2499999999999997,
+					0.05555555555555555,
+					0.2823529411764706
+				],
+				"primary_color_light": "71726e",
+				"primary_color_dark": "4b4c49",
+				"secondary_color": "f8f9f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35419153.jpg",
+			"directors": [
+				{
+					"name": "莱恩·约翰逊"
+				}
+			],
+			"genres": [
+				"剧情",
+				"喜剧",
+				"悬疑"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 10,
+					"title": "豆瓣2025评分最高外语电影",
+					"uri": "douban://douban.com/subject_collection/ECB5AE5EQ?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "35419153",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2924862475.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2924862475.jpg"
+			},
+			"pubdate": [
+				"2025-09-06(多伦多电影节)"
+			],
+			"rating": {
+				"count": 119533,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35419153",
+			"subtype": "movie",
+			"title": "利刃出鞘3",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35419153",
+			"url": "https://movie.douban.com/subject/35419153/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2025"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-07 21:53:38"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-04 13:58:35",
 		"id": 4937020433,
 		"is_editable": false,
