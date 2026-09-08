@@ -2,6 +2,529 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-08 15:30:15",
+		"id": 4940089948,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/34915462 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/34915462/interest/4940089948",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "滨野大辉"
+				},
+				{
+					"name": "榎木淳弥"
+				},
+				{
+					"name": "若山诗音"
+				},
+				{
+					"name": "梅原裕一郎"
+				},
+				{
+					"name": "安济知佳"
+				},
+				{
+					"name": "神谷浩史"
+				},
+				{
+					"name": "内田雄马"
+				},
+				{
+					"name": "诹访彩花"
+				},
+				{
+					"name": "内山昂辉"
+				},
+				{
+					"name": "伊濑茉莉也"
+				},
+				{
+					"name": "田所梓"
+				},
+				{
+					"name": "小笠原仁"
+				},
+				{
+					"name": "梶原岳人"
+				},
+				{
+					"name": "土屋李央"
+				},
+				{
+					"name": "远野光"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2021 / 日本 / 动作 科幻 动画 / 雨宫哲 / 滨野大辉 榎木淳弥",
+			"color_scheme": {
+				"_base_color": [
+					0.619047619047619,
+					0.09210526315789479,
+					0.2980392156862745
+				],
+				"_avg_color": [
+					0.5892857142857143,
+					0.1958041958041958,
+					0.5607843137254902
+				],
+				"primary_color_light": "969aa5",
+				"primary_color_dark": "73777f",
+				"secondary_color": "f4f6f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/34915462.jpg",
+			"directors": [
+				{
+					"name": "雨宫哲"
+				}
+			],
+			"genres": [
+				"动作",
+				"科幻",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "34915462",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img2.doubanio.com/view/photo/m_ratio_poster/public/p2637358861.jpg",
+				"normal": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2637358861.jpg"
+			},
+			"pubdate": [
+				"2021-04-02(日本)"
+			],
+			"rating": {
+				"count": 10166,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/34915462",
+			"subtype": "tv",
+			"title": "SSSS.电光机王",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/34915462",
+			"url": "https://movie.douban.com/subject/34915462/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2021"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-08 15:30:15"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-09-08 15:25:19",
+		"id": 4940087173,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/26430114 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/26430114/interest/4940087173",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "谢添天"
+				},
+				{
+					"name": "夏磊"
+				},
+				{
+					"name": "沈达威"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2015 / 中国大陆 / 剧情 动画 / 李豪凌 / 谢添天 夏磊",
+			"color_scheme": {
+				"_base_color": [
+					0.004629629629629613,
+					0.1690140845070423,
+					0.8352941176470589
+				],
+				"_avg_color": [
+					0.9545454545454545,
+					0.215686274509804,
+					0.4
+				],
+				"primary_color_light": "725f5f",
+				"primary_color_dark": "4c3f3f",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/26430114.jpg",
+			"directors": [
+				{
+					"name": "李豪凌"
+				}
+			],
+			"genres": [
+				"剧情",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "26430114",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2251771287.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2251771287.jpg"
+			},
+			"pubdate": [
+				"2015-06-19"
+			],
+			"rating": {
+				"count": 3910,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 6.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/26430114",
+			"subtype": "movie",
+			"title": "中国惊奇先生",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/26430114",
+			"url": "https://movie.douban.com/subject/26430114/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2015"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-08 15:25:19"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-09-08 11:40:54",
+		"id": 4939975817,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/34937955 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/34937955/interest/4939975817",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "梶裕贵"
+				},
+				{
+					"name": "洲崎绫"
+				},
+				{
+					"name": "小泽亚李"
+				},
+				{
+					"name": "小野贤章"
+				},
+				{
+					"name": "杉田智和"
+				},
+				{
+					"name": "置鲇龙太郎"
+				},
+				{
+					"name": "潘惠美"
+				},
+				{
+					"name": "小清水亚美"
+				},
+				{
+					"name": "小松未可子"
+				},
+				{
+					"name": "上田丽奈"
+				},
+				{
+					"name": "松本沙罗"
+				},
+				{
+					"name": "长绳麻理亚"
+				},
+				{
+					"name": "关智一"
+				},
+				{
+					"name": "河本邦弘"
+				},
+				{
+					"name": "堀内贤雄"
+				},
+				{
+					"name": "三宅健太"
+				},
+				{
+					"name": "稻田彻"
+				},
+				{
+					"name": "桧山修之"
+				},
+				{
+					"name": "间岛淳司"
+				},
+				{
+					"name": "间宫康弘"
+				},
+				{
+					"name": "远近孝一"
+				},
+				{
+					"name": "北泽力"
+				},
+				{
+					"name": "中村太亮"
+				},
+				{
+					"name": "羽多野涉"
+				},
+				{
+					"name": "三木真一郎"
+				},
+				{
+					"name": "井上喜久子"
+				},
+				{
+					"name": "橘龙丸"
+				},
+				{
+					"name": "武内骏辅"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2021 / 日本 / 动画 / 谷口悟朗 仁科邦康 藤濑顺一 / 梶裕贵 洲崎绫",
+			"color_scheme": {
+				"_base_color": [
+					0.7023809523809524,
+					0.25925925925925924,
+					0.21176470588235294
+				],
+				"_avg_color": [
+					0.047008547008547084,
+					0.24375000000000002,
+					0.6274509803921569
+				],
+				"primary_color_light": "837aa5",
+				"primary_color_dark": "655e7f",
+				"secondary_color": "f5f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/34937955.jpg",
+			"directors": [
+				{
+					"name": "谷口悟朗"
+				},
+				{
+					"name": "仁科邦康"
+				},
+				{
+					"name": "藤濑顺一"
+				}
+			],
+			"genres": [
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "34937955",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2628094845.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2628094845.jpg"
+			},
+			"pubdate": [
+				"2021-01-08(日本)"
+			],
+			"rating": {
+				"count": 5836,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/34937955",
+			"subtype": "tv",
+			"title": "巴克·亚罗",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/34937955",
+			"url": "https://movie.douban.com/subject/34937955/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2021"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-08 11:40:54"
+	},
+	{
+		"charts": [],
+		"comment": "",
+		"create_time": "2026-09-08 11:19:35",
+		"id": 4939965576,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/2244765 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/2244765/interest/4939965576",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "黄怡晴"
+				},
+				{
+					"name": "徐刚"
+				},
+				{
+					"name": "刘强"
+				},
+				{
+					"name": "王肖兵"
+				},
+				{
+					"name": "游军"
+				},
+				{
+					"name": "王衡"
+				},
+				{
+					"name": "王勇"
+				},
+				{
+					"name": "李敏妍"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2006 / 法国 中国大陆 / 喜剧 动作 动画 儿童 冒险 武侠 / 张天晓 周磊 / 黄怡晴 徐刚",
+			"color_scheme": {
+				"_base_color": [
+					0.047619047619047616,
+					0.5,
+					0.16470588235294117
+				],
+				"_avg_color": [
+					0.06451612903225806,
+					0.38749999999999996,
+					0.3137254901960784
+				],
+				"primary_color_light": "724939",
+				"primary_color_dark": "4c3126",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/2244765.jpg",
+			"directors": [
+				{
+					"name": "张天晓"
+				},
+				{
+					"name": "周磊"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 40,
+					"title": "第24届中国电视金鹰奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECPNAOPYA?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "2244765",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2570091648.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2570091648.jpg"
+			},
+			"pubdate": [
+				"2006"
+			],
+			"rating": {
+				"count": 63726,
+				"max": 10,
+				"star_count": 5,
+				"value": 9.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/2244765",
+			"subtype": "tv",
+			"title": "中华小子",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/2244765",
+			"url": "https://movie.douban.com/subject/2244765/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2006"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-08 11:19:35"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-07 21:53:38",
 		"id": 4939662162,
 		"is_editable": false,
