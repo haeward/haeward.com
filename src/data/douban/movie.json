@@ -2,6 +2,109 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-09 18:27:54",
+		"id": 4938763052,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/37501131 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37501131/interest/4938763052",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "金惠秀"
+				},
+				{
+					"name": "金志勋"
+				},
+				{
+					"name": "赵汝贞"
+				},
+				{
+					"name": "金宰澈"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 韩国 / 剧情 惊悚 / 李昌熙 / 金惠秀 金志勋",
+			"color_scheme": {
+				"_base_color": [
+					0.08459595959595957,
+					0.6470588235294118,
+					0.8
+				],
+				"_avg_color": [
+					0.0748299319727891,
+					0.620253164556962,
+					0.30980392156862746
+				],
+				"primary_color_light": "724e28",
+				"primary_color_dark": "4c341a",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37501131.jpg",
+			"directors": [
+				{
+					"name": "李昌熙"
+				}
+			],
+			"genres": [
+				"剧情",
+				"惊悚"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 1,
+					"title": "一周全球口碑剧集榜",
+					"uri": "douban://douban.com/subject_collection/tv_global_best_weekly?type=rank&category=movie&rank_type=weekly"
+				}
+			],
+			"id": "37501131",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2934748119.jpg",
+				"normal": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2934748119.jpg"
+			},
+			"pubdate": [
+				"2026-07-31(韩国)"
+			],
+			"rating": {
+				"count": 33172,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.7
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37501131",
+			"subtype": "tv",
+			"title": "现在不是出轨的问题",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37501131",
+			"url": "https://movie.douban.com/subject/37501131/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-09 18:27:54"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-08 15:30:15",
 		"id": 4940089948,
 		"is_editable": false,
