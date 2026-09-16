@@ -1,6 +1,98 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-09-17 00:49:14",
+		"id": 3745590686,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/book/36122667 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36122667/interest/3745590686",
+		"status": "done",
+		"subject": {
+			"article_intros": [],
+			"author": [
+				"[日] 藤本树"
+			],
+			"book_subtitle": "",
+			"buy_more_uri": "douban://douban.com/book/36122667/vendors_douban",
+			"card_subtitle": "[日] 藤本树 / 2023 / 中信出版社",
+			"color_scheme": {
+				"_base_color": [
+					0.050617283950617285,
+					0.6026785714285714,
+					0.8784313725490196
+				],
+				"_avg_color": [
+					0.638888888888889,
+					0.05555555555555549,
+					0.4235294117647059
+				],
+				"primary_color_light": "72422d",
+				"primary_color_dark": "4c2c1e",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/book/36122667.jpg",
+			"has_ebook": false,
+			"honor_infos": [
+				{
+					"kind": "book",
+					"rank": 1,
+					"title": "豆瓣2023年度绘本·漫画图书",
+					"uri": "douban://douban.com/subject_collection/ECPY6EKVQ?type=rank&category=book&rank_type=year"
+				}
+			],
+			"id": "36122667",
+			"intro": "📷只要能记起，就不怕会忘记。\n以电影收藏回忆，以虚构化解伤痛的青春物语。\n在悲伤时，来一抹奇幻色彩吧！\n——▶▶▶▶▶‖◀◀◀◀◀——\n📱“请你拍到我死的那一刻为止……”\n受病重的母亲请求，优太开始拍摄关于她的电影。\n可随着母亲的去世与电影的失败，\n优太也失去了人生的希望。\n在偶遇的神秘少女绘梨的帮助下，\n优太终于重拾了对电影的热情，\n却不知绘梨其实怀抱着一个秘密……\n💿现实与虚构交织，情感在至深处炸裂。\n将真相丢入回收站，把爱意留在电影中。\n——▶▶▶▶▶‖◀◀◀◀◀——\n✉如果回忆注定有残缺，\n我希望留下你最美的样子。",
+			"is_released": true,
+			"is_show": false,
+			"min_sale_price": "¥23.1",
+			"null_rating_reason": "",
+			"other_versions_count": 7,
+			"pages": [
+				"208"
+			],
+			"pic": {
+				"large": "https://img9.doubanio.com/view/subject/l/public/s34367076.jpg",
+				"normal": "https://img9.doubanio.com/view/subject/m/public/s34367076.jpg"
+			},
+			"press": [
+				"中信出版社"
+			],
+			"pubdate": [
+				"2023-1-1"
+			],
+			"rating": {
+				"count": 30447,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 8.6
+			},
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/book/36122667",
+			"subtype": "book",
+			"title": "再见绘梨",
+			"type": "book",
+			"uri": "douban://douban.com/book/36122667",
+			"url": "https://book.douban.com/subject/36122667/",
+			"vendor_icons": [],
+			"vendor_original_price": "",
+			"vendor_sale_price": ""
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-17 00:49:14"
+	},
+	{
+		"charts": [],
 		"comment": "真诚永远打动人，村上春树对跑步时身体和精神的描述细腻和真实。而迈出脚步，是坚持的前提，一步一步，才能走到最后。",
 		"create_time": "2026-05-18 01:09:12",
 		"id": 4830465062,
