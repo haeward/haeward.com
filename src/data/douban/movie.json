@@ -1,6 +1,141 @@
 [
 	{
 		"charts": [],
+		"comment": "不明所以",
+		"create_time": "2026-09-18 13:25:56",
+		"id": 4855719118,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ 不明所以 https://www.douban.com/doubanapp/dispatch/movie/36850814 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36850814/interest/4855719118",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "张若昀"
+				},
+				{
+					"name": "白客"
+				},
+				{
+					"name": "高叶"
+				},
+				{
+					"name": "大鹏"
+				},
+				{
+					"name": "庄达菲"
+				},
+				{
+					"name": "孙艺洲"
+				},
+				{
+					"name": "田雨"
+				},
+				{
+					"name": "王耀庆"
+				},
+				{
+					"name": "李乃文"
+				},
+				{
+					"name": "李晨"
+				},
+				{
+					"name": "欧阳奋强"
+				},
+				{
+					"name": "童漠男"
+				},
+				{
+					"name": "滕哲"
+				},
+				{
+					"name": "闫佩伦"
+				},
+				{
+					"name": "钟汉良"
+				},
+				{
+					"name": "吕星辰"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 喜剧 / 董润年 / 张若昀 白客",
+			"color_scheme": {
+				"_base_color": [
+					0.5645161290322581,
+					0.14975845410628022,
+					0.8117647058823529
+				],
+				"_avg_color": [
+					0.16666666666666666,
+					0.014814814814814762,
+					0.5294117647058824
+				],
+				"primary_color_light": "8c9ca5",
+				"primary_color_dark": "6c787f",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36850814.jpg",
+			"directors": [
+				{
+					"name": "董润年"
+				}
+			],
+			"genres": [
+				"喜剧"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "36850814",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2934583425.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2934583425.jpg"
+			},
+			"pubdate": [
+				"2026-08-01(中国大陆)"
+			],
+			"rating": {
+				"count": 103872,
+				"max": 10,
+				"star_count": 3.5,
+				"value": 6.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36850814",
+			"subtype": "movie",
+			"title": "年会不能停！2",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36850814",
+			"url": "https://movie.douban.com/subject/36850814/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-18 13:25:56"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-09-16 02:09:35",
 		"id": 4939811448,
