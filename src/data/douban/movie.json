@@ -1,6 +1,210 @@
 [
 	{
 		"charts": [],
+		"comment": "笑点密集，老爷子和快银帅呆了，BGM也很燃，好看的爆米花电影",
+		"create_time": "2026-09-21 01:12:17",
+		"id": 3584258094,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ 笑点密集，老爷子和快银帅呆了，BGM也很燃，好看的爆米花电影 https://www.douban.com/doubanapp/dispatch/movie/35118954 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/35118954/interest/3584258094",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "布拉德·皮特"
+				},
+				{
+					"name": "乔伊·金"
+				},
+				{
+					"name": "亚伦·泰勒-约翰逊"
+				},
+				{
+					"name": "布莱恩·泰里·亨利"
+				},
+				{
+					"name": "安德鲁·浩二"
+				},
+				{
+					"name": "真田广之"
+				},
+				{
+					"name": "迈克尔·珊农"
+				},
+				{
+					"name": "桑德拉·布洛克"
+				},
+				{
+					"name": "坏痞兔"
+				},
+				{
+					"name": "罗根·勒曼"
+				},
+				{
+					"name": "莎姬·贝兹"
+				},
+				{
+					"name": "丘增"
+				},
+				{
+					"name": "凯伦·福原"
+				},
+				{
+					"name": "凯文·秋吉·程"
+				},
+				{
+					"name": "明基·村上"
+				},
+				{
+					"name": "武谷香织"
+				},
+				{
+					"name": "吉姆·加里蒂"
+				},
+				{
+					"name": "埃梅丽娜·亚当斯"
+				},
+				{
+					"name": "詹森·郑"
+				},
+				{
+					"name": "约书亚·萨达索"
+				},
+				{
+					"name": "约翰娜·沃茨"
+				},
+				{
+					"name": "胡里奥·加贝"
+				},
+				{
+					"name": "安德烈·穆尼奥斯"
+				},
+				{
+					"name": "阿诺德·陈"
+				},
+				{
+					"name": "帕沙·D·林奇尼科夫"
+				},
+				{
+					"name": "米歇尔·李"
+				},
+				{
+					"name": "贾森·马修·史密斯"
+				},
+				{
+					"name": "大卫·雷奇"
+				},
+				{
+					"name": "艾恩"
+				},
+				{
+					"name": "雷·巴佛"
+				},
+				{
+					"name": "达伦·凯兰"
+				},
+				{
+					"name": "莉昂·马苏达"
+				},
+				{
+					"name": "伊戈·米基塔斯"
+				},
+				{
+					"name": "瑞安·雷诺兹"
+				},
+				{
+					"name": "查宁·塔图姆"
+				},
+				{
+					"name": "许海"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2022 / 美国 日本 / 喜剧 动作 惊悚 / 大卫·雷奇 / 布拉德·皮特 乔伊·金",
+			"color_scheme": {
+				"_base_color": [
+					0.08333333333333325,
+					0.11659192825112104,
+					0.8745098039215686
+				],
+				"_avg_color": [
+					0.19444444444444434,
+					0.05217391304347832,
+					0.45098039215686275
+				],
+				"primary_color_light": "726c65",
+				"primary_color_dark": "4c4843",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/35118954.jpg",
+			"directors": [
+				{
+					"name": "大卫·雷奇"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"惊悚"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 5,
+					"title": "豆瓣2022评分最高外语电影",
+					"uri": "douban://douban.com/subject_collection/ECQU6DFQA?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "35118954",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2873950053.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2873950053.jpg"
+			},
+			"pubdate": [
+				"2022-08-03(洛迦诺电影节)"
+			],
+			"rating": {
+				"count": 296801,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.8
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/35118954",
+			"subtype": "movie",
+			"title": "子弹列车",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/35118954",
+			"url": "https://movie.douban.com/subject/35118954/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "2022"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-21 01:12:17"
+	},
+	{
+		"charts": [],
 		"comment": "不明所以",
 		"create_time": "2026-09-18 13:25:56",
 		"id": 4855719118,
