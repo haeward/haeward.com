@@ -2,6 +2,208 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-09-25 02:06:32",
+		"id": 4951184545,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/34884712 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/34884712/interest/4951184545",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "莱昂纳多·迪卡普里奥"
+				},
+				{
+					"name": "詹妮弗·劳伦斯"
+				},
+				{
+					"name": "梅丽尔·斯特里普"
+				},
+				{
+					"name": "凯特·布兰切特"
+				},
+				{
+					"name": "罗布·摩根"
+				},
+				{
+					"name": "乔纳·希尔"
+				},
+				{
+					"name": "马克·里朗斯"
+				},
+				{
+					"name": "泰勒·派瑞"
+				},
+				{
+					"name": "提莫西·查拉梅"
+				},
+				{
+					"name": "朗·普尔曼"
+				},
+				{
+					"name": "爱莉安娜·格兰德"
+				},
+				{
+					"name": "卡迪小子"
+				},
+				{
+					"name": "克里斯·埃文斯"
+				},
+				{
+					"name": "希米什·帕特尔"
+				},
+				{
+					"name": "梅兰妮·林斯基"
+				},
+				{
+					"name": "迈克尔·切克利斯"
+				},
+				{
+					"name": "托莫·希思黎"
+				},
+				{
+					"name": "保罗·吉尔福伊尔"
+				},
+				{
+					"name": "罗伯特·乔伊"
+				},
+				{
+					"name": "海缇安·朴"
+				},
+				{
+					"name": "朗尼·法默"
+				},
+				{
+					"name": "罗斯·帕特里奇"
+				},
+				{
+					"name": "列维·施瑞博尔"
+				},
+				{
+					"name": "克里斯·埃弗里特"
+				},
+				{
+					"name": "乔治亚·莱曼"
+				},
+				{
+					"name": "帕特丽夏·德哈尼"
+				},
+				{
+					"name": "本·锡德尔"
+				},
+				{
+					"name": "特蕾莎·普雷恩"
+				},
+				{
+					"name": "梅根·莱瑟斯"
+				},
+				{
+					"name": "阿什利·班菲尔德"
+				},
+				{
+					"name": "萨拉·西尔弗曼"
+				},
+				{
+					"name": "乔·格拉瑟"
+				},
+				{
+					"name": "博·艾伦"
+				},
+				{
+					"name": "塞莱斯特·奥利瓦"
+				},
+				{
+					"name": "罗曼·米蒂齐扬"
+				},
+				{
+					"name": "内森·里奇曼"
+				},
+				{
+					"name": "韦斯·约翰逊"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2021 / 美国 / 喜剧 科幻 / 亚当·麦凯 / 莱昂纳多·迪卡普里奥 詹妮弗·劳伦斯",
+			"color_scheme": {
+				"_base_color": [
+					0.04687500000000002,
+					0.5161290322580645,
+					0.24313725490196078
+				],
+				"_avg_color": [
+					0.07619047619047621,
+					0.16908212560386468,
+					0.8117647058823529
+				],
+				"primary_color_light": "a56850",
+				"primary_color_dark": "7f503d",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/34884712.jpg",
+			"directors": [
+				{
+					"name": "亚当·麦凯"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"科幻"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 10,
+					"title": "豆瓣2022评分最高外语电影",
+					"uri": "douban://douban.com/subject_collection/ECQU6DFQA?type=rank&category=movie&rank_type=year"
+				}
+			],
+			"id": "34884712",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2730833093.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2730833093.jpg"
+			},
+			"pubdate": [
+				"2021-12-10(美国)"
+			],
+			"rating": {
+				"count": 295457,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.6
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/34884712",
+			"subtype": "movie",
+			"title": "不要抬头",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/34884712",
+			"url": "https://movie.douban.com/subject/34884712/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2021"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-25 02:06:32"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-09-21 23:27:02",
 		"id": 4949233277,
 		"is_editable": false,
