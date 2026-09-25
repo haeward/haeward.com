@@ -1,6 +1,110 @@
 [
 	{
 		"charts": [],
+		"comment": "太过恶趣味了",
+		"create_time": "2026-09-25 10:24:53",
+		"id": 4940523610,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 太过恶趣味了 https://www.douban.com/doubanapp/dispatch/movie/38194261 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/38194261/interest/4940523610",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "夏吉优子"
+				},
+				{
+					"name": "松冈美里"
+				},
+				{
+					"name": "船户百合绘"
+				},
+				{
+					"name": "清水彩香"
+				},
+				{
+					"name": "井泽诗织"
+				},
+				{
+					"name": "明智璃子"
+				},
+				{
+					"name": "稻田彻"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 日本 / 动画 / 木村拓 / 夏吉优子 松冈美里",
+			"color_scheme": {
+				"_base_color": [
+					0.16666666666666666,
+					0.1111111111111111,
+					0.1411764705882353
+				],
+				"_avg_color": [
+					0.14814814814814808,
+					0.18367346938775517,
+					0.3843137254901961
+				],
+				"primary_color_light": "727265",
+				"primary_color_dark": "4c4c44",
+				"secondary_color": "f9f9f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/38194261.jpg",
+			"directors": [
+				{
+					"name": "木村拓"
+				}
+			],
+			"genres": [
+				"动画"
+			],
+			"has_linewatch": false,
+			"honor_infos": [],
+			"id": "38194261",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2931260330.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2931260330.jpg"
+			},
+			"pubdate": [
+				"2026-07-02(日本)"
+			],
+			"rating": {
+				"count": 4477,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/38194261",
+			"subtype": "tv",
+			"title": "尼古喵喵",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/38194261",
+			"url": "https://movie.douban.com/subject/38194261/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-09-25 10:24:53"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-09-25 02:06:32",
 		"id": 4951184545,
