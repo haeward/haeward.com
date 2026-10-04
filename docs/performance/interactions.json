@@ -1,0 +1,453 @@
+{
+    "recordedAt": "2026-10-03T16:00:42.369Z",
+    "baseline": "Working tree before this optimization; snapshot saved before edits",
+    "homepageImage": {
+        "beforeBytes": 18342,
+        "after": [
+            {
+                "dpr": 1,
+                "theme": "light",
+                "encodedBodySize": 3730,
+                "physicalWidth": 144,
+                "physicalHeight": 144,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 1.9434960133744856
+            },
+            {
+                "dpr": 1,
+                "theme": "dark",
+                "encodedBodySize": 3730,
+                "physicalWidth": 144,
+                "physicalHeight": 144,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 1.8105066872427984
+            },
+            {
+                "dpr": 2,
+                "theme": "light",
+                "encodedBodySize": 10726,
+                "physicalWidth": 288,
+                "physicalHeight": 288,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 1.3632008744855968
+            },
+            {
+                "dpr": 2,
+                "theme": "dark",
+                "encodedBodySize": 10726,
+                "physicalWidth": 288,
+                "physicalHeight": 288,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 1.321558320473251
+            },
+            {
+                "dpr": 3,
+                "theme": "light",
+                "encodedBodySize": 17280,
+                "physicalWidth": 384,
+                "physicalHeight": 384,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 0.607337034179241
+            },
+            {
+                "dpr": 3,
+                "theme": "dark",
+                "encodedBodySize": 17280,
+                "physicalWidth": 384,
+                "physicalHeight": 384,
+                "renderedWidth": 144,
+                "renderedHeight": 144,
+                "meanAbsRgbDifference": 0.607337034179241
+            }
+        ]
+    },
+    "search": {
+        "before": {
+            "stages": [
+                {
+                    "shown": 8,
+                    "snapshots": 3,
+                    "searches": 1,
+                    "details": 8
+                },
+                {
+                    "shown": 16,
+                    "snapshots": 5,
+                    "searches": 2,
+                    "details": 24
+                },
+                {
+                    "shown": 24,
+                    "snapshots": 7,
+                    "searches": 3,
+                    "details": 48
+                }
+            ],
+            "firstNodePreserved": false
+        },
+        "after": [
+            {
+                "engine": "chromium",
+                "stages": [
+                    {
+                        "shown": 8,
+                        "snapshots": 3,
+                        "searches": 1,
+                        "details": 8
+                    },
+                    {
+                        "shown": 16,
+                        "snapshots": 5,
+                        "searches": 1,
+                        "details": 16
+                    },
+                    {
+                        "shown": 24,
+                        "snapshots": 7,
+                        "searches": 1,
+                        "details": 24
+                    }
+                ]
+            },
+            {
+                "engine": "webkit",
+                "stages": [
+                    {
+                        "shown": 8,
+                        "snapshots": 3,
+                        "searches": 1,
+                        "details": 8
+                    },
+                    {
+                        "shown": 16,
+                        "snapshots": 5,
+                        "searches": 1,
+                        "details": 16
+                    },
+                    {
+                        "shown": 24,
+                        "snapshots": 7,
+                        "searches": 1,
+                        "details": 24
+                    }
+                ]
+            }
+        ],
+        "note": "details counts data/getData and normalization calls, not raw fragment downloads"
+    },
+    "media": [
+        {
+            "label": "baseline",
+            "initialCards": 100,
+            "finalCards": 200,
+            "originalCardsRetained": 0,
+            "addedCards": 200,
+            "removedCards": 100,
+            "retainedFocus": false,
+            "activeTag": "BODY"
+        },
+        {
+            "label": "after",
+            "initialCards": 100,
+            "finalCards": 200,
+            "originalCardsRetained": 100,
+            "addedCards": 100,
+            "removedCards": 0,
+            "retainedFocus": true,
+            "activeTag": "A"
+        }
+    ],
+    "theme": {
+        "light": {
+            "before": {
+                "initialBodyLayoutReads": 3,
+                "navigationBodyLayoutReads": 2,
+                "toggleBodyLayoutReads": 1,
+                "unrelatedStorageBodyLayoutReads": 1
+            },
+            "after": {
+                "colorScheme": "light",
+                "initialBodyLayoutReads": 0,
+                "navigationBodyLayoutReads": 0,
+                "toggleBodyLayoutReads": 1,
+                "unrelatedStorageBodyLayoutReads": 0
+            }
+        },
+        "dark": {
+            "before": {
+                "colorScheme": "dark",
+                "initialBodyLayoutReads": 3,
+                "navigationBodyLayoutReads": 2,
+                "toggleBodyLayoutReads": 1,
+                "unrelatedStorageBodyLayoutReads": 1
+            },
+            "after": {
+                "colorScheme": "dark",
+                "initialBodyLayoutReads": 0,
+                "navigationBodyLayoutReads": 1,
+                "toggleBodyLayoutReads": 1,
+                "unrelatedStorageBodyLayoutReads": 0
+            }
+        }
+    },
+    "resourceLinks": {
+        "beforeRequests": ["/rss.xml", "/rss.xml", "/subscriptions.opml"],
+        "afterRequests": []
+    },
+    "bundles": {
+        "before": {
+            "sourceFiles": 57,
+            "sourceLines": 6139,
+            "verifyLines": 1835,
+            "directDependencies": 14,
+            "jsBytes": 46747,
+            "jsGzipBytes": 17644,
+            "cssBytes": 93026,
+            "bundles": [
+                {
+                    "name": "ClientRouter.astro_astro_type_script_index_0_lang.Bwsu7jgA.js",
+                    "bytes": 13888,
+                    "gzipBytes": 4748
+                },
+                {
+                    "name": "Head.astro_astro_type_script_index_0_lang.DcsZJ3F5.js",
+                    "bytes": 4269,
+                    "gzipBytes": 1563
+                },
+                {
+                    "name": "ImageLightbox.astro_astro_type_script_index_0_lang.CyUvlEhv.js",
+                    "bytes": 3111,
+                    "gzipBytes": 1183
+                },
+                {
+                    "name": "LinkEnhancer.astro_astro_type_script_index_0_lang.CjE-qZRN.js",
+                    "bytes": 36,
+                    "gzipBytes": 56
+                },
+                {
+                    "name": "MediaBrowser.astro_astro_type_script_index_0_lang.CTygJ2BI.js",
+                    "bytes": 9285,
+                    "gzipBytes": 3479
+                },
+                {
+                    "name": "PageLayout.CS2WF8dM.css",
+                    "bytes": 93026,
+                    "gzipBytes": 16051
+                },
+                {
+                    "name": "SearchModal.astro_astro_type_script_index_0_lang.BpgvGSnA.js",
+                    "bytes": 10818,
+                    "gzipBytes": 3839
+                },
+                {
+                    "name": "dialog-focus.DrpZh4dr.js",
+                    "bytes": 507,
+                    "gzipBytes": 338
+                },
+                {
+                    "name": "html.BpRH71kO.js",
+                    "bytes": 217,
+                    "gzipBytes": 143
+                },
+                {
+                    "name": "link-enhancer.Bov9igdL.js",
+                    "bytes": 734,
+                    "gzipBytes": 437
+                },
+                {
+                    "name": "page.9pYLC08D.js",
+                    "bytes": 47,
+                    "gzipBytes": 67
+                },
+                {
+                    "name": "prefetch.Cq3-9L9B.js",
+                    "bytes": 2505,
+                    "gzipBytes": 1130
+                },
+                {
+                    "name": "ui.BdVYbyGn.js",
+                    "bytes": 1330,
+                    "gzipBytes": 661
+                }
+            ]
+        },
+        "after": {
+            "sourceFiles": 57,
+            "sourceLines": 6317,
+            "verifyLines": 2271,
+            "directDependencies": 14,
+            "jsBytes": 49535,
+            "jsGzipBytes": 18518,
+            "cssBytes": 93026,
+            "bundles": [
+                {
+                    "name": "ClientRouter.astro_astro_type_script_index_0_lang.Bwsu7jgA.js",
+                    "bytes": 13888,
+                    "gzipBytes": 4748
+                },
+                {
+                    "name": "Head.astro_astro_type_script_index_0_lang.wFZdKCMt.js",
+                    "bytes": 4330,
+                    "gzipBytes": 1605
+                },
+                {
+                    "name": "ImageLightbox.astro_astro_type_script_index_0_lang.CyUvlEhv.js",
+                    "bytes": 3111,
+                    "gzipBytes": 1183
+                },
+                {
+                    "name": "LinkEnhancer.astro_astro_type_script_index_0_lang.CjE-qZRN.js",
+                    "bytes": 36,
+                    "gzipBytes": 56
+                },
+                {
+                    "name": "MediaBrowser.astro_astro_type_script_index_0_lang.CFCIPH_U.js",
+                    "bytes": 10676,
+                    "gzipBytes": 3959
+                },
+                {
+                    "name": "PageLayout.CS2WF8dM.css",
+                    "bytes": 93026,
+                    "gzipBytes": 16051
+                },
+                {
+                    "name": "SearchModal.astro_astro_type_script_index_0_lang.BAOcLdVE.js",
+                    "bytes": 11978,
+                    "gzipBytes": 4088
+                },
+                {
+                    "name": "dialog-focus.DrpZh4dr.js",
+                    "bytes": 507,
+                    "gzipBytes": 338
+                },
+                {
+                    "name": "link-enhancer.Bov9igdL.js",
+                    "bytes": 734,
+                    "gzipBytes": 437
+                },
+                {
+                    "name": "page.9pYLC08D.js",
+                    "bytes": 47,
+                    "gzipBytes": 67
+                },
+                {
+                    "name": "prefetch.Cq3-9L9B.js",
+                    "bytes": 2505,
+                    "gzipBytes": 1130
+                },
+                {
+                    "name": "timeout.13xlWt0a.js",
+                    "bytes": 393,
+                    "gzipBytes": 246
+                },
+                {
+                    "name": "ui.BdVYbyGn.js",
+                    "bytes": 1330,
+                    "gzipBytes": 661
+                }
+            ]
+        }
+    },
+    "screenshots": [
+        {
+            "name": "home-390-light.png",
+            "changedPixels": 7764,
+            "totalPixels": 351000
+        },
+        {
+            "name": "blogroll-390-light.png",
+            "changedPixels": 0,
+            "totalPixels": 351000
+        },
+        {
+            "name": "media-390-light.png",
+            "changedPixels": 238,
+            "totalPixels": 351000
+        },
+        {
+            "name": "article-390-light.png",
+            "changedPixels": 0,
+            "totalPixels": 351000
+        },
+        {
+            "name": "home-390-dark.png",
+            "changedPixels": 7712,
+            "totalPixels": 351000
+        },
+        {
+            "name": "blogroll-390-dark.png",
+            "changedPixels": 0,
+            "totalPixels": 351000
+        },
+        {
+            "name": "media-390-dark.png",
+            "changedPixels": 239,
+            "totalPixels": 351000
+        },
+        {
+            "name": "article-390-dark.png",
+            "changedPixels": 0,
+            "totalPixels": 351000
+        },
+        {
+            "name": "home-1280-light.png",
+            "changedPixels": 7764,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "blogroll-1280-light.png",
+            "changedPixels": 0,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "media-1280-light.png",
+            "changedPixels": 489,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "article-1280-light.png",
+            "changedPixels": 0,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "home-1280-dark.png",
+            "changedPixels": 7712,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "blogroll-1280-dark.png",
+            "changedPixels": 0,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "media-1280-dark.png",
+            "changedPixels": 485,
+            "totalPixels": 1152000
+        },
+        {
+            "name": "article-1280-dark.png",
+            "changedPixels": 0,
+            "totalPixels": 1152000
+        }
+    ],
+    "contracts": {
+        "mediaPagesEqual": 8,
+        "rssEqualIgnoringLastBuildDate": true,
+        "dependenciesAndDeployConfigurationUnchanged": true
+    },
+    "validation": {
+        "astro": {
+            "files": 74,
+            "errors": 0,
+            "warnings": 0,
+            "hints": 0
+        },
+        "chromiumSmoke": "passed",
+        "webkitSmoke": "passed"
+    }
+}

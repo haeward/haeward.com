@@ -1,0 +1,172 @@
+{
+    "date": "2026-10-04",
+    "scope": "Image delivery and layout; original images and media JSON schema retained.",
+    "media": {
+        "count": 526,
+        "before": 17256330,
+        "after": 13231932,
+        "dimensionMismatches": [],
+        "larger": [],
+        "sourceChanged": [],
+        "savingsPct": 23.32128558042179,
+        "first14": {
+            "before": 426081,
+            "after": 344556,
+            "savingsPct": 19.133685848465433
+        },
+        "pages": {
+            "media/data/anime/1.json": 100,
+            "media/data/anime/2.json": 38,
+            "media/data/books/1.json": 48,
+            "media/data/movies/1.json": 100,
+            "media/data/movies/2.json": 100,
+            "media/data/movies/3.json": 17,
+            "media/data/series/1.json": 100,
+            "media/data/series/2.json": 23
+        }
+    },
+    "blogroll": {
+        "beforeRasterBytes": 1433422,
+        "count": 24,
+        "files": 62,
+        "derivedBytes": 83110,
+        "dpr1": 14828,
+        "dpr2": 29692,
+        "dpr3": 44600,
+        "comparisonScope": "All 24 local raster icons; one selected candidate per icon at each DPR, not a first-viewport comparison.",
+        "totalFilesIncludingFallback": 63,
+        "totalBytesIncludingFallback": 83438,
+        "extraFallbacks": ["/_astro/kawabangga.com.59hff37o_Z2wUEcR.webp"],
+        "allGeneratedFiles": 63,
+        "allGeneratedBytes": 83438
+    },
+    "simulatedNetwork": {
+        "conditions": {
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "deviceScaleFactor": 2,
+            "latencyMs": 150,
+            "downloadBytesPerSecond": 204800,
+            "uploadBytesPerSecond": 96000,
+            "coldCache": true,
+            "trials": 3,
+            "sample": "The same first 14 movie covers, with all other images blocked.",
+            "timingScope": "Local preview with simulated network, not production or RUM."
+        },
+        "summary": {
+            "baseline": {
+                "requestCounts": [14, 14, 14],
+                "transferBytes": [428209, 428209, 428209],
+                "medianFirst4LoadedMs": 1699.0999999940395,
+                "medianAll14LoadedMs": 2842,
+                "medianAll14DecodedMs": 2863.199999988079
+            },
+            "final": {
+                "requestCounts": [14, 14, 14],
+                "transferBytes": [346684, 346684, 346684],
+                "medianFirst4LoadedMs": 1531,
+                "medianAll14LoadedMs": 2446.5,
+                "medianAll14DecodedMs": 2480.7000000178814
+            }
+        }
+    },
+    "isolatedArticleDecode": [
+        {
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "repaired": false,
+            "beforeSize": {
+                "width": 0,
+                "height": 0
+            },
+            "afterSize": {
+                "width": 350,
+                "height": 262.5
+            },
+            "shift": 0.11244153580073708,
+            "scope": "Single released image in a controlled fixture, not whole-page or production CLS."
+        },
+        {
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "repaired": true,
+            "beforeSize": {
+                "width": 350,
+                "height": 262.5
+            },
+            "afterSize": {
+                "width": 350,
+                "height": 262.5
+            },
+            "shift": 0,
+            "scope": "Single released image in a controlled fixture, not whole-page or production CLS."
+        },
+        {
+            "viewport": {
+                "width": 1280,
+                "height": 844
+            },
+            "repaired": false,
+            "beforeSize": {
+                "width": 0,
+                "height": 0
+            },
+            "afterSize": {
+                "width": 720,
+                "height": 540
+            },
+            "shift": 0.0842000518364929,
+            "scope": "Single released image in a controlled fixture, not whole-page or production CLS."
+        },
+        {
+            "viewport": {
+                "width": 1280,
+                "height": 844
+            },
+            "repaired": true,
+            "beforeSize": {
+                "width": 720,
+                "height": 540
+            },
+            "afterSize": {
+                "width": 720,
+                "height": 540
+            },
+            "shift": 0,
+            "scope": "Single released image in a controlled fixture, not whole-page or production CLS."
+        }
+    ],
+    "build": {
+        "baseline": {
+            "files": 678,
+            "bytes": 37664282
+        },
+        "final": {
+            "files": 1267,
+            "bytes": 50995319
+        },
+        "unusedOriginalCopiesInAstro": 0
+    },
+    "validation": {
+        "astro": {
+            "files": 74,
+            "errors": 0,
+            "warnings": 0,
+            "hints": 0
+        },
+        "biome": true,
+        "markdown": true,
+        "secrets": true,
+        "dataRegression": true,
+        "contentIntegrity": true,
+        "smoke": ["chromium", "webkit"],
+        "pendingArticleImageResults": [200, 503],
+        "loadedArticleMaxDimensionDifferencePx": 0.234375
+    }
+}

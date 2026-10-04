@@ -1,3 +1,18 @@
+# OG artwork prompt
+
+Reusable artwork instructions for page and post covers. Replace `{{TITLE}}` with
+an actual title and supply `public/assets/images/site/favicon.png` as the identity
+reference. Hardware and software versions below are fixed artwork text, not
+repository runtime requirements. This prompt is independent of the site UI palette.
+
+Generated assets are stored under `public/assets/images/og/`; page mappings live in
+`src/data/og-pages.json` and are resolved by `src/lib/og.ts`. Review title readability,
+portrait identity, crop, and contrast before replacing an asset. Do not put personal
+or secret configuration in the prompt.
+
+## Prompt
+
+```text
 Create a horizontal blog or site page preview image in a retro terminal style with an Arch Linux theme and vintage CRT monitor aesthetics. The image must feel like a carefully designed tech blog cover, not a full terminal screenshot. Use a black background, subtle scanlines, soft but brighter monochrome green phosphor glow, slight screen curvature, edge vignette, and nostalgic CRT texture. The terminal color palette should follow a bright monochrome green scheme: the title and key elements are more luminous, while secondary text is slightly dimmer, but the entire image must remain strictly monochrome green.
 
 Use a hybrid layout that combines a 70/30 split-column structure with an L-shaped reading flow. The left 65–70% should function as the main information area, while the right 30–35% should serve as the portrait accent area. The composition should read like an L-shape: the title forms the top horizontal axis, the system info box beneath it forms the middle support, the portrait on the right acts as the vertical visual anchor, and a small terminal-style build-log area in the lower-left acts as the closing detail. Do not use an evenly scattered four-corner layout.
@@ -58,3 +73,4 @@ Avoid: showing a Time field, using Apple M2 Pro or Apple-branded CPU/GPU lines, 
 
 Information to fill in:
 TITLE = {{TITLE}}
+```

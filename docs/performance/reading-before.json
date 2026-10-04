@@ -1,0 +1,270 @@
+{
+    "recordedAt": "2026-09-19T07:15:15.356Z",
+    "browser": "153.0.8010.12",
+    "environment": {
+        "viewport": "390x844",
+        "dpr": 1,
+        "cpuSlowdown": 4,
+        "latencyMs": 150,
+        "downloadBytesPerSecond": 200000,
+        "uploadBytesPerSecond": 93750,
+        "coldCache": true,
+        "server": "localhost with gzip; remote image CDN live",
+        "wait": "load + fonts ready (60s maximum) + 2s; no interaction"
+    },
+    "samples": [
+        {
+            "route": "/",
+            "trial": 1,
+            "lcpMs": 24432,
+            "cls": 0,
+            "transferredBytes": 4757317,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 14,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 763
+        },
+        {
+            "route": "/",
+            "trial": 2,
+            "lcpMs": 24436,
+            "cls": 0,
+            "transferredBytes": 4757317,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 12,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 763
+        },
+        {
+            "route": "/",
+            "trial": 3,
+            "lcpMs": 24400,
+            "cls": 0,
+            "transferredBytes": 4757317,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 12,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 770
+        },
+        {
+            "route": "/posts/2025/travelogue-of-southern-shanxi/",
+            "trial": 1,
+            "lcpMs": 24504,
+            "cls": 0,
+            "transferredBytes": 4791571,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 19,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 653
+        },
+        {
+            "route": "/posts/2025/travelogue-of-southern-shanxi/",
+            "trial": 2,
+            "lcpMs": 24496,
+            "cls": 0,
+            "transferredBytes": 4791566,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 15,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 645
+        },
+        {
+            "route": "/posts/2025/travelogue-of-southern-shanxi/",
+            "trial": 3,
+            "lcpMs": 24476,
+            "cls": 0,
+            "transferredBytes": 4791571,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 14,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 631
+        },
+        {
+            "route": "/links/",
+            "trial": 1,
+            "lcpMs": 696,
+            "cls": 0,
+            "transferredBytes": 5103560,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 12,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 691
+        },
+        {
+            "route": "/links/",
+            "trial": 2,
+            "lcpMs": 704,
+            "cls": 0,
+            "transferredBytes": 5103560,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 13,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 697
+        },
+        {
+            "route": "/links/",
+            "trial": 3,
+            "lcpMs": 692,
+            "cls": 0,
+            "transferredBytes": 5103560,
+            "scriptBytes": 8727,
+            "scriptCount": 3,
+            "fontCount": 1,
+            "scriptDurationMs": 14,
+            "fontsReady": true,
+            "failures": [],
+            "scripts": [
+                {
+                    "name": "/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js",
+                    "bytes": 5562
+                },
+                {
+                    "name": "/_astro/SearchModal.astro_astro_type_script_index_0_lang.D6W6XcOR.js",
+                    "bytes": 3022
+                },
+                {
+                    "name": "/_astro/html.BpRH71kO.js",
+                    "bytes": 143
+                }
+            ],
+            "domContentLoadedMs": 688
+        }
+    ],
+    "label": "main 9bae5097bb3d481e4c3b1c0bb13a9ebeae0e482f, before all reading changes"
+}

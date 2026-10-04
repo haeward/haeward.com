@@ -1,17 +1,33 @@
-# Content Image Budget
+# 正文图片预算
 
-This site stays fast only if long-form posts keep image cost under control. Use this as the default review checklist for photo-heavy articles.
+图片较多的文章按以下约定发布，兼顾阅读质量、加载速度和后续维护。
 
-## Baseline
+## 数量与尺寸
 
-- Keep the opening viewport to `1` lead image, or `2` images only when the second one adds clear context.
-- Treat `20` content images as the default upper target for a post. If a draft exceeds `24`, do a quick performance review before publishing.
-- Prefer article image source widths at or below `1440px`. Content-column images rarely need anything larger.
-- Use `https://webp.haeward.com/...` sources when possible so responsive `?width=` variants are available.
+- 首屏默认保留 1 张引导图；第二张只有在提供明确上下文时才加入。
+- 每篇文章以 20 张正文图片为默认上限目标；草稿超过 24 张时，发布前检查移动端加载与滚动表现。
+- 展示版本通常不需要超过 1440px 宽；保留原图用于明确打开或下载，避免正文直接下载大原图。
+- 删除重复表达同一信息的图片，避免读者看到正文之前连续加载多张全宽照片。
 
-## Review pass before publish
+## 来源与准备
 
-- Remove any image that repeats information already clear from nearby text.
-- Avoid stacking multiple full-width photos before the reader reaches the first meaningful section break.
-- Keep captions descriptive so images still make sense when lazy-loaded later in the reading flow.
-- If a post must keep many photos, check the built page once on mobile and confirm scrolling remains smooth.
+- 少量新增配图可以放在 `public/assets/images/posts/`，与文章一起维护和部署。
+- 已有 `https://webp.haeward.com/...` 图片继续使用响应式 `?width=` 版本；不为统一来源批量迁移图片。
+- 第三方直链限于可信来源的少量图片；影响正文完整性的图片应保留可恢复副本。
+- 添加或替换支持的图片后运行 `pnpm run sync:article-images`，生成或测量响应式版本，并更新尺寸清单。修改现有 CDN 图片时使用 `--refresh` 重新测量。
+- 正常构建不会联网测量图片。清单更新后检查构建结果；修改 Markdown 图片处理逻辑时使用 `pnpm exec astro build --force`，避免复用旧内容缓存。
+
+本地与自有对象存储的选择、迁移时机及缓存约定见 [图片存储与加载策略](image-strategy.md)。
+
+## 加载与显示
+
+- 使用明确的宽高和尺寸清单预留显示空间，保持比例；通过 `srcset`、`sizes` 下载匹配显示尺寸的版本。
+- 正文首张图提前加载，其余懒加载；只有使用现有图片域名的正文页建立预连接。
+- 图注应能独立说明图片含义，图片尚未加载时仍可理解阅读内容。
+- 放大视图先使用已加载的预览，再加载适合视口与屏幕密度的版本；原图保留为明确操作。
+
+## 发布前检查
+
+- 在移动端和桌面端检查清晰度、文字细节、比例与图注，确认图片没有裁切或损坏。
+- 确认图片加载前后布局稳定、首图及时出现、未滚动到的图片没有集中下载。
+- 对图片较多的文章，检查弱网滚动和放大视图的失败、重试行为。
