@@ -4185,7 +4185,12 @@
 	},
 	{
 		"comment": "",
-		"rating": null,
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
 		"sharing_text": "https://www.douban.com/doubanapp/dispatch/book/10554308 来自@豆瓣App",
 		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/10554308/interest/2547502118",
 		"tags": [],
