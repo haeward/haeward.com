@@ -4,6 +4,7 @@ import { getContainerRenderer as getMDXRenderer } from "@astrojs/mdx/container-r
 import rss from "@astrojs/rss";
 import { SITE } from "@consts";
 import { getPublishedPosts } from "@lib/posts";
+import { portableRssContent } from "@lib/rss-content";
 import type { APIContext } from "astro";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 
@@ -12,7 +13,7 @@ export async function GET(context: APIContext) {
     const container = await AstroContainer.create({ renderers });
     const siteUrl = context.site ?? new URL(context.request.url).origin;
     const feedUrl = new URL("/rss.xml", siteUrl).href;
-    const feedImageUrl = new URL("/assets/images/site/favicon.png", siteUrl).href;
+    const feedImageUrl = new URL("/assets/images/site/feed-icon-144.png", siteUrl).href;
     const homeUrl = new URL("/", siteUrl).href;
 
     const posts = await getPublishedPosts();
@@ -25,7 +26,7 @@ export async function GET(context: APIContext) {
             return {
                 title: post.data.title,
                 description: post.data.description,
-                content: html,
+                content: portableRssContent(html, new URL(`/posts/${post.id}/`, siteUrl)),
                 pubDate: post.data.date,
                 link: `/posts/${post.id}/`,
             };

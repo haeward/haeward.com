@@ -1,17 +1,25 @@
-<div id="site-search" class="site-search" hidden aria-hidden="true" data-search-state="idle">
+---
+import { UI } from "@lib/ui";
+
+const t = UI;
+---
+
+<dialog
+    lang="en"
+    id="site-search"
+    class="site-search"
+    hidden
+    aria-labelledby="site-search-title"
+    data-search-state="idle"
+>
     <div class="site-search__backdrop" data-search-close="true"></div>
 
-    <section
-        class="site-search__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="site-search-title"
-    >
-        <h2 id="site-search-title" class="sr-only">Search articles</h2>
+    <section class="site-search__panel">
+        <h2 id="site-search-title" class="sr-only">{t.search}</h2>
 
         <div class="site-search__top">
             <label class="site-search__input-shell" for="site-search-input">
-                <span class="sr-only">Search articles</span>
+                <span class="sr-only">{t.search}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -30,7 +38,7 @@
                     id="site-search-input"
                     class="site-search__input"
                     type="search"
-                    placeholder="Search articles..."
+                    placeholder={t.searchPlaceholder}
                     autocomplete="off"
                     autocapitalize="off"
                     spellcheck="false"
@@ -42,9 +50,9 @@
                 type="button"
                 class="site-search__close"
                 data-search-close="true"
-                aria-label="Close search"
+                aria-label={t.closeSearch}
             >
-                ESC
+                {t.close}
             </button>
         </div>
 
@@ -65,9 +73,9 @@
 
         <div class="site-search__footer">
             <div class="site-search__hints" aria-hidden="true">
-                <span class="site-search__hint"><kbd>Enter</kbd> Open</span>
-                <span class="site-search__hint"><kbd>Tab</kbd> Navigate</span>
-                <span class="site-search__hint"><kbd>Esc</kbd> Close</span>
+                <span class="site-search__hint"><kbd>Enter</kbd> {t.open}</span>
+                <span class="site-search__hint"><kbd>Tab</kbd> {t.navigate}</span>
+                <span class="site-search__hint"><kbd>Esc</kbd> {t.close}</span>
             </div>
             <a
                 class="site-search__credit"
@@ -75,11 +83,12 @@
                 target="_blank"
                 rel="noreferrer noopener"
             >
-                Powered by <span>Pagefind</span>
+                Powered by <span>Pagefind</span
+                ><span class="sr-only" data-new-window>{t.newTab}</span>
             </a>
         </div>
     </section>
-</div>
+</dialog>
 
 <script>
 import "../scripts/search-modal";

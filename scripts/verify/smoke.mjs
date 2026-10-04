@@ -1,234 +1,25 @@
-import { createReadStream } from "node:fs";
-import { access, stat } from "node:fs/promises";
-import http from "node:http";
+import { access, readFile } from "node:fs/promises";
 import path from "node:path";
-import { chromium } from "playwright";
+import { chromium, webkit } from "playwright";
+import { parseBlogroll } from "../../src/lib/blogroll.ts";
+import { orderBlogroll } from "../../src/lib/blogroll-order.ts";
+import { verifyArticleImages } from "./article-images.mjs";
+import { verifyEnhancements } from "./enhancements.mjs";
+import { verifyMedia } from "./media.mjs";
+import { verifyReading } from "./reading.mjs";
+import { verifyResourceLinks } from "./resource-links.mjs";
+import { verifyRss } from "./rss.mjs";
+import { verifySearchPagination } from "./search-pagination.mjs";
+import { startPreview } from "./server.mjs";
 
 const DIST_DIR = path.resolve("dist");
-const HOST = "127.0.0.1";
 const ARTICLE_SLUG = "/posts/2025/travelogue-of-southern-shanxi/";
-const MOCK_MASTODON_ACCOUNT_ID = "114251868212289038";
-
-function renderMockMastodonContent(index) {
-    if (index === 2) {
-        return `<p class="quote-inline">RE: <a href="https://mas.to/@quoted/1">Quote inline source</a></p><p>Moment ${index + 1} from Mastodon.</p>`;
-    }
-
-    if (index === 3) {
-        return `<p>Moment ${index + 1} from Mastodon. <a href="https://mas.to/tags/now">#Now</a></p>`;
-    }
-
-    if (index === 4) {
-        return `<p>Moment ${index + 1} from Mastodon. :blobcatsweat: Custom emoji check.</p>`;
-    }
-
-    return `<p>Moment ${index + 1} from Mastodon. <a href="https://example.com/article">example.com</a></p>`;
-}
-
-const MOCK_MASTODON_ACCOUNT = {
-    acct: "haeward",
-    avatar: "/assets/images/site/favicon.png",
-    display_name: "Haeward",
-    url: "https://mas.to/@haeward",
-    username: "haeward",
-};
-
-function renderMockMastodonCreatedAt(index) {
-    return new Date(Date.UTC(2026, 3, 21 + index, 16, 57)).toISOString();
-}
-
-const MOCK_MASTODON_VISIBLE_STATUSES = Array.from({ length: 40 }, (_, index) => ({
-    id: `moment-${index + 1}`,
-    account: MOCK_MASTODON_ACCOUNT,
-    card:
-        index === 0
-            ? {
-                  description: "A linked article preview.",
-                  image: "/assets/images/site/favicon.png",
-                  provider_name: "Example",
-                  title: "Example preview",
-                  url: "https://example.com/article",
-              }
-            : null,
-    content: renderMockMastodonContent(index),
-    created_at: renderMockMastodonCreatedAt(index),
-    emojis:
-        index === 4
-            ? [
-                  {
-                      shortcode: "blobcatsweat",
-                      static_url: "/assets/images/site/favicon.png",
-                      url: "/assets/images/site/favicon.png",
-                  },
-              ]
-            : [],
-    media_attachments:
-        index === 1
-            ? [
-                  {
-                      description: "Preview attachment",
-                      preview_url: "/assets/images/site/favicon.png",
-                      type: "image",
-                      url: "/assets/images/site/favicon.png",
-                  },
-              ]
-            : [],
-    quote:
-        index === 2
-            ? {
-                  state: "accepted",
-                  quoted_status: {
-                      account: {
-                          acct: "quoted",
-                          avatar: "/assets/images/site/favicon.png",
-                          avatar_static: "/assets/images/site/favicon.png",
-                          display_name: "Quoted User",
-                          url: "https://mas.to/@quoted",
-                      },
-                      card: {
-                          description: "A quoted link preview.",
-                          image: "/assets/images/site/favicon.png",
-                          image_description: "Quoted preview image",
-                          provider_name: "Quoted Site",
-                          title: "Quoted preview title",
-                          url: "https://example.com/quoted",
-                      },
-                      content: "<p>A quoted toot preview.</p>",
-                      created_at: "2026-04-20T08:30:00.000Z",
-                      url: "https://mas.to/@quoted/1",
-                  },
-              }
-            : null,
-    tags:
-        index === 3
-            ? [
-                  {
-                      name: "Now",
-                      url: "https://mas.to/tags/now",
-                  },
-              ]
-            : [],
-    url: `https://mas.to/@haeward/${index + 1}`,
-}));
-
-const MOCK_MASTODON_BOOSTED_STATUS = {
-    id: "boosted-moment",
-    account: MOCK_MASTODON_ACCOUNT,
-    content: "<p>Boost wrapper should stay hidden.</p>",
-    created_at: "2026-04-30T16:57:00.000Z",
-    media_attachments: [],
-    reblog: {
-        id: "boosted-original",
-        account: {
-            acct: "boosted",
-            avatar: "/assets/images/site/favicon.png",
-            display_name: "Boosted User",
-            url: "https://mas.to/@boosted",
-            username: "boosted",
-        },
-        content: "<p>Boosted toot should render.</p>",
-        created_at: "2026-04-30T15:57:00.000Z",
-        media_attachments: [],
-        url: "https://mas.to/@boosted/1",
-    },
-    url: "https://mas.to/@haeward/boosted",
-};
-
-const MOCK_MASTODON_STATUSES = [
-    {
-        id: "reply-moment",
-        account: MOCK_MASTODON_ACCOUNT,
-        content: `<p>Reply should render. <a href="https://mas.to/@someone/1">Reply source</a></p>`,
-        created_at: "2026-04-29T16:57:00.000Z",
-        in_reply_to_account_id: "someone",
-        in_reply_to_id: "114251868212289000",
-        media_attachments: [],
-        url: "https://mas.to/@haeward/reply",
-    },
-    MOCK_MASTODON_BOOSTED_STATUS,
-    ...MOCK_MASTODON_VISIBLE_STATUSES,
-];
-
-const MIME_TYPES = {
-    ".css": "text/css; charset=utf-8",
-    ".gif": "image/gif",
-    ".html": "text/html; charset=utf-8",
-    ".ico": "image/x-icon",
-    ".jpeg": "image/jpeg",
-    ".jpg": "image/jpeg",
-    ".js": "text/javascript; charset=utf-8",
-    ".json": "application/json; charset=utf-8",
-    ".png": "image/png",
-    ".svg": "image/svg+xml",
-    ".txt": "text/plain; charset=utf-8",
-    ".webp": "image/webp",
-    ".xml": "application/xml; charset=utf-8",
-};
-
 function fail(message) {
     throw new Error(message);
 }
 
 async function ensureBuiltSite() {
     await access(DIST_DIR);
-}
-
-async function resolveRequestPath(urlPath) {
-    const pathname = decodeURIComponent(new URL(urlPath, `http://${HOST}`).pathname);
-    let filePath = path.join(DIST_DIR, pathname);
-    if (pathname.endsWith("/")) {
-        filePath = path.join(DIST_DIR, pathname, "index.html");
-    }
-
-    try {
-        const fileStat = await stat(filePath);
-        if (fileStat.isDirectory()) {
-            return path.join(filePath, "index.html");
-        }
-        return filePath;
-    } catch {
-        if (!path.extname(filePath)) {
-            return path.join(filePath, "index.html");
-        }
-        throw new Error(`Missing file for ${pathname}`);
-    }
-}
-
-async function startStaticServer() {
-    const server = http.createServer(async (req, res) => {
-        if (!req.url) {
-            res.writeHead(400);
-            res.end("Bad Request");
-            return;
-        }
-
-        try {
-            const filePath = await resolveRequestPath(req.url);
-            const ext = path.extname(filePath).toLowerCase();
-            res.writeHead(200, {
-                "content-type": MIME_TYPES[ext] ?? "application/octet-stream",
-            });
-            createReadStream(filePath).pipe(res);
-        } catch {
-            res.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
-            res.end("Not Found");
-        }
-    });
-
-    await new Promise((resolve, reject) => {
-        server.once("error", reject);
-        server.listen(0, HOST, resolve);
-    });
-
-    const address = server.address();
-    if (!address || typeof address === "string") {
-        fail("Unable to determine smoke server address.");
-    }
-
-    return {
-        server,
-        baseUrl: `http://${HOST}:${address.port}`,
-    };
 }
 
 function bindPageDiagnostics(page, label) {
@@ -246,7 +37,7 @@ function bindPageDiagnostics(page, label) {
 
     page.on("requestfailed", (request) => {
         const failureText = request.failure()?.errorText ?? "";
-        if (request.resourceType() === "image" && failureText.includes("ERR_ABORTED")) {
+        if (request.resourceType() === "image" && /ERR_ABORTED|cancelled/i.test(failureText)) {
             return;
         }
 
@@ -396,8 +187,9 @@ function countMediaRequests(requestLog, pathname) {
 
 async function run() {
     await ensureBuiltSite();
-    const { server, baseUrl } = await startStaticServer();
-    const browser = await chromium.launch({ headless: true });
+    const { server, baseUrl } = await startPreview(DIST_DIR);
+    const engine = process.env.SMOKE_BROWSER === "webkit" ? webkit : chromium;
+    const browser = await engine.launch({ headless: true });
 
     try {
         await assertStatus(baseUrl, "/", 200);
@@ -405,9 +197,9 @@ async function run() {
         await assertStatus(baseUrl, "/posts/", 200);
         await assertStatus(baseUrl, "/blog/", 404);
         await assertStatus(baseUrl, "/blog/2025/travelogue-of-southern-shanxi/", 404);
-        await assertStatus(baseUrl, "/now/", 200);
-        await assertStatus(baseUrl, "/moments/", 200);
-        await assertStatus(baseUrl, "/toolbox/", 200);
+        await assertStatus(baseUrl, "/now/", 404);
+        await assertStatus(baseUrl, "/moments/", 404);
+        await assertStatus(baseUrl, "/toolbox/", 404);
         await assertStatus(baseUrl, ARTICLE_SLUG, 200);
         await assertStatus(baseUrl, "/links/", 200);
         await assertStatus(baseUrl, "/media/", 200);
@@ -423,42 +215,16 @@ async function run() {
         await assertStatus(baseUrl, "/sitemap-index.xml", 200);
         await assertStatus(baseUrl, "/does-not-exist/", 404);
 
-        const momentsHtml = await fetch(new URL("/moments/", baseUrl)).then((response) =>
-            response.text(),
-        );
-        if (!momentsHtml.includes('data-moments-more="true" hidden')) {
-            fail("Expected /moments to hide the Mastodon more link before moments load.");
-        }
-
-        const page = await browser.newPage({ viewport: { width: 1440, height: 960 } });
-        await page.addInitScript(
-            ({ accountId, statuses }) => {
-                const originalFetch = window.fetch.bind(window);
-
-                window.fetch = async (input, init) => {
-                    const url =
-                        typeof input === "string"
-                            ? input
-                            : input instanceof Request
-                              ? input.url
-                              : String(input);
-
-                    if (url.startsWith(`https://mas.to/api/v1/accounts/${accountId}/statuses`)) {
-                        return {
-                            ok: true,
-                            async json() {
-                                return statuses;
-                            },
-                        };
-                    }
-
-                    return originalFetch(input, init);
-                };
-            },
-            {
-                accountId: MOCK_MASTODON_ACCOUNT_ID,
-                statuses: MOCK_MASTODON_STATUSES,
-            },
+        const page = await browser.newPage({
+            viewport: { width: 1440, height: 960 },
+            colorScheme: "light",
+        });
+        // Keep favicon rendering deterministic; browser smoke never probes external blogs.
+        await page.route("https://www.google.com/s2/favicons?*", (route) =>
+            route.fulfill({
+                path: "public/assets/images/site/favicon-32.png",
+                contentType: "image/png",
+            }),
         );
         const assertNoErrors = bindPageDiagnostics(page, "desktop");
         const desktopMediaRequests = [];
@@ -472,93 +238,106 @@ async function run() {
         });
 
         await assertOk(page, `${baseUrl}/`, "Home");
-        const homeImageSrc = await page.locator('img[alt="programmer"]').getAttribute("src");
-        if (homeImageSrc !== "/assets/images/site/home-hover-runtime.webp") {
+        const homeImage = await page.locator('img[alt="programmer"]').evaluate(async (image) => {
+            await image.decode();
+            const bounds = image.getBoundingClientRect();
+            const resource = performance.getEntriesByName(image.currentSrc)[0];
+            return {
+                src: new URL(image.currentSrc).pathname,
+                responsive: image.srcset.split(",").length > 1 && Boolean(image.sizes),
+                bytes: resource?.encodedBodySize,
+                width: bounds.width,
+                height: bounds.height,
+            };
+        });
+        if (
+            !homeImage.src.startsWith("/_astro/") ||
+            !homeImage.responsive ||
+            !(homeImage.bytes > 0 && homeImage.bytes < 6000) ||
+            homeImage.width !== 144 ||
+            homeImage.height !== 144
+        ) {
             fail(
-                `Expected homepage runtime image to use optimized asset, received ${homeImageSrc}.`,
+                `Homepage illustration lost responsive sizing or its byte budget: ${JSON.stringify(homeImage)}.`,
             );
         }
         const navLabels = await page
             .locator("header nav a")
             .evaluateAll((links) => links.map((link) => link.textContent?.trim() || ""));
-        const expectedNavLabels = ["Archive", "Media", "Now", "About", "Links"];
+        const expectedNavLabels = ["Archive", "Media", "About", "Blogroll"];
         if (expectedNavLabels.some((label, index) => navLabels[index] !== label)) {
             fail(
                 `Expected header nav to start with ${expectedNavLabels.join(", ")}. Received ${navLabels.join(", ")}.`,
             );
         }
 
-        await assertOk(page, `${baseUrl}/now/`, "Now");
-        const nowMomentsCount = await page.locator("[data-moments-item='true']").count();
-        if (nowMomentsCount !== 0) {
-            fail(`Expected /now to omit moments, received ${nowMomentsCount}.`);
+        await assertOk(page, `${baseUrl}/links/`, "Blogroll");
+        const opml = await readFile("public/subscriptions.opml", "utf8");
+        const period = await page.locator("[data-blogroll]").getAttribute("data-blogroll-period");
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(period || "")) {
+            fail("Blogroll needs the build's ordering period.");
         }
-
-        await assertOk(page, `${baseUrl}/moments/`, "Moments");
-        await page.waitForSelector("[data-moments-item='true']");
-        const momentsCount = await page.locator("[data-moments-item='true']").count();
-        if (momentsCount !== 40) {
-            fail(`Expected /moments to render 40 moments, received ${momentsCount}.`);
-        }
-        if ((await page.locator("text=Reply should render").count()) !== 1) {
-            fail("Expected /moments to render reply statuses.");
-        }
-        if ((await page.locator("text=Boost wrapper should stay hidden").count()) !== 0) {
-            fail("Expected /moments to hide boosted status wrappers.");
-        }
-        if ((await page.locator("text=Boosted toot should render").count()) !== 1) {
-            fail("Expected /moments to render boosted toot content.");
-        }
-        await page.waitForSelector('[data-moments-boost="true"]:has-text("Haeward boosted")');
-        await page.waitForSelector('[data-moments-boost-avatar="true"]');
-        await page.waitForSelector(
-            '[data-moments-reply="true"]:has-text("Haeward replied to") a[href="https://mas.to/web/statuses/114251868212289000"]:has-text("toot")',
+        const expectedBlogs = orderBlogroll(parseBlogroll(opml), period);
+        const actualBlogs = await page.locator("[data-blogroll] li a").evaluateAll((anchors) =>
+            anchors.map((a) => ({
+                name: a.closest("li").querySelector(".blogroll-name").textContent,
+                url: a.href,
+            })),
         );
-        await page.waitForSelector('a[href="https://mas.to/@haeward/reply"]:has-text("View Toot")');
-        if ((await page.locator("text=Quote inline source").count()) !== 0) {
-            fail("Expected /moments to hide Mastodon inline quote source links.");
-        }
-        await page.waitForSelector('[data-moments-author="true"]');
-        await page.waitForSelector('[data-moments-author-avatar="true"]');
-        await page.waitForSelector(
-            '[data-moments-author-handle="true"]:has-text("@haeward@mas.to")',
-        );
-        await page.waitForSelector('a:has-text("View Toot")');
-        await page.waitForSelector('a:has-text("Example preview")');
-        await page.waitForSelector("text=A quoted toot preview.");
-        await page.waitForSelector('[data-moments-quote="true"]');
-        await page.waitForSelector('[data-moments-quote-avatar="true"]');
-        await page.waitForSelector(
-            '[data-moments-quote-card-image="true"][alt="Quoted preview image"]',
-        );
-        await page.waitForSelector('a:has-text("Quoted preview title")');
-        await page.waitForSelector('a:has-text("#Now")');
-        await page.waitForSelector('[data-moments-tag="true"]:has-text("#Now")');
-        await page.waitForSelector('[data-moments-emoji="true"][alt=":blobcatsweat:"]');
-        await page.waitForSelector('[data-moments-media="true"][alt="Preview attachment"]');
-        await page.waitForSelector(
-            '[data-moments-mastodon-more="true"][href="https://mas.to/@haeward"]:has-text("View more on Mastodon")',
-        );
-
-        await assertOk(page, `${baseUrl}/links/`, "Links");
-        await page.waitForSelector('[data-links-section="blogroll"] [data-link-card="true"]');
-        await page.waitForSelector('[data-links-section="videos"] [data-link-card="true"]');
-        await page.waitForSelector('[data-links-section="podcasts"]');
-
-        const blogrollCount = await page
-            .locator('[data-links-section="blogroll"] [data-link-card="true"]')
-            .count();
-        const videoCount = await page
-            .locator('[data-links-section="videos"] [data-link-card="true"]')
-            .count();
-        if (blogrollCount === 0 || videoCount === 0) {
+        if (JSON.stringify(actualBlogs) !== JSON.stringify(expectedBlogs)) {
             fail(
-                `Expected Links page to render both blogroll and video entries, received ${blogrollCount} and ${videoCount}.`,
+                "Blogroll must match the OPML names and URLs in the build period's shuffled order.",
             );
+        }
+        if (await page.locator("[data-links-section], [data-link-status]").count()) {
+            fail("Blogroll must not render legacy categories or connectivity indicators.");
+        }
+        if ((await page.locator("[data-blogroll] img").count()) !== expectedBlogs.length) {
+            fail("Every Blogroll card needs an icon with a text fallback.");
+        }
+        const firstBlogLink = page.locator("[data-blogroll] a").first();
+        if (
+            (await firstBlogLink.getAttribute("target")) !== "_blank" ||
+            (await firstBlogLink.getAttribute("rel")) !== "noopener noreferrer"
+        ) {
+            fail("Blogroll cards must open in a new tab with safe opener handling.");
+        }
+        if (!(await page.locator(".page-intro a[download]").count())) {
+            fail("The OPML download belongs in the introduction.");
+        }
+        const download = page.locator('a[download="subscriptions.opml"]');
+        const [saved] = await Promise.all([page.waitForEvent("download"), download.click()]);
+        if (
+            saved.suggestedFilename() !== "subscriptions.opml" ||
+            (await readFile(await saved.path(), "utf8")) !== opml
+        ) {
+            fail("OPML download must preserve the maintained file exactly.");
+        }
+        const noJs = await browser.newContext({ javaScriptEnabled: false });
+        try {
+            await noJs.route("https://www.google.com/s2/favicons?*", (route) =>
+                route.fulfill({
+                    path: "public/assets/images/site/favicon-32.png",
+                    contentType: "image/png",
+                }),
+            );
+            const plain = await noJs.newPage();
+            await plain.goto(`${baseUrl}/links/`);
+            if ((await plain.locator("[data-blogroll] li").count()) !== expectedBlogs.length) {
+                fail("Blogroll must render without JavaScript.");
+            }
+            for (const width of [320, 390, 768]) {
+                await plain.setViewportSize({ width, height: 844 });
+                if (await plain.evaluate(() => document.documentElement.scrollWidth > innerWidth)) {
+                    fail(`Blogroll overflows at ${width}px.`);
+                }
+            }
+        } finally {
+            await noJs.close();
         }
 
         const themeToggle = page.locator("#theme-toggle");
-        await page.waitForFunction(() => document.documentElement.dataset.themeMode === "system");
+        await page.waitForFunction(() => document.documentElement.dataset.themeMode === "light");
         await themeToggle.click();
         await page.waitForFunction(() => document.documentElement.dataset.themeMode === "dark");
         await themeToggle.click();
@@ -626,15 +405,10 @@ async function run() {
         await page.click(".blog-article img");
         await page.waitForSelector(".image-lightbox.is-open");
         await page.keyboard.press("Escape");
-        await page.waitForSelector(".image-lightbox:not(.is-open)");
+        await page.waitForFunction(() => !document.querySelector("#image-lightbox").open);
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: "instant" }));
-        await page.waitForSelector(
-            '[data-toc-root="true"][data-toc-visible="true"] [data-toc-link="true"]',
-        );
-        await page
-            .locator('[data-toc-root="true"][data-toc-visible="true"] [data-toc-link="true"]')
-            .first()
-            .click();
+        await page.waitForSelector('.blog-toc--desktop [data-toc-link="true"]');
+        await page.locator('.blog-toc--desktop [data-toc-link="true"]').first().click();
         await page.waitForTimeout(200);
 
         const mobilePage = await browser.newPage({
@@ -667,6 +441,13 @@ async function run() {
         assertNoMobileErrors();
         await mobilePage.close();
         await page.close();
+        await verifyArticleImages(browser, baseUrl);
+        await verifyReading(browser, baseUrl);
+        await verifyEnhancements(browser, baseUrl);
+        await verifyMedia(browser, baseUrl);
+        await verifySearchPagination(browser, baseUrl);
+        await verifyResourceLinks(browser, baseUrl);
+        await verifyRss(browser, baseUrl);
     } finally {
         await browser.close();
         await new Promise((resolve, reject) =>

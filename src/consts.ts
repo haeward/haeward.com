@@ -12,21 +12,6 @@ export const BLOG: Metadata = {
         "A chronological archive of essays, notes, travelogues, and technical writing from Haeward.",
 };
 
-export const NOW: Metadata = {
-    TITLE: "Now",
-    DESCRIPTION: "A current snapshot of what I am reading, watching, building, and thinking about.",
-};
-
-export const MOMENTS: Metadata = {
-    TITLE: "Moments",
-    DESCRIPTION: "Recent short notes and updates from Haeward on Mastodon.",
-};
-
-export const TOOLBOX: Metadata = {
-    TITLE: "Toolbox",
-    DESCRIPTION: "A small inventory of tools, services, and workflows Haeward keeps close.",
-};
-
 export const ABOUT: Metadata = {
     TITLE: "About",
     DESCRIPTION:
@@ -38,10 +23,9 @@ export const MEDIA: Metadata = {
     DESCRIPTION: "A personal media shelf of books, films, series, anime, and notes worth keeping.",
 };
 
-export const LINKS: Metadata = {
-    TITLE: "Links",
-    DESCRIPTION:
-        "A curated directory of blogs, publications, creators, and videos I return to for ideas and perspective.",
+export const BLOGROLL: Metadata = {
+    TITLE: "Blogroll",
+    DESCRIPTION: "Blogs I follow for ideas, stories, and new perspectives.",
 };
 
 export const CHANGELOG: Metadata = {
@@ -64,7 +48,7 @@ export const SOCIALS: Socials = [
     },
     {
         NAME: "Mastodon",
-        HREF: "https://mas.to/@haeward",
+        HREF: "https://g0v.social/@haeward",
         ICON: "/assets/icons/social/mastodon.svg",
         ENABLE: true,
     },

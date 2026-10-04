@@ -20,7 +20,11 @@ const isDefault = tab.key === defaultTab;
     class="space-y-4 scroll-mt-24"
     hidden={!isDefault}
 >
-    <ul class="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 xl:grid-cols-4" data-media-grid>
+    <ul
+        class="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 xl:grid-cols-4"
+        data-media-grid
+        aria-busy="false"
+    >
         {initialItems.map((item) => (
             <MediaCard item={item} />
         ))}
@@ -31,6 +35,8 @@ const isDefault = tab.key === defaultTab;
             <p
                 class="text-sm text-[var(--site-color-text-muted)] sm:text-base"
                 data-media-status-message
+                role="status"
+                aria-live="polite"
             ></p>
             <div class="flex justify-center" data-media-retry-wrapper hidden>
                 <button

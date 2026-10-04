@@ -5,7 +5,7 @@ import { SITE } from "@consts";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="animate">
+<footer lang="en" class="animate">
     <Container>
         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div
@@ -16,13 +16,9 @@ const currentYear = new Date().getFullYear();
                 <span>2025 ~ {currentYear}</span>
             </div>
             <div class="animate leading-relaxed text-[var(--site-color-text-muted)] sm:text-right">
-                <a href="/moments" class="font-bold underline">Moments</a>
+                <a href="/changelog/" class="font-bold underline">Changelog</a>
                 {" · "}
-                <a href="/toolbox" class="font-bold underline">Toolbox</a>
-                {" · "}
-                <a href="/changelog" class="font-bold underline">Changelog</a>
-                {" · "}
-                <a href="/rss.xml" class="font-bold underline">RSS</a>
+                <a href="/rss.xml" class="font-bold underline" data-astro-prefetch="false">RSS</a>
             </div>
         </div>
     </Container>

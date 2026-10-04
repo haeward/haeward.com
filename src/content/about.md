@@ -11,13 +11,13 @@ title: "About Me"
 - 几乎每天都会听播客，内容大多围绕科技、历史、阅读、影视、商业与投资
 - 间歇性运动，还没有形成长期习惯，正在慢慢坚持
 
-> 如果你感兴趣，也可以在 [Links](/links) 页面查看我关注的一些博客、频道和播客。
+> 如果你感兴趣，也可以在 [Blogroll](/links/) 页面查看我关注的一些博客。
 
 ## 网络栖息地
 
 - [GitHub](https://github.com/haeward)
-- [Twitter/X](https://x.com/haewyu)
-- [Mastodon](https://mas.to/@haeward)
+- [Twitter/X](https://x.com/haewardev)
+- [Mastodon](https://g0v.social/@haeward)
 - [Douban](https://www.douban.com/people/mithrasu/)
 - [Bangumi](https://bgm.tv/user/haeward)
 

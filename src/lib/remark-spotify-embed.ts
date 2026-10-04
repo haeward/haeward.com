@@ -72,6 +72,7 @@ function generateSpotifyEmbed(spotifyData: SpotifyData): string {
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     ></iframe>
+    <p><a href="https://open.spotify.com/${spotifyData.type}/${spotifyData.id}">Listen on Spotify</a></p>
   </div>`;
 }
 
@@ -86,7 +87,12 @@ function extractSpotifyData(url: string): SpotifyData | undefined {
 
         const [type, id] = parsedUrl.pathname.split("/").filter(Boolean);
 
-        if (!isSpotifyMediaType(type) || !id) {
+        if (
+            !["https:", "http:"].includes(parsedUrl.protocol) ||
+            !isSpotifyMediaType(type) ||
+            !id ||
+            !/^[a-zA-Z0-9]+$/.test(id)
+        ) {
             return undefined;
         }
 

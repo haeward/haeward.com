@@ -1,9 +1,13 @@
 import type { Html, Image, Paragraph, Parent, Root } from "mdast";
 import { visit } from "unist-util-visit";
+import imageDimensions from "../data/article-images.json";
 
-const RESPONSIVE_IMAGE_WIDTHS = [480, 768, 1024, 1440];
-const ARTICLE_IMAGE_SIZES =
-    "(max-width: 768px) calc(100vw - 2rem), (max-width: 1280px) min(100vw - 4rem, 46rem), 46rem";
+type ImageDimensions = {
+    width: number;
+    height: number;
+    variants?: { requestWidth?: number; src?: string; width: number; height: number }[];
+};
+const ARTICLE_IMAGE_SIZES = "(max-width: 760px) calc(100vw - 40px), 720px";
 
 function escapeHtml(value: string): string {
     return value
@@ -29,33 +33,54 @@ function withWidth(rawUrl: string, width: number): string {
     return url.toString();
 }
 
-function buildImageMarkup(imageNode: Image, eager: boolean): string {
+function buildImageMarkup(imageNode: Image, firstImage: boolean): string {
     const altText = imageNode.alt?.trim() ?? "";
     const escapedAlt = escapeHtml(altText);
     const responsive = supportsResponsiveWidths(imageNode.url);
-    const src = responsive ? withWidth(imageNode.url, 1024) : imageNode.url;
-    const srcset = responsive
-        ? RESPONSIVE_IMAGE_WIDTHS.map(
-              (width) => `${escapeHtml(withWidth(imageNode.url, width))} ${width}w`,
-          ).join(", ")
+    const dimensions = (imageDimensions as Record<string, ImageDimensions>)[imageNode.url];
+    const variants = (dimensions?.variants ?? []).flatMap((variant) => {
+        const src =
+            variant.src ??
+            (responsive && variant.requestWidth
+                ? withWidth(imageNode.url, variant.requestWidth)
+                : undefined);
+        return src ? [{ ...variant, src }] : [];
+    });
+    const fallback = variants.find((variant) => variant.width >= 720) ?? variants.at(-1);
+    const src = fallback?.src ?? imageNode.url;
+    const srcset = variants
+        .map((variant) => `${escapeHtml(variant.src)} ${variant.width}w`)
+        .join(", ");
+    // Portraits are height-limited in the article; don't download a full-column
+    // image when only a narrow, fitted portrait will actually be displayed.
+    const sizes = dimensions
+        ? `min(calc(100vw - 40px), 720px, ${((72 * dimensions.width) / dimensions.height).toFixed(2)}vh, ${((672 * dimensions.width) / dimensions.height).toFixed(2)}px)`
+        : ARTICLE_IMAGE_SIZES;
+    // A fitted link with an auto-width image otherwise collapses until decoding,
+    // even when the img has width/height attributes. Reserve the final fitted box.
+    const frameStyle = dimensions
+        ? ` style="--article-image-width: min(100%, ${Math.min(720, dimensions.width)}px, ${((72 * dimensions.width) / dimensions.height).toFixed(2)}vh, ${((672 * dimensions.width) / dimensions.height).toFixed(2)}px); --article-image-ratio: ${dimensions.width} / ${dimensions.height}; --article-image-height: 100%"`
         : "";
-
     const attributes = [
         `class="blog-figure__image"`,
         `src="${escapeHtml(src)}"`,
         `alt="${escapedAlt}"`,
-        `loading="${eager ? "eager" : "lazy"}"`,
+        `loading="${firstImage ? "eager" : "lazy"}"`,
         `decoding="async"`,
-        `fetchpriority="${eager ? "high" : "low"}"`,
     ];
+    if (firstImage) attributes.push(`fetchpriority="high"`);
+
+    if (dimensions) {
+        attributes.push(`width="${dimensions.width}"`, `height="${dimensions.height}"`);
+    }
 
     if (srcset) {
         attributes.push(`srcset="${srcset}"`);
-        attributes.push(`sizes="${ARTICLE_IMAGE_SIZES}"`);
+        attributes.push(`sizes="${sizes}"`);
     }
 
     return `<figure class="blog-figure">
-            <img ${attributes.join(" ")} />
+            <a href="${escapeHtml(imageNode.url)}" data-image-zoom="true" data-astro-prefetch="false" aria-label="${escapedAlt} — Open image"${frameStyle}><img ${attributes.join(" ")} /></a>
             <figcaption class="blog-figure__caption">${escapedAlt}</figcaption>
           </figure>`;
 }
@@ -63,7 +88,7 @@ function buildImageMarkup(imageNode: Image, eager: boolean): string {
 const remarkImageCaption = () => {
     return (tree: Root) => {
         const replacements: Array<{ index: number; parent: Parent; newNode: Html }> = [];
-        let figureIndex = 0;
+        let firstImage = true;
 
         visit(
             tree,
@@ -77,11 +102,11 @@ const remarkImageCaption = () => {
                     if (imageNode.alt && imageNode.alt.trim() !== "") {
                         const figureNode: Html = {
                             type: "html",
-                            value: buildImageMarkup(imageNode, figureIndex === 0),
+                            value: buildImageMarkup(imageNode, firstImage),
                         };
+                        firstImage = false;
 
                         replacements.push({ index, parent, newNode: figureNode });
-                        figureIndex += 1;
                     }
                 }
             },

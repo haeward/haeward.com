@@ -5,7 +5,7 @@ import { MEDIA, SITE } from "@consts";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getMediaPageData } from "@lib/media";
 
-const { tabs, defaultItems, manifest } = getMediaPageData();
+const { tabs, defaultItems, manifest } = await getMediaPageData();
 ---
 
 <PageLayout title={`${MEDIA.TITLE} | ${SITE.NAME}`} description={MEDIA.DESCRIPTION}>

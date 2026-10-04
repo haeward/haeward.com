@@ -12,6 +12,7 @@ const blog = defineCollection({
         description: z.string(),
         date: z.coerce.date(),
         draft: z.boolean().optional(),
+        mastodonUrl: z.url({ protocol: /^https$/ }).optional(),
         og: z.string().optional(),
         ogAlt: z.string().optional(),
         lang: z.string().default("en"),

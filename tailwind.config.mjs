@@ -6,9 +6,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["LXGW Neo XiHei", ...defaultTheme.fontFamily.sans],
-                serif: ["LXGW Neo XiHei", ...defaultTheme.fontFamily.serif],
-                mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
+                sans: defaultTheme.fontFamily.sans,
+                serif: defaultTheme.fontFamily.sans,
+                mono: defaultTheme.fontFamily.mono,
             },
         },
     },

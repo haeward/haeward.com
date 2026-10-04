@@ -1,0 +1,622 @@
+{
+    "https://webp.haeward.com/2025/08/guangshengsi-fohuitu.jpeg": {
+        "width": 1024,
+        "height": 768,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/guangshengsi-mountain-climbing.jpeg": {
+        "width": 768,
+        "height": 1024,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 640
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 1024
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/guangshengsi-qiyutu.jpeg": {
+        "width": 1024,
+        "height": 768,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/guangshengsi-shuishenmiao.jpeg": {
+        "width": 1024,
+        "height": 768,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/xiaoxitian.jpg": {
+        "width": 1080,
+        "height": 1440,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 640
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 1024
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 1365
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1080,
+                "height": 1440
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/yellow-river-1.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/yellow-river-2.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/yonglegong-chaoyuantu.jpg": {
+        "width": 1437,
+        "height": 382,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 478,
+                "height": 127
+            },
+            {
+                "requestWidth": 768,
+                "width": 767,
+                "height": 204
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1023,
+                "height": 272
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1437,
+                "height": 382
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/yonglegong-sanqingdian.jpeg": {
+        "width": 1024,
+        "height": 768,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            }
+        ]
+    },
+    "https://webp.haeward.com/2025/08/yuncheng-sunset-glow.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/feihong-tower-body.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/feihong-tower-eaves-corner.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/feihong-tower-word-record.jpeg": {
+        "width": 1440,
+        "height": 1025,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 479,
+                "height": 341
+            },
+            {
+                "requestWidth": 768,
+                "width": 767,
+                "height": 546
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1023,
+                "height": 728
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1025
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/feihong-tower.jpeg": {
+        "width": 1440,
+        "height": 1778,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 479,
+                "height": 592
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 948
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 1264
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1778
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guandishenxiang-landscape.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guandishenxiang.jpeg": {
+        "width": 1440,
+        "height": 1920,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 640
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 1024
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 1365
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1920
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guangshengsibei.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guanquelou.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guanyu-shenyong.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/guanyu.jpeg": {
+        "width": 1439,
+        "height": 881,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 479,
+                "height": 293
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 470
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1023,
+                "height": 626
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1439,
+                "height": 881
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/pujiu-temple.jpeg": {
+        "width": 1440,
+        "height": 1920,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 640
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 1024
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 1365
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1920
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/yellow-river-iron-ox.jpeg": {
+        "width": 1440,
+        "height": 1308,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 436
+            },
+            {
+                "requestWidth": 768,
+                "width": 767,
+                "height": 697
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 930
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1308
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/yingying-tower.jpeg": {
+        "width": 1440,
+        "height": 1920,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 640
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 1024
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 1365
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1920
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/yuncheng-north-station.jpeg": {
+        "width": 1440,
+        "height": 1080,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 360
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 576
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1024,
+                "height": 768
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 1080
+            }
+        ]
+    },
+    "https://webp.haeward.com/2026/01/yuncheng-yanhu.jpeg": {
+        "width": 1440,
+        "height": 885,
+        "variants": [
+            {
+                "requestWidth": 480,
+                "width": 480,
+                "height": 295
+            },
+            {
+                "requestWidth": 768,
+                "width": 768,
+                "height": 472
+            },
+            {
+                "requestWidth": 1024,
+                "width": 1023,
+                "height": 629
+            },
+            {
+                "requestWidth": 1440,
+                "width": 1440,
+                "height": 885
+            }
+        ]
+    }
+}

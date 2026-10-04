@@ -1,115 +1,122 @@
 ---
-import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import { UI } from "@lib/ui";
 
-type Props = {
-    showDivider?: boolean;
-};
-
-const { showDivider = false } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const active = (path: string) => currentPath === path || currentPath.startsWith(`${path}/`);
 ---
 
-<header class:list={["py-4", showDivider && "header--divider"]}>
-    <div class="px-5">
-        <div class="mx-auto max-w-screen-md">
-            <div
-                class:list={[
-          "flex flex-col gap-3",
-          "sm:flex-row sm:items-center sm:justify-between"
-        ]}
-            >
-                <div class="flex items-center gap-4 sm:gap-8">
-                    <Link href="/" underline={false}>
-                        <div
-                            class="font-semibold text-xl text-[var(--site-color-text-primary)] sm:text-2xl"
-                        >
-                            {SITE.NAME}
-                        </div>
-                    </Link>
-                    <div class="flex flex-wrap items-center gap-3 sm:gap-6">
-                        <button
-                            id="theme-toggle"
-                            type="button"
-                            data-theme-toggle-mode="dark"
-                            aria-label="Switch theme to Dark"
-                            class="header-action group size-6 flex items-center justify-center rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="theme-toggle__icon theme-toggle__icon--light group-hover:stroke-[var(--site-color-text-neutral-hover)] transition-colors duration-300 ease-in-out"
-                                aria-hidden="true"
-                            >
-                                <circle cx="12" cy="12" r="5"></circle>
-                                <line x1="12" y1="1" x2="12" y2="3"></line>
-                                <line x1="12" y1="21" x2="12" y2="23"></line>
-                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                <line x1="1" y1="12" x2="3" y2="12"></line>
-                                <line x1="21" y1="12" x2="23" y2="12"></line>
-                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                            </svg>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="theme-toggle__icon theme-toggle__icon--dark group-hover:stroke-[var(--site-color-text-neutral-hover)] transition-colors duration-300 ease-in-out"
-                                aria-hidden="true"
-                            >
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                            </svg>
-                        </button>
-                        <button
-                            id="search-trigger"
-                            type="button"
-                            data-search-trigger="true"
-                            aria-label="Search articles"
-                            aria-haspopup="dialog"
-                            aria-controls="site-search"
-                            class="header-action group size-6 flex items-center justify-center rounded-full"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.75"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="transition-colors duration-300 ease-in-out group-hover:stroke-[var(--site-color-text-neutral-hover)]"
-                                aria-hidden="true"
-                            >
-                                <circle cx="11" cy="11" r="7"></circle>
-                                <path d="m20 20-3.5-3.5"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <nav
-                    class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[var(--site-color-text-muted)] sm:text-base"
+<header lang="en">
+    <div class="mx-auto w-full max-w-screen-md px-5">
+        <div class="header-layout">
+            <a href="/" class="site-link inline-block header-brand shrink-0">
+                <div
+                    class="font-semibold text-xl text-[var(--site-color-text-primary)] sm:text-2xl"
                 >
-                    <Link href="/posts" class="whitespace-nowrap"> Archive </Link>
-                    <Link href="/media" class="whitespace-nowrap"> Media </Link>
-                    <Link href="/now" class="whitespace-nowrap"> Now </Link>
-                    <Link href="/about" class="whitespace-nowrap"> About </Link>
-                    <Link href="/links" class="whitespace-nowrap"> Links </Link>
+                    {SITE.NAME}
+                </div>
+            </a>
+            <div class="header-controls">
+                <nav
+                    class="header-navigation text-sm text-[var(--site-color-text-muted)] sm:text-base"
+                >
+                    <a
+                        href="/posts/"
+                        aria-current={active("/posts") ? "page" : undefined}
+                        class="site-link inline-block whitespace-nowrap"
+                    >
+                        Archive
+                    </a>
+                    <a
+                        href="/media/"
+                        aria-current={active("/media") ? "page" : undefined}
+                        class="site-link inline-block whitespace-nowrap"
+                    >
+                        Media
+                    </a>
+                    <a
+                        href="/about/"
+                        aria-current={active("/about") ? "page" : undefined}
+                        class="site-link inline-block whitespace-nowrap"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="/links/"
+                        aria-current={active("/links") ? "page" : undefined}
+                        class="site-link inline-block whitespace-nowrap"
+                    >
+                        Blogroll
+                    </a>
                 </nav>
+                <button
+                    id="search-trigger"
+                    type="button"
+                    data-search-trigger="true"
+                    aria-label={UI.search}
+                    aria-haspopup="dialog"
+                    aria-controls="site-search"
+                    data-js-control
+                    hidden
+                    class="header-action group size-6 flex items-center justify-center rounded-full"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="transition-colors duration-300 ease-in-out group-hover:stroke-[var(--site-color-text-neutral-hover)]"
+                        aria-hidden="true"
+                    >
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-3.5-3.5"></path>
+                    </svg>
+                </button>
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    data-theme-toggle-mode="dark"
+                    aria-label="Switch theme to Dark"
+                    data-js-control
+                    hidden
+                    class="header-action theme-toggle flex items-center justify-center rounded-full"
+                >
+                    <span class="theme-toggle__track" aria-hidden="true">
+                        <span class="theme-toggle__thumb">
+                            <svg
+                                class="theme-toggle__icon theme-toggle__icon--light"
+                                aria-hidden="true"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" fill="currentColor" />
+                                <path
+                                    d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                            <svg
+                                class="theme-toggle__icon theme-toggle__icon--dark"
+                                aria-hidden="true"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+                            </svg>
+                        </span>
+                    </span>
+                </button>
             </div>
         </div>
     </div>

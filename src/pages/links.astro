@@ -1,74 +1,81 @@
 ---
+import { readdirSync } from "node:fs";
+import BlogrollCard from "@components/BlogrollCard.astro";
 import Container from "@components/Container.astro";
-import LinkCard from "@components/LinkCard.astro";
-import { LINKS, SITE } from "@consts";
+import { BLOGROLL, SITE } from "@consts";
 import PageLayout from "@layouts/PageLayout.astro";
-import type { LinkEntry } from "@types";
-import { BLOGROLL_LINKS, PODCAST_LINKS, VIDEO_LINKS } from "../data/links";
+import { parseBlogroll } from "@lib/blogroll";
+import { blogrollPeriod, orderBlogroll } from "@lib/blogroll-order";
+import type { ImageMetadata } from "astro";
+import subscriptions from "../../public/subscriptions.opml?raw";
 
-type LinkSection = {
-    key: string;
-    title: string;
-    items: LinkEntry[];
-};
-
-const sections: LinkSection[] = [
-    {
-        key: "blogroll",
-        title: "Blogroll",
-        items: BLOGROLL_LINKS,
-    },
-    {
-        key: "videos",
-        title: "Videos",
-        items: VIDEO_LINKS,
-    },
-    {
-        key: "podcasts",
-        title: "Podcast",
-        items: PODCAST_LINKS,
-    },
-];
+const period = blogrollPeriod();
+const blogs = orderBlogroll(parseBlogroll(subscriptions), period);
+const rasterIcons = import.meta.glob<ImageMetadata>(
+    "../../public/assets/images/blogroll/*.{png,jpg,jpeg,webp,avif}",
+    { eager: true, import: "default" },
+);
+const icons = new Map(
+    readdirSync("public/assets/images/blogroll").map((file) => [
+        file.replace(/\.[^.]+$/, ""),
+        rasterIcons[`../../public/assets/images/blogroll/${file}`] ??
+            `/assets/images/blogroll/${file}`,
+    ]),
+);
+function iconFor(url: string): string | ImageMetadata {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    return (
+        icons.get(host) ||
+        `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64`
+    );
+}
 ---
 
-<PageLayout title={`${LINKS.TITLE} | ${SITE.NAME}`} description={LINKS.DESCRIPTION} lang="en">
+<PageLayout title={`${BLOGROLL.TITLE} | ${SITE.NAME}`} description={BLOGROLL.DESCRIPTION} lang="en">
     <Container>
-        <section class="space-y-6 sm:space-y-8">
-            <div class="animate space-y-3">
-                <h1
-                    class="serif-reading-title text-3xl font-bold tracking-[0.01em] text-[var(--site-color-text-primary)] sm:text-4xl"
-                >
-                    Links
-                </h1>
-                <p
-                    class="serif-reading-surface text-[1.03rem] leading-8 font-medium tracking-[0.014em] text-[var(--site-color-text-body)]"
-                >
-                    记录一些喜欢的内容。
+        <section class="space-y-5 sm:space-y-6">
+            <div class="space-y-3">
+                <h1 class="page-title">Blogroll</h1>
+                <p class="page-intro site-prose-links" id="download-opml">
+                    Blogs I follow and keep coming back to. If you're interested, import these blogs
+                    into your feed reader with the
+                    <a
+                        href="/subscriptions.opml"
+                        download="subscriptions.opml"
+                        data-astro-reload
+                        data-astro-prefetch="false"
+                        ><strong>OPML file</strong></a
+                    >.
                 </p>
             </div>
 
-            <div class="space-y-9 sm:space-y-10">
-                {sections.map((section) => (
-                    <section
-                        class="animate space-y-5 sm:space-y-6"
-                        aria-labelledby={`links-section-${section.key}`}
-                        data-links-section={section.key}
-                    >
-                        <h2
-                            id={`links-section-${section.key}`}
-                            class="serif-reading-title text-xl font-bold tracking-[0.01em] text-[var(--site-color-text-heading)] sm:text-2xl"
-                        >
-                            {section.title}
-                        </h2>
-
-                        <ul class="mx-auto grid w-full max-w-[40.75rem] grid-cols-1 gap-x-7 gap-y-6 sm:grid-cols-2 md:grid-cols-3">
-                            {section.items.map((item) => (
-                                <LinkCard item={item} />
-                            ))}
-                        </ul>
-                    </section>
-                ))}
-            </div>
+            <ul
+                class="blogroll-grid"
+                aria-label="Blogs"
+                data-blogroll
+                data-blogroll-period={period}
+            >
+                {blogs.map((blog) => <BlogrollCard blog={blog} icon={iconFor(blog.url)} />)}
+            </ul>
+            {blogs.length === 0 && <p class="page-intro">No blogs to share just yet.</p>}
         </section>
     </Container>
 </PageLayout>
+
+<style>
+.blogroll-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.125rem;
+    width: calc(100% - 1rem);
+    margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+    .blogroll-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 2rem;
+        width: calc(100% - 4rem);
+    }
+}
+</style>

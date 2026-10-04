@@ -11,7 +11,7 @@ const { tabs, defaultTab } = Astro.props;
 
 <div
     id="media-tabs"
-    class="flex flex-wrap gap-5 text-sm justify-start"
+    class="flex flex-wrap gap-x-5 gap-y-1 text-sm justify-start"
     role="tablist"
     aria-label="Media categories"
 >
@@ -22,9 +22,10 @@ const { tabs, defaultTab } = Astro.props;
             role="tab"
             aria-controls={tab.key}
             aria-selected={tab.key === defaultTab ? "true" : "false"}
+            tabindex={tab.key === defaultTab ? 0 : -1}
             data-tab={tab.key}
             data-active={tab.key === defaultTab ? "true" : "false"}
-            class="group px-0 py-1 text-base text-[var(--site-color-text-muted)] hover:text-[var(--site-color-text-neutral-hover)] transition-colors border-b border-transparent data-[active=true]:border-black/60 data-[active=true]:text-[var(--site-color-text-primary)] data-[active=true]:dark:border-white/60"
+            class="group min-h-11 px-0 py-1 text-base text-[var(--site-color-text-muted)] hover:text-[var(--site-color-text-neutral-hover)] transition-colors border-b border-transparent data-[active=true]:border-black/60 data-[active=true]:text-[var(--site-color-text-primary)] data-[active=true]:dark:border-white/60"
         >
             {tab.label} <span class="text-[var(--site-color-text-muted)]">({tab.count})</span>
         </button>

@@ -1,21 +1,21 @@
 ---
 import MediaPanel from "@components/MediaPanel.astro";
 import MediaTabs from "@components/MediaTabs.astro";
-import type { ClientMediaItem, MediaManifest, MediaTab, MediaTabKey } from "@lib/media";
+import type { ClientMediaItem, MediaManifest, MediaTab } from "@lib/media";
 
 interface Props {
     tabs: MediaTab[];
     defaultItems: ClientMediaItem[];
     manifest: MediaManifest;
-    defaultTab?: MediaTabKey;
 }
 
-const { tabs, defaultItems, manifest, defaultTab = manifest.defaultTab } = Astro.props;
+const { tabs, defaultItems, manifest } = Astro.props;
+const { defaultTab } = manifest;
 const serializedManifest = JSON.stringify(manifest).replace(/</g, "\\u003c");
 ---
 
-<div class="space-y-10">
-    <div class="animate space-y-2"><MediaTabs tabs={tabs} defaultTab={defaultTab} /></div>
+<div class="flex flex-col gap-6 sm:gap-8">
+    <div class="animate"><MediaTabs tabs={tabs} defaultTab={defaultTab} /></div>
 
     {tabs.map((tab) => (
         <MediaPanel

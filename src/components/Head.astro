@@ -16,7 +16,12 @@ interface Props {
     locale?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const canonicalURL = new URL(
+    path.endsWith("/") || /\.[a-z0-9]+$/i.test(path) ? path : `${path}/`,
+    Astro.site,
+);
+const notFound = path === "/404" || path === "/404/" || path === "/404.html";
 const {
     title,
     description,
@@ -53,16 +58,17 @@ function getTwitterSite(): string | undefined {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/site/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/site/favicon-32.png">
 <meta name="generator" content={Astro.generator}>
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL}>
+{!notFound && <link rel="canonical" href={canonicalURL} />}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title}>
 <meta name="description" content={description}>
+{notFound && <meta name="robots" content="noindex, follow" />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType}>
@@ -92,8 +98,8 @@ function getTwitterSite(): string | undefined {
 {ogImageURL && <meta name="twitter:image:alt" content={ogImageAlt} />}
 
 <!-- Mastodon -->
-<link rel="me" href="https://mas.to/@haeward">
-<meta name="fediverse:creator" content="@haeward@mas.to">
+<link rel="me" href="https://g0v.social/@haeward">
+<meta name="fediverse:creator" content="@haeward@g0v.social">
 
 <!-- RSS Link -->
 <link
@@ -106,19 +112,19 @@ function getTwitterSite(): string | undefined {
 <ClientRouter />
 
 <script is:inline>
-const getStoredTheme = () => {
-    const userTheme = localStorage.getItem("theme");
-    return userTheme === "light" || userTheme === "dark" ? userTheme : "system";
-};
-const resolveTheme = (theme, systemPrefersDark) => {
-    if (theme === "dark") return true;
-    if (theme === "light") return false;
-    return systemPrefersDark;
-};
-const theme = getStoredTheme();
-const dark = resolveTheme(theme, window.matchMedia("(prefers-color-scheme: dark)").matches);
-document.documentElement.dataset.themeMode = theme;
-document.documentElement.classList.toggle("dark", dark);
+(() => {
+    let theme =
+        window.__siteState?.theme ??
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    try {
+        const stored = localStorage.getItem("theme");
+        if (stored === "light" || stored === "dark") theme = stored;
+    } catch {
+        /* Storage is optional. */
+    }
+    document.documentElement.dataset.themeMode = theme;
+    document.documentElement.classList.toggle("dark", theme === "dark");
+})();
 </script>
 
 <script>

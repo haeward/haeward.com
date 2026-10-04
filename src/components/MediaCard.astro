@@ -1,16 +1,9 @@
 ---
-import { MEDIA_CARD_CLASSES, MEDIA_CARD_TITLE_CLAMP } from "@lib/media-card";
-
-type MediaItem = {
-    title: string;
-    url?: string;
-    cover?: string;
-    subtitle?: string;
-    myRating?: number;
-};
+import type { ClientMediaItem } from "@lib/media";
+import { MEDIA_CARD_CLASSES, MEDIA_CARD_TITLE_CLAMP, renderMediaStars } from "@lib/media-card";
 
 interface Props {
-    item: MediaItem;
+    item: ClientMediaItem;
 }
 
 const { item } = Astro.props;
@@ -32,7 +25,6 @@ const cardClass = item.url ? MEDIA_CARD_CLASSES.linked : MEDIA_CARD_CLASSES.stat
                         alt={item.title}
                         loading="lazy"
                         decoding="async"
-                        fetchpriority="low"
                         width="240"
                         height="360"
                         class={MEDIA_CARD_CLASSES.coverImage}
@@ -46,18 +38,7 @@ const cardClass = item.url ? MEDIA_CARD_CLASSES.linked : MEDIA_CARD_CLASSES.stat
                     {item.title}
                 </div>
                 <div class={MEDIA_CARD_CLASSES.stars}>
-                    {[1, 2, 3, 4, 5].map((star) => (
-                        <svg
-                            class="size-2.5 sm:size-3"
-                            viewBox="0 0 20 20"
-                            fill={star <= stars ? "currentColor" : "none"}
-                            stroke="currentColor"
-                            stroke-width="1.4"
-                            aria-hidden="true"
-                        >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.96a1 1 0 0 0 .95.69h4.163c.969 0 1.371 1.24.588 1.81l-3.368 2.447a1 1 0 0 0-.364 1.118l1.287 3.96c.3.921-.755 1.688-1.54 1.118l-3.368-2.447a1 1 0 0 0-1.176 0l-3.368 2.447c-.784.57-1.838-.197-1.539-1.118l1.287-3.96a1 1 0 0 0-.364-1.118L2.048 9.387c-.784-.57-.38-1.81.588-1.81h4.163a1 1 0 0 0 .95-.69l1.3-3.96z" />
-                        </svg>
-                    ))}
+                    <Fragment set:html={renderMediaStars(stars)} />
                     <span class="sr-only">{stars} out of 5</span>
                 </div>
             </div>

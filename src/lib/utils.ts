@@ -1,18 +1,3 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
-}
-
-export function formatDate(date: Date) {
-    return Intl.DateTimeFormat("en-US", {
-        month: "short",
-        day: "2-digit",
-        year: "numeric",
-    }).format(date);
-}
-
 export function readingTime(html: string) {
     // Remove script and style tags
     const withoutScriptAndStyle = html.replace(
@@ -62,25 +47,6 @@ export function readingTime(html: string) {
     return `${readingTimeMinutes} min read`;
 }
 
-export function dateRange(startDate: Date, endDate?: Date | string): string {
-    const startMonth = startDate.toLocaleString("default", { month: "short" });
-    const startYear = startDate.getFullYear().toString();
-    let endMonth: string | undefined;
-    let endYear: string | undefined;
-
-    if (endDate) {
-        if (typeof endDate === "string") {
-            endMonth = "";
-            endYear = endDate;
-        } else {
-            endMonth = endDate.toLocaleString("default", { month: "short" });
-            endYear = endDate.getFullYear().toString();
-        }
-    }
-
-    return `${startMonth}${startYear} - ${endMonth}${endYear}`;
-}
-
 export function wordCount(text: string): string {
     const trimmed = text.trim();
     if (!trimmed) return "0 words";
@@ -95,4 +61,19 @@ export function wordCount(text: string): string {
 
     const totalWords = cjkChars + englishWords;
     return `${totalWords} words`;
+}
+
+export function visibleText(html: string): string {
+    return html
+        .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&#(x[0-9a-f]+|[0-9]+);/gi, (_, value: string) => {
+            const number = value.toLowerCase().startsWith("x")
+                ? Number.parseInt(value.slice(1), 16)
+                : Number(value);
+            return number > 0 && number <= 0x10ffff ? String.fromCodePoint(number) : " ";
+        })
+        .replace(/&(?:nbsp|amp|quot|apos|lt|gt);/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
 }

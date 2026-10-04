@@ -1,7 +1,14 @@
+---
+import { UI } from "@lib/ui";
+---
+
 <button
+    lang="en"
     id="back-to-top"
+    data-js-control
+    hidden
     type="button"
-    aria-label="Back to top"
+    aria-label={UI.backTop}
     class="site-focus-ring group fixed right-4 bottom-4 z-50 inline-flex size-12 items-center justify-center rounded-2xl border border-black/12 text-[var(--site-color-text-muted)] hover:text-[var(--site-color-text-neutral-hover)] focus-visible:outline-none focus-visible:ring-2 dark:border-white/12 sm:right-6 sm:bottom-6"
 >
     <svg

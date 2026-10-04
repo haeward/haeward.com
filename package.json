@@ -21,10 +21,10 @@
         "check:fix": "biome check --write .",
         "md:lint": "markdownlint-cli2 \"**/*.{md,mdx}\"",
         "secrets:lint": "secretlint \"**/*\"",
-        "sort:links": "node scripts/links/sort-links.mjs",
+        "sync:article-images": "node scripts/content/image-metadata.mjs",
         "sync:douban-covers": "node scripts/douban/sync-covers.mjs",
-        "sync:links-assets": "node scripts/links/sync-assets.mjs",
-        "sync:links-status": "node scripts/links/sync-status.mjs"
+        "check:content": "node scripts/verify/content.mjs",
+        "test:data": "node scripts/verify/data.mjs"
     },
     "dependencies": {
         "@astrojs/markdown-remark": "^7.3.0",
@@ -34,8 +34,10 @@
         "@tailwindcss/typography": "^0.5.10",
         "@tailwindcss/vite": "^4.0.0",
         "astro": "^7.3.1",
-        "clsx": "^2.1.0",
-        "tailwind-merge": "^3.0.0",
+        "fast-xml-parser": "5.11.1",
+        "fast-xml-validator": "1.4.2",
+        "hast-util-from-html": "2.0.3",
+        "hast-util-to-html": "9.0.5",
         "tailwindcss": "^4.0.0",
         "typescript": "6.0.3",
         "unist-util-visit": "^5.0.0"
@@ -46,6 +48,7 @@
         "@secretlint/secretlint-rule-preset-recommend": "^13.0.0",
         "@types/mdast": "^4.0.4",
         "@types/unist": "^3.0.3",
+        "github-slugger": "2.0.0",
         "husky": "^9.1.7",
         "lint-staged": "^17.0.0",
         "markdownlint-cli2": "^0.23.2",

@@ -16,27 +16,26 @@ const formattedDate = new Intl.DateTimeFormat(
     isHome
         ? {
               year: "numeric",
+              timeZone: "UTC",
               month: "short",
               day: "numeric",
           }
         : {
+              timeZone: "UTC",
               month: "short",
               day: "numeric",
           },
 ).format(entry.data.date);
 
 const cardClasses =
-    "group grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3 px-2 py-1.5 transition-colors duration-200 ease-out sm:gap-x-4";
-const titleClasses = isHome
-    ? "serif-reading-title text-[1.03rem] leading-[1.45] font-semibold text-[var(--site-color-text-heading)] transition-colors duration-200 group-hover:text-[var(--site-color-text-neutral-hover)] sm:text-[1.12rem]"
-    : "serif-reading-title text-[1.08rem] leading-[1.45] font-semibold text-[var(--site-color-text-heading)] transition-colors duration-200 group-hover:text-[var(--site-color-text-neutral-hover)] sm:text-[1.16rem]";
-const dateWidthClasses = isHome ? "w-[7.7rem] sm:w-[9rem]" : "w-[5rem] sm:w-[5.6rem]";
-const dateClasses = isHome
-    ? "text-center text-[0.76rem] font-semibold tracking-[0.04em] text-[var(--site-color-text-muted)] transition-colors duration-200 group-hover:text-[var(--site-color-text-heading)] sm:text-[0.84rem]"
-    : "text-center text-[0.8rem] font-semibold tracking-[0.04em] text-[var(--site-color-text-muted)] transition-colors duration-200 group-hover:text-[var(--site-color-text-heading)] sm:text-[0.88rem]";
+    "group grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-3 rounded-sm px-0 py-3 transition-colors duration-200 ease-out sm:gap-x-4";
+const titleClasses =
+    "post-row-title transition-colors duration-200 group-hover:text-[var(--site-color-text-neutral-hover)]";
+const dateWidthClasses = isHome ? "w-[6.5rem]" : "w-[3.6rem]";
+const dateClasses = "post-row-date text-left font-normal tabular-nums";
 ---
 
-<a href={`/posts/${entry.id}`} class={cardClasses}>
+<a href={`/posts/${entry.id}/`} class={cardClasses}>
     <time
         class:list={[dateWidthClasses, dateClasses, "whitespace-nowrap"]}
         datetime={entry.data.date.toISOString()}
@@ -44,6 +43,10 @@ const dateClasses = isHome
         {formattedDate}
     </time>
     <div class="min-w-0">
-        <div class={titleClasses}>{entry.data.title}</div>
+        <div
+            class:list={[titleClasses, "underline-offset-4 group-hover:underline group-focus-visible:underline"]}
+        >
+            {entry.data.title}
+        </div>
     </div>
 </a>

@@ -24,19 +24,15 @@ const changelogYears = Object.keys(changelogByYear).sort((a, b) => Number(b) - N
     lang="en"
 >
     <Container>
-        <section class="space-y-8 sm:space-y-10">
+        <section class="page-sections">
             <div class="animate max-w-2xl space-y-4">
                 <p class="changelog-page__eyebrow">Site journal</p>
                 <div class="space-y-3">
-                    <h1
-                        class="serif-reading-title text-3xl font-bold tracking-[0.01em] text-[var(--site-color-text-primary)] sm:text-4xl"
-                    >
-                        Changelog
-                    </h1>
+                    <h1 class="page-title">Changelog</h1>
                 </div>
             </div>
 
-            <div class="space-y-10 sm:space-y-12">
+            <div class="page-sections">
                 {changelogYears.map((year) => (
           <section class="animate changelog-year" aria-labelledby={`changelog-year-${year}`}>
             <div class="changelog-year__header">
@@ -48,7 +44,7 @@ const changelogYears = Object.keys(changelogByYear).sort((a, b) => Number(b) - N
             <ol class="changelog-list" aria-label={`Updates from ${year}`}>
               {changelogByYear[year].map((entry) => (
                 <li class="changelog-entry">
-                  <FormattedDate class="changelog-entry__date" date={new Date(`${entry.date}T00:00:00`)} />
+                  <FormattedDate class="changelog-entry__date" date={new Date(`${entry.date}T00:00:00Z`)} />
                   <p class="serif-reading-surface changelog-entry__title">{entry.content}</p>
                 </li>
               ))}

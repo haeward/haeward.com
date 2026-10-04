@@ -1,30 +1,7 @@
+import type { ClientMediaItem, MediaDataPage, MediaManifest, MediaTabKey } from "@lib/media";
 import { MEDIA_CARD_CLASSES, MEDIA_CARD_TITLE_CLAMP, renderMediaStars } from "@lib/media-card";
 import { escapeAttribute, escapeHtml } from "./html";
-
-type MediaTabKey = "movies" | "series" | "anime" | "books";
-
-type ClientMediaItem = {
-    title?: string;
-    url?: string;
-    cover?: string;
-    myRating?: number;
-};
-
-type MediaManifest = {
-    defaultTab: MediaTabKey;
-    pageSize: number;
-    endpointBase: string;
-    tabs: Record<MediaTabKey, { count: number }>;
-};
-
-type MediaDataPage = {
-    tab: MediaTabKey;
-    page: number;
-    pageSize: number;
-    totalCount: number;
-    hasMore: boolean;
-    items: ClientMediaItem[];
-};
+import { withTimeout } from "./timeout";
 
 type PanelRefs = {
     panel: HTMLElement;
@@ -42,11 +19,13 @@ type TabState = {
     loadedCount: number;
     totalCount: number;
     hasMore: boolean;
-    loadingScope: "initial" | "more" | null;
+    loading: boolean;
     blockedOnError: boolean;
+    retryAction: (() => void) | null;
 };
 
 type MediaContext = {
+    tablist: HTMLElement;
     activeTab: MediaTabKey | null;
     manifest: MediaManifest;
     panels: Record<MediaTabKey, PanelRefs>;
@@ -54,14 +33,16 @@ type MediaContext = {
     tabSet: Set<MediaTabKey>;
     tabs: HTMLButtonElement[];
     tabStates: Record<MediaTabKey, TabState>;
+    controller: AbortController;
+    pendingRequests: Map<string, Promise<MediaDataPage>>;
+    observer: IntersectionObserver | null;
 };
 
 type GlobalMediaTabsState = {
     hashBound: boolean;
-    pendingRequests: Map<string, Promise<MediaDataPage>>;
-    retryActions: Map<MediaTabKey, (() => void) | null>;
+    lifecycleBound: boolean;
     syncFromHash: (() => void) | null;
-    activeObserver: IntersectionObserver | null;
+    cleanup: (() => void) | null;
 };
 
 type MediaTabsWindow = Window & {
@@ -71,10 +52,9 @@ type MediaTabsWindow = Window & {
 const globalWindow = window as MediaTabsWindow;
 globalWindow.__mediaTabsState ??= {
     hashBound: false,
-    pendingRequests: new Map(),
-    retryActions: new Map(),
+    lifecycleBound: false,
     syncFromHash: null,
-    activeObserver: null,
+    cleanup: null,
 };
 
 const mediaTabsState = globalWindow.__mediaTabsState;
@@ -83,6 +63,8 @@ function initMediaTabs(): void {
     const tablist = document.getElementById("media-tabs");
     const dataNode = document.getElementById("media-data");
     if (!(tablist instanceof HTMLElement) || !(dataNode instanceof HTMLScriptElement)) {
+        mediaTabsState.cleanup?.();
+        mediaTabsState.cleanup = null;
         mediaTabsState.syncFromHash = null;
         return;
     }
@@ -120,14 +102,16 @@ function initMediaTabs(): void {
                     loadedCount: initialLoadedCount,
                     totalCount,
                     hasMore: initialLoadedCount < totalCount,
-                    loadingScope: null,
+                    loading: false,
                     blockedOnError: false,
+                    retryAction: null,
                 } satisfies TabState,
             ];
         }),
     ) as Record<MediaTabKey, TabState>;
 
     const context: MediaContext = {
+        tablist,
         activeTab: null,
         manifest,
         panels,
@@ -135,6 +119,15 @@ function initMediaTabs(): void {
         tabSet: new Set(tabNames),
         tabs,
         tabStates,
+        controller: new AbortController(),
+        pendingRequests: new Map(),
+        observer: null,
+    };
+
+    mediaTabsState.cleanup?.();
+    mediaTabsState.cleanup = () => {
+        context.controller.abort();
+        disconnectAutoLoadObserver(context);
     };
 
     tabs.forEach((tab) => {
@@ -145,11 +138,34 @@ function initMediaTabs(): void {
         });
     });
 
+    tablist.addEventListener("keydown", (event) => {
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        const index = tabs.indexOf(event.target as HTMLButtonElement);
+        if (index < 0) return;
+        const nextIndex =
+            event.key === "ArrowRight"
+                ? (index + 1) % tabs.length
+                : event.key === "ArrowLeft"
+                  ? (index - 1 + tabs.length) % tabs.length
+                  : event.key === "Home"
+                    ? 0
+                    : event.key === "End"
+                      ? tabs.length - 1
+                      : null;
+        if (nextIndex === null) return;
+        const next = tabs[nextIndex];
+        const name = next?.getAttribute("data-tab");
+        if (!next || !isMediaTabKey(name)) return;
+        event.preventDefault();
+        next.focus();
+        void activateTab(context, name, { updateHash: true });
+    });
+
     tabNames.forEach((name) => {
         const refs = panels[name];
 
         refs.retryButton?.addEventListener("click", () => {
-            mediaTabsState.retryActions.get(name)?.();
+            context.tabStates[name].retryAction?.();
         });
     });
 
@@ -166,16 +182,27 @@ function initMediaTabs(): void {
         void activateTab(context, nextTab, { updateHash: false });
     };
 
-    bindHashListener();
+    bindGlobalListeners();
     mediaTabsState.syncFromHash();
 }
 
-function bindHashListener(): void {
-    if (mediaTabsState.hashBound) return;
-    mediaTabsState.hashBound = true;
-    window.addEventListener("hashchange", () => {
-        mediaTabsState.syncFromHash?.();
-    });
+function bindGlobalListeners(): void {
+    if (!mediaTabsState.hashBound) {
+        mediaTabsState.hashBound = true;
+        window.addEventListener("hashchange", () => mediaTabsState.syncFromHash?.());
+    }
+    if (!mediaTabsState.lifecycleBound) {
+        mediaTabsState.lifecycleBound = true;
+        document.addEventListener("astro:before-swap", () => {
+            mediaTabsState.cleanup?.();
+            mediaTabsState.cleanup = null;
+            mediaTabsState.syncFromHash = null;
+        });
+    }
+}
+
+function isLiveContext(context: MediaContext): boolean {
+    return !context.controller.signal.aborted && context.tablist.isConnected;
 }
 
 function parseManifest(value: string): MediaManifest | null {
@@ -250,7 +277,7 @@ function renderCard(item: ClientMediaItem): string {
     const title = escapeHtml(item.title || "Untitled");
     const stars = Math.max(0, Math.min(5, Math.round(item.myRating || 0)));
     const cover = item.cover
-        ? `<img src="${escapeAttribute(item.cover)}" alt="${title}" loading="lazy" decoding="async" fetchpriority="low" width="240" height="360" class="${MEDIA_CARD_CLASSES.coverImage}" />`
+        ? `<img src="${escapeAttribute(item.cover)}" alt="${title}" loading="lazy" decoding="async" width="240" height="360" class="${MEDIA_CARD_CLASSES.coverImage}" />`
         : `<div class="${MEDIA_CARD_CLASSES.missingCover}">No cover</div>`;
     const body = `<div class="flex h-full flex-col">
                     <div class="${MEDIA_CARD_CLASSES.coverShell}">
@@ -286,7 +313,7 @@ function renderPanel(context: MediaContext, tab: MediaTabKey): void {
     const refs = context.panels[tab];
     const state = context.tabStates[tab];
 
-    if (refs.grid) {
+    if (refs.grid && refs.grid.childElementCount !== state.loadedCount) {
         refs.grid.innerHTML = state.html;
     }
 
@@ -312,7 +339,7 @@ function updateSentinelState(context: MediaContext, tab: MediaTabKey): void {
     refs.sentinel.hidden = !state.hasMore;
 }
 
-function setLoadingState(context: MediaContext, tab: MediaTabKey, scope: "initial" | "more"): void {
+function setLoadingState(context: MediaContext, tab: MediaTabKey): void {
     const refs = context.panels[tab];
     const state = context.tabStates[tab];
 
@@ -322,11 +349,12 @@ function setLoadingState(context: MediaContext, tab: MediaTabKey, scope: "initia
         refs.retryWrapper.hidden = true;
     }
 
-    state.loadingScope = scope;
+    state.loading = true;
     state.blockedOnError = false;
-    disconnectAutoLoadObserver();
+    refs.grid?.setAttribute("aria-busy", "true");
+    disconnectAutoLoadObserver(context);
 
-    mediaTabsState.retryActions.set(tab, null);
+    state.retryAction = null;
 }
 
 function clearStatus(context: MediaContext, tab: MediaTabKey): void {
@@ -338,15 +366,15 @@ function clearStatus(context: MediaContext, tab: MediaTabKey): void {
         refs.retryWrapper.hidden = true;
     }
 
-    state.loadingScope = null;
+    state.loading = false;
     state.blockedOnError = false;
-    mediaTabsState.retryActions.set(tab, null);
+    refs.grid?.setAttribute("aria-busy", "false");
+    state.retryAction = null;
 }
 
 function setErrorState(
     context: MediaContext,
     tab: MediaTabKey,
-    _scope: "initial" | "more",
     message: string,
     retryAction: () => void,
 ): void {
@@ -359,23 +387,25 @@ function setErrorState(
         refs.retryWrapper.hidden = false;
     }
 
-    state.loadingScope = null;
+    state.loading = false;
     state.blockedOnError = true;
-    disconnectAutoLoadObserver();
-    mediaTabsState.retryActions.set(tab, retryAction);
+    refs.grid?.setAttribute("aria-busy", "false");
+    if (context.activeTab === tab) disconnectAutoLoadObserver(context);
+    state.retryAction = retryAction;
 }
 
-function disconnectAutoLoadObserver(): void {
-    mediaTabsState.activeObserver?.disconnect();
-    mediaTabsState.activeObserver = null;
+function disconnectAutoLoadObserver(context: MediaContext): void {
+    context.observer?.disconnect();
+    context.observer = null;
 }
 
 function observeAutoLoad(context: MediaContext, tab: MediaTabKey): void {
-    disconnectAutoLoadObserver();
+    if (!isLiveContext(context) || context.activeTab !== tab) return;
+    disconnectAutoLoadObserver(context);
 
     const state = context.tabStates[tab];
     const refs = context.panels[tab];
-    if (!refs.sentinel || !state.hasMore || state.loadingScope || state.blockedOnError) {
+    if (!refs.sentinel || !state.hasMore || state.loading || state.blockedOnError) {
         return;
     }
 
@@ -383,12 +413,14 @@ function observeAutoLoad(context: MediaContext, tab: MediaTabKey): void {
         return;
     }
 
-    mediaTabsState.activeObserver = new IntersectionObserver(
+    context.observer = new IntersectionObserver(
         (entries) => {
             const entry = entries[0];
-            if (!entry?.isIntersecting || context.activeTab !== tab) return;
+            if (!entry?.isIntersecting || context.activeTab !== tab || !isLiveContext(context)) {
+                return;
+            }
 
-            disconnectAutoLoadObserver();
+            disconnectAutoLoadObserver(context);
             void loadMore(context, tab);
         },
         {
@@ -398,7 +430,7 @@ function observeAutoLoad(context: MediaContext, tab: MediaTabKey): void {
         },
     );
 
-    mediaTabsState.activeObserver.observe(refs.sentinel);
+    context.observer.observe(refs.sentinel);
 }
 
 async function fetchMediaPage(
@@ -407,49 +439,60 @@ async function fetchMediaPage(
     page: number,
 ): Promise<MediaDataPage> {
     const requestKey = `${tab}:${page}`;
-    const existing = mediaTabsState.pendingRequests.get(requestKey);
+    const existing = context.pendingRequests.get(requestKey);
     if (existing) return existing;
 
-    const request = (async () => {
-        const response = await fetch(buildEndpoint(context, tab, page), {
-            headers: { Accept: "application/json" },
-        });
+    const controller = new AbortController();
+    const cancelRequest = () => controller.abort();
+    context.controller.signal.addEventListener("abort", cancelRequest, { once: true });
 
-        if (!response.ok) {
-            throw new Error(`media_page_${response.status}`);
-        }
+    const request = withTimeout(
+        (async () => {
+            const response = await fetch(buildEndpoint(context, tab, page), {
+                headers: { Accept: "application/json" },
+                signal: controller.signal,
+            });
 
-        const payload = (await response.json()) as Partial<MediaDataPage>;
+            if (!response.ok) {
+                throw new Error(`media_page_${response.status}`);
+            }
 
-        if (
-            !payload ||
-            !isMediaTabKey(payload.tab) ||
-            payload.tab !== tab ||
-            typeof payload.page !== "number" ||
-            typeof payload.pageSize !== "number" ||
-            typeof payload.totalCount !== "number" ||
-            typeof payload.hasMore !== "boolean" ||
-            !Array.isArray(payload.items)
-        ) {
-            throw new Error("media_payload_invalid");
-        }
+            const payload = (await response.json()) as Partial<MediaDataPage>;
 
-        return {
-            tab: payload.tab,
-            page: payload.page,
-            pageSize: payload.pageSize,
-            totalCount: payload.totalCount,
-            hasMore: payload.hasMore,
-            items: payload.items,
-        };
-    })();
+            if (
+                !payload ||
+                !isMediaTabKey(payload.tab) ||
+                payload.tab !== tab ||
+                typeof payload.page !== "number" ||
+                typeof payload.pageSize !== "number" ||
+                typeof payload.totalCount !== "number" ||
+                typeof payload.hasMore !== "boolean" ||
+                !Array.isArray(payload.items)
+            ) {
+                throw new Error("media_payload_invalid");
+            }
 
-    mediaTabsState.pendingRequests.set(requestKey, request);
+            return {
+                tab: payload.tab,
+                page: payload.page,
+                pageSize: payload.pageSize,
+                totalCount: payload.totalCount,
+                hasMore: payload.hasMore,
+                items: payload.items,
+            };
+        })(),
+    );
+
+    context.pendingRequests.set(requestKey, request);
 
     try {
         return await request;
+    } catch (error) {
+        controller.abort();
+        throw error;
     } finally {
-        mediaTabsState.pendingRequests.delete(requestKey);
+        context.controller.signal.removeEventListener("abort", cancelRequest);
+        context.pendingRequests.delete(requestKey);
     }
 }
 
@@ -468,10 +511,20 @@ function applyPayload(
     state.loadedCount += payload.items.length;
     state.totalCount = payload.totalCount;
     state.hasMore = payload.hasMore;
+
+    if (context.activeTab === tab) {
+        const grid = context.panels[tab].grid;
+        if (grid) {
+            if (mode === "append") grid.insertAdjacentHTML("beforeend", html);
+            else grid.innerHTML = html;
+        }
+        updateSentinelState(context, tab);
+    }
 }
 
 async function loadInitial(context: MediaContext, tab: MediaTabKey): Promise<void> {
     const state = context.tabStates[tab];
+    if (!isLiveContext(context) || state.loading) return;
     if (state.loadedCount > 0 || state.totalCount === 0) {
         renderPanel(context, tab);
         clearStatus(context, tab);
@@ -481,18 +534,19 @@ async function loadInitial(context: MediaContext, tab: MediaTabKey): Promise<voi
         return;
     }
 
-    setLoadingState(context, tab, "initial");
+    setLoadingState(context, tab);
 
     try {
         const payload = await fetchMediaPage(context, tab, 1);
+        if (!isLiveContext(context)) return;
         applyPayload(context, tab, payload, "replace");
         clearStatus(context, tab);
-        renderPanel(context, tab);
         if (context.activeTab === tab) {
             observeAutoLoad(context, tab);
         }
     } catch {
-        setErrorState(context, tab, "initial", "Could not load this tab right now.", () => {
+        if (!isLiveContext(context)) return;
+        setErrorState(context, tab, "Could not load this tab right now.", () => {
             void loadInitial(context, tab);
         });
     }
@@ -500,23 +554,24 @@ async function loadInitial(context: MediaContext, tab: MediaTabKey): Promise<voi
 
 async function loadMore(context: MediaContext, tab: MediaTabKey): Promise<void> {
     const state = context.tabStates[tab];
-    if (!state.hasMore) return;
+    if (!isLiveContext(context) || !state.hasMore || state.loading) return;
 
     const nextPage = getNextPage(context, tab);
     if (state.loadedPages.has(nextPage)) return;
 
-    setLoadingState(context, tab, "more");
+    setLoadingState(context, tab);
 
     try {
         const payload = await fetchMediaPage(context, tab, nextPage);
+        if (!isLiveContext(context)) return;
         applyPayload(context, tab, payload, "append");
         clearStatus(context, tab);
-        renderPanel(context, tab);
         if (context.activeTab === tab) {
             observeAutoLoad(context, tab);
         }
     } catch {
-        setErrorState(context, tab, "more", "Could not load more items right now.", () => {
+        if (!isLiveContext(context)) return;
+        setErrorState(context, tab, "Could not load more items right now.", () => {
             void loadMore(context, tab);
         });
     }
@@ -527,13 +582,15 @@ async function activateTab(
     tab: MediaTabKey,
     options: { updateHash: boolean },
 ): Promise<void> {
-    disconnectAutoLoadObserver();
+    if (!isLiveContext(context)) return;
+    disconnectAutoLoadObserver(context);
     context.activeTab = tab;
 
     context.tabs.forEach((button) => {
         const active = button.getAttribute("data-tab") === tab;
         button.setAttribute("aria-selected", active ? "true" : "false");
         button.setAttribute("data-active", active ? "true" : "false");
+        button.tabIndex = active ? 0 : -1;
     });
 
     context.tabNames.forEach((name) => {
@@ -545,7 +602,7 @@ async function activateTab(
     if (options.updateHash) {
         const nextHash = `#${tab}`;
         if (window.location.hash !== nextHash) {
-            history.replaceState(null, "", nextHash);
+            history.replaceState(history.state, "", nextHash);
         }
     }
 

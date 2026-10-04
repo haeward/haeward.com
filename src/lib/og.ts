@@ -1,25 +1,15 @@
 import type { CollectionEntry } from "astro:content";
 import pageOgData from "../data/og-pages.json";
 
-type PageOgEntry = {
-    title: string;
-    og: string;
-    ogAlt?: string;
-};
-
 type OgMeta = {
     ogImage?: string;
     ogImageAlt?: string;
 };
 
-type PageOgMap = Record<string, PageOgEntry>;
-
-const PAGE_OG = pageOgData as PageOgMap;
-
-export type PageOgKey = keyof typeof pageOgData;
+type PageOgKey = keyof typeof pageOgData;
 
 export function getPageOg(key: PageOgKey): OgMeta {
-    const entry = PAGE_OG[key];
+    const entry = pageOgData[key];
 
     return {
         ogImage: entry.og,

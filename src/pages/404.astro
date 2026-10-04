@@ -25,6 +25,18 @@ import PageLayout from "@layouts/PageLayout.astro";
             >
                 Go Home
             </a>
+            <div class="mt-4 flex items-center gap-4">
+                <a class="site-link underline" href="/posts/">View archive</a>
+                <button
+                    type="button"
+                    data-search-trigger="true"
+                    data-js-control
+                    hidden
+                    class="search-action"
+                >
+                    Search articles
+                </button>
+            </div>
         </div>
     </Container>
 </PageLayout>

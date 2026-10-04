@@ -3,35 +3,30 @@ import { render } from "astro:content";
 import ImageLightbox from "@components/ImageLightbox.astro";
 import LinkEnhancer from "@components/LinkEnhancer.astro";
 import PostHeader from "@components/PostHeader.astro";
-import PostNavigation from "@components/PostNavigation.astro";
+import PostReplies from "@components/PostReplies.astro";
 import TableOfContents from "@components/TableOfContents.astro";
 import { SITE } from "@consts";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getPostOg } from "@lib/og";
 import type { BlogPost } from "@lib/posts";
-import { getPostNeighbors, getPublishedPosts } from "@lib/posts";
+import { getPublishedPosts } from "@lib/posts";
 
 export async function getStaticPaths() {
     const posts = await getPublishedPosts();
 
     return posts.map((post) => ({
         params: { slug: post.id },
-        props: {
-            post,
-            ...getPostNeighbors(posts, post),
-        },
+        props: { post },
     }));
 }
 
 type Props = {
     post: BlogPost;
-    prev: BlogPost | null;
-    next: BlogPost | null;
 };
 
-const { post, prev, next } = Astro.props;
+const { post } = Astro.props;
 const { Content, headings } = await render(post);
-const postBody = post.body ?? "";
+const postBody = post.rendered?.html ?? "";
 const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 4);
 const hasToc = tocHeadings.length > 0;
 const postOg = getPostOg(post);
@@ -40,36 +35,42 @@ const postOg = getPostOg(post);
 <PageLayout
     title={`${post.data.title} | ${SITE.NAME}`}
     description={post.data.description}
-    headerDivider={true}
     ogImage={postOg.ogImage}
     ogImageAlt={postOg.ogImageAlt}
     lang={post.data.lang}
     ogType="article"
     publishedTime={post.data.date}
 >
+    <Fragment slot="head">
+        {postBody.includes("https://webp.haeward.com/") && (
+            <link rel="preconnect" href="https://webp.haeward.com" />
+        )}
+    </Fragment>
     <div class="px-5">
         <div class="blog-post-shell">
             <div class="blog-post-main">
                 <PostHeader post={post} body={postBody} />
 
+                {hasToc && <TableOfContents lang={post.data.lang} headings={tocHeadings} variant="mobile" />}
+
                 <article
-                    class="animate mt-10 blog-article serif-reading-surface site-prose-links"
+                    class="animate blog-article serif-reading-surface site-prose-links"
                     data-pagefind-body
                 >
                     <Content />
                 </article>
 
-                <PostNavigation prev={prev} next={next} />
+                <PostReplies title={post.data.title} mastodonUrl={post.data.mastodonUrl} />
             </div>
 
             {hasToc && (
                 <div class="blog-post-toc-rail">
-                    <TableOfContents headings={tocHeadings} />
+                    <TableOfContents lang={post.data.lang} headings={tocHeadings} />
                 </div>
             )}
         </div>
     </div>
 
     <LinkEnhancer />
-    <ImageLightbox />
+    <ImageLightbox lang={post.data.lang} />
 </PageLayout>

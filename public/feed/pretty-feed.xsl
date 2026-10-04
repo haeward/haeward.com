@@ -12,7 +12,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><xsl:value-of select="rss/channel/title"/> | RSS Feed</title>
-        <link rel="icon" type="image/png" href="/assets/images/site/favicon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/site/favicon-32.png"/>
         <style><![CDATA[
           @font-face {
             font-family: "LXGW Neo XiHei";
@@ -39,8 +39,8 @@
           }
 
           :root {
+            color-scheme: light;
             --bg-base: #FFC34A;
-            --bg-pattern-line: rgba(217, 169, 58, 0.24);
             --hud-red: #df3326;
             --coin-yellow: #ffc93c;
             --coin-yellow-shadow: #efab00;
@@ -75,37 +75,30 @@
 
           body {
             position: relative;
+            min-height: 100vh;
             font-family: "LXGW Neo XiHei", sans-serif;
             color: var(--ink);
             background-color: var(--bg-base);
             line-height: 1.6;
           }
 
-          body::before,
-          body::after {
+          body::before {
             content: "";
             position: absolute;
             inset: 0;
             pointer-events: none;
             z-index: 0;
+            background-image: url("/feed/pokeball-pattern.svg");
+            background-size: 104px 104px;
           }
 
-          body::before {
-            background-image:
-              repeating-linear-gradient(-45deg, transparent 0 12px, var(--bg-base) 12px 18px),
-              linear-gradient(45deg, transparent 49%, var(--bg-pattern-line) 49% 51%, transparent 51%);
-            background-size:
-              auto,
-              72px 72px;
+          a {
+            text-underline-offset: 0.2em;
           }
 
-          body::after {
-            background-image:
-              repeating-linear-gradient(45deg, transparent 0 12px, var(--bg-base) 12px 18px),
-              linear-gradient(-45deg, transparent 49%, var(--bg-pattern-line) 49% 51%, transparent 51%);
-            background-size:
-              auto,
-              72px 72px;
+          :is(a, button):focus-visible {
+            outline: 2px solid var(--link-red-hover);
+            outline-offset: 4px;
           }
 
           .page {
@@ -158,6 +151,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.55rem;
+            min-height: 44px;
             margin-bottom: 1.15rem;
             color: var(--ink);
             font-family: "JetBrains Mono", monospace;
@@ -232,6 +226,7 @@
 
           .feed-copy {
             width: 100%;
+            min-height: 44px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -256,15 +251,13 @@
           }
 
           .feed-copy:focus-visible {
-            outline: 3px solid rgba(207, 56, 37, 0.28);
+            outline: 2px solid var(--link-red-hover);
             outline-offset: 3px;
           }
 
           .feed-copy__value {
             min-width: 0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            overflow-wrap: anywhere;
           }
 
           .feed-copy__meta {
@@ -302,8 +295,8 @@
           }
 
           .section-header {
-            margin-bottom: 1.2rem;
-            padding: 0 0 1rem;
+            margin-bottom: 0.7rem;
+            padding: 0 0 0.65rem;
             border-bottom: 3px solid var(--line);
             box-shadow: inset 0 -7px 0 rgba(255, 201, 60, 0.18);
           }
@@ -315,7 +308,7 @@
           }
 
           .recent-item {
-            padding: 1rem 0.15rem 1rem 0.1rem;
+            padding: 0.65rem 0.15rem 0.65rem 0.1rem;
             border-top: 2px solid var(--line-soft);
           }
 
@@ -344,7 +337,10 @@
           }
 
           .recent-item__date {
-            display: inline-flex;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 1.4;
             align-items: baseline;
             gap: 0.45rem;
             font-family: "JetBrains Mono", monospace;
@@ -358,6 +354,13 @@
             color: #80756b;
             text-transform: uppercase;
             letter-spacing: 0.08em;
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+              transition: none !important;
+              transform: none !important;
+            }
           }
 
           @media (max-width: 720px) {
@@ -420,6 +423,7 @@
             if (!value) return;
 
             const setCopiedState = () => {
+              document.getElementById("feed-copy-help").textContent = "Feed address copied.";
               button.classList.add("is-copied");
               window.clearTimeout(button._copyTimer);
               button._copyTimer = window.setTimeout(() => {
@@ -432,9 +436,15 @@
               input.value = value;
               document.body.appendChild(input);
               input.select();
-              document.execCommand("copy");
+              let copied = false;
+              try { copied = document.execCommand("copy"); } catch { /* Manual copying remains available. */ }
               document.body.removeChild(input);
-              setCopiedState();
+              button.focus();
+              if (copied) setCopiedState();
+              else {
+                button.classList.remove("is-copied");
+                document.getElementById("feed-copy-help").textContent = "Could not copy. Select the address or copy it from your browser’s address bar.";
+              }
             };
 
             if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -481,13 +491,13 @@
                     <span class="feed-copy__status">Copied</span>
                   </span>
                 </button>
-                <p class="feed-copy-help">Click the feed address box to copy the RSS URL.</p>
+                <p class="feed-copy-help" id="feed-copy-help" role="status">Click the feed address box to copy the RSS URL.</p>
               </div>
             </div>
 
             <div class="panel">
               <div class="section-header">
-                <span class="section-title">Recent Items</span>
+                <span class="section-title">Recent Posts</span>
               </div>
               <ol class="recent-list">
                 <xsl:for-each select="rss/channel/item">

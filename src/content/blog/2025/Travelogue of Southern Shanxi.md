@@ -46,7 +46,10 @@ ogAlt: "晋南游记的复古绿色终端风格封面，包含 Arch Linux 系统
 
 ### 普救寺 & 黄河大铁牛
 
-> “待月西厢下，迎风户半开，拂墙花影动，疑是玉人来。”
+> [!QUOTE center]
+>
+> 待月西厢下，迎风户半开，\
+> 拂墙花影动，疑是玉人来。
 
 由于[王实甫](https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%AE%9E%E7%94%AB)改编的元杂剧《[西厢记](https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%8E%A2%E8%AE%B0)》问世，使得这个“普天下佛寺无过”的普救寺声名远播，寺中的舍利塔也因此被称为莺莺塔，成为了中国古典爱情故事的重要象征。
 
@@ -54,6 +57,8 @@ ogAlt: "晋南游记的复古绿色终端风格封面，包含 Arch Linux 系统
 
 ![莺莺塔](https://webp.haeward.com/2026/01/yingying-tower.jpeg)
 
+> [!QUOTE center]
+>
 > 普愿天下有情，都成菩提眷属
 
 ![普救寺](https://webp.haeward.com/2026/01/pujiu-temple.jpeg)
@@ -66,7 +71,10 @@ ogAlt: "晋南游记的复古绿色终端风格封面，包含 Arch Linux 系统
 
 也被称为鹳鹊楼，因有鹳雀栖息在楼上而得名。鹳雀楼是中国四大名楼（黄鹤楼、岳阳楼、滕王阁）之一，总高度 73.9 米，共有六层，是四大名楼中最高的楼阁。后也因唐代诗人王之涣的《登鹳雀楼》而闻名遐迩：
 
-> 白日依山尽，黄河入海流。欲穷千里目，更上一层楼。
+> [!QUOTE center]
+>
+> 白日依山尽，黄河入海流。\
+> 欲穷千里目，更上一层楼。
 
 ![鹳雀楼](https://webp.haeward.com/2026/01/guanquelou.jpeg)
 

@@ -1,13 +1,15 @@
 ---
+import { UI } from "@lib/ui";
 import type { MarkdownHeading } from "astro";
 
 type Props = {
     headings: MarkdownHeading[];
     variant?: "mobile" | "desktop";
     title?: string;
+    lang?: string;
 };
 
-const { headings, variant = "desktop", title = "Contents" } = Astro.props;
+const { headings, variant = "desktop", lang = "en", title = UI.contents } = Astro.props;
 
 const tocHeadings = headings.filter(({ depth }) => depth >= 2 && depth <= 4);
 
@@ -24,8 +26,9 @@ const depthClasses = {
 ---
 
 {variant === "mobile" ? (
-  <nav class="blog-toc blog-toc--mobile animate xl:hidden serif-reading-surface" data-toc-root="true" data-toc-visible="false" aria-label={title}>
-    <div class="blog-toc__body">
+  <details lang="en" class="blog-toc blog-toc--mobile animate xl:hidden serif-reading-surface" data-toc-root="true" data-toc-visible="true" aria-label={title}>
+    <summary class="blog-toc__summary">{title}</summary>
+    <nav class="blog-toc__body" aria-label={title}>
       <div class="blog-toc__progress" data-toc-progress="true" style="--blog-toc-progress: 0%;">
         <div class="blog-toc__progress-track" aria-hidden="true">
           <span class="blog-toc__progress-fill" data-toc-progress-fill="true"></span>
@@ -43,15 +46,15 @@ const depthClasses = {
               data-active="false"
             >
               <span class="blog-toc__line" aria-hidden="true"></span>
-              <span class="blog-toc__label">{heading.text}</span>
+              <span lang={lang} class="blog-toc__label">{heading.text}</span>
             </a>
           </li>
         ))}
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </details>
 ) : (
-  <aside class="blog-toc blog-toc--desktop animate hidden xl:block serif-reading-surface" data-toc-root="true" data-toc-visible="false" aria-label={title}>
+  <aside lang="en" class="blog-toc blog-toc--desktop animate hidden xl:block serif-reading-surface" data-toc-root="true" data-toc-visible="true" aria-label={title}>
     <nav class="blog-toc__body">
       <div class="blog-toc__progress" data-toc-progress="true" style="--blog-toc-progress: 0%;">
         <div class="blog-toc__progress-track" aria-hidden="true">
@@ -70,7 +73,7 @@ const depthClasses = {
               data-active="false"
             >
               <span class="blog-toc__line" aria-hidden="true"></span>
-              <span class="blog-toc__label">{heading.text}</span>
+              <span lang={lang} class="blog-toc__label">{heading.text}</span>
             </a>
           </li>
         ))}

@@ -5,9 +5,10 @@ import Container from "@components/Container.astro";
 import { SITE, SOCIALS } from "@consts";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getPageOg } from "@lib/og";
-import { getRecentPosts } from "@lib/posts";
+import { getPublishedPosts } from "@lib/posts";
+import homeIllustration from "../../public/assets/images/site/home-hover-runtime.webp";
 
-const blog = await getRecentPosts(SITE.NUM_POSTS_ON_HOMEPAGE);
+const blog = (await getPublishedPosts()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 const pageOg = getPageOg("home");
 ---
 
@@ -19,33 +20,38 @@ const pageOg = getPageOg("home");
     lang="en"
 >
     <Container>
-        <div class="space-y-12 sm:space-y-14">
+        <div class="page-sections">
             <section>
                 <div class="flex justify-center items-center mb-4">
-                    <div class="relative w-48 h-48">
+                    <div class="relative w-36 h-36">
                         <Image
-                            src="/assets/images/site/home-hover-runtime.webp"
+                            src={homeIllustration}
                             alt="programmer"
                             class="w-full h-full animate"
-                            width={192}
-                            height={192}
+                            width={144}
+                            height={144}
+                            widths={[144, 288, homeIllustration.width]}
+                            sizes="144px"
+                            quality={80}
                             loading="eager"
                         />
                     </div>
                 </div>
-                <div class="flex justify-center animate gap-4 mb-4">
+                <div class="flex justify-center animate gap-0 min-[360px]:gap-1 mb-4">
                     {SOCIALS.filter(social => social.ENABLE !== false).map((social) => (
             <a
               href={social.HREF}
+              data-astro-prefetch={social.NAME === "RSS" ? "false" : undefined}
               target="_blank"
               rel="noopener noreferrer"
-              class="hover:text-[var(--site-color-text-neutral-hover)] transition-colors duration-300"
-              aria-label={social.NAME}
+              class="inline-flex size-11 shrink-0 items-center justify-center hover:text-[var(--site-color-text-neutral-hover)] transition-colors duration-300"
+              aria-label={`${social.NAME} (opens in a new tab)`}
+              data-new-window
             >
               <Image
                 src={social.ICON}
                 alt={social.NAME}
-                class="w-7 h-7"
+                class="home-social-icon w-6 h-6"
                 width={28}
                 height={28}
                 loading="eager"
@@ -55,15 +61,12 @@ const pageOg = getPageOg("home");
                 </div>
             </section>
 
-            <section class="animate px-1 py-2 sm:px-0 sm:py-3">
-                <div class="mb-5">
-                    <h1
-                        class="serif-reading-title text-[1rem] font-semibold tracking-[0.2em] text-[var(--site-color-text-heading)] uppercase sm:text-[1.12rem]"
-                    >
-                        LATEST POSTS
-                    </h1>
+            <section class="animate">
+                <div class="mb-5 flex flex-wrap items-baseline justify-between gap-3">
+                    <h1 class="section-title">Latest posts</h1>
+                    <a href="/posts/" class="site-link underline text-sm">All posts</a>
                 </div>
-                <ul class="flex flex-col gap-1">
+                <ul class="flex flex-col gap-1 ps-2 sm:ps-4">
                     {blog.map(post => (
             <li>
               <ArrowCard entry={post} variant="home" />

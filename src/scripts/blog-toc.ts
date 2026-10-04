@@ -14,7 +14,7 @@ function syncTableOfContents(): void {
 
     tocContainers.forEach((container) => {
         if (!(container instanceof HTMLElement)) return;
-        container.setAttribute("data-toc-visible", "false");
+        container.setAttribute("data-toc-visible", "true");
     });
 
     tocProgressRows.forEach((row) => {
@@ -45,7 +45,10 @@ function syncTableOfContents(): void {
 
         tocLinks.forEach((link) => {
             if (!(link instanceof HTMLElement)) return;
-            link.setAttribute("data-active", link.dataset.slug === slug ? "true" : "false");
+            const active = link.dataset.slug === slug;
+            link.setAttribute("data-active", String(active));
+            if (active) link.setAttribute("aria-current", "location");
+            else link.removeAttribute("aria-current");
         });
     };
 
@@ -70,7 +73,12 @@ function syncTableOfContents(): void {
     };
 
     const setActiveSlugFromHash = () => {
-        const hashSlug = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+        let hashSlug = "";
+        try {
+            hashSlug = decodeURIComponent(window.location.hash.slice(1));
+        } catch {
+            return false;
+        }
         if (!hashSlug) return false;
 
         const hashedHeading = headings.find((heading) => heading.id === hashSlug);
@@ -98,7 +106,7 @@ function syncTableOfContents(): void {
 
         activeProgress = roundedProgress;
         const progressValue = `${roundedProgress}%`;
-        const isTocVisible = roundedProgress >= 1;
+        const isTocVisible = true;
 
         tocContainers.forEach((container) => {
             if (!(container instanceof HTMLElement)) return;
@@ -128,22 +136,19 @@ function syncTableOfContents(): void {
     };
 
     const handleHashChange = () => {
-        if (setActiveSlugFromHash()) {
-            window.setTimeout(() => {
-                requestUpdate();
-            }, 80);
-        }
+        if (setActiveSlugFromHash()) requestUpdate();
     };
 
-    observer = new IntersectionObserver(
-        () => {
-            requestUpdate();
-        },
-        {
-            rootMargin: "-15% 0px -55% 0px",
-            threshold: [0, 1],
-        },
-    );
+    if (typeof IntersectionObserver === "function")
+        observer = new IntersectionObserver(
+            () => {
+                requestUpdate();
+            },
+            {
+                rootMargin: "-15% 0px -55% 0px",
+                threshold: [0, 1],
+            },
+        );
 
     headings.forEach((heading) => {
         observer?.observe(heading);
@@ -168,6 +173,9 @@ function syncTableOfContents(): void {
     };
 }
 
+document.addEventListener("astro:before-swap", () => {
+    (window as BlogTocWindow).__blogTocCleanup?.();
+});
 document.addEventListener("DOMContentLoaded", syncTableOfContents);
 document.addEventListener("astro:page-load", syncTableOfContents);
 

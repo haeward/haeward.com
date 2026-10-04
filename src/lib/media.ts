@@ -1,13 +1,13 @@
+import { getImage } from "astro:assets";
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
+import type { ImageMetadata } from "astro";
 import bookData from "../data/douban/book.json";
 import movieData from "../data/douban/movie.json";
 
 type DoubanRating = {
     max?: number;
     value?: number;
-    star_count?: number;
-    count?: number;
 };
 
 type DoubanSubject = {
@@ -16,18 +16,14 @@ type DoubanSubject = {
     sharing_url?: string;
     pic?: {
         normal?: string;
-        large?: string;
     };
     cover_url?: string;
-    card_subtitle?: string;
-    rating?: DoubanRating;
     type?: string;
     subtype?: string;
     genres?: string[];
 };
 
 type DoubanItem = {
-    comment?: string;
     rating?: DoubanRating;
     create_time?: string;
     status?: string;
@@ -40,9 +36,6 @@ type NormalizedItem = {
     title: string;
     url?: string;
     cover?: string;
-    subtitle?: string;
-    comment?: string;
-    createdAt?: Date;
     myRating?: number;
     subjectType?: string;
     genres?: string[];
@@ -71,14 +64,18 @@ export type MediaManifest = {
 };
 type MediaKind = "movie" | "book";
 
-export const MEDIA_PAGE_SIZE = 100;
-export const DEFAULT_MEDIA_TAB: MediaTabKey = "movies";
-export const MEDIA_DATA_ENDPOINT_BASE = "/media/data";
+const MEDIA_PAGE_SIZE = 100;
+const DEFAULT_MEDIA_TAB: MediaTabKey = "movies";
+const MEDIA_DATA_ENDPOINT_BASE = "/media/data";
+const localCovers = import.meta.glob<ImageMetadata>(
+    "../../public/douban/{movie,book}/*.{jpg,jpeg,png,webp,avif}",
+    { eager: true, import: "default" },
+);
 
-let mediaItemsByTabCache: Record<MediaTabKey, ClientMediaItem[]> | null = null;
+let mediaItemsByTabCache: Promise<Record<MediaTabKey, ClientMediaItem[]>> | null = null;
 
-export function getMediaPageData() {
-    const itemsByTab = getMediaItemsByTab();
+export async function getMediaPageData() {
+    const itemsByTab = await getMediaItemsByTab();
     const tabs = getMediaTabs(itemsByTab);
 
     return {
@@ -88,13 +85,18 @@ export function getMediaPageData() {
     };
 }
 
-export function getMediaItemsByTab(): Record<MediaTabKey, ClientMediaItem[]> {
-    if (mediaItemsByTabCache) return mediaItemsByTabCache;
+function getMediaItemsByTab(): Promise<Record<MediaTabKey, ClientMediaItem[]>> {
+    mediaItemsByTabCache ??= loadMediaItemsByTab();
+    return mediaItemsByTabCache;
+}
 
-    const movieCoverIndex = createLocalCoverIndex("movie");
-    const bookCoverIndex = createLocalCoverIndex("book");
-    const movieEntries = normalizeItems(movieData as DoubanItem[], 5, movieCoverIndex);
-    const books = normalizeItems(bookData as DoubanItem[], 5, bookCoverIndex);
+async function loadMediaItemsByTab(): Promise<Record<MediaTabKey, ClientMediaItem[]>> {
+    const [movieCoverIndex, bookCoverIndex] = await Promise.all([
+        createLocalCoverIndex("movie"),
+        createLocalCoverIndex("book"),
+    ]);
+    const movieEntries = normalizeItems(movieData as DoubanItem[], movieCoverIndex);
+    const books = normalizeItems(bookData as DoubanItem[], bookCoverIndex);
 
     const isAnimation = (item: NormalizedItem) => item.genres?.includes("动画") ?? false;
     const movieItems = movieEntries.filter(
@@ -105,19 +107,15 @@ export function getMediaItemsByTab(): Record<MediaTabKey, ClientMediaItem[]> {
     );
     const animeItems = movieEntries.filter((item) => isAnimation(item));
 
-    mediaItemsByTabCache = {
+    return {
         movies: movieItems.map(toClientMediaItem),
         series: seriesItems.map(toClientMediaItem),
         anime: animeItems.map(toClientMediaItem),
         books: books.map(toClientMediaItem),
     };
-
-    return mediaItemsByTabCache;
 }
 
-export function getMediaTabs(
-    itemsByTab: Record<MediaTabKey, ClientMediaItem[]> = getMediaItemsByTab(),
-): MediaTab[] {
+function getMediaTabs(itemsByTab: Record<MediaTabKey, ClientMediaItem[]>): MediaTab[] {
     return [
         { key: "movies", label: "Movies", count: itemsByTab.movies.length },
         { key: "series", label: "Series", count: itemsByTab.series.length },
@@ -126,9 +124,7 @@ export function getMediaTabs(
     ];
 }
 
-export function createMediaManifest(
-    itemsByTab: Record<MediaTabKey, ClientMediaItem[]> = getMediaItemsByTab(),
-): MediaManifest {
+function createMediaManifest(itemsByTab: Record<MediaTabKey, ClientMediaItem[]>): MediaManifest {
     return {
         defaultTab: DEFAULT_MEDIA_TAB,
         pageSize: MEDIA_PAGE_SIZE,
@@ -142,10 +138,10 @@ export function createMediaManifest(
     };
 }
 
-export function getMediaPagePayload(
+function getMediaPagePayload(
     tab: MediaTabKey,
     page: number,
-    itemsByTab: Record<MediaTabKey, ClientMediaItem[]> = getMediaItemsByTab(),
+    itemsByTab: Record<MediaTabKey, ClientMediaItem[]>,
 ): MediaDataPage {
     const items = itemsByTab[tab];
     const safePage = Math.max(1, page);
@@ -162,8 +158,8 @@ export function getMediaPagePayload(
     };
 }
 
-export function getMediaDataStaticPaths() {
-    const itemsByTab = getMediaItemsByTab();
+export async function getMediaDataStaticPaths() {
+    const itemsByTab = await getMediaItemsByTab();
 
     return (Object.entries(itemsByTab) as [MediaTabKey, ClientMediaItem[]][]).flatMap(
         ([tab, items]) =>
@@ -187,10 +183,10 @@ function parseDate(value?: string): Date | undefined {
     return parsed;
 }
 
-function formatRating(rating?: DoubanRating, fallbackMax = 5): number | undefined {
+function formatRating(rating?: DoubanRating): number | undefined {
     if (!rating || typeof rating.value !== "number") return;
 
-    const max = typeof rating.max === "number" ? rating.max : fallbackMax;
+    const max = typeof rating.max === "number" ? rating.max : 5;
     if (max <= 0) return;
 
     return Math.max(0, Math.min(rating.value, max));
@@ -198,7 +194,6 @@ function formatRating(rating?: DoubanRating, fallbackMax = 5): number | undefine
 
 function normalizeItems(
     items: DoubanItem[],
-    fallbackMax: number,
     localCoverIndex: Map<string, string>,
 ): NormalizedItem[] {
     return items
@@ -219,10 +214,7 @@ function normalizeItems(
                 title,
                 url,
                 cover: resolveCover(localCoverIndex, subjectId, remoteCover),
-                subtitle: subject.card_subtitle,
-                comment: item.comment?.trim() || undefined,
-                createdAt: parseDate(item.create_time),
-                myRating: formatRating(item.rating, fallbackMax),
+                myRating: formatRating(item.rating),
                 subjectType: subject.subtype ?? subject.type,
                 genres: subject.genres ?? [],
             };
@@ -242,15 +234,27 @@ function getSubjectId(value?: string): string | undefined {
     return value?.match(/subject\/(\d+)/)?.[1];
 }
 
-function createLocalCoverIndex(kind: MediaKind): Map<string, string> {
+async function createLocalCoverIndex(kind: MediaKind): Promise<Map<string, string>> {
     const dir = path.resolve("public", "douban", kind);
     if (!existsSync(dir)) return new Map();
 
-    return new Map(
-        readdirSync(dir, { withFileTypes: true })
-            .filter((entry) => entry.isFile())
-            .map((entry) => [path.parse(entry.name).name, `/douban/${kind}/${entry.name}`]),
+    const files = readdirSync(dir, { withFileTypes: true }).filter((entry) => entry.isFile());
+    const covers = await Promise.all(
+        files.map(async ({ name }): Promise<[string, string]> => {
+            const source = localCovers[`../../public/douban/${kind}/${name}`];
+            const image = source
+                ? await getImage({
+                      src: source,
+                      width: 540,
+                      format: "webp",
+                      quality: 75,
+                      fit: "contain",
+                  })
+                : null;
+            return [path.parse(name).name, image?.src ?? `/douban/${kind}/${name}`];
+        }),
     );
+    return new Map(covers);
 }
 
 function resolveCover(

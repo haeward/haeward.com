@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .node-version
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -40,5 +40,22 @@ jobs:
       - name: Secret lint
         run: pnpm run secrets:lint
 
-      - name: Site check and build
-        run: pnpm run build:site
+      - name: Data and failure regression checks
+        run: pnpm run test:data
+
+      - name: Install browser engines
+        run: pnpm exec playwright install --with-deps chromium webkit
+
+      - name: Full site and search build
+        run: pnpm run build
+
+      - name: Content integrity checks
+        run: pnpm run check:content
+
+      - name: Chromium regression checks
+        run: node scripts/verify/smoke.mjs
+
+      - name: WebKit regression checks
+        run: node scripts/verify/smoke.mjs
+        env:
+          SMOKE_BROWSER: webkit

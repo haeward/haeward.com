@@ -1,15 +1,34 @@
-<div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+---
+import { UI } from "@lib/ui";
+
+const { lang = "en" } = Astro.props;
+const t = UI;
+---
+
+<dialog lang="en" id="image-lightbox" class="image-lightbox" aria-label={t.imageViewer}>
     <div class="image-lightbox__backdrop" data-close="true"></div>
-    <figure
-        class="image-lightbox__figure"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Image viewer"
-    >
-        <img class="image-lightbox__img" alt="" data-close="true">
-        <figcaption class="image-lightbox__caption" hidden></figcaption>
+    <div class="image-lightbox__toolbar">
+        <a
+            href="/"
+            class="image-lightbox__original"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-astro-prefetch="false"
+            >{t.original}<span class="sr-only" data-new-window>{t.newTab}</span></a
+        >
+        <button type="button" data-close="true" autofocus>{t.close}</button>
+    </div>
+    <figure class="image-lightbox__figure">
+        <div class="image-lightbox__stage">
+            <img lang={lang} class="image-lightbox__img" alt="" decoding="async">
+        </div>
+        <figcaption lang={lang} class="image-lightbox__caption" hidden></figcaption>
     </figure>
-</div>
+    <div class="image-lightbox__feedback">
+        <p class="image-lightbox__status" role="status"></p>
+        <button type="button" data-image-retry hidden>{t.retry}</button>
+    </div>
+</dialog>
 
 <script>
 import "../scripts/article-lightbox";

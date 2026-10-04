@@ -1,6 +1,6 @@
 ---
 import type { BlogPost } from "@lib/posts";
-import { readingTime, wordCount } from "@lib/utils";
+import { readingTime, visibleText, wordCount } from "@lib/utils";
 import FormattedDate from "./FormattedDate.astro";
 
 interface Props {
@@ -9,20 +9,25 @@ interface Props {
 }
 
 const { post, body } = Astro.props;
+const text = visibleText(body);
+const countLabel = `About ${wordCount(text)}`;
+const timeLabel = readingTime(text);
 const pagefindDate = post.data.date.toISOString().slice(0, 10);
 ---
 
-<div class="space-y-4 my-6">
+<div class="flex flex-col gap-3">
     <span data-pagefind-meta={`date:${pagefindDate}`} hidden aria-hidden="true"></span>
 
-    <div
-        class="animate serif-reading-title text-xl sm:text-2xl font-bold text-[var(--site-color-text-primary)]"
+    <h1
+        data-pagefind-meta="title"
+        class="blog-post-title animate serif-reading-title font-bold text-[var(--site-color-text-primary)]"
     >
         {post.data.title}
-    </div>
+    </h1>
 
     <div
-        class="animate flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-[var(--site-color-text-muted)]"
+        lang="en"
+        class="animate flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-[var(--site-color-text-muted)]"
     >
         <div class="flex items-center gap-1 whitespace-nowrap">
             <svg
@@ -45,7 +50,6 @@ const pagefindDate = post.data.date.toISOString().slice(0, 10);
             <FormattedDate date={post.data.date} />
         </div>
         <div class="flex items-center gap-1 whitespace-nowrap">
-            <span class="text-[var(--site-color-text-muted)]" aria-hidden="true">·</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -64,10 +68,9 @@ const pagefindDate = post.data.date.toISOString().slice(0, 10);
                 <line x1="16" y1="17" x2="8" y2="17"></line>
                 <line x1="10" y1="9" x2="8" y2="9"></line>
             </svg>
-            <span>{wordCount(body)}</span>
+            <span>{countLabel}</span>
         </div>
         <div class="flex items-center gap-1 whitespace-nowrap">
-            <span class="text-[var(--site-color-text-muted)]" aria-hidden="true">·</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -83,7 +86,7 @@ const pagefindDate = post.data.date.toISOString().slice(0, 10);
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span>{readingTime(body)}</span>
+            <span>{timeLabel}</span>
         </div>
     </div>
 </div>

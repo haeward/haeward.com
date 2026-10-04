@@ -2,6 +2,7 @@ name: Site Build And Deploy
 
 on:
   schedule:
+    # Daily 00:05 UTC rebuild; Blogroll gets a new order each day.
     - cron: '5 0 * * *'
   push:
     branches:
@@ -32,7 +33,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .node-version
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
@@ -45,6 +46,9 @@ jobs:
       - name: Build site
         run: pnpm run build
 
+      - name: Content integrity checks
+        run: pnpm run check:content
+
       - name: Smoke check
         run: node scripts/verify/smoke.mjs
 
@@ -54,5 +58,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=blog --commit-dirty=true
-          wranglerVersion: '4'
+          wranglerVersion: '4.135.0'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

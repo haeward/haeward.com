@@ -1,0 +1,133 @@
+---
+import { getImage } from "astro:assets";
+import type { Blog } from "@lib/blogroll";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+    blog: Blog;
+    icon: string | ImageMetadata;
+}
+
+const { blog, icon } = Astro.props;
+const label = blog.url.replace(/^https?:\/\/(?:www\.)?/i, "").replace(/\/$/, "");
+const initial = Array.from(blog.name.replace(/^@/, ""))[0]?.toUpperCase() || "B";
+const optimizedIcon =
+    typeof icon === "string"
+        ? null
+        : await getImage({
+              src: icon,
+              width: 32,
+              widths: [32, 64, 96],
+              format: "webp",
+              quality: 80,
+              fit: "contain",
+          });
+---
+
+<li data-blogroll-card>
+    <a href={blog.url} target="_blank" rel="noopener noreferrer" class="blogroll-card">
+        <span class="blogroll-icon" aria-hidden="true">
+            <span>{initial}</span>
+            <img
+                src={typeof icon === "string" ? icon : optimizedIcon?.src}
+                srcset={optimizedIcon?.srcSet.attribute}
+                sizes={optimizedIcon ? "32px" : undefined}
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
+                referrerpolicy="no-referrer"
+                onerror="this.setAttribute('hidden', '')"
+            >
+        </span>
+        <span class="blogroll-details">
+            <span class="blogroll-name">{blog.name}</span>
+            <span class="blogroll-url">{label}</span>
+        </span>
+    </a>
+</li>
+
+<style>
+.blogroll-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 100%;
+    min-height: 4.5rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--site-color-surface-border) 45%, transparent);
+    border-radius: 0.5rem;
+    background: color-mix(in srgb, var(--site-surface) 20%, var(--site-canvas));
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease;
+}
+
+.blogroll-card:hover,
+.blogroll-card:focus-visible {
+    background: color-mix(in srgb, var(--site-surface) 55%, var(--site-canvas));
+    border-color: color-mix(in srgb, var(--site-color-surface-border) 70%, transparent);
+}
+
+.blogroll-card:hover .blogroll-name,
+.blogroll-card:focus-visible .blogroll-name {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.blogroll-card:focus-visible {
+    outline: 2px solid var(--site-link-focus);
+    outline-offset: 3px;
+}
+
+.blogroll-icon {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    background: var(--site-surface);
+    color: var(--site-color-text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.blogroll-icon img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: var(--site-canvas);
+}
+
+.blogroll-details {
+    display: grid;
+    gap: 0.125rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.blogroll-name {
+    color: var(--site-color-text-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.blogroll-url {
+    color: var(--site-color-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blogroll-card {
+        transition: none;
+    }
+}
+</style>

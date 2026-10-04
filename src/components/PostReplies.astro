@@ -1,0 +1,36 @@
+---
+import { SOCIALS } from "@consts";
+
+interface Props {
+    title: string;
+    mastodonUrl?: string;
+}
+
+const { title, mastodonUrl } = Astro.props;
+const email = SOCIALS.find((social) => social.NAME === "Email");
+const mastodon = SOCIALS.find((social) => social.NAME === "Mastodon");
+const emailHref = email ? `${email.HREF}?subject=${encodeURIComponent(`Re: ${title}`)}` : undefined;
+---
+
+<nav class="post-replies" lang="en" aria-label="Reply to this article" data-pagefind-ignore>
+    <span>Reply:</span>
+    <div class="post-replies__platforms">
+        {email && (
+        <a href={emailHref} aria-label="Reply by Email">
+            <img src={email.ICON} width="18" height="18" alt="" aria-hidden="true" />
+            Email
+        </a>
+    )}
+        {mastodon && (mastodonUrl ? (
+        <a href={mastodonUrl} target="_blank" rel="noopener noreferrer" aria-label="Reply on Mastodon (opens in a new tab)">
+            <img src={mastodon.ICON} width="18" height="18" alt="" aria-hidden="true" />
+            Mastodon<span class="sr-only" data-new-window> (opens in a new tab)</span>
+        </a>
+    ) : (
+        <span class="post-replies__unavailable" aria-disabled="true" title="Discussion link not available yet">
+            <img src={mastodon.ICON} width="18" height="18" alt="" aria-hidden="true" />
+            Mastodon<span class="sr-only"> (discussion link not available yet)</span>
+        </span>
+    ))}
+    </div>
+</nav>

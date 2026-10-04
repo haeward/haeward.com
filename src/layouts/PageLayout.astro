@@ -4,13 +4,14 @@ import Footer from "@components/Footer.astro";
 import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
 import SearchModal from "@components/SearchModal.astro";
+import { getPageOg } from "@lib/og";
+import { UI } from "@lib/ui";
 
 type Props = {
     title: string;
     description: string;
     ogImage?: string;
     ogImageAlt?: string;
-    headerDivider?: boolean;
     lang?: string;
     ogType?: "website" | "article";
     publishedTime?: string | Date;
@@ -20,9 +21,8 @@ type Props = {
 const {
     title,
     description,
-    ogImage,
-    ogImageAlt,
-    headerDivider = true,
+    ogImage = getPageOg("home").ogImage,
+    ogImageAlt = getPageOg("home").ogImageAlt,
     lang = "en",
     ogType,
     publishedTime,
@@ -49,10 +49,14 @@ function toOpenGraphLocale(language: string): string {
             publishedTime={publishedTime}
             locale={locale}
         />
+        <slot name="head" />
     </head>
     <body>
-        <Header showDivider={headerDivider} />
-        <main class="mt-14 sm:mt-8"><slot /></main>
+        <a lang="en" href="#main-content" class="skip-link">{UI.skip}</a>
+        <Header />
+        <div class="site-edge-fade site-edge-fade--top" aria-hidden="true"></div>
+        <div class="site-edge-fade site-edge-fade--bottom" aria-hidden="true"></div>
+        <main id="main-content" tabindex="-1"><slot /></main>
         <SearchModal />
         <Footer />
         <BackToTop />

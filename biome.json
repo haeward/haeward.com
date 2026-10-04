@@ -1,5 +1,5 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.5.12/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
     "vcs": {
         "enabled": true,
         "clientKind": "git",
@@ -21,8 +21,7 @@
             "!dist",
             "!.astro",
             "!node_modules",
-            "!src/data/douban",
-            "!src/data/links/generated.json"
+            "!src/data/douban"
         ]
     },
     "formatter": {
@@ -73,16 +72,6 @@
                     },
                     "style": {
                         "useTemplate": "off"
-                    }
-                }
-            }
-        },
-        {
-            "includes": ["src/components/Link.astro"],
-            "linter": {
-                "rules": {
-                    "a11y": {
-                        "useAnchorContent": "off"
                     }
                 }
             }
