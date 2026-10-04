@@ -6,6 +6,7 @@ Primary sources:
 
 - `src/pages/rss.xml.ts`
 - `public/feed/pretty-feed.xsl`
+- `public/feed/pokeball-pattern.svg`
 - `src/components/Head.astro`
 - `src/components/Footer.astro`
 
@@ -33,6 +34,8 @@ Current rules:
 - item links use the canonical post path
 - feed advertises `/feed/pretty-feed.xsl` as its stylesheet
 - Atom self link remains present
+- relative body links and image/source URLs resolve against the canonical article URL
+- feed icon/logo use the dedicated 144px PNG, independently of the 32px browser favicon
 
 Do not casually change:
 
@@ -52,47 +55,28 @@ RSS is a utility destination, not a header-nav section.
 
 ## Browser Preview
 
-The preview in `public/feed/pretty-feed.xsl` is intentionally outside the normal
-site design language.
+The XSL preview intentionally retains its original identity independently of
+the site's neutral shell: yellow canvas, cream rounded panels, dark outlines
+and offset shadows, red links, and the original LXGW Neo XiHei and JetBrains Mono
+fonts. Its light palette remains consistent across system themes. Those font
+downloads are restricted to this standalone preview.
 
-Normal site:
+The background displays its SVG tile at 104px with approximately 22.5px
+Poké Ball motifs centered inside the diamonds. The source viewBox remains 120px
+with 26px icons, scaled together by CSS. Muted ochre colors and low opacity keep the pattern
+secondary to the content. A slightly darker circular outline keeps the smaller
+motif recognizable. Grid opacity is 0.12 and icon opacity is 0.15. Only RSS uses
+Poké Balls; other pages have solid neutral backgrounds. The SVG contains its own geometry and needs no scripts
+or external image references.
 
-- warm paper
-- quiet clay accents
-- low-noise shell
-
-RSS preview:
-
-- bright yellow background
-- patterned backdrop
-- thick dark border
-- hard shadow
-- playful copy box
-- red links
-
-That contrast is intentional. The preview is an explanatory wrapper around raw
-XML, not part of the day-to-day browsing shell.
-
-## Preview Typography and Layout
-
-Current preview typography:
-
-- readable/display face: `LXGW Neo XiHei`
-- utility text: `JetBrains Mono`
-
-Current layout:
-
-- `.page` max width `44rem`
-- masthead with back link and explanation
-- hero-like panel for title and feed URL copy
-- second panel for recent items
-- mobile adjustments at `max-width: 720px`
-
-The preview should answer three questions quickly:
-
-1. What is this?
-2. What URL do I copy?
-3. What recent posts are here?
+The wrapper remains at 44rem maximum width with mobile gutters. It provides a
+back link, subscription explanation, visible feed URL, and a `RECENT POSTS` list.
+Items use 0.65rem vertical padding, with a 0.12rem title-to-date gap and no default
+date paragraph margins. Long feed URLs and dates can wrap on narrow screens.
+Keyboard focus remains visible and reduced-motion preferences are respected.
+The feed address remains readable without scripts; copying is a progressive
+enhancement. The preview does not import the site router or become a second
+article archive.
 
 ## Copy Interaction
 
@@ -105,6 +89,8 @@ Current behavior:
 - `navigator.clipboard.writeText` when available
 - temporary-input fallback when needed
 - temporary copied state after success
+- fallback return value is checked; failure announces manual copying instead of success
+- the fallback returns focus to the copy button and updates a live status message
 - visible focus outline
 
 Keep this interaction dependency-free and local to the XSL.
@@ -118,10 +104,13 @@ Keep this interaction dependency-free and local to the XSL.
 
 ## Validation
 
-Docs-only work: `pnpm run md:lint`
+Use the validation matrix in [AGENTS.md](../../AGENTS.md). Docs-only work requires
+`pnpm run md:lint` and `pnpm run secrets:lint`.
 
 RSS implementation work:
 
 - `pnpm run build:site`
 - `pnpm run smoke` when feed behavior or preview behavior changes
 - verify `/rss.xml` stays reachable and newest-first
+- smoke tests exercise the rendered XSL copy success/failure in both browser engines
+- `pnpm run test:data` checks relative links, sources, and encoded URL parameters

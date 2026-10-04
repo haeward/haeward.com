@@ -1,14 +1,15 @@
-version: alpha
+# Descriptive reference; CSS and components are authoritative.
+version: 1
 name: Haeward
-description: Warm paper Astro blog with narrow reading, quiet lists, compact
-  media grids, a custom search modal, and a standalone RSS preview.
+description: Neutral Astro blog with narrow reading, quiet lists, compact
+  media grids, a native search dialog, and a standalone RSS preview.
 colors:
   page:
-    light: "#efeee9"
-    dark: stone-900
+    light: "#f4f5f5"
+    dark: "#1e2020"
   text-primary:
-    light: "#343331"
-    dark: "#d6d1c8"
+    light: "#262a30"
+    dark: "#d5d9e0"
   text-heading:
     light: var(--site-color-text-heading)
     dark: var(--site-color-text-heading)
@@ -18,28 +19,32 @@ colors:
   border:
     light: var(--site-color-surface-border)
     dark: var(--site-color-surface-border)
-  link-internal:
-    light: "#9f542f"
-    dark: "#f0b58f"
-  link-hover:
-    light: "#a25832"
-    dark: "#f1b994"
-  link-strong-hover:
-    light: "#7c3f23"
-    dark: "#ffd7bc"
+  control-accent:
+    light: "#245fbc"
+    dark: "#8ab4f8"
+  control-hover:
+    light: "#194c9e"
+    dark: "#b0ceff"
+  control-strong-hover:
+    light: "#17417f"
+    dark: "#c8ddff"
   focus:
-    light: rgba(159, 84, 47, 0.48)
-    dark: rgba(240, 181, 143, 0.5)
+    light: rgba(36, 95, 188, 0.48)
+    dark: rgba(138, 180, 248, 0.5)
   quote:
-    light: orange-400/85 on orange-100
-    dark: orange-500/85 on neutral-500/10
+    light: neutral border on transparent
+    dark: neutral border on transparent
+  prose-link:
+    light: inherit
+    dark: inherit
+  prose-link-hover:
+    light: "#111318"
+    dark: "#ffffff"
   rating:
     light: amber-300
     dark: amber-200
-  status-up: emerald-500
-  status-down: rose-500
   rss-preview:
-    background: "#FFC34A"
+    background: "#ffc34a"
     panel: "#fffdf7"
     ink: "#19120f"
     link: "#cf3825"
@@ -48,41 +53,78 @@ typography:
     family: ui-sans-serif, system-ui, sans-serif
     implementation: body font-sans
   reading:
-    family: LXGW Neo XiHei
+    family: ui-sans-serif, system-ui, sans-serif
     implementation: .serif-reading-surface and .serif-reading-title
+    body: 17px / 1.9 mobile, 18px / 1.95 from sm
+    title: 28px / 32px, weight 600
+    section: 22px / 24px, weight 600
   mono:
-    family: JetBrains Mono
-    implementation: font-mono and RSS utility text
+    family: ui-monospace, monospace
+    implementation: font-mono
+  rss-preview:
+    family: LXGW Neo XiHei, sans-serif
+    utility-family: JetBrains Mono, monospace
   note: class names with "serif-reading" are historical names, not font facts
 spacing:
   container: max-w-screen-md
   gutter: px-5
-  main-y: py-12 sm:py-16
-  article-gap: mt-10
+  main-top: 16px mobile, 20px from sm
+  main-bottom: 40px mobile, 48px from sm
+  article-top: 16px mobile, 20px from sm
+  page-section-gap: 40px mobile, 48px from sm
+  paragraph-gap: 20px mobile, 24px from sm
+  article-title-metadata: 12px
+  article-metadata-wrap-gap: 8px
+  article-gap: 24px after visible TOC, 32px otherwise
+  article-h2: 40px before / 16px after, 48px / 16px from sm
+  article-h3: 32px before / 12px after, 36px / 12px from sm
+  prose-list-margin: 2px
+  about-description-item-gap: 8px
   dense-list-gap: gap-1
   media-grid-gap: gap-4 sm:gap-6
+  media-tabs-gap: 20px horizontal, 4px vertical
+  media-panel-gap: 24px mobile, 32px from sm
 rounded:
   small: rounded to rounded-md
   card: rounded-lg
   utility: rounded-full to rounded-2xl
-  search: 1.5rem desktop, 1.15rem mobile
+  search: 0.75rem
 components:
+  page-background:
+    style: solid neutral gray
+    reference: "#1e2020"
+    header: identical opaque canvas
   header-action:
-    size: size-6
+    size: minimum 44px
     shape: rounded-full
     focus: var(--site-link-focus)
   article-link:
-    style: warm clay text, no underline until hover/focus
-  link-card:
-    shape: rounded-lg
-    status: top-right dot
+    style: inherited text color, weight 500, persistent 1px underline, neutral external arrow
+  literary-quote:
+    style: borderless typographic quote without quote marks, optional right-aligned source
+    marker: "> [!QUOTE] followed by a blank quoted line"
+    centered-marker: "> [!QUOTE center] centers only the quotation text"
+    attribution: "> — Author and work, as the final paragraph"
+  blogroll:
+    source: public/subscriptions.opml
+    layout: centered two-column cards from sm with 32px side insets, single column with 8px insets on mobile
+    gap: 18px mobile; 24px rows and 32px columns from sm
+    min-height: 72px
+    padding: 10px vertical, 12px horizontal
+    order: deterministic daily shuffle, UTC calendar date seed
+    icons: local hostname assets with remote favicon and initial fallback
+    hover: subtle neutral surface and border, name underline, no shadow
+    download: bold inline link within the introduction
   media-card:
     shape: rounded-lg
     cover-ratio: aspect-[2/3]
     hover: small lift, slightly stronger shadow
   search-panel:
-    width: min(calc(100vw - 1.8rem), 48rem)
-    backdrop: blurred darkened overlay
+    width: min(100%, 44rem)
+    backdrop: native darkened overlay
   rss-preview:
     stylesheet: /feed/pretty-feed.xsl
-    mode: standalone playful preview
+    mode: standalone yellow preview with outlined panels
+    background-pattern: /feed/pokeball-pattern.svg
+    background-repeat: 104px
+    background-icon-size: 22.5px

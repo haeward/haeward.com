@@ -1,233 +1,189 @@
 # Reading
 
-This file documents the implemented reading experience for articles and other
-content-led pages.
-
-Primary sources:
-
-- `src/pages/posts/[...slug].astro`
-- `src/components/PostHeader.astro`
-- `src/components/PostNavigation.astro`
-- `src/components/TableOfContents.astro`
-- `src/components/ImageLightbox.astro`
-- `src/components/LinkEnhancer.astro`
-- `src/styles/global.css`
-- `src/scripts/blog-toc.ts`
-- `src/scripts/article-lightbox.ts`
-
-## Reading Shell
-
-Article pages use a narrow, centered frame:
-
-- outer page gutter: `px-5`
-- shell: `.blog-post-shell` = `relative mx-auto max-w-screen-md`
-- main column: `.blog-post-main` = `min-w-0 w-full`
-- article element: `animate mt-10 blog-article serif-reading-surface
-  site-prose-links`
-
-The article title and metadata live outside rendered Markdown. That keeps the
-page shell stable even when post content structure changes.
-
-Current header rules:
-
-- title: `.serif-reading-title text-xl sm:text-2xl font-bold`
-- meta row: `flex flex-wrap items-center gap-x-3 gap-y-1 text-sm`
-- metadata is icon-led and quiet, not banner-like
-
-Do not wrap the article header in a hero card.
-
-## Prose Rules
-
-The `article` selector in `src/styles/global.css` is the main reading contract.
-
-Current behavior:
-
-- `max-w-full prose dark:prose-invert`
-- base text `1.04rem`, paragraphs `1.06rem`, `leading-8`
-- paragraphs and list items use medium weight with small positive tracking
-- headings use `font-bold` and `--site-color-text-heading`
-- long words can break with `overflow-wrap: anywhere`
-
-Heading spacing is tighter than default typography plugin output:
-
-- `h1`: `mt-8 mb-4`
-- `h2`: `mt-6 mb-3`
-- `h3`: `mt-5 mb-2`
-- `h4`: `mt-4 mb-2`
-- `h5`, `h6`: `mt-3 mb-1`
-
-The result should feel compact, readable, and steady from paragraph to heading.
-
-## Typography Reality
-
-The current reading face is `LXGW Neo XiHei`. Older references to Noto Serif are
-outdated for this repo.
-
-Important implementation detail:
-
-- `.serif-reading-surface` and `.serif-reading-title` are historical class
-  names
-- in the current code, both classes map to `LXGW Neo XiHei`
-
-When updating reading docs or CSS, follow the implementation, not the class
-name.
-
-## Multilingual Content
-
-The page root sets `lang={post.data.lang}` through `PageLayout`. Mixed-language
-readable surfaces use `data-language-scan="true"` where needed.
-
-Rules:
-
-- set the root `lang` when the page language is known
-- keep language scanning for readable mixed-language content
-- do not apply language scanning to controls, code, inputs, or SVG
-
-## Links and Emphasis
-
-Article links use the site-wide warm clay link system plus article-specific
-accessibility handling from `LinkEnhancer.astro`.
-
-Current rules:
-
-- links are bold
-- links are not underlined at rest
-- hover/focus reveals underline and a restrained color shift
-- focus adds a visible outline and light background
-- high-contrast mode forces stronger underline and outline
-- reduced-motion mode removes transitions
-
-Strong text:
-
-- stays in heading color
-- gets small inline padding and rounded corners
-- should not be styled to resemble a separate badge system
-
-## Blockquotes
-
-Blockquotes are compact callouts inside the reading flow.
-
-Current style:
-
-- no italics
-- orange left border
-- soft orange background in light mode
-- soft neutral background in dark mode
-- bold text around `1.02rem`
-- `rounded-r-md` and `shadow-sm`
-
-On the About page only, blockquotes become lighter and more note-like. That is
-an intentional local exception.
-
-## Code and Tables
-
-Inline code:
-
-- uses `JetBrains Mono`
-- uses red foreground
-- uses small padding and a small radius
-- suppresses default Tailwind Typography backticks
-
-Code blocks:
-
-- `bg-gray-100/90` or `dark:bg-zinc-800/85`
-- low-noise border
-- `rounded-lg p-4 my-6`
-- hover-only copy affordance rendered as a pseudo-element
-
-Tables:
-
-- centered and rounded
-- lightly bordered with the site text color mixed into transparency
-- header row gets a faint warm link tint
-
-Do not add a second visible copy button without changing the global pattern.
-
-## Figures and Images
-
-Figures support the article; they should not dominate it by default.
-
-Current rules:
-
-- `figure` uses centered layout and generous vertical rhythm
-- images are rounded and lightly shadowed
-- `.blog-figure__image` is capped by the reading column and viewport height
-- captions are centered, medium weight, and relaxed
-- article images show `cursor: zoom-in`
-- hover adds a very small lift and shadow increase
-
-Image-heavy posts should still follow
-`docs/content-image-budget.md`.
-
-## Image Lightbox
-
-The article lightbox is an enhancement around normal images, not a gallery
-system.
-
-Behavior from `src/scripts/article-lightbox.ts`:
-
-- only images inside `.blog-article` participate
-- linked images are skipped
-- images with `data-no-zoom="true"` are skipped
-- overlay opens by copying `currentSrc` / `src`
-- caption mirrors the image `alt` text
-- Escape closes
-- clicking the backdrop or the overlay image closes
-
-Visual behavior from CSS:
-
-- overlay fills the viewport at `z-index: 200`
-- backdrop is `rgba(0, 0, 0, 0.85)`
-- image and figure animate in with short scale/opacity motion
-- `html.image-lightbox-open` disables background scroll
-
-## Table of Contents
-
-The TOC is a reading-progress tool, not global navigation.
-
-Source rules:
-
-- eligible headings are only `h2`, `h3`, and `h4`
-- no eligible headings means no TOC
-
-Two variants exist:
-
-- mobile TOC inside the article flow, hidden at `xl`
-- desktop TOC rail outside the article column at `xl`
-
-Current behavior:
-
-- hidden until reading progress reaches at least `1%`
-- active item follows viewport position
-- progress bar width tracks article progress
-- depth is expressed through line length
-- active state increases weight, contrast, and line width
-
-Do not move the desktop TOC inside the main article column.
-
-## Previous and Next
-
-Adjacent-post navigation appears only when there is a previous or next post.
-
-Rules:
-
-- separate it from the article with a thin `hr`
-- stack on mobile, split at `sm`
-- keep labels minimal
-- use small directional arrow motion only
-
-## Anti-Patterns
-
-- no article hero cards
-- no wide prose columns
-- no decorative wrappers around normal reading content
-- no image dump before the article establishes structure
-- no separate link system just for articles
-
-- Do not use a wide article layout for normal posts.
-- Do not wrap the article body in a card.
-- Do not add decorative hero sections to articles.
-- Do not use hover-only interactions for essential article controls.
-- Do not remove `lang`, `data-language-scan`, `data-pagefind-body`, or heading
-  IDs from reading surfaces.
-- Do not hand-edit generated Douban or link data as part of article design work.
+Primary implementation: `src/pages/posts/[...slug].astro`, reading components,
+`src/styles/global.css`, and the article scripts in `src/scripts`.
+
+## Shell and text
+
+Articles use a centered 720px column with 20px mobile gutters. See
+[Foundation](foundation.md) for shared typography, focus, and edge fades. The article title
+is an `h1`; Markdown supplies the following heading levels. Body text uses
+system sans-serif fonts, regular weight, and relaxed line spacing. Reading
+statistics are estimates derived from rendered text, excluding HTML attributes
+and link destinations. Dates and count/time labels use English on all articles;
+both Chinese and English articles use `About … words`. The existing estimate
+counts CJK characters and runs of Latin letters or digits; the label is unified,
+without changing that approximation.
+
+Article pages use the shared 16px top padding on mobile and 20px from `sm`, with no extra
+outer margin on the article header. The title and metadata are separated by
+12px; wrapped metadata rows use an 8px gap. The body follows a visible mobile
+TOC by 24px, or the header by 32px when the TOC is absent or in the desktop rail.
+The first body element has no top margin, so it cannot add another offset.
+
+Prose h2 spacing is 40px before and 16px after on mobile, increasing to 48/16px
+from `sm`. H3 uses 32/12px and 36/12px respectively. Body copy is 17px / 1.9
+on mobile and 18px / 1.95 from `sm`, with 20px / 24px paragraph gaps.
+H2 is 22px / 24px; H3 is 19px / 20px; both have a 1.5 line height and weight 600.
+Images have 32px vertical margins and captions follow by 12px. Captions are
+14px / 1.7, regular weight and muted. Compact list items use
+2px vertical margins; About's first descriptive list separates successive outer
+items by 8px, without expanding its short link list or nested lists.
+
+## Links, quotes, and code
+
+Prose links inherit the surrounding text color, use weight 500 and a persistent
+1px underline. Hover/focus uses the neutral-hover text color without changing
+weight or layout. Ordinary links use normal browser
+navigation, including same-origin absolute URLs. Explicit new-tab links retain
+safe `rel` values and a concise new-tab hint. Link text remains the accessible
+name; scripts do not replace every name with a verbose URL description.
+Markdown external HTTP(S) text links receive a small neutral northeast arrow
+at build time; no site icons are prepended. The arrows are decorative and hidden from assistive
+technology and search indexing. Relative links, same-site links, email links,
+image links, and existing icon cards do not receive duplicate decoration.
+
+Quotes use a neutral left border, normal weight, and no colored panel or shadow.
+Strong text has no badge-like padding. Inline code uses a neutral surface and
+system monospace. Code blocks scroll locally; JavaScript adds a real Copy code
+button and a live success/failure message. A separate pressed-state button toggles
+wrapping; horizontal scrolling remains the default. Without JS the code remains readable.
+
+### Work quotations
+
+`remark-work-quote.ts` recognizes a standalone `[!QUOTE]` paragraph at the start
+of a Markdown blockquote. This works for any quoted work, not only poetry:
+
+```markdown
+> [!QUOTE]
+>
+> 白日依山尽，黄河入海流。\
+> 欲穷千里目，更上一层楼。
+>
+> — 王之涣《登鹳雀楼》
+```
+
+Leave a blank quoted line after the marker. A final paragraph starting with
+an em dash (`—`) followed by a space becomes an optional right-aligned attribution; Markdown links and emphasis
+are supported there. A trailing backslash makes an intentional line break;
+ordinary wrapped prose flows naturally. Multiple quoted paragraphs are supported.
+No decorative quotation marks are added. Author-written punctuation is preserved.
+A bare marker without content remains ordinary text.
+
+Use `[!QUOTE center]` instead of `[!QUOTE]` to center only that quotation's text,
+for example a poem. The source remains right-aligned. The default marker stays
+left-aligned; centering is never inferred from content or applied to other quotes.
+
+Rendering produces `figure.literary-quote > blockquote` plus optional
+`figcaption`, so content and attribution survive in RSS and without JavaScript.
+These figures explicitly align left, have no border or background, use 18px /
+20px local Kai/serif text at 2.1 line height, and 32px / 40px vertical margins.
+The quotation is inset 1em. The source follows
+by 16px. Unmarked practical notes keep their normal bordered style.
+
+Headings h2–h4 receive stable IDs during Markdown rendering so the article TOC can
+jump to sections without client code. Visible heading links and chapter-link copy
+controls are not generated; the TOC is the sole section-navigation affordance.
+About also omits visible heading links. Articles inherit the shared layout's soft
+canvas-colored fades from the viewport edges; the top fade is transparent at the
+document start and the header scrolls away with the page. These fades do not
+change the reading column or TOC rail.
+
+## Tables
+
+`rehype-reading.ts` generates a focusable, named scrolling wrapper and column
+header scopes during Markdown rendering. Author-specified alignment is preserved;
+otherwise cells are left-aligned. Numeric/date-only cells avoid breaking apart.
+Headers use a neutral surface and rows use thin horizontal separators.
+
+## Table of contents
+
+The article renders both variants of `TableOfContents.astro`. Mobile uses native
+`details` before the body; it works without JS. Wide screens use the existing
+side rail, visible from the start. The rail uses a restrained grayscale palette,
+compact rows, and a small gap between the progress track and the first entry;
+its position and progress geometry remain unchanged. Progress and active-section
+state are optional script enhancements. Malformed hashes are ignored safely. Observers/listeners
+are cleaned up before client navigation.
+
+The mobile TOC sits 24px after metadata. Its summary keeps a minimum 44px target
+and a native disclosure marker; only the open state adds bottom padding for the
+entries. The collapsed box is 46px high with the current single-line label.
+
+## Images
+
+For source preparation and publication checks, see the
+[image budget](../content-image-budget.md) and [image strategy](../image-strategy.md).
+
+`remark-image-caption.ts` keeps captions and responsive sources. The first figure
+loads eagerly with high fetch priority; later figures use native lazy loading.
+Only articles that reference `webp.haeward.com` preconnect to that image origin.
+Images fit both the column and a 72vh / 672px height limit without cropping. The
+`sizes` hint accounts for that height limit and the image aspect ratio, avoiding
+oversized downloads for fitted portraits. The default source is a measured
+variant near the reading-column width, instead of an unconditional 1024px request.
+Measured figures reserve that fitted width and aspect ratio before decoding, so
+slow requests cannot collapse their image links or move the following caption.
+
+`src/data/article-images.json` records measured CDN dimensions for requests at
+480, 768, 1024, and 1440px. The CDN may return a smaller or rounded width, so
+`srcset` uses the actual measured widths and deduplicates equal widths. Run
+`pnpm run sync:article-images` after adding supported article images. Use
+`--refresh` to remeasure changed CDN resources. The scan decodes full responses,
+not only headers, and publishes the manifest only after the complete scan succeeds.
+Normal builds never fetch remote image dimensions.
+
+Current article images, including the Xiaoxitian photograph, use the site's
+`webp.haeward.com` image domain. Their measured responsive variants and original
+links stay remote; there are no article photo copies under `public/`.
+Local sources under `public/assets/images/posts/` remain supported by the same
+sync command if needed later. It preserves the source and generates WebP variants
+up to 1440px without upscaling, recording their URLs and dimensions in the manifest.
+A successfully decoded image can still contain visually damaged pixels, so
+source changes also require visual inspection.
+
+A static image link provides keyboard access and a no-JS original-image fallback.
+Image links and Open original opt out of Astro prefetch, so focus or hover cannot
+download the unbounded original before an explicit open.
+With JS, it opens a native modal dialog and immediately reuses an already-loaded
+thumbnail. A detached image loads and decodes a sharper responsive candidate for
+the viewer's fitted size and device pixel ratio, then replaces the preview.
+It does not automatically download the unbounded original. Open original remains
+an explicit action. Images without responsive variants still load their original.
+
+The toolbar, fitted image, caption, and feedback occupy separate rows. Portraits,
+landscapes, and long captions remain inside the viewport. Escape, Close, and the
+backdrop dismiss the dialog and restore focus. Failed or timed-out requests keep
+any available preview and expose Retry and Open original. Closing, reopening, or
+client navigation invalidates pending loads to prevent stale images appearing.
+
+## Replies
+
+`PostReplies.astro` appears after the body, aligned to the reading column’s right edge.
+The label is `Reply:`; icons sit 6px from names, platforms are 20px apart, and
+the label sits 12px from the platform group. Narrow layouts can wrap to the right.
+Email and Mastodon use the existing social icons with visible English names.
+Email uses the configured public address and a URL-encoded `Re: <article title>`
+subject. The optional article frontmatter field `mastodonUrl` accepts an HTTPS
+link to that article's discussion. Without a link, Mastodon is a noninteractive,
+accessible placeholder; it does not link to a profile or a dummy fragment.
+The reply region is excluded from search indexing and print.
+
+## Print
+
+Print CSS hides navigation, dialogs, reading controls, and the footer. It uses
+plain readable text and avoids splitting figures, code blocks, and table rows
+where possible. This is a basic print layout, not a paginated publishing format.
+
+## Verification
+
+`pnpm run smoke` exercises the current site plus a Markdown table/code fixture.
+Checks include no-JS reading, keyboard dialogs, narrow screens, table alignment,
+code-copy success/failure, code wrapping, TOC jumps, absence of visible heading
+anchors, malformed hashes, and image dimensions. Both Chromium
+and WebKit are run in CI. Fixture content never enters the published site.
+
+After editing Markdown plugins, run `pnpm exec astro build --force` and restart
+the development server. If the background server retains old article HTML,
+stop it, back up and remove the generated `.astro/data-store.json`, then restart.
+Verify actual article output as well as renderer fixtures.
