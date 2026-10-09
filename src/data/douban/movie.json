@@ -2,6 +2,178 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-10-10 01:50:15",
+		"id": 4954662571,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ https://www.douban.com/doubanapp/dispatch/movie/2341884 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/2341884/interest/4954662571",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "王绘春"
+				},
+				{
+					"name": "林乃桢"
+				},
+				{
+					"name": "郑强"
+				},
+				{
+					"name": "何冰"
+				},
+				{
+					"name": "修宗迪"
+				},
+				{
+					"name": "张山"
+				},
+				{
+					"name": "周继伟"
+				},
+				{
+					"name": "杨静"
+				},
+				{
+					"name": "丛林"
+				},
+				{
+					"name": "蒋恺"
+				},
+				{
+					"name": "常远"
+				},
+				{
+					"name": "张炬"
+				},
+				{
+					"name": "唐国强"
+				},
+				{
+					"name": "谭宗尧"
+				},
+				{
+					"name": "蒋勤勤"
+				},
+				{
+					"name": "张光北"
+				},
+				{
+					"name": "吴刚"
+				},
+				{
+					"name": "胡军"
+				},
+				{
+					"name": "初星一"
+				},
+				{
+					"name": "奚美娟"
+				},
+				{
+					"name": "蒋竹青"
+				},
+				{
+					"name": "刘栋"
+				},
+				{
+					"name": "鲍大志"
+				},
+				{
+					"name": "龚丽君"
+				},
+				{
+					"name": "杨立新"
+				},
+				{
+					"name": "崔红红"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "1996 / 中国大陆 / 剧情 传记 历史 战争 古装 / 沈好放 / 王绘春 林乃桢",
+			"color_scheme": {
+				"_base_color": [
+					0.10185185185185179,
+					0.07725321888412014,
+					0.9137254901960784
+				],
+				"_avg_color": [
+					0.08333333333333333,
+					0.09569377990430615,
+					0.8196078431372549
+				],
+				"primary_color_light": "a5a098",
+				"primary_color_dark": "7f7b75",
+				"secondary_color": "f9f7f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/2341884.jpg",
+			"directors": [
+				{
+					"name": "沈好放"
+				}
+			],
+			"genres": [
+				"剧情",
+				"传记",
+				"历史"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "tv",
+					"rank": 45,
+					"title": "古装类大陆剧榜",
+					"uri": "douban://douban.com/subject_collection/ECTU453WI?type=rank&category=movie&rank_type=tv_genre"
+				}
+			],
+			"id": "2341884",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2545563994.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2545563994.jpg"
+			},
+			"pubdate": [
+				"1996-03-15(中国大陆)"
+			],
+			"rating": {
+				"count": 20204,
+				"max": 10,
+				"star_count": 4.5,
+				"value": 9.4
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/2341884",
+			"subtype": "tv",
+			"title": "东周列国·春秋篇",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/2341884",
+			"url": "https://movie.douban.com/subject/2341884/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png"
+			],
+			"year": "1996"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-10-10 01:50:15"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-10-06 23:53:54",
 		"id": 4960011793,
 		"is_editable": false,
