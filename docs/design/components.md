@@ -24,7 +24,7 @@ Primary sources:
 - `src/scripts/search-modal.ts`
 - `src/scripts/media-tabs.ts`
 - `src/pages/posts/index.astro`
-- `src/pages/links.astro`
+- `src/pages/blogroll.astro`
 - `src/pages/media.astro`
 
 ## Selection Guide
@@ -164,8 +164,8 @@ Use it for post indexes. Do not grow it into an excerpt card by default.
 
 ## Blogroll
 
-`BlogrollCard.astro` presents a linked icon/name/URL card. The page stays at
-`/links/`; [Blogroll](blogroll.md) owns its geometry, icon processing, OPML parsing,
+`BlogrollCard.astro` presents a linked icon/name/URL card. The page lives at
+`/blogroll/`; [Blogroll](blogroll.md) owns its geometry, icon processing, OPML parsing,
 daily ordering, and download contract. Use that reference when changing this surface.
 
 ## Media Browser and Cards

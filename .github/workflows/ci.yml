@@ -7,11 +7,17 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  checks:
+  quality:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -20,31 +26,57 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: 12.11.2
           run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
+        id: install
         run: pnpm install --frozen-lockfile
 
       - name: Biome check
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm run check
 
       - name: Markdown lint
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm run md:lint
 
       - name: Secret lint
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm run secrets:lint
 
       - name: Data and failure regression checks
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm run test:data
 
-      - name: Install browser engines
-        run: pnpm exec playwright install --with-deps chromium webkit
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Full site and search build
         run: pnpm run build
@@ -52,10 +84,99 @@ jobs:
       - name: Content integrity checks
         run: pnpm run check:content
 
-      - name: Chromium regression checks
-        run: node scripts/verify/smoke.mjs
+      - name: Share the checked build
+        uses: actions/upload-artifact@v7
+        with:
+          name: site-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 1
 
-      - name: WebKit regression checks
-        run: node scripts/verify/smoke.mjs
+  smoke:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    env:
+      SMOKE_BROWSER: ${{ matrix.browser }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download the checked build
+        uses: actions/download-artifact@v8
+        with:
+          name: site-dist
+          path: dist/
+
+      - name: Install browser engine
+        run: pnpm exec playwright install --with-deps "$SMOKE_BROWSER"
+
+      - name: Browser regression checks
+        run: pnpm run smoke:built
+
+      - name: Detect deployment validation changes
+        if: matrix.browser == 'chromium'
+        id: deployment
         env:
-          SMOKE_BROWSER: webkit
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" != pull_request ] || ! git diff --quiet HEAD^ HEAD -- \
+            .github/workflows/ci.yml .github/workflows/deploy.yml .node-version \
+            public/_headers scripts/verify/deploy.mjs package.json pnpm-lock.yaml pnpm-workspace.yaml; then
+            echo "required=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deployment CLI and Pages header checks
+        if: matrix.browser == 'chromium' && steps.deployment.outputs.required == 'true'
+        run: pnpm run check:deploy
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: smoke-failure-${{ matrix.browser }}
+          path: |
+            output/playwright/smoke/${{ matrix.browser }}/
+            output/ci/deploy.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # Keep a stable required-check name and reject failed or skipped dependencies.
+  checks:
+    if: always()
+    needs: [quality, build, smoke]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Require every validation job
+        env:
+          QUALITY_RESULT: ${{ needs.quality.result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+          SMOKE_RESULT: ${{ needs.smoke.result }}
+        run: |
+          test "$QUALITY_RESULT" = success
+          test "$BUILD_RESULT" = success
+          test "$SMOKE_RESULT" = success

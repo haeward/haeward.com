@@ -27,19 +27,28 @@ pnpm run dev
 | `pnpm run secrets:lint` | Secret scan |
 | `pnpm run test:data` | Offline data, URL, and failure regressions |
 | `pnpm run check:content` | Source and built-content integrity; run after `build` |
+| `pnpm run check:deploy` | Pinned Wrangler startup and local Pages cache headers; run after `build` |
 | `pnpm run smoke` | Build and run Chromium browser regressions |
+| `pnpm run smoke:built` | Reuse an existing full build for browser regressions |
 
 Install Chromium with `pnpm run smoke:install` if needed. For WebKit, run
 `pnpm exec playwright install webkit`, then `SMOKE_BROWSER=webkit pnpm run smoke`.
 The validation rules for each change type are in [AGENTS.md](AGENTS.md).
+
+CI runs quality checks and a production build independently, then tests the same
+build in Chromium and WebKit. The final `checks` job requires all validation jobs
+to pass. Relevant deployment/environment changes also run the pinned Wrangler
+and Pages header check. Failed browser runs upload traces and screenshots for
+seven days; local captures live under ignored `output/`. Inspect a trace with
+`pnpm exec playwright show-trace <trace.zip>`.
 
 ## Content and data
 
 - Articles live in `src/content/blog/`; frontmatter is validated by
   `src/content.config.ts`. Standalone About content lives in `src/content/about.md`.
 - Markdown supports image captions, responsive figures, work quotations, and
-  media embeds. See [Reading](docs/design/reading.md) for authoring syntax and
-  [the image budget](docs/content-image-budget.md) before publishing photo-heavy posts.
+  media embeds. See [Reading](docs/design/reading.md) for authoring syntax,
+  image preparation, and publication checks.
 - After adding or replacing supported article images, run
   `pnpm run sync:article-images`. Use `pnpm run sync:article-images --refresh` to
   remeasure existing CDN images. Normal builds do not fetch image dimensions.
@@ -49,14 +58,15 @@ The validation rules for each change type are in [AGENTS.md](AGENTS.md).
 
 ## Blogroll
 
-The page stays at `/links/`. Replace `public/subscriptions.opml` with a curated
+The page lives at `/blogroll/`. Replace `public/subscriptions.opml` with a curated
 blog export, then rebuild. This file supplies both the page and its downloadable
 OPML. Website corrections belong in `htmlUrl`; preserve `xmlUrl` for feed readers.
 Nested groups are flattened and duplicate website URLs are omitted. Known media
-feeds are excluded from the page; the download preserves the original export.
+feeds are excluded from the page; the download preserves the maintained OPML.
 
 Local icons live in `public/assets/images/blogroll/`, named by hostname without
-`www.`. New hosts use remote favicons with an initials fallback. No generated
+`www.`. New hosts use a globe placeholder until a local icon is added; cards do not contact
+remote favicon services. No generated
 Links dataset, connectivity checker, icon sync script, or separate workflow is
 required. Display order is shuffled deterministically by UTC date at build time;
 the daily deployment publishes it after a successful build.
@@ -73,5 +83,6 @@ Credentials are managed outside the repository. Keep the production search build
 and `public/_headers` cache rules with the deployment.
 
 Start with [DESIGN.md](DESIGN.md) for visual work, [AGENTS.md](AGENTS.md) for repository
-rules, or [the documentation index](docs/README.md) for implementation records,
-performance evidence, image maintenance, and OG artwork instructions.
+rules, or [the documentation index](docs/README.md) for current behavior and
+OG artwork instructions. Historical investigations and measurements belong in
+Git history or PR discussions rather than the active documentation.

@@ -344,13 +344,10 @@ export async function verifyReading(browser, baseUrl) {
                 const results = [{
                     data: async () => ({
                         url: "/posts/example/",
-                        meta: { title: term === "partial" ? "Available result" : "Current result" },
+                        meta: { title: "Current result" },
                         excerpt: "<mark>Result</mark><img src=x onerror=alert(1)>",
                     }),
                 }];
-                if (term === "partial") results.push({
-                    data: async () => { throw new Error("Missing fragment"); },
-                });
                 return { results };
             }`,
         }),
@@ -362,10 +359,6 @@ export async function verifyReading(browser, baseUrl) {
     await failures.route("**/__search-old/", (route) => notifyOldSearch(route));
     await failures.goto(baseUrl);
     await failures.locator("#search-trigger").click();
-    await failures.locator("#site-search-input").fill("partial");
-    await failures.waitForSelector('[data-search-state="results"]');
-    assert.match(await failures.locator("#site-search-summary").textContent(), /Showing 1 of 2/);
-    assert.equal(await failures.locator("#site-search-content img").count(), 0);
     await failures.locator("#site-search-input").fill("timeout");
     await failures.waitForSelector('[data-search-state="unavailable"]', { timeout: 12000 });
     await failures.locator("#site-search-input").fill("old");

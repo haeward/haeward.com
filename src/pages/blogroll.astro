@@ -22,12 +22,9 @@ const icons = new Map(
             `/assets/images/blogroll/${file}`,
     ]),
 );
-function iconFor(url: string): string | ImageMetadata {
+function iconFor(url: string): string | ImageMetadata | undefined {
     const host = new URL(url).hostname.replace(/^www\./, "");
-    return (
-        icons.get(host) ||
-        `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=64`
-    );
+    return icons.get(host);
 }
 ---
 
@@ -55,7 +52,9 @@ function iconFor(url: string): string | ImageMetadata {
                 data-blogroll
                 data-blogroll-period={period}
             >
-                {blogs.map((blog) => <BlogrollCard blog={blog} icon={iconFor(blog.url)} />)}
+                {blogs.map((blog, index) => (
+                    <BlogrollCard blog={blog} icon={iconFor(blog.url)} eager={index < 8} />
+                ))}
             </ul>
             {blogs.length === 0 && <p class="page-intro">No blogs to share just yet.</p>}
         </section>
