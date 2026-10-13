@@ -2,12 +2,6 @@ import assert from "node:assert/strict";
 
 export async function verifyResourceLinks(browser, baseUrl) {
     const context = await browser.newContext();
-    await context.route("https://www.google.com/s2/favicons?*", (route) =>
-        route.fulfill({
-            path: "public/assets/images/site/favicon-32.png",
-            contentType: "image/png",
-        }),
-    );
     const page = await context.newPage();
     const resources = [];
     page.on("request", (request) => {
@@ -18,7 +12,7 @@ export async function verifyResourceLinks(browser, baseUrl) {
         for (const [pathname, selector] of [
             ["/", 'main a[href="/rss.xml"]'],
             ["/", 'footer a[href="/rss.xml"]'],
-            ["/links/", 'a[download="subscriptions.opml"]'],
+            ["/blogroll/", 'a[download="subscriptions.opml"]'],
         ]) {
             await page.goto(baseUrl + pathname, { waitUntil: "networkidle" });
             const link = page.locator(selector);

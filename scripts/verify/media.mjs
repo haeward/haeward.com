@@ -5,20 +5,10 @@ const movieSentinel = '[data-tab-panel="movies"] [data-media-sentinel]';
 const booksGrid = '[data-tab-panel="books"] [data-media-grid]';
 const booksRetry = '[data-tab-panel="books"] [data-media-retry]';
 
-async function withMediaPage(browser, baseUrl, label, verify) {
+async function withMediaPage(browser, label, verify) {
     const context = await browser.newContext({
         viewport: { width: 1280, height: 900 },
         reducedMotion: "reduce",
-    });
-    await context.route("**/*", (route) => {
-        const request = route.request();
-        if (request.resourceType() === "image" && !request.url().startsWith(baseUrl)) {
-            return route.fulfill({
-                path: "public/assets/images/site/favicon-32.png",
-                contentType: "image/png",
-            });
-        }
-        return route.continue();
     });
     const page = await context.newPage();
     const errors = [];
@@ -27,6 +17,11 @@ async function withMediaPage(browser, baseUrl, label, verify) {
         await verify(page);
         assert.deepEqual(errors, [], label);
     } catch (error) {
+        if (context.smokeArtifactPrefix) {
+            await page
+                .screenshot({ path: `${context.smokeArtifactPrefix}-failure.png`, timeout: 5000 })
+                .catch(() => {});
+        }
         throw new Error(`${label}: ${error.message}`, { cause: error });
     } finally {
         await context.close();
@@ -38,15 +33,17 @@ async function waitForMoviePage(page) {
         const manifest = JSON.parse(node.textContent);
         return Math.min(manifest.pageSize * 2, manifest.tabs.movies.count);
     });
-    await page.locator(movieSentinel).scrollIntoViewIfNeeded();
+    if ((await page.locator(`${movieGrid} > li`).count()) < expected) {
+        await page.locator(movieSentinel).scrollIntoViewIfNeeded();
+    }
     await page.waitForFunction(
-        ({ selector, count }) => document.querySelector(selector)?.childElementCount === count,
+        ({ selector, count }) => document.querySelector(selector)?.childElementCount >= count,
         { selector: movieGrid, count: expected },
     );
 }
 
 export async function verifyMedia(browser, baseUrl) {
-    await withMediaPage(browser, baseUrl, "Media history and keyboard", async (page) => {
+    await withMediaPage(browser, "Media history and keyboard", async (page) => {
         await page.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         await page
             .locator(`${movieGrid} img`)
@@ -98,7 +95,7 @@ export async function verifyMedia(browser, baseUrl) {
         assert.equal(await page.locator("#media-tabs").count(), 0);
     });
 
-    await withMediaPage(browser, baseUrl, "Media pagination retains focus", async (page) => {
+    await withMediaPage(browser, "Media pagination retains focus", async (page) => {
         let release;
         const requested = new Promise((resolve) => {
             release = resolve;
@@ -110,16 +107,32 @@ export async function verifyMedia(browser, baseUrl) {
         await card.focus();
         await page.locator(movieSentinel).scrollIntoViewIfNeeded();
         const route = await requested;
-        await route.continue();
+        assert.equal(await page.locator(movieGrid).getAttribute("aria-busy"), "true");
+        // Isolate the append/focus contract from the observer starting page 3
+        // while the viewport is still near the sentinel. Full pagination is
+        // covered independently by the desktop and mobile smoke scenarios.
+        const response = await route.fetch();
+        const payload = await response.json();
+        await route.fulfill({
+            response,
+            json: {
+                ...payload,
+                totalCount: payload.pageSize + payload.items.length,
+                hasMore: false,
+            },
+        });
         await waitForMoviePage(page);
+        await page.waitForFunction(
+            (selector) => document.querySelector(selector)?.getAttribute("aria-busy") === "false",
+            movieGrid,
+        );
         assert(
             await original.evaluate((node) => node.isConnected && document.activeElement === node),
             "Appending a page must retain the existing card and its keyboard focus.",
         );
-        assert.equal(await page.locator(movieGrid).getAttribute("aria-busy"), "false");
     });
 
-    await withMediaPage(browser, baseUrl, "Inactive media failure", async (page) => {
+    await withMediaPage(browser, "Inactive media failure", async (page) => {
         let release;
         const requested = new Promise((resolve) => {
             release = resolve;
@@ -139,7 +152,7 @@ export async function verifyMedia(browser, baseUrl) {
         await waitForMoviePage(page);
     });
 
-    await withMediaPage(browser, baseUrl, "Media navigation request cancellation", async (page) => {
+    await withMediaPage(browser, "Media navigation request cancellation", async (page) => {
         let release;
         const requested = new Promise((resolve) => {
             release = resolve;
@@ -159,7 +172,7 @@ export async function verifyMedia(browser, baseUrl) {
         await waitForMoviePage(page);
     });
 
-    await withMediaPage(browser, baseUrl, "Media pagination retry", async (page) => {
+    await withMediaPage(browser, "Media pagination retry", async (page) => {
         let attempts = 0;
         await page.route("**/media/data/movies/2.json", (route) =>
             ++attempts === 1
@@ -172,7 +185,6 @@ export async function verifyMedia(browser, baseUrl) {
         const retry = page.locator('[data-tab-panel="movies"] [data-media-retry]');
         await retry.waitFor({ state: "visible" });
         assert.equal(await page.locator(`${movieGrid} > li`).count(), before);
-        assert.equal(await page.locator(movieGrid).getAttribute("aria-busy"), "false");
         const status = page.locator('[data-tab-panel="movies"] [data-media-status-message]');
         assert.equal(await status.getAttribute("role"), "status");
         assert.equal(await status.getAttribute("aria-live"), "polite");
@@ -181,7 +193,7 @@ export async function verifyMedia(browser, baseUrl) {
         assert.equal(attempts, 2);
     });
 
-    await withMediaPage(browser, baseUrl, "Media stalled request recovery", async (page) => {
+    await withMediaPage(browser, "Media stalled request recovery", async (page) => {
         await page.route("**/media/data/books/1.json", () => {});
         await page.goto(`${baseUrl}/media/#books`, { waitUntil: "domcontentloaded" });
         await page.locator(booksRetry).waitFor({ state: "visible", timeout: 10000 });

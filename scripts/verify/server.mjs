@@ -1,7 +1,6 @@
 import { readFile, stat } from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
-import { gzipSync } from "node:zlib";
 
 const mime = {
     ".html": "text/html; charset=utf-8",
@@ -21,7 +20,7 @@ const mime = {
     ".ttf": "font/ttf",
     ".woff2": "font/woff2",
 };
-export async function startPreview(directory, { compress = false } = {}) {
+export async function startPreview(directory) {
     const root = path.resolve(directory);
     const cache = new Map();
     const server = http.createServer(async (req, res) => {
@@ -37,19 +36,11 @@ export async function startPreview(directory, { compress = false } = {}) {
             if (file !== root && !file.startsWith(root + path.sep)) throw new Error("Invalid path");
             if ((await stat(file)).isDirectory()) file = path.join(file, "index.html");
             const type = mime[path.extname(file).toLowerCase()] || "application/octet-stream";
-            const gzip =
-                compress &&
-                /gzip/.test(req.headers["accept-encoding"] || "") &&
-                /^(text\/|application\/|font\/ttf)/.test(type);
-            const key = file + gzip;
-            if (!cache.has(key)) {
-                const bytes = await readFile(file);
-                cache.set(key, gzip ? gzipSync(bytes) : bytes);
-            }
+            if (!cache.has(file)) cache.set(file, await readFile(file));
+            const bytes = cache.get(file);
             res.setHeader("Content-Type", type);
-            res.setHeader("Content-Length", cache.get(key).length);
-            if (gzip) res.setHeader("Content-Encoding", "gzip");
-            res.end(cache.get(key));
+            res.setHeader("Content-Length", bytes.length);
+            res.end(bytes);
         } catch {
             res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
             res.end("Not Found");

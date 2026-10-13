@@ -15,7 +15,6 @@ references when implementation changes.
 | [Blogroll](docs/design/blogroll.md) | OPML contract, card geometry, icons, daily ordering, and download |
 | [RSS](docs/design/rss.md) | Full-content feed and independent XSL browser preview |
 | [Structured values](docs/design/design.yaml) | Compact reference values; descriptive, not a generated theme |
-| [Implementation and follow-up](docs/design/implementation.md) | Consolidated migration history, verification scope, and remaining work |
 
 ## Principles
 
@@ -63,6 +62,6 @@ Reduced-motion preferences and print reading are supported.
 
 Use the change-specific checks in [AGENTS.md](AGENTS.md). UI work needs browser
 regressions and practical visual review in both themes and narrow layouts.
-[Performance evidence](docs/performance/README.md) records build snapshots and
-lab measurements; those numbers do not establish field Core Web Vitals or
-completion of the manual follow-up in the implementation record.
+Browser regressions use controlled fixtures. Check real devices, deployed cache
+headers, and representative networks when assessing delivery performance;
+historical measurements and a passing smoke suite are not field acceptance.

@@ -6,7 +6,7 @@
 - `src/content/*.md` stores standalone page content such as `about`. `src/content/blog/**` stores posts validated by `src/content.config.ts`.
 - `src/components/` holds reusable UI, `src/layouts/` holds shells, `src/lib/` holds shared data/OG/helpers, and `src/scripts/` holds client-side behavior modules.
 - `public/subscriptions.opml` is the Blogroll source and downloadable export. `src/lib/blogroll.ts` parses it at build time.
-- `public/assets/images/blogroll/` contains local hostname-named icons; cards use remote favicons for new hosts, without connectivity checks or sync automation.
+- `public/assets/images/blogroll/` contains local hostname-named icons; missing or failed icons use a globe placeholder. Cards do not contact remote favicon services, and there is no connectivity checker or icon sync automation.
 - `src/data/douban/*.json` and `public/douban/**` are Douban sync output. `src/data/article-images.json` is the measured article-image manifest produced by `sync:article-images`.
 - `src/data/og-pages.json`, `src/lib/og.ts`, and `public/assets/images/og/**` back page/post OG assets.
 - `public/assets/**` stores static assets. `dist/`, `.astro/`, `node_modules/`, `.pnpm-store/`, and `.wrangler/` are generated or local-only.
@@ -20,7 +20,7 @@
 ## Documentation Maintenance
 
 - `README.md` owns setup and project orientation; `AGENTS.md` owns working constraints and validation; `DESIGN.md` indexes current visual rules. Use `docs/README.md` to find detailed references.
-- Keep current behavior in topic documents. Consolidate implementation history in `docs/design/implementation.md` and measurement summaries in `docs/performance/README.md`, retaining original JSON evidence and its scope.
+- Keep current behavior in topic documents; put setup and operation in `README.md` and validation constraints here. Keep investigations, acceptance records, and historical measurements in Git history or PR discussions rather than adding permanent report documents.
 - Use descriptive filenames without date suffixes for docs and tracked evidence. Put dates, baseline commits, and tool versions inside the records; update all relative links when moving files.
 - Do not present historical checks as new validation, old proposals as current defects, or ignored `output/` captures as shared evidence.
 
@@ -35,10 +35,12 @@
 - Site typecheck/build: `pnpm run build:site`
 - Full production build with Pagefind: `pnpm run build`
 - Built content integrity: `pnpm run check:content` after the full build
+- Deployment CLI and Pages headers: `pnpm run check:deploy` after the full build
 - Blogroll parsing, RSS URL, and content regression: `pnpm run test:data`
 - Preview built site: `pnpm run preview`
 - Install Playwright browser for smoke tests: `pnpm run smoke:install`
 - Smoke test: `pnpm run smoke`
+- Reuse a full build for browser tests: `pnpm run smoke:built`
 - Article image dimensions: `pnpm run sync:article-images` after adding supported article images; the normal build does not fetch dimensions.
 - Networked sync script: `pnpm run sync:douban-covers`
 
@@ -60,9 +62,11 @@
 - Run `pnpm run test:data` for data/URL/sync changes and `pnpm run check:content` after building content or routes. CI checks both.
 - UI, route, search, theme, article, media, links, RSS, OG, or client-script changes: also run `pnpm run smoke`.
 - `pnpm run smoke` builds the site, builds Pagefind, serves `dist/`, and checks route/status/UI behavior with Playwright. Set `SMOKE_BROWSER=webkit` to run the same suite in WebKit; CI runs both engines.
+- CI builds once and shares `dist/` with independent Chromium/WebKit jobs. `checks` aggregates all required jobs. Browser failures retain traces/screenshots for seven days; local `output/` captures remain ignored.
+- Run `pnpm run check:deploy` for deployment/Node/header changes after a full build; it starts the workflow's pinned Wrangler locally and verifies Pages cache headers without deploying. CI also covers dependency/configuration changes that can affect the CLI environment.
 - If Chromium is missing, run `pnpm run smoke:install`, then rerun `pnpm run smoke`. Install WebKit with `pnpm exec playwright install webkit` for a local two-engine run.
 - Blogroll source changes: replace `public/subscriptions.opml`, then run baseline validation, `pnpm run test:data`, and `pnpm run smoke`.
-- Content-only changes: run `pnpm run md:lint`, `pnpm run secrets:lint`, and `pnpm run build:site`. For image-heavy posts, follow `docs/content-image-budget.md`.
+- Content-only changes: run `pnpm run md:lint`, `pnpm run secrets:lint`, and `pnpm run build:site`. For image-heavy posts, follow the image publication checks in `docs/design/reading.md`.
 - Docs-only changes: run `pnpm run md:lint` and `pnpm run secrets:lint`.
 - If a network-backed sync fails, do not churn generated files. Report the failure and keep source edits separate.
 
@@ -97,6 +101,8 @@
 - Use Node from `.node-version` and pnpm from `package.json`; keep the lockfile and applicable workflow versions aligned. Douban workflow changes remain a separate workstream.
 - Deploy pins Wrangler in `.github/workflows/deploy.yml`. For upgrades, verify the CLI, local Pages headers, and build/smoke checks before changing the pin; retain the deployment command and credentials.
 - CI installs with `pnpm install --frozen-lockfile`; do not leave lockfile drift behind.
+- Upgrade Astro, MDX, Vite, and Markdown/RSS renderer APIs as a compatible set. Preserve the configured Markdown plugins and HTML whitespace behavior; do not use overrides to hide incompatible peer requirements.
+- pnpm enforces a strict 24-hour package release age, matched by Renovate's npm gate. Retry a premature upgrade after the gate expires; do not disable lockfile verification merely to make installation pass.
 - The canonical site URL is configured in `astro.config.mjs`; do not duplicate deployment configuration casually.
 - Keep secrets out of source files, `public/`, content frontmatter, generated JSON, and design/docs artifacts.
 - GitHub Actions deploy/sync secrets are managed outside the repo.

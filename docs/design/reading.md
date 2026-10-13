@@ -112,9 +112,6 @@ entries. The collapsed box is 46px high with the current single-line label.
 
 ## Images
 
-For source preparation and publication checks, see the
-[image budget](../content-image-budget.md) and [image strategy](../image-strategy.md).
-
 `remark-image-caption.ts` keeps captions and responsive sources. The first figure
 loads eagerly with high fetch priority; later figures use native lazy loading.
 Only articles that reference `webp.haeward.com` preconnect to that image origin.
@@ -141,6 +138,28 @@ sync command if needed later. It preserves the source and generates WebP variant
 up to 1440px without upscaling, recording their URLs and dimensions in the manifest.
 A successfully decoded image can still contain visually damaged pixels, so
 source changes also require visual inspection.
+
+### Preparation and publication
+
+- Keep originals and a recoverable backup. Current photos use the self-owned image
+  domain; a few new local figures can use `public/assets/images/posts/`.
+- Serve measured variants appropriate for display size and screen density; the
+  current pipeline prepares widths up to 1440px and keeps original links for
+  explicit viewing or download. Review transfer bytes rather than imposing an
+  arbitrary image-count limit on every article.
+- Run `pnpm run sync:article-images` after adding/replacing supported figures;
+  use `--refresh` for changed remote images. Builds do not fetch dimensions.
+- Inspect mobile/desktop sharpness, aspect ratio, captions, reserved layout space,
+  slow scrolling, viewer failures, and retry behavior. Decode success alone
+  does not establish visual quality or timely delivery.
+- Fingerprinted `/_astro/` assets have immutable caching. Fixed-name local
+  variants and remote photos need their actual hosting cache checked; changing
+  them may require a new filename/version. Site `_headers` rules do not configure
+  the separate image domain. Ordinary and forced refreshes have different cache
+  behavior and should be measured separately.
+- The local preparation script reads static images. Do not send animated GIFs
+  through it without explicit animation handling; its default decode preserves
+  only the first frame. Large/bulk media delivery needs a separate storage decision.
 
 A static image link provides keyboard access and a no-JS original-image fallback.
 Image links and Open original opt out of Astro prefetch, so focus or hover cannot

@@ -3,12 +3,6 @@ import assert from "node:assert/strict";
 const article = "/posts/2025/travelogue-of-southern-shanxi/";
 export async function verifyEnhancements(browser, baseUrl) {
     const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
-    await context.route("https://www.google.com/s2/favicons?*", (route) =>
-        route.fulfill({
-            path: "public/assets/images/site/favicon-32.png",
-            contentType: "image/png",
-        }),
-    );
     const page = await context.newPage();
     for (const route of ["/", "/posts/"]) {
         await page.goto(baseUrl + route);
@@ -82,7 +76,7 @@ export async function verifyEnhancements(browser, baseUrl) {
     await page.unroute("**/pagefind/pagefind-entry.json");
     await page.keyboard.press("Escape");
 
-    await page.goto(`${baseUrl}/links/#download-opml`, { waitUntil: "networkidle" });
+    await page.goto(`${baseUrl}/blogroll/#download-opml`, { waitUntil: "networkidle" });
     await page.evaluate(() => window.scrollTo(0, 600));
     await page.waitForFunction(() => scrollY >= 600);
     const scroll = await page.evaluate(() => scrollY);
@@ -92,7 +86,7 @@ export async function verifyEnhancements(browser, baseUrl) {
     await page.waitForURL("**/about/");
     await page.waitForFunction(() => document.activeElement?.id === "main-content");
     await page.goBack();
-    await page.waitForURL("**/links/#download-opml");
+    await page.waitForURL("**/blogroll/#download-opml");
     await page.waitForFunction((y) => Math.abs(scrollY - y) < 12, scroll);
     await page.goForward();
     await page.waitForURL("**/about/");
@@ -105,7 +99,7 @@ export async function verifyEnhancements(browser, baseUrl) {
         { width: 844, height: 390 },
     ]) {
         await page.setViewportSize(viewport);
-        for (const route of ["/", article, "/links/", "/about/", "/posts/"]) {
+        for (const route of ["/", article, "/blogroll/", "/about/", "/posts/"]) {
             await page.goto(baseUrl + route);
             assert(
                 await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1),

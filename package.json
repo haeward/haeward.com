@@ -9,7 +9,8 @@
         "build:site": "astro check && astro build",
         "build:search": "pnpm exec pagefind --site dist",
         "build": "pnpm run build:site && pnpm run build:search",
-        "smoke": "pnpm run build && node scripts/verify/smoke.mjs",
+        "smoke": "pnpm run build && pnpm run smoke:built",
+        "smoke:built": "node scripts/verify/smoke.mjs",
         "smoke:install": "pnpm exec playwright install --with-deps chromium",
         "preview": "pnpm run build && astro preview",
         "preview:network": "pnpm run build && astro preview --host",
@@ -24,6 +25,7 @@
         "sync:article-images": "node scripts/content/image-metadata.mjs",
         "sync:douban-covers": "node scripts/douban/sync-covers.mjs",
         "check:content": "node scripts/verify/content.mjs",
+        "check:deploy": "node scripts/verify/deploy.mjs",
         "test:data": "node scripts/verify/data.mjs"
     },
     "dependencies": {

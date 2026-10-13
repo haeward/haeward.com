@@ -1,9 +1,9 @@
-import { access, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { chromium, webkit } from "playwright";
 import { parseBlogroll } from "../../src/lib/blogroll.ts";
 import { orderBlogroll } from "../../src/lib/blogroll-order.ts";
 import { verifyArticleImages } from "./article-images.mjs";
+import { createSmokeSession, ensureSmokeBuild, smokeBrowserName } from "./browser.mjs";
 import { verifyEnhancements } from "./enhancements.mjs";
 import { verifyMedia } from "./media.mjs";
 import { verifyReading } from "./reading.mjs";
@@ -16,10 +16,6 @@ const DIST_DIR = path.resolve("dist");
 const ARTICLE_SLUG = "/posts/2025/travelogue-of-southern-shanxi/";
 function fail(message) {
     throw new Error(message);
-}
-
-async function ensureBuiltSite() {
-    await access(DIST_DIR);
 }
 
 function bindPageDiagnostics(page, label) {
@@ -186,12 +182,15 @@ function countMediaRequests(requestLog, pathname) {
 }
 
 async function run() {
-    await ensureBuiltSite();
+    smokeBrowserName();
+    await ensureSmokeBuild(DIST_DIR);
     const { server, baseUrl } = await startPreview(DIST_DIR);
-    const engine = process.env.SMOKE_BROWSER === "webkit" ? webkit : chromium;
-    const browser = await engine.launch({ headless: true });
+    let session;
+    let failed = false;
 
     try {
+        session = await createSmokeSession(baseUrl);
+        const { browser } = session;
         await assertStatus(baseUrl, "/", 200);
         await assertStatus(baseUrl, "/about/", 200);
         await assertStatus(baseUrl, "/posts/", 200);
@@ -201,7 +200,8 @@ async function run() {
         await assertStatus(baseUrl, "/moments/", 404);
         await assertStatus(baseUrl, "/toolbox/", 404);
         await assertStatus(baseUrl, ARTICLE_SLUG, 200);
-        await assertStatus(baseUrl, "/links/", 200);
+        await assertStatus(baseUrl, "/blogroll/", 200);
+        await assertStatus(baseUrl, "/links/", 404);
         await assertStatus(baseUrl, "/media/", 200);
         await assertStatus(baseUrl, "/media/data/movies/1.json", 200);
         await assertStatus(baseUrl, "/media/data/movies/2.json", 200);
@@ -219,13 +219,6 @@ async function run() {
             viewport: { width: 1440, height: 960 },
             colorScheme: "light",
         });
-        // Keep favicon rendering deterministic; browser smoke never probes external blogs.
-        await page.route("https://www.google.com/s2/favicons?*", (route) =>
-            route.fulfill({
-                path: "public/assets/images/site/favicon-32.png",
-                contentType: "image/png",
-            }),
-        );
         const assertNoErrors = bindPageDiagnostics(page, "desktop");
         const desktopMediaRequests = [];
         page.on("request", (request) => {
@@ -271,7 +264,15 @@ async function run() {
             );
         }
 
-        await assertOk(page, `${baseUrl}/links/`, "Blogroll");
+        await assertOk(page, `${baseUrl}/blogroll/`, "Blogroll");
+        if (
+            (await page.locator('header nav a[href="/blogroll/"]').getAttribute("aria-current")) !==
+                "page" ||
+            (await page.locator('link[rel="canonical"]').getAttribute("href")) !==
+                "https://haeward.com/blogroll/"
+        ) {
+            fail("Blogroll navigation and canonical URL must use the new route.");
+        }
         const opml = await readFile("public/subscriptions.opml", "utf8");
         const period = await page.locator("[data-blogroll]").getAttribute("data-blogroll-period");
         if (!/^\d{4}-\d{2}-\d{2}$/.test(period || "")) {
@@ -292,8 +293,19 @@ async function run() {
         if (await page.locator("[data-links-section], [data-link-status]").count()) {
             fail("Blogroll must not render legacy categories or connectivity indicators.");
         }
-        if ((await page.locator("[data-blogroll] img").count()) !== expectedBlogs.length) {
-            fail("Every Blogroll card needs an icon with a text fallback.");
+        if (
+            (await page.locator("[data-blogroll] .blogroll-icon").count()) !== expectedBlogs.length
+        ) {
+            fail("Every Blogroll card needs a local icon or website fallback.");
+        }
+        if ((await page.locator("[data-blogroll-fallback]").count()) !== expectedBlogs.length) {
+            fail("Every Blogroll icon needs the recognizable website fallback.");
+        }
+        const iconUrls = await page
+            .locator("[data-blogroll] img")
+            .evaluateAll((icons) => icons.map((icon) => icon.src));
+        if (iconUrls.some((url) => new URL(url).origin !== new URL(baseUrl).origin)) {
+            fail("Blogroll icons must not depend on external favicon services.");
         }
         const firstBlogLink = page.locator("[data-blogroll] a").first();
         if (
@@ -315,14 +327,8 @@ async function run() {
         }
         const noJs = await browser.newContext({ javaScriptEnabled: false });
         try {
-            await noJs.route("https://www.google.com/s2/favicons?*", (route) =>
-                route.fulfill({
-                    path: "public/assets/images/site/favicon-32.png",
-                    contentType: "image/png",
-                }),
-            );
             const plain = await noJs.newPage();
-            await plain.goto(`${baseUrl}/links/`);
+            await plain.goto(`${baseUrl}/blogroll/`);
             if ((await plain.locator("[data-blogroll] li").count()) !== expectedBlogs.length) {
                 fail("Blogroll must render without JavaScript.");
             }
@@ -441,18 +447,32 @@ async function run() {
         assertNoMobileErrors();
         await mobilePage.close();
         await page.close();
-        await verifyArticleImages(browser, baseUrl);
-        await verifyReading(browser, baseUrl);
-        await verifyEnhancements(browser, baseUrl);
-        await verifyMedia(browser, baseUrl);
-        await verifySearchPagination(browser, baseUrl);
-        await verifyResourceLinks(browser, baseUrl);
-        await verifyRss(browser, baseUrl);
+        for (const verify of [
+            verifyArticleImages,
+            verifyReading,
+            verifyEnhancements,
+            verifyMedia,
+            verifySearchPagination,
+            verifyResourceLinks,
+            verifyRss,
+        ]) {
+            console.log(`[${smokeBrowserName()}] ${verify.name}`);
+            await verify(browser, baseUrl);
+        }
+    } catch (error) {
+        failed = true;
+        await session?.captureFailure(error).catch((captureError) => {
+            console.error(`Could not capture smoke failure: ${captureError.message}`);
+        });
+        throw error;
     } finally {
-        await browser.close();
-        await new Promise((resolve, reject) =>
-            server.close((error) => (error ? reject(error) : resolve())),
-        );
+        try {
+            await session?.close({ failed });
+        } finally {
+            await new Promise((resolve, reject) =>
+                server.close((error) => (error ? reject(error) : resolve())),
+            );
+        }
     }
 }
 

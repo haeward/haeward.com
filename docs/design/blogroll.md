@@ -1,6 +1,6 @@
 # Blogroll
 
-The Links page is now Blogroll, retaining `/links/` for existing bookmarks.
+Blogroll lives at `/blogroll/`. The former `/links/` route is removed without a redirect.
 The source is `public/subscriptions.opml`, maintained from a NetNewsWire
 export with corrected website addresses. Replacing it updates both the built list and the downloadable
 file. There is no separate generated dataset or network enrichment workflow.
@@ -20,12 +20,14 @@ Displayed URLs omit the scheme and leading `www.`; link destinations remain inta
 The introduction combines the blog description and the inline, bold OPML download
 link. No separate download section appears below the cards. The download opts out
 of automatic hover/focus prefetch; activating it still downloads the maintained
-file directly. Matching former blog icons live in `public/assets/images/blogroll/`,
+file directly. Icons live in `public/assets/images/blogroll/`,
 named by hostname. Astro produces fingerprinted 32px, 64px, and 96px WebP variants
 for local raster icons without upscaling; the browser selects one for the 32px
-display and screen density. SVG and ICO files keep their original paths. Remaining sites
-use Google's favicon endpoint at display time, with lazy loading, no referrer,
-and a first-letter fallback on image failure. Cards open in a new tab with
+display and screen density. SVG and ICO files keep their original paths. The first
+eight cards load available icons eagerly; later cards use lazy loading. Missing
+or failed icons show a neutral globe symbol that inherits the theme's muted color.
+Add a hostname-named local file to supply a new
+site's icon; no external favicon service runs during page display. Cards open in a new tab with
 `noopener noreferrer`. Replacing the OPML still needs no
 JSON manifest, connectivity probe, icon sync script, or CI workflow.
 
@@ -43,7 +45,7 @@ XML fail the build with actionable errors. Reject unsafe URL schemes and DTDs.
 
 The maintained export should contain blogs. Explicit media groups/types and known
 media platform hosts are excluded; generic RSS metadata cannot classify arbitrary
-podcasts or video feeds. Downloads preserve the unmodified source export.
+podcasts or video feeds. Downloads preserve the maintained OPML exactly.
 
 ## Daily display order
 
@@ -62,9 +64,7 @@ build and its tests straddle a UTC date boundary.
 
 ## Validation
 
-The former categorized Links page, generated JSON, unused media-link assets,
-sync scripts, and Links Assets Sync workflow are retired. BlogrollCard only
-presents OPML entries and icons; see [implementation history](implementation.md).
+BlogrollCard presents OPML entries and local icons, with a globe when no icon is available.
 
 Verify XML variants, missing website fallback, duplicates, malformed inputs,
 media exclusion, and changed exports. Run lint, Markdown and secret checks, data
