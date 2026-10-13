@@ -6,7 +6,7 @@ import { SITE, SOCIALS } from "@consts";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getPageOg } from "@lib/og";
 import { getPublishedPosts } from "@lib/posts";
-import homeIllustration from "../../public/assets/images/site/home-hover-runtime.webp";
+import homeIllustration from "../../public/assets/images/site/home-hover.webp";
 
 const blog = (await getPublishedPosts()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 const pageOg = getPageOg("home");
