@@ -57,5 +57,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=blog --commit-dirty=true
-          wranglerVersion: '4.149.0'
+          wranglerVersion: '4.150.0'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
