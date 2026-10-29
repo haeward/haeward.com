@@ -34,23 +34,34 @@ const changelogYears = Object.keys(changelogByYear).sort((a, b) => Number(b) - N
 
             <div class="page-sections">
                 {changelogYears.map((year) => (
-          <section class="animate changelog-year" aria-labelledby={`changelog-year-${year}`}>
-            <div class="changelog-year__header">
-              <h2 id={`changelog-year-${year}`} class="serif-reading-title changelog-year__title">
-                {year}
-              </h2>
-            </div>
+                    <section
+                        class="animate changelog-year"
+                        aria-labelledby={`changelog-year-${year}`}
+                    >
+                        <div class="changelog-year__header">
+                            <h2
+                                id={`changelog-year-${year}`}
+                                class="serif-reading-title changelog-year__title"
+                            >
+                                {year}
+                            </h2>
+                        </div>
 
-            <ol class="changelog-list" aria-label={`Updates from ${year}`}>
-              {changelogByYear[year].map((entry) => (
-                <li class="changelog-entry">
-                  <FormattedDate class="changelog-entry__date" date={new Date(`${entry.date}T00:00:00Z`)} />
-                  <p class="serif-reading-surface changelog-entry__title">{entry.content}</p>
-                </li>
-              ))}
-            </ol>
-          </section>
-        ))}
+                        <ol class="changelog-list" aria-label={`Updates from ${year}`}>
+                            {changelogByYear[year].map((entry) => (
+                                <li class="changelog-entry">
+                                    <FormattedDate
+                                        class="changelog-entry__date"
+                                        date={new Date(`${entry.date}T00:00:00Z`)}
+                                    />
+                                    <p class="serif-reading-surface changelog-entry__title">
+                                        {entry.content}
+                                    </p>
+                                </li>
+                            ))}
+                        </ol>
+                    </section>
+                ))}
             </div>
         </section>
     </Container>

@@ -25,9 +25,7 @@ const isDefault = tab.key === defaultTab;
         data-media-grid
         aria-busy="false"
     >
-        {initialItems.map((item) => (
-            <MediaCard item={item} />
-        ))}
+        {initialItems.map((item) => <MediaCard item={item} />)}
     </ul>
 
     <div class="flex justify-center pt-8 text-center" data-media-status-wrapper hidden>
