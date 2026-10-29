@@ -20,7 +20,8 @@ const years = Object.keys(posts).sort((a, b) => Number.parseInt(b, 10) - Number.
                             {year}
                         </h2>
                         <p class="text-right text-sm tabular-nums text-[var(--site-color-text-muted)] sm:text-[0.9375rem]">
-                            {posts[year].length.toLocaleString("en-US")} {posts[year].length === 1 ? "post" : "posts"}
+                            {posts[year].length.toLocaleString("en-US")}{" "}
+                            {posts[year].length === 1 ? "post" : "posts"}
                         </p>
                     </div>
                     <ul class="flex flex-col gap-1 ps-2 sm:ps-4">

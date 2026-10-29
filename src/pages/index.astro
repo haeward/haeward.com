@@ -38,26 +38,26 @@ const pageOg = getPageOg("home");
                     </div>
                 </div>
                 <div class="flex justify-center animate gap-0 min-[360px]:gap-1 mb-4">
-                    {SOCIALS.filter(social => social.ENABLE !== false).map((social) => (
-            <a
-              href={social.HREF}
-              data-astro-prefetch={social.NAME === "RSS" ? "false" : undefined}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex size-11 shrink-0 items-center justify-center hover:text-(--site-color-text-neutral-hover) transition-colors duration-300"
-              aria-label={`${social.NAME} (opens in a new tab)`}
-              data-new-window
-            >
-              <Image
-                src={social.ICON}
-                alt={social.NAME}
-                class="home-social-icon w-6 h-6"
-                width={28}
-                height={28}
-                loading="eager"
-              />
-            </a>
-          ))}
+                    {SOCIALS.filter((social) => social.ENABLE !== false).map((social) => (
+                        <a
+                            href={social.HREF}
+                            data-astro-prefetch={social.NAME === "RSS" ? "false" : undefined}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex size-11 shrink-0 items-center justify-center hover:text-(--site-color-text-neutral-hover) transition-colors duration-300"
+                            aria-label={`${social.NAME} (opens in a new tab)`}
+                            data-new-window
+                        >
+                            <Image
+                                src={social.ICON}
+                                alt={social.NAME}
+                                class="home-social-icon w-6 h-6"
+                                width={28}
+                                height={28}
+                                loading="eager"
+                            />
+                        </a>
+                    ))}
                 </div>
             </section>
 
@@ -67,11 +67,11 @@ const pageOg = getPageOg("home");
                     <a href="/posts/" class="site-link underline text-sm">All posts</a>
                 </div>
                 <ul class="flex flex-col gap-1 ps-2 sm:ps-4">
-                    {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} variant="home" />
-            </li>
-          ))}
+                    {blog.map((post) => (
+                        <li>
+                            <ArrowCard entry={post} variant="home" />
+                        </li>
+                    ))}
                 </ul>
             </section>
         </div>

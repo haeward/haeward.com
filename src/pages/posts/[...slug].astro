@@ -51,7 +51,13 @@ const postOg = getPostOg(post);
             <div class="blog-post-main">
                 <PostHeader post={post} body={postBody} />
 
-                {hasToc && <TableOfContents lang={post.data.lang} headings={tocHeadings} variant="mobile" />}
+                {hasToc && (
+                    <TableOfContents
+                        lang={post.data.lang}
+                        headings={tocHeadings}
+                        variant="mobile"
+                    />
+                )}
 
                 <article
                     class="animate blog-article serif-reading-surface site-prose-links"
