@@ -2,6 +2,112 @@
 	{
 		"charts": [],
 		"comment": "",
+		"create_time": "2026-11-03 01:32:39",
+		"id": 4980634951,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ https://www.douban.com/doubanapp/dispatch/movie/5919538 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/5919538/interest/4980634951",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "苏志燮"
+				},
+				{
+					"name": "韩孝周"
+				},
+				{
+					"name": "赵成夏"
+				},
+				{
+					"name": "姜信一"
+				},
+				{
+					"name": "朴哲民"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2011 / 韩国 / 剧情 爱情 / 宋一坤 / 苏志燮 韩孝周",
+			"color_scheme": {
+				"_base_color": [
+					0.6818181818181818,
+					0.15492957746478878,
+					0.2784313725490196
+				],
+				"_avg_color": [
+					0.8333333333333334,
+					0.03508771929824561,
+					0.4470588235294118
+				],
+				"primary_color_light": "626072",
+				"primary_color_dark": "41404c",
+				"secondary_color": "f5f4f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/5919538.jpg",
+			"directors": [
+				{
+					"name": "宋一坤"
+				}
+			],
+			"genres": [
+				"剧情",
+				"爱情"
+			],
+			"has_linewatch": false,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 18,
+					"title": "韩国爱情片榜",
+					"uri": "douban://douban.com/subject_collection/ECHIOXXIQ?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "5919538",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2313669107.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2313669107.jpg"
+			},
+			"pubdate": [
+				"2011-10-20(韩国)"
+			],
+			"rating": {
+				"count": 70621,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.9
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/5919538",
+			"subtype": "movie",
+			"title": "只有你",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/5919538",
+			"url": "https://movie.douban.com/subject/5919538/",
+			"vendor_desc": "",
+			"vendor_icons": [],
+			"year": "2011"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-03 01:32:39"
+	},
+	{
+		"charts": [],
+		"comment": "",
 		"create_time": "2026-10-10 01:50:15",
 		"id": 4954662571,
 		"is_editable": false,
