@@ -1,6 +1,158 @@
 [
 	{
 		"charts": [],
+		"comment": "演技好评，剧情紧凑但略显普通",
+		"create_time": "2026-11-07 01:05:24",
+		"id": 4975799662,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ 演技好评，剧情紧凑但略显普通 https://www.douban.com/doubanapp/dispatch/movie/1947114 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1947114/interest/4975799662",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "任达华"
+				},
+				{
+					"name": "梁家辉"
+				},
+				{
+					"name": "徐子珊"
+				},
+				{
+					"name": "林雪"
+				},
+				{
+					"name": "邵美琪"
+				},
+				{
+					"name": "张兆辉"
+				},
+				{
+					"name": "吴廷烨"
+				},
+				{
+					"name": "黎耀祥"
+				},
+				{
+					"name": "彭敬慈"
+				},
+				{
+					"name": "谢雪心"
+				},
+				{
+					"name": "刘国诚"
+				},
+				{
+					"name": "黄素欢"
+				},
+				{
+					"name": "区轩玮"
+				},
+				{
+					"name": "罗子溢"
+				},
+				{
+					"name": "刘宗基"
+				},
+				{
+					"name": "黄华和"
+				},
+				{
+					"name": "赵志诚"
+				},
+				{
+					"name": "洪伟良"
+				},
+				{
+					"name": "陈工"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2007 / 中国香港 / 惊悚 犯罪 / 游乃海 / 任达华 梁家辉",
+			"color_scheme": {
+				"_base_color": [
+					0.9895833333333334,
+					0.16243654822335024,
+					0.7725490196078432
+				],
+				"_avg_color": [
+					0.6666666666666666,
+					0.030303030303030408,
+					0.25882352941176473
+				],
+				"primary_color_light": "726061",
+				"primary_color_dark": "4c4040",
+				"secondary_color": "f9f4f5",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1947114.jpg",
+			"directors": [
+				{
+					"name": "游乃海"
+				}
+			],
+			"genres": [
+				"惊悚",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 6,
+					"title": "第27届香港电影金像奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECKI6VFHY?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "1947114",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p1929460809.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1929460809.jpg"
+			},
+			"pubdate": [
+				"2007-06-21(中国香港)"
+			],
+			"rating": {
+				"count": 72296,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.5
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1947114",
+			"subtype": "movie",
+			"title": "跟踪",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1947114",
+			"url": "https://movie.douban.com/subject/1947114/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2007"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-07 01:05:24"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-11-03 01:32:39",
 		"id": 4980634951,
