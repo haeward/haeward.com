@@ -1,6 +1,128 @@
 [
 	{
 		"charts": [],
+		"comment": "对比原版，追踪不够自然，但适应时代变化，技术明显进步了不少。另外，演员颜值不错。",
+		"create_time": "2026-11-07 17:36:11",
+		"id": 4975800857,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 对比原版，追踪不够自然，但适应时代变化，技术明显进步了不少。另外，演员颜值不错。 https://www.douban.com/doubanapp/dispatch/movie/20388224 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/20388224/interest/4975800857",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "薛景求"
+				},
+				{
+					"name": "郑雨盛"
+				},
+				{
+					"name": "韩孝周"
+				},
+				{
+					"name": "李俊昊"
+				},
+				{
+					"name": "金秉玉"
+				},
+				{
+					"name": "任达华"
+				},
+				{
+					"name": "陈庆"
+				},
+				{
+					"name": "卞约汉"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2013 / 韩国 / 动作 犯罪 / 曹义锡‍ 金丙书 / 薛景求 郑雨盛",
+			"color_scheme": {
+				"_base_color": [
+					0.5833333333333334,
+					0.16,
+					0.09803921568627451
+				],
+				"_avg_color": [
+					0.5555555555555561,
+					0.042857142857142906,
+					0.27450980392156865
+				],
+				"primary_color_light": "606972",
+				"primary_color_dark": "40464c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/20388224.jpg",
+			"directors": [
+				{
+					"name": "曹义锡‍"
+				},
+				{
+					"name": "金丙书"
+				}
+			],
+			"genres": [
+				"动作",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 14,
+					"title": "韩国动作片榜",
+					"uri": "douban://douban.com/subject_collection/ECWQOU2HI?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "20388224",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2199597040.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2199597040.jpg"
+			},
+			"pubdate": [
+				"2014-09-16(中国大陆)"
+			],
+			"rating": {
+				"count": 114483,
+				"max": 10,
+				"star_count": 4,
+				"value": 7.7
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/20388224",
+			"subtype": "movie",
+			"title": "绝密跟踪",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/20388224",
+			"url": "https://movie.douban.com/subject/20388224/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img2.doubanio.com/f/frodo/8e1b7f8b48804cf759fc411e75d62c5ffd4f8f42/pics/vendors/migu_video.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2013"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-07 17:36:11"
+	},
+	{
+		"charts": [],
 		"comment": "演技好评，剧情紧凑但略显普通",
 		"create_time": "2026-11-07 01:05:24",
 		"id": 4975799662,
