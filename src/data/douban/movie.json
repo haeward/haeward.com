@@ -1,6 +1,150 @@
 [
 	{
 		"charts": [],
+		"comment": "为什么现在都是赛博化、哪吒化的奇幻动画电影，没有其他好的表达方式了吗？过于现代化和偶尔的方言台词太出戏了，好歹要符合作品类型吧，已经有点审美疲劳了。剧情漏洞不少，再加上莫名其妙的配乐和滂沱大雨（只能用雨来表现角色心理吗？）。还有，感觉战力体系有点崩塌，凡人打神仙，还是打杨戬，真是这种场面吗，实在觉得不好展现，换个反派 BOSS 不好吗？不是很理解。",
+		"create_time": "2026-11-09 00:40:02",
+		"id": 4985092134,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 3,
+			"value": 3
+		},
+		"sharing_text": "我的评分：★★★ 为什么现在都是赛博化、哪吒化的奇幻动画电影，没有其他好的表达方式了吗？过于现代化和偶尔的方言台词太出戏了，好歹要符合作品类型吧，已经有点审美疲劳了。剧情漏洞不少，再加上莫名其妙的配乐和滂沱大雨（只能用雨来… https://www.douban.com/doubanapp/dispatch/movie/36882191 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/36882191/interest/4985092134",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "陈浩"
+				},
+				{
+					"name": "李绍哲"
+				},
+				{
+					"name": "立冬"
+				},
+				{
+					"name": "果子哥哥"
+				},
+				{
+					"name": "董天弋"
+				},
+				{
+					"name": "喻鹏力"
+				},
+				{
+					"name": "黄豫硕"
+				},
+				{
+					"name": "张运气"
+				},
+				{
+					"name": "邓先森"
+				},
+				{
+					"name": "曹知善"
+				},
+				{
+					"name": "囧森瑟夫"
+				},
+				{
+					"name": "零柒"
+				},
+				{
+					"name": "韩雨泽"
+				},
+				{
+					"name": "张天宇"
+				},
+				{
+					"name": "张稷"
+				},
+				{
+					"name": "良生"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 喜剧 动画 奇幻 冒险 / 牟正洋 / 陈浩 李绍哲",
+			"color_scheme": {
+				"_base_color": [
+					0.03479853479853481,
+					0.674074074074074,
+					0.5294117647058824
+				],
+				"_avg_color": [
+					0.04819277108433736,
+					0.6014492753623188,
+					0.5411764705882353
+				],
+				"primary_color_light": "a54d36",
+				"primary_color_dark": "7f3b29",
+				"secondary_color": "f9f5f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/36882191.jpg",
+			"directors": [
+				{
+					"name": "牟正洋"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动画",
+				"奇幻"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 11,
+					"title": "华语动画片榜",
+					"uri": "douban://douban.com/subject_collection/ECFMOYMKA?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "36882191",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2934074566.jpg",
+				"normal": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2934074566.jpg"
+			},
+			"pubdate": [
+				"2026-07-18(中国大陆)"
+			],
+			"rating": {
+				"count": 469864,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.2
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/36882191",
+			"subtype": "movie",
+			"title": "八仙！",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/36882191",
+			"url": "https://movie.douban.com/subject/36882191/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-09 00:40:02"
+	},
+	{
+		"charts": [],
 		"comment": "对比原版，追踪不够自然，但适应时代变化，技术明显进步了不少。另外，演员颜值不错。",
 		"create_time": "2026-11-07 17:36:11",
 		"id": 4975800857,
