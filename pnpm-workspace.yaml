@@ -2,8 +2,11 @@ minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
 
 overrides:
+    "@tailwindcss/typography>postcss-selector-parser": 6.1.5
     fast-xml-parser: 5.12.0
     lodash: 4.18.1
+    "markdownlint>re2js": 2.8.7
+    "micromark-extension-math>katex": 0.18.2
 
 allowBuilds:
     esbuild: true
