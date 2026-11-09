@@ -6,7 +6,7 @@ overrides:
     fast-xml-parser: 5.12.0
     lodash: 4.18.1
     "markdownlint>re2js": 2.9.1
-    "micromark-extension-math>katex": 0.18.2
+    "micromark-extension-math>katex": 0.19.1
 
 allowBuilds:
     esbuild: true
