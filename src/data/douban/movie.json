@@ -1,6 +1,171 @@
 [
 	{
 		"charts": [],
+		"comment": "",
+		"create_time": "2026-11-10 13:19:24",
+		"id": 4986020736,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 4,
+			"value": 4
+		},
+		"sharing_text": "我的评分：★★★★ https://www.douban.com/doubanapp/dispatch/movie/1783457 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/1783457/interest/4986020736",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "杰克·布莱克"
+				},
+				{
+					"name": "达斯汀·霍夫曼"
+				},
+				{
+					"name": "安吉丽娜·朱莉"
+				},
+				{
+					"name": "伊恩·麦柯肖恩"
+				},
+				{
+					"name": "成龙"
+				},
+				{
+					"name": "塞斯·罗根"
+				},
+				{
+					"name": "刘玉玲"
+				},
+				{
+					"name": "大卫·克罗斯"
+				},
+				{
+					"name": "兰德尔·杜克·金"
+				},
+				{
+					"name": "吴汉章"
+				},
+				{
+					"name": "丹·福勒"
+				},
+				{
+					"name": "迈克·克拉克·邓肯"
+				},
+				{
+					"name": "韦恩·奈特"
+				},
+				{
+					"name": "凯尔·加斯"
+				},
+				{
+					"name": "JR·里德"
+				},
+				{
+					"name": "劳拉·奈特林格"
+				},
+				{
+					"name": "坦雅·海登"
+				},
+				{
+					"name": "斯蒂芬·凯林"
+				},
+				{
+					"name": "马克·奥斯本"
+				},
+				{
+					"name": "约翰·斯蒂文森"
+				},
+				{
+					"name": "肯特·奥斯博内"
+				},
+				{
+					"name": "瑞利·奥斯本"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2008 / 美国 / 喜剧 动作 动画 冒险 / 马克·奥斯本 约翰·斯蒂文森 / 杰克·布莱克 达斯汀·霍夫曼",
+			"color_scheme": {
+				"_base_color": [
+					0.041025641025641026,
+					0.7027027027027026,
+					0.7254901960784313
+				],
+				"_avg_color": [
+					0.052325581395348854,
+					0.6231884057971014,
+					0.5411764705882353
+				],
+				"primary_color_light": "a54d31",
+				"primary_color_dark": "7f3b25",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/1783457.jpg",
+			"directors": [
+				{
+					"name": "马克·奥斯本"
+				},
+				{
+					"name": "约翰·斯蒂文森"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 19,
+					"title": "美国动画片榜",
+					"uri": "douban://douban.com/subject_collection/EC4IPDWYI?type=rank&category=movie&rank_type=film_genre"
+				}
+			],
+			"id": "1783457",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p1597238857.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1597238857.jpg"
+			},
+			"pubdate": [
+				"2008-06-20(中国大陆)"
+			],
+			"rating": {
+				"count": 653925,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.3
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/1783457",
+			"subtype": "movie",
+			"title": "功夫熊猫",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/1783457",
+			"url": "https://movie.douban.com/subject/1783457/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png",
+				"https://img9.doubanio.com/f/frodo/6c7b857e6b2255201e73bf83732d95d572f3f9f7/pics/vendors/iqiyi.png"
+			],
+			"year": "2008"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-10 13:19:24"
+	},
+	{
+		"charts": [],
 		"comment": "为什么现在都是赛博化、哪吒化的奇幻动画电影，没有其他好的表达方式了吗？过于现代化和偶尔的方言台词太出戏了，好歹要符合作品类型吧，已经有点审美疲劳了。剧情漏洞不少，再加上莫名其妙的配乐和滂沱大雨（只能用雨来表现角色心理吗？）。还有，感觉战力体系有点崩塌，凡人打神仙，还是打杨戬，真是这种场面吗，实在觉得不好展现，换个反派 BOSS 不好吗？不是很理解。",
 		"create_time": "2026-11-09 00:40:02",
 		"id": 4985092134,
