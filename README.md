@@ -26,6 +26,8 @@ pnpm run dev
 | `pnpm run smoke` | Build and run browser regressions |
 
 Install the smoke-test browser with `pnpm run smoke:install` before the first run.
+After a full build, `pnpm run smoke:quick` runs the core deployment checks;
+`pnpm run smoke:built` runs the full browser regression suite without rebuilding.
 See [AGENTS.md](AGENTS.md) for the full command list and validation requirements.
 
 ## Content
@@ -47,8 +49,9 @@ use a globe. See [Blogroll](docs/design/blogroll.md) for details.
 ## Deployment and references
 
 GitHub Actions checks pull requests and deploys `main` to Cloudflare Pages on
-pushes and a daily schedule. CI covers Chromium and WebKit. The canonical site
-URL is configured in [`astro.config.mjs`](astro.config.mjs).
+pushes and a daily schedule. Pull requests run full Chromium regression; main and
+manual CI runs also cover WebKit. Deployment runs the core browser checks.
+The canonical site URL is configured in [`astro.config.mjs`](astro.config.mjs).
 
 Use [DESIGN.md](DESIGN.md) for the current design,
 [AGENTS.md](AGENTS.md) for contribution rules and checks, and

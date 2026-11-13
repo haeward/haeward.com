@@ -213,7 +213,7 @@ export async function verifyReading(browser, baseUrl) {
             .evaluate((node) => getComputedStyle(node).textAlign),
         "center",
     );
-    assert(!(await page.locator("article").innerText()).includes("[!QUOTE]"));
+    assert(!(await page.locator("article").textContent()).includes("[!QUOTE]"));
     assert.equal(await page.locator("[data-image-zoom] .prose-external-arrow").count(), 0);
     assert.equal(
         await page

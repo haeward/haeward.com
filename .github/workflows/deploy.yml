@@ -16,6 +16,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
       deployments: write
@@ -48,8 +49,8 @@ jobs:
       - name: Content integrity checks
         run: pnpm run check:content
 
-      - name: Smoke check
-        run: node scripts/verify/smoke.mjs
+      - name: Core smoke check
+        run: pnpm run smoke:quick
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v4
@@ -59,3 +60,12 @@ jobs:
           command: pages deploy ./dist --project-name=blog --commit-dirty=true
           wranglerVersion: '4.158.0'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: deploy-smoke-failure
+          path: output/playwright/smoke/chromium/
+          if-no-files-found: ignore
+          retention-days: 7

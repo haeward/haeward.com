@@ -12,6 +12,7 @@ import { verifyRss } from "./rss.mjs";
 import { verifySearchPagination } from "./search-pagination.mjs";
 import { startPreview } from "./server.mjs";
 
+const quick = process.argv.includes("--quick");
 const DIST_DIR = path.resolve("dist");
 const ARTICLE_SLUG = "/posts/2025/travelogue-of-southern-shanxi/";
 function fail(message) {
@@ -136,7 +137,7 @@ async function assertMediaTabAutoLoadMore(page, tabName, label, requestLog) {
     }
 
     // Each appended page moves the sentinel down; scroll again to trigger the next page.
-    const pageCount = Math.ceil(totalCount / pageSize);
+    const pageCount = quick ? 2 : Math.ceil(totalCount / pageSize);
     for (let pageNumber = 2; pageNumber <= pageCount; pageNumber += 1) {
         const expectedCount = Math.min(pageNumber * pageSize, totalCount);
         if ((await page.locator(gridItemSelector).count()) < expectedCount) {
@@ -152,7 +153,7 @@ async function assertMediaTabAutoLoadMore(page, tabName, label, requestLog) {
     }
 
     await page.waitForFunction(
-        ({ panelSelector, expectedCount }) => {
+        ({ panelSelector, expectedCount, exhausted }) => {
             const panel = document.querySelector(panelSelector);
             if (!(panel instanceof HTMLElement)) return false;
 
@@ -160,11 +161,14 @@ async function assertMediaTabAutoLoadMore(page, tabName, label, requestLog) {
             const sentinel = panel.querySelector("[data-media-sentinel]");
             const sentinelHidden = !(sentinel instanceof HTMLElement) || sentinel.hidden === true;
 
-            return cards.length === expectedCount && sentinelHidden;
+            return exhausted
+                ? cards.length === expectedCount && sentinelHidden
+                : cards.length >= expectedCount;
         },
         {
             panelSelector,
-            expectedCount: totalCount,
+            expectedCount: Math.min(pageCount * pageSize, totalCount),
+            exhausted: pageCount * pageSize >= totalCount,
         },
     );
 
@@ -447,15 +451,18 @@ async function run() {
         assertNoMobileErrors();
         await mobilePage.close();
         await page.close();
-        for (const verify of [
-            verifyArticleImages,
-            verifyReading,
-            verifyEnhancements,
-            verifyMedia,
-            verifySearchPagination,
-            verifyResourceLinks,
-            verifyRss,
-        ]) {
+        const verifiers = quick
+            ? [verifySearchPagination]
+            : [
+                  verifyArticleImages,
+                  verifyReading,
+                  verifyEnhancements,
+                  verifyMedia,
+                  verifySearchPagination,
+                  verifyResourceLinks,
+                  verifyRss,
+              ];
+        for (const verify of verifiers) {
             console.log(`[${smokeBrowserName()}] ${verify.name}`);
             await verify(browser, baseUrl);
         }

@@ -11,6 +11,7 @@
         "build": "pnpm run build:site && pnpm run build:search",
         "smoke": "pnpm run build && pnpm run smoke:built",
         "smoke:built": "node scripts/verify/smoke.mjs",
+        "smoke:quick": "node scripts/verify/smoke.mjs --quick",
         "smoke:install": "pnpm exec playwright install --with-deps chromium",
         "preview": "pnpm run build && astro preview",
         "preview:network": "pnpm run build && astro preview --host",

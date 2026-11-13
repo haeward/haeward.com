@@ -99,7 +99,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [chromium, webkit]
+        # PRs run Chromium; main and manual runs also cover WebKit.
+        browser: ${{ fromJSON(github.event_name == 'pull_request' && '["chromium"]' || '["chromium","webkit"]') }}
     env:
       SMOKE_BROWSER: ${{ matrix.browser }}
 
