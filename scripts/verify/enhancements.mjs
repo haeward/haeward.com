@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { bounded } from "./wait.mjs";
 
 const article = "/posts/2025/travelogue-of-southern-shanxi/";
 export async function verifyEnhancements(browser, baseUrl) {
@@ -123,15 +124,21 @@ export async function verifyEnhancements(browser, baseUrl) {
 
     // Slow response plus close/reopen must never display a dismissed query.
     await page.goto(baseUrl);
-    await page.route("**/pagefind/pagefind-entry.json", async (route) => {
-        await new Promise((resolve) => setTimeout(resolve, 700));
-        await route.continue().catch(() => {});
+    let releaseSnapshot;
+    const snapshot = new Promise((resolve) => {
+        releaseSnapshot = resolve;
     });
+    await page.route("**/pagefind/pagefind-entry.json", (route) => releaseSnapshot(route));
     await page.locator("#search-trigger").click();
     await page.locator("#site-search-input").fill("Obsidian");
+    const pending = await bounded(snapshot, "dismissed search snapshot");
     await page.waitForSelector('[data-search-state="loading"]');
     await page.keyboard.press("Escape");
-    await page.waitForTimeout(900);
+    const finished = page.waitForEvent("requestfinished", {
+        predicate: (request) => request.url().endsWith("/pagefind/pagefind-entry.json"),
+    });
+    await pending.fulfill({ json: original });
+    await finished;
     assert.equal(await page.locator("dialog[open]").count(), 0);
     await page.unroute("**/pagefind/pagefind-entry.json");
     await page.locator("#search-trigger").click();

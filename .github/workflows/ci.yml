@@ -18,10 +18,25 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      site: ${{ steps.changes.outputs.site }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Classify changes
+        id: changes
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          site=true
+          if [ -n "$BASE" ] && git fetch --depth=1 origin "$BASE"; then
+            if git diff --name-only "$BASE" HEAD | node scripts/verify/docs-only.mjs; then
+              site=false
+            fi
+          fi
+          echo "site=$site" >> "$GITHUB_OUTPUT"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
@@ -40,7 +55,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Biome check
-        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.install.outcome == 'success' && steps.changes.outputs.site == 'true' }}
         run: pnpm run check
 
       - name: Markdown lint
@@ -52,10 +67,12 @@ jobs:
         run: pnpm run secrets:lint
 
       - name: Data and failure regression checks
-        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.install.outcome == 'success' && steps.changes.outputs.site == 'true' }}
         run: pnpm run test:data
 
   build:
+    needs: quality
+    if: needs.quality.outputs.site == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -174,10 +191,28 @@ jobs:
     steps:
       - name: Require every validation job
         env:
+          SITE_REQUIRED: ${{ needs.quality.outputs.site }}
           QUALITY_RESULT: ${{ needs.quality.result }}
           BUILD_RESULT: ${{ needs.build.result }}
           SMOKE_RESULT: ${{ needs.smoke.result }}
         run: |
           test "$QUALITY_RESULT" = success
-          test "$BUILD_RESULT" = success
-          test "$SMOKE_RESULT" = success
+          if [ "$SITE_REQUIRED" = true ]; then
+            test "$BUILD_RESULT" = success
+            test "$SMOKE_RESULT" = success
+          else
+            test "$SITE_REQUIRED" = false
+            test "$BUILD_RESULT" = skipped
+            test "$SMOKE_RESULT" = skipped
+          fi
+
+  publish:
+    needs: [quality, checks]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.quality.outputs.site == 'true'
+    permissions:
+      contents: read
+      deployments: write
+    uses: ./.github/workflows/deploy.yml
+    with:
+      reuse-build: true
+    secrets: inherit

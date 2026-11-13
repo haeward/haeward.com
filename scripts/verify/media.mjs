@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { installMediaFixture, mediaPage } from "./media-fixture.mjs";
+import { bounded } from "./wait.mjs";
 
 const movieGrid = '[data-tab-panel="movies"] [data-media-grid]';
 const movieSentinel = '[data-tab-panel="movies"] [data-media-sentinel]';
@@ -10,6 +12,7 @@ async function withMediaPage(browser, label, verify) {
         viewport: { width: 1280, height: 900 },
         reducedMotion: "reduce",
     });
+    await installMediaFixture(context);
     const page = await context.newPage();
     const errors = [];
     page.on("pageerror", (error) => errors.push(error.message));
@@ -43,6 +46,31 @@ async function waitForMoviePage(page) {
 }
 
 export async function verifyMedia(browser, baseUrl) {
+    await withMediaPage(browser, "Media pagination exhaustion", async (page) => {
+        await page.goto(`${baseUrl}/media/#movies`);
+        for (const count of [24, 48, 53]) {
+            await page.waitForFunction(
+                (count) =>
+                    document.querySelectorAll('[data-tab-panel="movies"] [data-media-grid] > li')
+                        .length === count,
+                count,
+            );
+            if (count < 53) await page.locator(movieSentinel).scrollIntoViewIfNeeded();
+        }
+        await page.waitForFunction(
+            (selector) => document.querySelector(selector).hidden,
+            movieSentinel,
+        );
+        assert.equal(
+            new Set(
+                await page
+                    .locator(`${movieGrid} a`)
+                    .evaluateAll((links) => links.map((a) => a.href)),
+            ).size,
+            53,
+        );
+    });
+
     await withMediaPage(browser, "Media history and keyboard", async (page) => {
         await page.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         await page
@@ -106,15 +134,13 @@ export async function verifyMedia(browser, baseUrl) {
         const original = await card.elementHandle();
         await card.focus();
         await page.locator(movieSentinel).scrollIntoViewIfNeeded();
-        const route = await requested;
+        const route = await bounded(requested, "media: requested");
         assert.equal(await page.locator(movieGrid).getAttribute("aria-busy"), "true");
         // Isolate the append/focus contract from the observer starting page 3
         // while the viewport is still near the sentinel. Full pagination is
         // covered independently by the desktop and mobile smoke scenarios.
-        const response = await route.fetch();
-        const payload = await response.json();
+        const payload = mediaPage("movies", 2);
         await route.fulfill({
-            response,
             json: {
                 ...payload,
                 totalCount: payload.pageSize + payload.items.length,
@@ -140,7 +166,7 @@ export async function verifyMedia(browser, baseUrl) {
         await page.route("**/media/data/books/1.json", (route) => release(route));
         await page.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         await page.locator('[data-tab="books"]').click();
-        const route = await requested;
+        const route = await bounded(requested, "media: requested");
         assert.equal(await page.locator(booksGrid).getAttribute("aria-busy"), "true");
         await page.locator('[data-tab="movies"]').click();
         await route.fulfill({ status: 503, body: "Unavailable" });
@@ -160,7 +186,7 @@ export async function verifyMedia(browser, baseUrl) {
         await page.route("**/media/data/books/1.json", (route) => release(route));
         await page.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         await page.locator('[data-tab="books"]').click();
-        const route = await requested;
+        const route = await bounded(requested, "media: requested");
         await page.locator('header a[href="/about/"]').click();
         await page.waitForURL("**/about/");
         await page.waitForFunction(() => document.activeElement?.id === "main-content");
@@ -177,7 +203,7 @@ export async function verifyMedia(browser, baseUrl) {
         await page.route("**/media/data/movies/2.json", (route) =>
             ++attempts === 1
                 ? route.fulfill({ status: 503, body: "Unavailable" })
-                : route.continue(),
+                : route.fallback(),
         );
         await page.goto(`${baseUrl}/media/#movies`, { waitUntil: "networkidle" });
         const before = await page.locator(`${movieGrid} > li`).count();

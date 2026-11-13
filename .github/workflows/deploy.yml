@@ -4,9 +4,11 @@ on:
   schedule:
     # Daily 00:05 UTC rebuild; Blogroll gets a new order each day.
     - cron: '5 0 * * *'
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      reuse-build:
+        type: boolean
+        default: false
   workflow_dispatch:
 
 concurrency:
@@ -40,16 +42,27 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Download checked build
+        if: inputs.reuse-build
+        uses: actions/download-artifact@v8
+        with:
+          name: site-dist
+          path: dist/
+
       - name: Install Playwright browser
+        if: ${{ !inputs.reuse-build }}
         run: pnpm run smoke:install
 
       - name: Build site
+        if: ${{ !inputs.reuse-build }}
         run: pnpm run build
 
       - name: Content integrity checks
+        if: ${{ !inputs.reuse-build }}
         run: pnpm run check:content
 
       - name: Core smoke check
+        if: ${{ !inputs.reuse-build }}
         run: pnpm run smoke:quick
 
       - name: Deploy

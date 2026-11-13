@@ -9,6 +9,7 @@ import { verifyMedia } from "./media.mjs";
 import { verifyReading } from "./reading.mjs";
 import { verifyResourceLinks } from "./resource-links.mjs";
 import { verifyRss } from "./rss.mjs";
+import { verifySearch } from "./search.mjs";
 import { verifySearchPagination } from "./search-pagination.mjs";
 import { startPreview } from "./server.mjs";
 
@@ -58,7 +59,7 @@ async function assertOk(page, url, label) {
 }
 
 async function assertStatus(baseUrl, route, expectedStatus) {
-    const response = await fetch(new URL(route, baseUrl));
+    const response = await fetch(new URL(route, baseUrl), { signal: AbortSignal.timeout(5000) });
     if (response.status !== expectedStatus) {
         fail(`Expected ${route} to return ${expectedStatus}, got ${response.status}.`);
     }
@@ -137,7 +138,7 @@ async function assertMediaTabAutoLoadMore(page, tabName, label, requestLog) {
     }
 
     // Each appended page moves the sentinel down; scroll again to trigger the next page.
-    const pageCount = quick ? 2 : Math.ceil(totalCount / pageSize);
+    const pageCount = Math.min(2, Math.ceil(totalCount / pageSize));
     for (let pageNumber = 2; pageNumber <= pageCount; pageNumber += 1) {
         const expectedCount = Math.min(pageNumber * pageSize, totalCount);
         if ((await page.locator(gridItemSelector).count()) < expectedCount) {
@@ -207,12 +208,20 @@ async function run() {
         await assertStatus(baseUrl, "/blogroll/", 200);
         await assertStatus(baseUrl, "/links/", 404);
         await assertStatus(baseUrl, "/media/", 200);
-        await assertStatus(baseUrl, "/media/data/movies/1.json", 200);
-        await assertStatus(baseUrl, "/media/data/movies/2.json", 200);
-        await assertStatus(baseUrl, "/media/data/books/1.json", 200);
-        await assertStatus(baseUrl, "/media/data/series/1.json", 200);
-        await assertStatus(baseUrl, "/media/data/anime/1.json", 200);
-        await assertStatus(baseUrl, "/media/data/books/2.json", 404);
+        const mediaHtml = await fetch(`${baseUrl}/media/`, {
+            signal: AbortSignal.timeout(5000),
+        }).then((response) => response.text());
+        const manifest = JSON.parse(
+            mediaHtml.match(/<script\b[^>]*id="media-data"[^>]*>([\s\S]*?)<\/script>/)[1],
+        );
+        for (const [tab, { count }] of Object.entries(manifest.tabs)) {
+            const last = Math.ceil(count / manifest.pageSize);
+            if (last) {
+                await assertStatus(baseUrl, `/media/data/${tab}/1.json`, 200);
+                await assertStatus(baseUrl, `/media/data/${tab}/${last}.json`, 200);
+            }
+            await assertStatus(baseUrl, `/media/data/${tab}/${last + 1}.json`, 404);
+        }
         await assertStatus(baseUrl, "/media/data/unknown/1.json", 404);
         await assertStatus(baseUrl, "/rss.xml", 200);
         await assertStatus(baseUrl, "/robots.txt", 200);
@@ -366,7 +375,10 @@ async function run() {
         }
         await waitForActiveMediaTab(page, "books");
         await assertMediaTabInitialLoad(page, "books", "Desktop books tab");
-        if (countMediaRequests(desktopMediaRequests, "/media/data/books/1.json") !== 1) {
+        if (
+            countMediaRequests(desktopMediaRequests, "/media/data/books/1.json") !==
+            (mediaManifest.tabs.books.count > 0 ? 1 : 0)
+        ) {
             fail(`Expected /media/data/books/1.json to be requested once on first books load.`);
         }
 
@@ -377,7 +389,10 @@ async function run() {
         await page.click('[data-tab="books"]');
         await waitForActiveMediaTab(page, "books");
         await assertMediaTabInitialLoad(page, "books", "Desktop books revisit");
-        if (countMediaRequests(desktopMediaRequests, "/media/data/books/1.json") !== 1) {
+        if (
+            countMediaRequests(desktopMediaRequests, "/media/data/books/1.json") !==
+            (mediaManifest.tabs.books.count > 0 ? 1 : 0)
+        ) {
             fail(`Expected books tab revisit to reuse cached data without a second request.`);
         }
 
@@ -452,8 +467,9 @@ async function run() {
         await mobilePage.close();
         await page.close();
         const verifiers = quick
-            ? [verifySearchPagination]
+            ? [verifySearch]
             : [
+                  verifySearch,
                   verifyArticleImages,
                   verifyReading,
                   verifyEnhancements,

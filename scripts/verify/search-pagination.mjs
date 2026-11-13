@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { bounded } from "./wait.mjs";
 
 const moduleFixture = `export async function search(term) {
     await fetch("/__search-call/" + encodeURIComponent(term));
@@ -143,7 +144,7 @@ export async function verifySearchPagination(browser, baseUrl) {
         await open("stale");
         const stalePending = pausePagination();
         await page.locator("[data-search-more]").click();
-        const stale = await stalePending;
+        const stale = await bounded(stalePending, "search-pagination: stalePending");
         assert.equal(await page.locator(".site-search__result").count(), 8);
         assert.equal(await page.locator("[data-search-more]").isDisabled(), true);
         await page.locator("#site-search-input").fill("replacement");
@@ -159,7 +160,7 @@ export async function verifySearchPagination(browser, baseUrl) {
         await open("closed");
         const closedPending = pausePagination();
         await page.locator("[data-search-more]").click();
-        const closed = await closedPending;
+        const closed = await bounded(closedPending, "search-pagination: closedPending");
         await page.keyboard.press("Escape");
         await closed.route.fulfill({ json: closed.data });
         await page.waitForTimeout(50);

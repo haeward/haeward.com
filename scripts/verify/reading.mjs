@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createMarkdownProcessor, rehypeHeadingIds } from "@astrojs/markdown-remark";
 import rehypeReading from "../../src/lib/rehype-reading.ts";
 import remarkWorkQuote from "../../src/lib/remark-work-quote.ts";
+import { bounded } from "./wait.mjs";
 
 const ARTICLE = "/posts/2025/travelogue-of-southern-shanxi/";
 
@@ -362,7 +363,7 @@ export async function verifyReading(browser, baseUrl) {
     await failures.locator("#site-search-input").fill("timeout");
     await failures.waitForSelector('[data-search-state="unavailable"]', { timeout: 12000 });
     await failures.locator("#site-search-input").fill("old");
-    const oldSearchRoute = await oldSearchStarted;
+    const oldSearchRoute = await bounded(oldSearchStarted, "reading: oldSearchStarted");
     await failures.locator("#site-search-input").fill("new");
     await failures.waitForSelector('[data-search-state="results"]');
     await oldSearchRoute.fulfill({ status: 200, body: "" });

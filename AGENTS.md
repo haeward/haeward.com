@@ -63,7 +63,9 @@
 - Run `pnpm run test:data` for data/URL/sync changes and `pnpm run check:content` after building content or routes. CI checks both.
 - UI, route, search, theme, article, media, links, RSS, OG, or client-script changes: also run `pnpm run smoke`.
 - `pnpm run smoke` builds the site, builds Pagefind, serves `dist/`, and checks route/status/UI behavior with Playwright. Set `SMOKE_BROWSER=webkit` to run the same suite in WebKit; PR CI runs Chromium; main and manual CI runs also run WebKit.
-- Deployment runs core smoke (routes, theme, Blogroll, media, lightbox, search) sampling the first two media pages; full CI regression retains pagination exhaustion and specialized failure scenarios.
+- Deployment runs core smoke (routes, theme, Blogroll, media, lightbox, search) sampling the first two media pages; full CI regression uses fixed media fixtures for pagination exhaustion and specialized failure scenarios. Deployment smoke checks the real Pagefind index.
+- Documentation-only changes (README, AGENTS, DESIGN, and docs/) run Markdown and secret lint; the stable checks job validates intentional build/browser skips.
+- Main publishes the same build artifact only after CI checks succeed through the reusable deployment workflow. Scheduled and manual deployments build and run core smoke independently.
 - CI builds once and shares `dist/` with the selected browser jobs. `checks` aggregates all required jobs. Browser failures retain traces/screenshots for seven days; local `output/` captures remain ignored.
 - Run `pnpm run check:deploy` for deployment/Node/header changes after a full build; it starts the workflow's pinned Wrangler locally and verifies Pages cache headers without deploying. CI also covers dependency/configuration changes that can affect the CLI environment.
 - If Chromium is missing, run `pnpm run smoke:install`, then rerun `pnpm run smoke`. Install WebKit with `pnpm exec playwright install webkit` for a local two-engine run.

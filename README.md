@@ -48,9 +48,10 @@ use a globe. See [Blogroll](docs/design/blogroll.md) for details.
 
 ## Deployment and references
 
-GitHub Actions checks pull requests and deploys `main` to Cloudflare Pages on
-pushes and a daily schedule. Pull requests run full Chromium regression; main and
-manual CI runs also cover WebKit. Deployment runs the core browser checks.
+GitHub Actions checks pull requests and deploys the checked `main` build to
+Cloudflare Pages after CI succeeds. A daily schedule rebuilds Blogroll ordering. Pull requests run full Chromium regression; main and
+manual CI runs also cover WebKit. Scheduled and manual deployments run the core browser checks, including real search.
+Documentation-only changes skip site builds and browser checks.
 The canonical site URL is configured in [`astro.config.mjs`](astro.config.mjs).
 
 Use [DESIGN.md](DESIGN.md) for the current design,
