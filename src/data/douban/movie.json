@@ -1,6 +1,180 @@
 [
 	{
 		"charts": [],
+		"comment": "美术风格比第一部还好",
+		"create_time": "2026-11-14 12:35:04",
+		"id": 4988773741,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 5,
+			"value": 5
+		},
+		"sharing_text": "我的评分：★★★★★ 美术风格比第一部还好 https://www.douban.com/doubanapp/dispatch/movie/3233635 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/3233635/interest/4988773741",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "杰克·布莱克"
+				},
+				{
+					"name": "安吉丽娜·朱莉"
+				},
+				{
+					"name": "达斯汀·霍夫曼"
+				},
+				{
+					"name": "加里·奥德曼"
+				},
+				{
+					"name": "成龙"
+				},
+				{
+					"name": "塞斯·罗根"
+				},
+				{
+					"name": "刘玉玲"
+				},
+				{
+					"name": "大卫·克罗斯"
+				},
+				{
+					"name": "吴汉章"
+				},
+				{
+					"name": "杨紫琼"
+				},
+				{
+					"name": "丹尼·麦克布莱德"
+				},
+				{
+					"name": "丹尼斯·海斯伯特"
+				},
+				{
+					"name": "尚格·云顿"
+				},
+				{
+					"name": "维克多·加博"
+				},
+				{
+					"name": "迈克·贝尔"
+				},
+				{
+					"name": "艾普尔·洪"
+				},
+				{
+					"name": "亚历山德拉·戈尔德·朱尔登"
+				},
+				{
+					"name": "斯蒂芬·凯林"
+				},
+				{
+					"name": "利亚姆·奈特"
+				},
+				{
+					"name": "保罗·马祖斯基"
+				},
+				{
+					"name": "丹·奥康纳"
+				},
+				{
+					"name": "罗密·罗斯蒙特"
+				},
+				{
+					"name": "莫瑞·史特林"
+				},
+				{
+					"name": "弗雷德·塔特西奥"
+				},
+				{
+					"name": "劳伦·汤姆"
+				},
+				{
+					"name": "康拉德·弗农"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2011 / 美国 / 喜剧 动作 动画 冒险 / 吕寅荣 / 杰克·布莱克 安吉丽娜·朱莉",
+			"color_scheme": {
+				"_base_color": [
+					0.06097560975609756,
+					0.803921568627451,
+					0.2
+				],
+				"_avg_color": [
+					0.12235067437379576,
+					0.8963730569948187,
+					0.7568627450980392
+				],
+				"primary_color_light": "a55120",
+				"primary_color_dark": "7f3e18",
+				"secondary_color": "f9f6f4",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/3233635.jpg",
+			"directors": [
+				{
+					"name": "吕寅荣"
+				}
+			],
+			"genres": [
+				"喜剧",
+				"动作",
+				"动画"
+			],
+			"has_linewatch": true,
+			"honor_infos": [
+				{
+					"kind": "movie",
+					"rank": 2,
+					"title": "第39届动画安妮奖获奖名单",
+					"uri": "douban://douban.com/subject_collection/ECDYJAR3A?type=rank&category=movie&rank_type=award_movie"
+				}
+			],
+			"id": "3233635",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p877183898.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p877183898.jpg"
+			},
+			"pubdate": [
+				"2011-05-28(中国大陆)"
+			],
+			"rating": {
+				"count": 492129,
+				"max": 10,
+				"star_count": 4,
+				"value": 8.1
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/3233635",
+			"subtype": "movie",
+			"title": "功夫熊猫2",
+			"type": "movie",
+			"uri": "douban://douban.com/movie/3233635",
+			"url": "https://movie.douban.com/subject/3233635/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+				"https://img9.doubanio.com/f/frodo/88a62f5e0cf9981c910e60f4421c3e66aac2c9bc/pics/vendors/bilibili.png",
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2011"
+		},
+		"tags": [],
+		"vote_count": 0,
+		"star_time": "2026-11-14 12:35:04"
+	},
+	{
+		"charts": [],
 		"comment": "",
 		"create_time": "2026-11-10 13:19:24",
 		"id": 4986020736,
