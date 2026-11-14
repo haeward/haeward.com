@@ -3,7 +3,7 @@ minimumReleaseAgeStrict: true
 
 overrides:
     "@tailwindcss/typography>postcss-selector-parser": 6.1.6
-    fast-xml-parser: 5.12.0
+    fast-xml-parser: 5.12.1
     lodash: 4.18.1
     "markdownlint>re2js": 2.9.1
     "micromark-extension-math>katex": 0.19.1
