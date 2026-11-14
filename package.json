@@ -37,7 +37,7 @@
         "@tailwindcss/typography": "^0.5.10",
         "@tailwindcss/vite": "^4.0.0",
         "astro": "^7.3.1",
-        "fast-xml-parser": "5.12.0",
+        "fast-xml-parser": "5.12.1",
         "fast-xml-validator": "1.4.2",
         "hast-util-from-html": "2.1.0",
         "hast-util-to-html": "9.0.6",
