@@ -1,6 +1,132 @@
 [
 	{
 		"charts": [],
+		"comment": "剧情逻辑不通，节奏也不好，推案情的时候加快，渲染人物又放慢，观感实在是不好",
+		"create_time": "2026-11-18 09:26:45",
+		"id": 4986563527,
+		"is_editable": false,
+		"is_private": false,
+		"platforms": [],
+		"rating": {
+			"count": 1,
+			"max": 5,
+			"star_count": 2,
+			"value": 2
+		},
+		"sharing_text": "我的评分：★★ 剧情逻辑不通，节奏也不好，推案情的时候加快，渲染人物又放慢，观感实在是不好 https://www.douban.com/doubanapp/dispatch/movie/37109676 来自@豆瓣App",
+		"sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/subject/37109676/interest/4986563527",
+		"status": "done",
+		"subject": {
+			"actors": [
+				{
+					"name": "井柏然"
+				},
+				{
+					"name": "孙艺洲"
+				},
+				{
+					"name": "张颂文"
+				},
+				{
+					"name": "王鸥"
+				},
+				{
+					"name": "王奕婷"
+				},
+				{
+					"name": "冯雷"
+				},
+				{
+					"name": "余文乐"
+				},
+				{
+					"name": "李洪涛"
+				},
+				{
+					"name": "李小冉"
+				},
+				{
+					"name": "张雪迎"
+				},
+				{
+					"name": "洪浚嘉"
+				},
+				{
+					"name": "郭广平"
+				},
+				{
+					"name": "隋俊波"
+				}
+			],
+			"album_no_interact": false,
+			"article_intros": [],
+			"card_subtitle": "2026 / 中国大陆 / 剧情 悬疑 犯罪 / 李路 / 井柏然 孙艺洲",
+			"color_scheme": {
+				"_base_color": [
+					0.5833333333333334,
+					0.08888888888888888,
+					0.35294117647058826
+				],
+				"_avg_color": [
+					0.033333333333333236,
+					0.03999999999999997,
+					0.49019607843137253
+				],
+				"primary_color_light": "686d72",
+				"primary_color_dark": "45494c",
+				"secondary_color": "f4f7f9",
+				"is_dark": true
+			},
+			"controversy_reason": "",
+			"cover_url": "https://dou.img.lithub.cc/movie/37109676.jpg",
+			"directors": [
+				{
+					"name": "李路"
+				}
+			],
+			"genres": [
+				"剧情",
+				"悬疑",
+				"犯罪"
+			],
+			"has_linewatch": true,
+			"honor_infos": [],
+			"id": "37109676",
+			"is_released": true,
+			"is_show": false,
+			"null_rating_reason": "",
+			"pic": {
+				"large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2936897680.jpg",
+				"normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2936897680.jpg"
+			},
+			"pubdate": [
+				"2026-11-05(中国大陆)"
+			],
+			"rating": {
+				"count": 14766,
+				"max": 10,
+				"star_count": 3,
+				"value": 6.4
+			},
+			"release_date": null,
+			"sharing_url": "https://www.douban.com/doubanapp/dispatch/movie/37109676",
+			"subtype": "tv",
+			"title": "谷雨",
+			"type": "tv",
+			"uri": "douban://douban.com/tv/37109676",
+			"url": "https://movie.douban.com/subject/37109676/",
+			"vendor_desc": "",
+			"vendor_icons": [
+				"https://img3.doubanio.com/f/frodo/6fa5caade3ca480ccd95f455ee4d195ee342eb90/pics/vendors/youku.png"
+			],
+			"year": "2026"
+		},
+		"tags": [],
+		"vote_count": 4,
+		"star_time": "2026-11-18 09:26:45"
+	},
+	{
+		"charts": [],
 		"comment": "美术风格比第一部还好",
 		"create_time": "2026-11-14 12:35:04",
 		"id": 4988773741,
