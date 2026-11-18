@@ -23,11 +23,11 @@ pnpm run dev
 | `pnpm run build` | Typecheck and build the site, including search |
 | `pnpm run preview` | Rebuild and preview the production site |
 | `pnpm run check` | Check code formatting and lint |
-| `pnpm run smoke` | Build and run browser regressions |
+| `pnpm run smoke` | Smoke-test the existing production build |
 
-Install the smoke-test browser with `pnpm run smoke:install` before the first run.
-After a full build, `pnpm run smoke:quick` runs the core deployment checks;
-`pnpm run smoke:built` runs the full browser regression suite without rebuilding.
+Run `pnpm run build` before `pnpm run smoke`. For local smoke checks, install
+Chromium with `pnpm exec playwright install --with-deps --only-shell chromium`,
+or run `SMOKE_BROWSER_CHANNEL=chrome pnpm run smoke` with Google Chrome installed.
 See [AGENTS.md](AGENTS.md) for the full command list and validation requirements.
 
 ## Content
@@ -49,8 +49,9 @@ use a globe. See [Blogroll](docs/design/blogroll.md) for details.
 ## Deployment and references
 
 GitHub Actions checks pull requests and deploys the checked `main` build to
-Cloudflare Pages after CI succeeds. A daily schedule rebuilds Blogroll ordering. Pull requests run full Chromium regression; main and
-manual CI runs also cover WebKit. Scheduled and manual deployments run the core browser checks, including real search.
+Cloudflare Pages after the `checks` job succeeds. CI and scheduled or manual
+deployments check the built content and smoke-test it using the runner's
+preinstalled Chrome. A daily schedule rebuilds Blogroll ordering.
 Documentation-only changes skip site builds and browser checks.
 The canonical site URL is configured in [`astro.config.mjs`](astro.config.mjs).
 

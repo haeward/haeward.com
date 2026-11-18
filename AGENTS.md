@@ -35,13 +35,9 @@
 - Site typecheck/build: `pnpm run build:site`
 - Full production build with Pagefind: `pnpm run build`
 - Built content integrity: `pnpm run check:content` after the full build
-- Deployment CLI and Pages headers: `pnpm run check:deploy` after the full build
-- Blogroll parsing, RSS URL, and content regression: `pnpm run test:data`
 - Preview built site: `pnpm run preview`
-- Install Playwright browser for smoke tests: `pnpm run smoke:install`
-- Smoke test: `pnpm run smoke`
-- Reuse a full build for browser tests: `pnpm run smoke:built`
-- Core deployment smoke against an existing build: `pnpm run smoke:quick`
+- Install local Chromium for smoke tests: `pnpm exec playwright install --with-deps --only-shell chromium`
+- Core smoke against an existing production build: `pnpm run smoke`
 - Article image dimensions: `pnpm run sync:article-images` after adding supported article images; the normal build does not fetch dimensions.
 - Networked sync script: `pnpm run sync:douban-covers`
 
@@ -60,16 +56,13 @@
 ## Testing & Validation
 
 - Baseline validation for code/config changes: `pnpm run check`, `pnpm run md:lint`, `pnpm run secrets:lint`, and `pnpm run build:site`.
-- Run `pnpm run test:data` for data/URL/sync changes and `pnpm run check:content` after building content or routes. CI checks both.
-- UI, route, search, theme, article, media, links, RSS, OG, or client-script changes: also run `pnpm run smoke`.
-- `pnpm run smoke` builds the site, builds Pagefind, serves `dist/`, and checks route/status/UI behavior with Playwright. Set `SMOKE_BROWSER=webkit` to run the same suite in WebKit; PR CI runs Chromium; main and manual CI runs also run WebKit.
-- Deployment runs core smoke (routes, theme, Blogroll, media, lightbox, search) sampling the first two media pages; full CI regression uses fixed media fixtures for pagination exhaustion and specialized failure scenarios. Deployment smoke checks the real Pagefind index.
-- Documentation-only changes (README, AGENTS, DESIGN, and docs/) run Markdown and secret lint; the stable checks job validates intentional build/browser skips.
+- Run `pnpm run check:content` after a full build for content or route changes.
+- For UI, route, search, theme, article, media, links, RSS, OG, or client-script changes, run `pnpm run build` and `pnpm run smoke`. Smoke serves `dist/` and samples the main routes, theme, Blogroll, media pagination, lightbox, and real Pagefind search.
+- CI and scheduled or manual deployments run `pnpm run check:content` and `pnpm run smoke` after building. They use the hosted runner's preinstalled Chrome.
+- Documentation-only changes (README, AGENTS, DESIGN, and docs/) run Markdown and secret lint in the `checks` job.
 - Main publishes the same build artifact only after CI checks succeed through the reusable deployment workflow. Scheduled and manual deployments build and run core smoke independently.
-- CI builds once and shares `dist/` with the selected browser jobs. `checks` aggregates all required jobs. Browser failures retain traces/screenshots for seven days; local `output/` captures remain ignored.
-- Run `pnpm run check:deploy` for deployment/Node/header changes after a full build; it starts the workflow's pinned Wrangler locally and verifies Pages cache headers without deploying. CI also covers dependency/configuration changes that can affect the CLI environment.
-- If Chromium is missing, run `pnpm run smoke:install`, then rerun `pnpm run smoke`. Install WebKit with `pnpm exec playwright install webkit` for a local two-engine run.
-- Blogroll source changes: replace `public/subscriptions.opml`, then run baseline validation, `pnpm run test:data`, and `pnpm run smoke`.
+- CI builds and tests `dist/` in `checks`. The publish job downloads that artifact. Browser failures retain traces/screenshots for seven days; local `output/` captures remain ignored.
+- Blogroll source changes: replace `public/subscriptions.opml`, then run baseline validation, `pnpm run build`, and `pnpm run smoke`.
 - Content-only changes: run `pnpm run md:lint`, `pnpm run secrets:lint`, and `pnpm run build:site`. For image-heavy posts, follow the image publication checks in `docs/design/reading.md`.
 - Docs-only changes: run `pnpm run md:lint` and `pnpm run secrets:lint`.
 - If a network-backed sync fails, do not churn generated files. Report the failure and keep source edits separate.

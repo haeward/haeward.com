@@ -109,8 +109,5 @@ Use the validation matrix in [AGENTS.md](../../AGENTS.md). Docs-only work requir
 
 RSS implementation work:
 
-- `pnpm run build:site`
-- `pnpm run smoke` when feed behavior or preview behavior changes
+- `pnpm run build` followed by `pnpm run smoke` when feed or preview behavior changes
 - verify `/rss.xml` stays reachable and newest-first
-- smoke tests exercise the rendered XSL copy success/failure in both browser engines
-- `pnpm run test:data` checks relative links, sources, and encoded URL parameters

@@ -196,11 +196,9 @@ where possible. This is a basic print layout, not a paginated publishing format.
 
 ## Verification
 
-`pnpm run smoke` exercises the current site plus a Markdown table/code fixture.
-Checks include no-JS reading, keyboard dialogs, narrow screens, table alignment,
-code-copy success/failure, code wrapping, TOC jumps, absence of visible heading
-anchors, malformed hashes, and image dimensions. Both Chromium
-and WebKit are run in CI. Fixture content never enters the published site.
+After a production build, `pnpm run smoke` opens a representative article and
+checks that the image lightbox opens and closes with Escape. The content check
+validates local links, anchors, and image attributes in the rendered output.
 
 After editing Markdown plugins, run `pnpm exec astro build --force` and restart
 the development server. If the background server retains old article HTML,
