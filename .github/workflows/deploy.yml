@@ -49,10 +49,6 @@ jobs:
           name: site-dist
           path: dist/
 
-      - name: Install Playwright browser
-        if: ${{ !inputs.reuse-build }}
-        run: pnpm run smoke:install
-
       - name: Build site
         if: ${{ !inputs.reuse-build }}
         run: pnpm run build
@@ -63,7 +59,9 @@ jobs:
 
       - name: Core smoke check
         if: ${{ !inputs.reuse-build }}
-        run: pnpm run smoke:quick
+        env:
+          SMOKE_BROWSER_CHANNEL: chrome
+        run: pnpm run smoke
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v4

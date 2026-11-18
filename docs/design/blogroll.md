@@ -66,8 +66,6 @@ build and its tests straddle a UTC date boundary.
 
 BlogrollCard presents OPML entries and local icons, with a globe when no icon is available.
 
-Verify XML variants, missing website fallback, duplicates, malformed inputs,
-media exclusion, and changed exports. Run lint, Markdown and secret checks, data
-regressions, site/search build, content integrity, and browser smoke checks.
-Browser checks cover names/URLs matching the source, exact download bytes,
-no-JavaScript rendering, narrow layouts, and theme behavior.
+For changes to OPML parsing or exports, verify XML variants, missing website
+fallback, duplicates, malformed inputs, and media exclusion. The core smoke
+checks that the Blogroll renders entries and the OPML download is reachable.

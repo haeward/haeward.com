@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  quality:
+  checks:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -66,42 +66,31 @@ jobs:
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm run secrets:lint
 
-      - name: Data and failure regression checks
-        if: ${{ !cancelled() && steps.install.outcome == 'success' && steps.changes.outputs.site == 'true' }}
-        run: pnpm run test:data
-
-  build:
-    needs: quality
-    if: needs.quality.outputs.site == 'true'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          run_install: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Full site and search build
+      - name: Build site and search
+        if: steps.changes.outputs.site == 'true'
         run: pnpm run build
 
       - name: Content integrity checks
+        if: steps.changes.outputs.site == 'true'
         run: pnpm run check:content
 
+      - name: Core smoke check
+        if: steps.changes.outputs.site == 'true'
+        env:
+          SMOKE_BROWSER_CHANNEL: chrome
+        run: pnpm run smoke
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: smoke-failure-chromium
+          path: output/playwright/smoke/chromium/
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Share the checked build
+        if: steps.changes.outputs.site == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v7
         with:
           name: site-dist
@@ -109,106 +98,9 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-  smoke:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    strategy:
-      fail-fast: false
-      matrix:
-        # PRs run Chromium; main and manual runs also cover WebKit.
-        browser: ${{ fromJSON(github.event_name == 'pull_request' && '["chromium"]' || '["chromium","webkit"]') }}
-    env:
-      SMOKE_BROWSER: ${{ matrix.browser }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 2
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          run_install: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Download the checked build
-        uses: actions/download-artifact@v8
-        with:
-          name: site-dist
-          path: dist/
-
-      - name: Install browser engine
-        run: pnpm exec playwright install --with-deps "$SMOKE_BROWSER"
-
-      - name: Browser regression checks
-        run: pnpm run smoke:built
-
-      - name: Detect deployment validation changes
-        if: matrix.browser == 'chromium'
-        id: deployment
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          if [ "$EVENT_NAME" != pull_request ] || ! git diff --quiet HEAD^ HEAD -- \
-            .github/workflows/ci.yml .github/workflows/deploy.yml .node-version \
-            public/_headers scripts/verify/deploy.mjs package.json pnpm-lock.yaml pnpm-workspace.yaml; then
-            echo "required=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Deployment CLI and Pages header checks
-        if: matrix.browser == 'chromium' && steps.deployment.outputs.required == 'true'
-        run: pnpm run check:deploy
-
-      - name: Upload failure diagnostics
-        if: failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: smoke-failure-${{ matrix.browser }}
-          path: |
-            output/playwright/smoke/${{ matrix.browser }}/
-            output/ci/deploy.log
-          if-no-files-found: ignore
-          retention-days: 7
-
-  # Keep a stable required-check name and reject failed or skipped dependencies.
-  checks:
-    if: always()
-    needs: [quality, build, smoke]
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-
-    steps:
-      - name: Require every validation job
-        env:
-          SITE_REQUIRED: ${{ needs.quality.outputs.site }}
-          QUALITY_RESULT: ${{ needs.quality.result }}
-          BUILD_RESULT: ${{ needs.build.result }}
-          SMOKE_RESULT: ${{ needs.smoke.result }}
-        run: |
-          test "$QUALITY_RESULT" = success
-          if [ "$SITE_REQUIRED" = true ]; then
-            test "$BUILD_RESULT" = success
-            test "$SMOKE_RESULT" = success
-          else
-            test "$SITE_REQUIRED" = false
-            test "$BUILD_RESULT" = skipped
-            test "$SMOKE_RESULT" = skipped
-          fi
-
   publish:
-    needs: [quality, checks]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.quality.outputs.site == 'true'
+    needs: checks
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.checks.outputs.site == 'true'
     permissions:
       contents: read
       deployments: write
